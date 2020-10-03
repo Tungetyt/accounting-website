@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
-
 import '../components/layout.css';
 import Typography from '@material-ui/core/Typography';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -56,10 +54,10 @@ const IndexPage = () => {
 
   const [isDark, setTheme] = useState(true);
   const icon = !isDark ? <Brightness3Icon /> : <Brightness7Icon />;
-  const appliedTheme = createMuiTheme(isDark ? dark : light);
+  const theme = createMuiTheme(isDark ? dark : light);
   return (
     <>
-      <ThemeProvider theme={appliedTheme}>
+      <ThemeProvider theme={theme}>
         <CssBaseline />
         <SEO title="Home" />
         <IconButton
