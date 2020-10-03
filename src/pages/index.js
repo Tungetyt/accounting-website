@@ -53,7 +53,6 @@ const IndexPage = () => {
   };
 
   const [isDark, setTheme] = useState(true);
-  const icon = !isDark ? <Brightness3Icon /> : <Brightness7Icon />;
   const theme = createMuiTheme(isDark ? dark : light);
   return (
     <>
@@ -66,7 +65,7 @@ const IndexPage = () => {
           aria-label="mode"
           onClick={() => setTheme((prevDark) => !prevDark)}
         >
-          {icon}
+          {!isDark ? <Brightness3Icon /> : <Brightness7Icon />}
         </IconButton>
       </ThemeProvider>
     </>
