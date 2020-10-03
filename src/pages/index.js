@@ -12,6 +12,14 @@ import SEO from '../components/seo';
 import Image from '../components/image';
 import Layout from '../components/layout';
 
+// const useStyles = makeStyles({
+//   language: {
+
+//     borderRadius: '50%',
+
+//   },
+// });
+
 const IndexPage = () => {
   // <Layout>
   //   <SEO title="Home" />
@@ -24,43 +32,51 @@ const IndexPage = () => {
   //   <Link to="/page-2/">Go to page 2</Link> <br />
   //   <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   // </Layout>
+  // const classes = useStyles();
 
-  const white = '#ffffff';
-  const blue = '#152f70';
+  const color = {
+    white: '#ffffff',
+    blue: '#152f70',
+  };
 
-  const light = {
-    palette: {
-      type: 'light',
-      primary: {
-        main: blue,
+  const theme = {
+    light: {
+      palette: {
+        type: 'light',
+        primary: {
+          main: color.blue,
+        },
+        background: {
+          default: color.white,
+        },
       },
-      background: {
-        default: white,
+    },
+    dark: {
+      palette: {
+        type: 'dark',
+        primary: {
+          main: color.white,
+        },
+        background: {
+          default: color.blue,
+        },
       },
     },
   };
 
-  const dark = {
-    palette: {
-      type: 'dark',
-      primary: {
-        main: white,
-      },
-      background: {
-        default: blue,
-      },
-    },
+  const localStorageKey = {
+    theme: 'theme-ui-color-mode',
+    language: 'language',
   };
 
-  const localStorageThemeKey = 'theme-ui-color-mode';
+  const [isDark, setIsDark] = useState(localStorage.getItem(localStorageKey.theme) !== 'light');
+  const [isPolish, setIsPolish] = useState(localStorage.getItem(localStorageKey.language) !== 'english');
 
-  const [isDark, setIsDark] = useState(localStorage.getItem(localStorageThemeKey) !== 'light');
-
-  const theme = createMuiTheme(isDark ? dark : light);
+  const chosenTheme = createMuiTheme(isDark ? theme.dark : theme.light);
 
   return (
     <>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={chosenTheme}>
         <CssBaseline />
         <SEO title="Home" />
         <IconButton
@@ -68,12 +84,22 @@ const IndexPage = () => {
           color="primary"
           aria-label="mode"
           onClick={() => {
-            const localStorageTheme = isDark ? 'light' : 'dark';
-            localStorage.setItem(localStorageThemeKey, localStorageTheme);
+            const newTheme = isDark ? 'light' : 'dark';
+            localStorage.setItem(localStorageKey.theme, newTheme);
             setIsDark((prevIsDark) => !prevIsDark);
           }}
         >
-          {!isDark ? <Brightness3Icon /> : <Brightness7Icon />}
+          {isDark ? <Brightness7Icon /> : <Brightness3Icon />}
+        </IconButton>
+        <IconButton
+          aria-label="language"
+          onClick={() => {
+            const newLanguage = isPolish ? 'english' : 'polish';
+            localStorage.setItem(localStorageKey.language, newLanguage);
+            setIsPolish((prevIsPolish) => !prevIsPolish);
+          }}
+        >
+          {isPolish ? <Typography>PL</Typography> : <Typography>EN</Typography>}
         </IconButton>
         <Typography>aaaaaaaaaaaaaaaaa</Typography>
         <Typography>aaaaaaaaaaaaaaaaa</Typography>
