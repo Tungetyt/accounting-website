@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../components/layout.css';
 import Typography from '@material-ui/core/Typography';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { ThemeProvider } from '@material-ui/core';
+import { ThemeProvider, Button } from '@material-ui/core';
 import { createMuiTheme, makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import IconButton from '@material-ui/core/IconButton';
@@ -31,7 +31,6 @@ const IndexPage = () => {
   const light = {
     palette: {
       type: 'light',
-
       primary: {
         main: blue,
       },
@@ -40,6 +39,7 @@ const IndexPage = () => {
       },
     },
   };
+
   const dark = {
     palette: {
       type: 'dark',
@@ -52,8 +52,12 @@ const IndexPage = () => {
     },
   };
 
-  const [isDark, setTheme] = useState(true);
+  const localStorageThemeKey = 'theme-ui-color-mode';
+
+  const [isDark, setIsDark] = useState(localStorage.getItem(localStorageThemeKey) !== 'light');
+
   const theme = createMuiTheme(isDark ? dark : light);
+
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -63,10 +67,49 @@ const IndexPage = () => {
           edge="end"
           color="primary"
           aria-label="mode"
-          onClick={() => setTheme((prevDark) => !prevDark)}
+          onClick={() => {
+            const localStorageTheme = isDark ? 'light' : 'dark';
+            localStorage.setItem(localStorageThemeKey, localStorageTheme);
+            setIsDark((prevIsDark) => !prevIsDark);
+          }}
         >
           {!isDark ? <Brightness3Icon /> : <Brightness7Icon />}
         </IconButton>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <Typography>aaaaaaaaaaaaaaaaa</Typography>
       </ThemeProvider>
     </>
   );
