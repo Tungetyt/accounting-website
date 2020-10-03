@@ -14,23 +14,6 @@ import SEO from '../components/seo';
 import Image from '../components/image';
 import Layout from '../components/layout';
 
-export const light = {
-  palette: {
-    type: 'light',
-  },
-};
-export const dark = {
-  palette: {
-    type: 'dark',
-    primary: {
-      main: '#b9f6ca',
-    },
-    secondary: {
-      main: '#b9f6ca',
-    },
-  },
-};
-
 const IndexPage = () => {
   // <Layout>
   //   <SEO title="Home" />
@@ -44,19 +27,44 @@ const IndexPage = () => {
   //   <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   // </Layout>
 
+  const white = '#ffffff';
+  const blue = '#152f70';
+
+  const light = {
+    palette: {
+      type: 'light',
+
+      primary: {
+        main: blue,
+      },
+      background: {
+        default: white,
+      },
+    },
+  };
+  const dark = {
+    palette: {
+      type: 'dark',
+      primary: {
+        main: white,
+      },
+      background: {
+        default: blue,
+      },
+    },
+  };
+
   const [isDark, setTheme] = useState(true);
   const icon = !isDark ? <Brightness3Icon /> : <Brightness7Icon />;
   const appliedTheme = createMuiTheme(isDark ? dark : light);
   return (
-
     <>
       <ThemeProvider theme={appliedTheme}>
-
         <CssBaseline />
         <SEO title="Home" />
         <IconButton
           edge="end"
-          color="inherit"
+          color="primary"
           aria-label="mode"
           onClick={() => setTheme((prevDark) => !prevDark)}
         >
