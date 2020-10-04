@@ -11,14 +11,14 @@ import Brightness7Icon from '@material-ui/icons/Brightness7';
 import SEO from '../components/seo';
 import Image from '../components/image';
 import Layout from '../components/layout';
+import dict from '../dict';
+import LangBtn from '../components/lang-btn';
 
-// const useStyles = makeStyles({
-//   language: {
-
-//     borderRadius: '50%',
-
-//   },
-// });
+const useStyles = makeStyles({
+  btn: {
+    fontWeight: 'bold',
+  },
+});
 
 const IndexPage = () => {
   // <Layout>
@@ -32,17 +32,27 @@ const IndexPage = () => {
   //   <Link to="/page-2/">Go to page 2</Link> <br />
   //   <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   // </Layout>
-  // const classes = useStyles();
+  const classes = useStyles();
 
   const color = {
     white: '#ffffff',
     blue: '#152f70',
   };
 
+  const themeNames = {
+    light: 'light',
+    dark: 'dark',
+  };
+
+  const langNames = {
+    pl: 'pl',
+    en: 'en',
+  };
+
   const theme = {
     light: {
       palette: {
-        type: 'light',
+        type: themeNames.light,
         primary: {
           main: color.blue,
         },
@@ -53,7 +63,7 @@ const IndexPage = () => {
     },
     dark: {
       palette: {
-        type: 'dark',
+        type: themeNames.dark,
         primary: {
           main: color.white,
         },
@@ -69,8 +79,10 @@ const IndexPage = () => {
     language: 'language',
   };
 
-  const [isDark, setIsDark] = useState(localStorage.getItem(localStorageKey.theme) !== 'light');
-  const [isPolish, setIsPolish] = useState(localStorage.getItem(localStorageKey.language) !== 'english');
+  const getLanguageFromLS = () => localStorage.getItem(localStorageKey.language);
+
+  const [isDark, setIsDark] = useState(localStorage.getItem(localStorageKey.theme) !== themeNames.light);
+  const [isPolish, setIsPolish] = useState(getLanguageFromLS() !== langNames.en);
 
   const chosenTheme = createMuiTheme(isDark ? theme.dark : theme.light);
 
@@ -84,25 +96,28 @@ const IndexPage = () => {
           color="primary"
           aria-label="mode"
           onClick={() => {
-            const newTheme = isDark ? 'light' : 'dark';
+            const newTheme = isDark ? themeNames.light : themeNames.dark;
             localStorage.setItem(localStorageKey.theme, newTheme);
             setIsDark((prevIsDark) => !prevIsDark);
           }}
         >
           {isDark ? <Brightness7Icon /> : <Brightness3Icon />}
         </IconButton>
-        <IconButton
+        {/* <IconButton
           aria-label="language"
           onClick={() => {
-            const newLanguage = isPolish ? 'english' : 'polish';
-            localStorage.setItem(localStorageKey.language, newLanguage);
+            const newLang = isPolish ? langNames.en : langNames.pl;
+            localStorage.setItem(localStorageKey.language, newLang);
             setIsPolish((prevIsPolish) => !prevIsPolish);
           }}
         >
-          {isPolish ? <Typography>PL</Typography> : <Typography>EN</Typography>}
-        </IconButton>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          {isPolish
+            ? <Typography noWrap className={classes.btn} color="primary">PL</Typography>
+            : <Typography noWrap className={classes.btn} color="primary">EN</Typography>}
+        </IconButton> */}
+        <LangBtn />
+        <Typography>{dict.test[getLanguageFromLS() || 'pl']}</Typography>
+        <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>
         <Typography>aaaaaaaaaaaaaaaaa</Typography>
         <Typography>aaaaaaaaaaaaaaaaa</Typography>
         <Typography>aaaaaaaaaaaaaaaaa</Typography>
