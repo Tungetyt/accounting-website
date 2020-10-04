@@ -13,27 +13,10 @@ import Image from '../components/image';
 import Layout from '../components/layout';
 import dict from '../dict';
 import LangBtn from '../components/lang-btn';
-
-const useStyles = makeStyles({
-  btn: {
-    fontWeight: 'bold',
-  },
-});
+import LangContext from '../context/lang-context';
+import ThemeBtn from '../components/theme-btn';
 
 const IndexPage = () => {
-  // <Layout>
-  //   <SEO title="Home" />
-  //   <h1>Hi people</h1>
-  //   <p>Welcome to your new Gatsby site.</p>
-  //   <p>Now go build something great.</p>
-  //   <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-  //     <Image />
-  //   </div>
-  //   <Link to="/page-2/">Go to page 2</Link> <br />
-  //   <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  // </Layout>
-  const classes = useStyles();
-
   const color = {
     white: '#ffffff',
     blue: '#152f70',
@@ -79,10 +62,12 @@ const IndexPage = () => {
     language: 'language',
   };
 
-  const getLanguageFromLS = () => localStorage.getItem(localStorageKey.language);
-
-  const [isDark, setIsDark] = useState(localStorage.getItem(localStorageKey.theme) !== themeNames.light);
-  const [isPolish, setIsPolish] = useState(getLanguageFromLS() !== langNames.en);
+  const [isDark, setIsDark] = useState(
+    localStorage.getItem(localStorageKey.theme) !== themeNames.light,
+  );
+  const [isPolishContext, setIsPolishContext] = useState(
+    localStorage.getItem(localStorageKey.language) !== langNames.en,
+  );
 
   const chosenTheme = createMuiTheme(isDark ? theme.dark : theme.light);
 
@@ -91,66 +76,56 @@ const IndexPage = () => {
       <ThemeProvider theme={chosenTheme}>
         <CssBaseline />
         <SEO title="Home" />
-        <IconButton
-          edge="end"
-          color="primary"
-          aria-label="mode"
-          onClick={() => {
-            const newTheme = isDark ? themeNames.light : themeNames.dark;
-            localStorage.setItem(localStorageKey.theme, newTheme);
-            setIsDark((prevIsDark) => !prevIsDark);
-          }}
-        >
-          {isDark ? <Brightness7Icon /> : <Brightness3Icon />}
-        </IconButton>
-        {/* <IconButton
-          aria-label="language"
-          onClick={() => {
-            const newLang = isPolish ? langNames.en : langNames.pl;
-            localStorage.setItem(localStorageKey.language, newLang);
-            setIsPolish((prevIsPolish) => !prevIsPolish);
-          }}
-        >
-          {isPolish
-            ? <Typography noWrap className={classes.btn} color="primary">PL</Typography>
-            : <Typography noWrap className={classes.btn} color="primary">EN</Typography>}
-        </IconButton> */}
-        <LangBtn />
-        <Typography>{dict.test[getLanguageFromLS() || 'pl']}</Typography>
-        <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
-        <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        <LangContext.Provider value={[isPolishContext, setIsPolishContext]}>
+          <IconButton
+            edge="end"
+            color="primary"
+            aria-label="mode"
+            onClick={() => {
+              const newTheme = isDark ? themeNames.light : themeNames.dark;
+              localStorage.setItem(localStorageKey.theme, newTheme);
+              setIsDark((prevIsDark) => !prevIsDark);
+            }}
+          >
+            {isDark ? <Brightness7Icon /> : <Brightness3Icon />}
+          </IconButton>
+          <LangBtn />
+          <Typography>{dict.test[isPolishContext ? 'pl' : 'en']}</Typography>
+          <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          <Typography>aaaaaaaaaaaaaaaaa</Typography>
+        </LangContext.Provider>
       </ThemeProvider>
     </>
   );

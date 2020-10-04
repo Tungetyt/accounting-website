@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import './layout.css';
 import Typography from '@material-ui/core/Typography';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -12,32 +12,35 @@ import SEO from './seo';
 import Image from './image';
 import Layout from './layout';
 import dict from '../dict';
-import { getLanguageFromLS, localStorageKey } from '../helpers';
-import LangBtnContent from './lang-btn-content';
+import LangBtn from './lang-btn';
 import LangContext from '../context/lang-context';
 
-const LangBtn = () => {
-  const [isPolishContext, setIsPolishContext] = useContext(LangContext);
-
-  const langNames = {
-    pl: 'pl',
-    en: 'en',
+const ThemeBtn = () => {
+  const localStorageKey = {
+    theme: 'theme-ui-color-mode',
+    language: 'language',
   };
-
+  const themeNames = {
+    light: 'light',
+    dark: 'dark',
+  };
+  const [isDark, setIsDark] = useState(
+    localStorage.getItem(localStorageKey.theme) !== themeNames.light,
+  );
   return (
     <IconButton
-      aria-label="language"
+      edge="end"
+      color="primary"
+      aria-label="mode"
       onClick={() => {
-        const newLang = isPolishContext ? langNames.en : langNames.pl;
-        localStorage.setItem(localStorageKey.language, newLang);
-        setIsPolishContext((prevIsPolish) => !prevIsPolish);
+        const newTheme = isDark ? themeNames.light : themeNames.dark;
+        localStorage.setItem(localStorageKey.theme, newTheme);
+        setIsDark((prevIsDark) => !prevIsDark);
       }}
     >
-      {isPolishContext
-        ? <LangBtnContent content="PL" />
-        : <LangBtnContent content="EN" />}
+      {isDark ? <Brightness7Icon /> : <Brightness3Icon />}
     </IconButton>
   );
 };
 
-export default LangBtn;
+export default ThemeBtn;
