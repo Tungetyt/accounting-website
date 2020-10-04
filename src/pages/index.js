@@ -15,6 +15,7 @@ import dict from '../dict';
 import LangBtn from '../components/lang-btn';
 import LangContext from '../context/lang-context';
 import ThemeBtn from '../components/theme-btn';
+import { getLanguageFromLS, localStorageKey, langNames } from '../helpers';
 
 const IndexPage = () => {
   const color = {
@@ -25,11 +26,6 @@ const IndexPage = () => {
   const themeNames = {
     light: 'light',
     dark: 'dark',
-  };
-
-  const langNames = {
-    pl: 'pl',
-    en: 'en',
   };
 
   const theme = {
@@ -55,11 +51,6 @@ const IndexPage = () => {
         },
       },
     },
-  };
-
-  const localStorageKey = {
-    theme: 'theme-ui-color-mode',
-    language: 'language',
   };
 
   const [isDark, setIsDark] = useState(

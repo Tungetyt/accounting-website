@@ -4,3 +4,8 @@ export const localStorageKey = {
 };
 
 export const getLanguageFromLS = () => localStorage.getItem(localStorageKey.language);
+
+export const langNames = {
+  pl: 'pl',
+  en: 'en',
+};

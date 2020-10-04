@@ -14,12 +14,9 @@ import Layout from './layout';
 import dict from '../dict';
 import LangBtn from './lang-btn';
 import LangContext from '../context/lang-context';
+import { getLanguageFromLS, localStorageKey, langNames } from '../helpers';
 
 const ThemeBtn = () => {
-  const localStorageKey = {
-    theme: 'theme-ui-color-mode',
-    language: 'language',
-  };
   const themeNames = {
     light: 'light',
     dark: 'dark',

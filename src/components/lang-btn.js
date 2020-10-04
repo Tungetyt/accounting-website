@@ -12,17 +12,12 @@ import SEO from './seo';
 import Image from './image';
 import Layout from './layout';
 import dict from '../dict';
-import { getLanguageFromLS, localStorageKey } from '../helpers';
 import LangBtnContent from './lang-btn-content';
 import LangContext from '../context/lang-context';
+import { getLanguageFromLS, localStorageKey, langNames } from '../helpers';
 
 const LangBtn = () => {
   const [isPolishContext, setIsPolishContext] = useContext(LangContext);
-
-  const langNames = {
-    pl: 'pl',
-    en: 'en',
-  };
 
   return (
     <IconButton
