@@ -8,6 +8,8 @@ import Paper from '@material-ui/core/Paper';
 import IconButton from '@material-ui/core/IconButton';
 import Brightness3Icon from '@material-ui/icons/Brightness3';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
+import Tooltip from '@material-ui/core/Tooltip';
+import Zoom from '@material-ui/core/Zoom';
 import SEO from '../components/seo';
 import Image from '../components/image';
 import Layout from '../components/layout';
@@ -76,18 +78,21 @@ const IndexPage = () => {
         <CssBaseline />
         <SEO title="Home" />
         <LangContext.Provider value={[isPolishContext, setIsPolishContext]}>
-          <IconButton
-            edge="end"
-            color="primary"
-            aria-label="mode"
-            onClick={() => {
-              const newTheme = isDark ? themeNames.light : themeNames.dark;
-              localStorage.setItem(localStorageKey.theme, newTheme);
-              setIsDark((prevIsDark) => !prevIsDark);
-            }}
-          >
-            {isDark ? <Brightness7Icon /> : <Brightness3Icon />}
-          </IconButton>
+          <Tooltip title="Add" arrow TransitionComponent={Zoom}>
+
+            <IconButton
+              edge="end"
+              color="primary"
+              aria-label="mode"
+              onClick={() => {
+                const newTheme = isDark ? themeNames.light : themeNames.dark;
+                localStorage.setItem(localStorageKey.theme, newTheme);
+                setIsDark((prevIsDark) => !prevIsDark);
+              }}
+            >
+              {isDark ? <Brightness7Icon /> : <Brightness3Icon />}
+            </IconButton>
+          </Tooltip>
           <LangBtn />
           <Typography>{dict.test[isPolishContext ? 'pl' : 'en']}</Typography>
           <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>

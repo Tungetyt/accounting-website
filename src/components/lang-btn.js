@@ -8,6 +8,8 @@ import Paper from '@material-ui/core/Paper';
 import IconButton from '@material-ui/core/IconButton';
 import Brightness3Icon from '@material-ui/icons/Brightness3';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
+import Tooltip from '@material-ui/core/Tooltip';
+import Zoom from '@material-ui/core/Zoom';
 import SEO from './seo';
 import Image from './image';
 import Layout from './layout';
@@ -20,18 +22,21 @@ const LangBtn = () => {
   const [isPolishContext, setIsPolishContext] = useContext(LangContext);
 
   return (
-    <IconButton
-      aria-label="language"
-      onClick={() => {
-        const newLang = isPolishContext ? langNames.en : langNames.pl;
-        localStorage.setItem(localStorageKey.language, newLang);
-        setIsPolishContext((prevIsPolish) => !prevIsPolish);
-      }}
-    >
-      {isPolishContext
-        ? <LangBtnContent content="PL" />
-        : <LangBtnContent content="EN" />}
-    </IconButton>
+    <Tooltip title="Add" arrow TransitionComponent={Zoom}>
+
+      <IconButton
+        aria-label="language"
+        onClick={() => {
+          const newLang = isPolishContext ? langNames.en : langNames.pl;
+          localStorage.setItem(localStorageKey.language, newLang);
+          setIsPolishContext((prevIsPolish) => !prevIsPolish);
+        }}
+      >
+        {isPolishContext
+          ? <LangBtnContent content="PL" />
+          : <LangBtnContent content="EN" />}
+      </IconButton>
+    </Tooltip>
   );
 };
 
