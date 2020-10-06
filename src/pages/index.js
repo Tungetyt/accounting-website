@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../components/layout.css';
 import Typography from '@material-ui/core/Typography';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -54,11 +54,18 @@ const IndexPage = () => {
   };
 
   const [isDark, setIsDark] = useState(
-    localStorage.getItem(localStorageKey.theme) !== themeNames.light,
+    // localStorage.getItem(localStorageKey.theme) !== themeNames.light,
+    true,
   );
   const [isPolishContext, setIsPolishContext] = useState(
-    localStorage.getItem(localStorageKey.language) !== langNames.en,
+    // localStorage.getItem(localStorageKey.language) !== langNames.en,
+    true,
   );
+
+  useEffect(() => {
+    setIsDark(localStorage.getItem(localStorageKey.theme) !== themeNames.light);
+    setIsPolishContext(localStorage.getItem(localStorageKey.language) !== langNames.en);
+  }, []);
 
   const chosenTheme = createMuiTheme(isDark ? theme.dark : theme.light);
 
