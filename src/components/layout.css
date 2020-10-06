@@ -4,3 +4,23 @@ html {
   font-family: 'Roboto', sans-serif;
   /* background-color: blue; */
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background:whitesmoke; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #43588c; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background:#2c437e; 
+}

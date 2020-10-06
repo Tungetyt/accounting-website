@@ -19,7 +19,7 @@ import { getLanguageFromLS, localStorageKey, langNames } from '../helpers';
 
 const IndexPage = () => {
   const color = {
-    white: '#ffffff',
+    white: '#f5f5f5',
     blue: '#152f70',
   };
 
@@ -39,6 +39,7 @@ const IndexPage = () => {
           default: color.white,
         },
       },
+
     },
     dark: {
       palette: {
