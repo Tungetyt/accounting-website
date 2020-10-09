@@ -53,12 +53,10 @@ const IndexPage = () => {
   };
 
   const [isDark, setIsDark] = useState(
-    // localStorage.getItem(localStorageKey.theme) !== themeNames.light,
     true,
-    // getItemByKeyIfPossible(localStorageKey.language) !== langNames.en,
+    // getItemByKeyIfPossible(localStorageKey.theme) !== themeNames.light,
   );
   const [isPl, setIsPl] = useState(
-    // localStorage.getItem(localStorageKey.language) !== langNames.en,
     true,
     // getItemByKeyIfPossible(localStorageKey.language) !== langNames.en,
   );
@@ -74,7 +72,7 @@ const IndexPage = () => {
     <>
       <ThemeProvider theme={chosenTheme}>
         <CssBaseline />
-        <SEO title="Home" />
+        <SEO title="Vavicom" lang="pl" />
         <LangContext.Provider value={[isPl, setIsPl]}>
           <Tooltip title={dict.themeBtn[isPl ? 'pl' : 'en']} arrow TransitionComponent={Zoom}>
             <IconButton
