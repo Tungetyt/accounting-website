@@ -54,19 +54,19 @@ const IndexPage = () => {
 
   const [isDark, setIsDark] = useState(
     // localStorage.getItem(localStorageKey.theme) !== themeNames.light,
-    // true,
-    getItemByKeyIfPossible(localStorageKey.theme) !== themeNames.light,
+    true,
+    // getItemByKeyIfPossible(localStorageKey.language) !== langNames.en,
   );
   const [isPl, setIsPl] = useState(
     // localStorage.getItem(localStorageKey.language) !== langNames.en,
-    // true,
-    getItemByKeyIfPossible(localStorageKey.language) !== langNames.en,
+    true,
+    // getItemByKeyIfPossible(localStorageKey.language) !== langNames.en,
   );
 
-  // useEffect(() => {
-  //   setIsDark(typeof window !== 'undefined' && window.localStorage.getItem(localStorageKey.theme) !== themeNames.light);
-  //   setIsPl(localStorage.getItem(localStorageKey.language) !== langNames.en);
-  // }, []);
+  useEffect(() => {
+    setIsDark(getItemByKeyIfPossible(localStorageKey.language) !== langNames.en);
+    setIsPl(getItemByKeyIfPossible(localStorageKey.language) !== langNames.en);
+  }, []);
 
   const chosenTheme = createMuiTheme(isDark ? theme.dark : theme.light);
 
@@ -95,6 +95,7 @@ const IndexPage = () => {
           <LangBtn />
           <Typography>{dict.test[isPl ? 'pl' : 'en']}</Typography>
           <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>
+          <Brightness7Icon />
           <Typography>aaaaaaaaaaaaaaaaa</Typography>
           <Typography>aaaaaaaaaaaaaaaaa</Typography>
           <Typography>aaaaaaaaaaaaaaaaa</Typography>
