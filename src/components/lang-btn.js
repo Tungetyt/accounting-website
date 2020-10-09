@@ -16,7 +16,7 @@ import Layout from './layout';
 import dict from '../dict';
 import LangBtnContent from './lang-btn-content';
 import LangContext from '../context/lang-context';
-import { getLanguageFromLS, localStorageKey, langNames } from '../helpers';
+import { getItemByKeyIfPossible, localStorageKey, langNames } from '../helpers';
 
 const LangBtn = () => {
   const [isPl, setIsPl] = useContext(LangContext);
@@ -28,7 +28,9 @@ const LangBtn = () => {
         aria-label="language"
         onClick={() => {
           const newLang = isPl ? langNames.en : langNames.pl;
-          localStorage.setItem(localStorageKey.language, newLang);
+          if (typeof window !== 'undefined') {
+            window.localStorage.setItem(localStorageKey.language, newLang);
+          }
           setIsPl((prevIsPolish) => !prevIsPolish);
         }}
       >

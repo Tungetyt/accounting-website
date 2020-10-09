@@ -18,7 +18,7 @@ import dict from '../dict';
 import LangBtn from '../components/lang-btn';
 import LangContext from '../context/lang-context';
 import ThemeBtn from '../components/theme-btn';
-import { getLanguageFromLS, localStorageKey, langNames } from '../helpers';
+import { getItemByKeyIfPossible, localStorageKey, langNames } from '../helpers';
 
 const IndexPage = () => {
   const themeNames = {
@@ -54,17 +54,19 @@ const IndexPage = () => {
 
   const [isDark, setIsDark] = useState(
     // localStorage.getItem(localStorageKey.theme) !== themeNames.light,
-    true,
+    // true,
+    getItemByKeyIfPossible(localStorageKey.theme) !== themeNames.light,
   );
   const [isPl, setIsPl] = useState(
     // localStorage.getItem(localStorageKey.language) !== langNames.en,
-    true,
+    // true,
+    getItemByKeyIfPossible(localStorageKey.language) !== langNames.en,
   );
 
-  useEffect(() => {
-    setIsDark(localStorage.getItem(localStorageKey.theme) !== themeNames.light);
-    setIsPl(localStorage.getItem(localStorageKey.language) !== langNames.en);
-  }, []);
+  // useEffect(() => {
+  //   setIsDark(typeof window !== 'undefined' && window.localStorage.getItem(localStorageKey.theme) !== themeNames.light);
+  //   setIsPl(localStorage.getItem(localStorageKey.language) !== langNames.en);
+  // }, []);
 
   const chosenTheme = createMuiTheme(isDark ? theme.dark : theme.light);
 
@@ -81,7 +83,9 @@ const IndexPage = () => {
               aria-label="mode"
               onClick={() => {
                 const newTheme = isDark ? themeNames.light : themeNames.dark;
-                localStorage.setItem(localStorageKey.theme, newTheme);
+                if (typeof window !== 'undefined') {
+                  window.localStorage.setItem(localStorageKey.theme, newTheme);
+                }
                 setIsDark((prevIsDark) => !prevIsDark);
               }}
             >

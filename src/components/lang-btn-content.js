@@ -12,7 +12,7 @@ import SEO from './seo';
 import Image from './image';
 import Layout from './layout';
 import dict from '../dict';
-import { getLanguageFromLS, localStorageKey } from '../helpers';
+import { getItemByKeyIfPossible, localStorageKey } from '../helpers';
 
 const useStyles = makeStyles({
   btn: {
