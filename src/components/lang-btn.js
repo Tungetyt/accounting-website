@@ -19,20 +19,20 @@ import LangContext from '../context/lang-context';
 import { getLanguageFromLS, localStorageKey, langNames } from '../helpers';
 
 const LangBtn = () => {
-  const [isPolishContext, setIsPolishContext] = useContext(LangContext);
+  const [isPl, setIsPl] = useContext(LangContext);
 
   return (
-    <Tooltip title="Add" arrow TransitionComponent={Zoom}>
+    <Tooltip title={dict.langBtn[isPl ? 'pl' : 'en']} arrow TransitionComponent={Zoom}>
 
       <IconButton
         aria-label="language"
         onClick={() => {
-          const newLang = isPolishContext ? langNames.en : langNames.pl;
+          const newLang = isPl ? langNames.en : langNames.pl;
           localStorage.setItem(localStorageKey.language, newLang);
-          setIsPolishContext((prevIsPolish) => !prevIsPolish);
+          setIsPl((prevIsPolish) => !prevIsPolish);
         }}
       >
-        {isPolishContext
+        {isPl
           ? <LangBtnContent content="PL" />
           : <LangBtnContent content="EN" />}
       </IconButton>

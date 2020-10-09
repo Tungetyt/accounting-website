@@ -10,6 +10,7 @@ import Brightness3Icon from '@material-ui/icons/Brightness3';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 import Tooltip from '@material-ui/core/Tooltip';
 import Zoom from '@material-ui/core/Zoom';
+import indigo from '@material-ui/core/colors/indigo';
 import SEO from '../components/seo';
 import Image from '../components/image';
 import Layout from '../components/layout';
@@ -20,11 +21,6 @@ import ThemeBtn from '../components/theme-btn';
 import { getLanguageFromLS, localStorageKey, langNames } from '../helpers';
 
 const IndexPage = () => {
-  const color = {
-    white: '#f5f5f5',
-    blue: '#152f70',
-  };
-
   const themeNames = {
     light: 'light',
     dark: 'dark',
@@ -35,10 +31,10 @@ const IndexPage = () => {
       palette: {
         type: themeNames.light,
         primary: {
-          main: color.blue,
+          main: indigo['900'],
         },
         background: {
-          default: color.white,
+          default: indigo['50'],
         },
       },
 
@@ -47,10 +43,10 @@ const IndexPage = () => {
       palette: {
         type: themeNames.dark,
         primary: {
-          main: color.white,
+          main: indigo['50'],
         },
         background: {
-          default: color.blue,
+          default: indigo['900'],
         },
       },
     },
@@ -60,14 +56,14 @@ const IndexPage = () => {
     // localStorage.getItem(localStorageKey.theme) !== themeNames.light,
     true,
   );
-  const [isPolishContext, setIsPolishContext] = useState(
+  const [isPl, setIsPl] = useState(
     // localStorage.getItem(localStorageKey.language) !== langNames.en,
     true,
   );
 
   useEffect(() => {
     setIsDark(localStorage.getItem(localStorageKey.theme) !== themeNames.light);
-    setIsPolishContext(localStorage.getItem(localStorageKey.language) !== langNames.en);
+    setIsPl(localStorage.getItem(localStorageKey.language) !== langNames.en);
   }, []);
 
   const chosenTheme = createMuiTheme(isDark ? theme.dark : theme.light);
@@ -77,9 +73,8 @@ const IndexPage = () => {
       <ThemeProvider theme={chosenTheme}>
         <CssBaseline />
         <SEO title="Home" />
-        <LangContext.Provider value={[isPolishContext, setIsPolishContext]}>
-          <Tooltip title="Add" arrow TransitionComponent={Zoom}>
-
+        <LangContext.Provider value={[isPl, setIsPl]}>
+          <Tooltip title={dict.themeBtn[isPl ? 'pl' : 'en']} arrow TransitionComponent={Zoom}>
             <IconButton
               edge="end"
               color="primary"
@@ -94,7 +89,7 @@ const IndexPage = () => {
             </IconButton>
           </Tooltip>
           <LangBtn />
-          <Typography>{dict.test[isPolishContext ? 'pl' : 'en']}</Typography>
+          <Typography>{dict.test[isPl ? 'pl' : 'en']}</Typography>
           <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>
           <Typography>aaaaaaaaaaaaaaaaa</Typography>
           <Typography>aaaaaaaaaaaaaaaaa</Typography>
