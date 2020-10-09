@@ -64,7 +64,7 @@ const IndexPage = () => {
   );
 
   useEffect(() => {
-    setIsDark(getItemByKeyIfPossible(localStorageKey.language) !== langNames.en);
+    setIsDark(getItemByKeyIfPossible(localStorageKey.theme) !== themeNames.light);
     setIsPl(getItemByKeyIfPossible(localStorageKey.language) !== langNames.en);
   }, []);
 
