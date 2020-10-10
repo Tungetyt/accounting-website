@@ -22,7 +22,6 @@ export const appTheme = {
       type: themeNames.light,
       primary: {
         main: indigo['900'],
-        contrastText: indigo['50'],
       },
       background: {
         default: indigo['50'],
@@ -38,7 +37,6 @@ export const appTheme = {
       type: themeNames.dark,
       primary: {
         main: indigo['50'],
-        contrastText: indigo['900'],
       },
       background: {
         default: indigo['900'],

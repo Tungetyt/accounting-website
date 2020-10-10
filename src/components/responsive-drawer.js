@@ -19,6 +19,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import Button from '@material-ui/core/Button';
+import { red, yellow } from '@material-ui/core/colors';
 import {
   getItemByKeyIfPossible, localStorageKey, langNames, appTheme, themeNames, drawerWidth,
 } from '../helpers';
@@ -55,6 +56,10 @@ function ResponsiveDrawer(props) {
       opacity: 0.85,
       backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.zeroElevation.backgroundColor,
     },
+    // listItemText: {
+    //   primary:
+    // }
+
   }));
   const classes = useStyles();
 
@@ -62,25 +67,39 @@ function ResponsiveDrawer(props) {
     setIsMobileOpen((prevIsMobileOpen) => !prevIsMobileOpen);
   };
 
+  const theme = useTheme();
+
   const drawer = (
     <div>
       <div className={classes.toolbar} />
       <List>
         <ListItem button>
-          <ListItemIcon><InboxIcon /></ListItemIcon>
-          <ListItemText primary="About" />
+          <ListItemIcon><InboxIcon color="primary" /></ListItemIcon>
+          <ListItemText
+            disableTypography
+            primary={<Typography type="body2" style={{ color: theme.palette.primary.main }}>MyTitle</Typography>}
+          />
         </ListItem>
         <ListItem button>
-          <ListItemIcon><InboxIcon /></ListItemIcon>
-          <ListItemText primary="About" />
+          <ListItemIcon><InboxIcon color="primary" /></ListItemIcon>
+          <ListItemText
+            disableTypography
+            primary={<Typography type="body2" style={{ color: theme.palette.primary.main }}>MyTitle</Typography>}
+          />
         </ListItem>
         <ListItem button>
-          <ListItemIcon><InboxIcon /></ListItemIcon>
-          <ListItemText primary="About" />
+          <ListItemIcon><InboxIcon color="primary" /></ListItemIcon>
+          <ListItemText
+            disableTypography
+            primary={<Typography type="body2" style={{ color: theme.palette.primary.main }}>MyTitle</Typography>}
+          />
         </ListItem>
         <ListItem button>
-          <ListItemIcon><InboxIcon /></ListItemIcon>
-          <ListItemText primary="About" />
+          <ListItemIcon><InboxIcon color="primary" /></ListItemIcon>
+          <ListItemText
+            disableTypography
+            primary={<Typography type="body2" style={{ color: theme.palette.primary.main }}>MyTitle</Typography>}
+          />
         </ListItem>
       </List>
     </div>
@@ -105,7 +124,7 @@ function ResponsiveDrawer(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
+          <Typography variant="h6" noWrap color="primary">
             Responsive drawer
           </Typography>
         </Toolbar>
