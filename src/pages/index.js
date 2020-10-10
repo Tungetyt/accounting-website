@@ -27,40 +27,11 @@ import LangBtn from '../components/lang-btn';
 import LangContext from '../context/lang-context';
 import ThemeBtn from '../components/theme-btn';
 import ScrollTop from '../components/scroll-top';
-import { getItemByKeyIfPossible, localStorageKey, langNames } from '../helpers';
+import {
+  getItemByKeyIfPossible, localStorageKey, langNames, theme, themeNames,
+} from '../helpers';
 
 const IndexPage = () => {
-  const themeNames = {
-    light: 'light',
-    dark: 'dark',
-  };
-
-  const theme = {
-    light: {
-      palette: {
-        type: themeNames.light,
-        primary: {
-          main: indigo['900'],
-        },
-        background: {
-          default: indigo['50'],
-        },
-      },
-
-    },
-    dark: {
-      palette: {
-        type: themeNames.dark,
-        primary: {
-          main: indigo['50'],
-        },
-        background: {
-          default: indigo['900'],
-        },
-      },
-    },
-  };
-
   const [isDark, setIsDark] = useState(
     true,
   );
