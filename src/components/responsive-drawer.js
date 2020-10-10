@@ -20,11 +20,9 @@ import clsx from 'clsx';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import Button from '@material-ui/core/Button';
 import {
-  getItemByKeyIfPossible, localStorageKey, langNames, appTheme, themeNames,
+  getItemByKeyIfPossible, localStorageKey, langNames, appTheme, themeNames, drawerWidth,
 } from '../helpers';
 import { LangContext, ColorContext } from '../context/contexts';
-
-const drawerWidth = 240;
 
 function ResponsiveDrawer(props) {
   const { window } = props;
@@ -52,6 +50,10 @@ function ResponsiveDrawer(props) {
     content: {
       flexGrow: 1,
       padding: theme.spacing(3),
+    },
+    appBar: {
+      opacity: 0.85,
+      backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.zeroElevation.backgroundColor,
     },
   }));
   const classes = useStyles();
@@ -92,7 +94,6 @@ function ResponsiveDrawer(props) {
       <AppBar
         position="fixed"
         className={classes.appBar}
-        style={{ background: 'rgba(63, 81, 181,0.85)', color: 'white' }}
       >
         <Toolbar>
           <IconButton
@@ -119,6 +120,7 @@ function ResponsiveDrawer(props) {
             anchor="right"
             open={isMobileOpen}
             onClose={handleDrawerToggle}
+            onOpen={handleDrawerToggle}
             classes={{
               paper: classes.drawerPaper,
             }}

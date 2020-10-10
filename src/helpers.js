@@ -28,7 +28,7 @@ export const appTheme = {
         default: indigo['50'],
       },
       zeroElevation: {
-        backgroundColor: indigo['200'],
+        backgroundColor: indigo['100'],
       },
     },
 
@@ -44,8 +44,10 @@ export const appTheme = {
         default: indigo['900'],
       },
       zeroElevation: {
-        backgroundColor: indigo['700'],
+        backgroundColor: indigo['800'],
       },
     },
   },
 };
+
+export const drawerWidth = 180;
