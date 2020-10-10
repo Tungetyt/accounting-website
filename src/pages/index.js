@@ -32,13 +32,6 @@ import {
 } from '../helpers';
 import ResponsiveDrawer from '../components/responsive-drawer';
 
-const useStyles = makeStyles((theme) => ({
-
-  scrollTop: {
-    zIndex: 2000,
-  },
-
-}));
 const IndexPage = () => {
   const [isDark, setIsDark] = useState(
     true,
@@ -53,7 +46,6 @@ const IndexPage = () => {
   }, []);
 
   const chosenTheme = createMuiTheme(isDark ? appTheme.dark : appTheme.light);
-  const classes = useStyles();
 
   return (
     <>
@@ -123,7 +115,7 @@ const IndexPage = () => {
               <Typography>aaaaaaaaaaaaaaaaa</Typography>
               <Typography>aaaaaaaaaaaaaaaaa</Typography>
             </main>
-            <ScrollTop className={classes.scrollTop}>
+            <ScrollTop>
               <Fab color="secondary" size="small" aria-label="scroll back to top">
                 <KeyboardArrowUpIcon />
               </Fab>
