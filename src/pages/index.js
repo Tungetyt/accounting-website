@@ -24,12 +24,13 @@ import Image from '../components/image';
 import Layout from '../components/layout';
 import dict from '../dict';
 import LangBtn from '../components/lang-btn';
-import LangContext from '../context/lang-context';
+import { LangContext, ColorContext } from '../context/contexts';
 import ThemeBtn from '../components/theme-btn';
 import ScrollTop from '../components/scroll-top';
 import {
-  getItemByKeyIfPossible, localStorageKey, langNames, theme, themeNames,
+  getItemByKeyIfPossible, localStorageKey, langNames, appTheme, themeNames,
 } from '../helpers';
+import ResponsiveDrawer from '../components/responsive-drawer';
 
 const IndexPage = () => {
   const [isDark, setIsDark] = useState(
@@ -44,75 +45,83 @@ const IndexPage = () => {
     setIsPl(getItemByKeyIfPossible(localStorageKey.language) !== langNames.en);
   }, []);
 
-  const chosenTheme = createMuiTheme(isDark ? theme.dark : theme.light);
+  const chosenTheme = createMuiTheme(isDark ? appTheme.dark : appTheme.light);
 
   return (
     <>
       <ThemeProvider theme={chosenTheme}>
-        <CssBaseline />
-        <SEO title="Vavicom" lang="pl" />
-        <div id="back-to-top-anchor" />
-        <LangContext.Provider value={[isPl, setIsPl]}>
-          <Tooltip title={dict.themeBtn[isPl ? 'pl' : 'en']} arrow TransitionComponent={Zoom} id="back-to-top-anchor">
-            <IconButton
-              edge="end"
-              color="primary"
-              aria-label="mode"
-              onClick={() => {
-                const newTheme = isDark ? themeNames.light : themeNames.dark;
-                if (typeof window !== 'undefined') {
-                  window.localStorage.setItem(localStorageKey.theme, newTheme);
-                }
-                setIsDark((prevIsDark) => !prevIsDark);
-              }}
-            >
-              {isDark ? <Brightness7Icon /> : <Brightness3Icon />}
-            </IconButton>
-          </Tooltip>
-          <LangBtn />
-          <Typography>{dict.test[isPl ? 'pl' : 'en']}</Typography>
-          <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>
-          <Brightness7Icon />
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <Typography>aaaaaaaaaaaaaaaaa</Typography>
-          <ScrollTop>
-            <Fab color="secondary" size="small" aria-label="scroll back to top">
-              <KeyboardArrowUpIcon />
-            </Fab>
-          </ScrollTop>
-        </LangContext.Provider>
+        <ColorContext.Provider value={[isDark, setIsDark]}>
+          <LangContext.Provider value={[isPl, setIsPl]}>
 
+            <CssBaseline />
+            <SEO title="Vavicom" lang="pl" />
+            <div id="back-to-top-anchor" />
+            <ResponsiveDrawer />
+            <main>
+              <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>bbbbbbbbbbbbbbbbbbbbbb</Typography>
+              <Typography>cccccccccccccccc</Typography>
+              <Typography>dddddddddddddddddddddddddd</Typography>
+              <Typography>eeeeeeeeeeeeeeeeeeeeeee</Typography>
+              <Tooltip title={dict.themeBtn[isPl ? 'pl' : 'en']} arrow TransitionComponent={Zoom} id="back-to-top-anchor">
+                <IconButton
+                  edge="end"
+                  color="primary"
+                  aria-label="mode"
+                  onClick={() => {
+                    const newTheme = isDark ? themeNames.light : themeNames.dark;
+                    if (typeof window !== 'undefined') {
+                      window.localStorage.setItem(localStorageKey.theme, newTheme);
+                    }
+                    setIsDark((prevIsDark) => !prevIsDark);
+                  }}
+                >
+                  {isDark ? <Brightness7Icon /> : <Brightness3Icon />}
+                </IconButton>
+              </Tooltip>
+              <LangBtn />
+              <Typography>{dict.test[isPl ? 'pl' : 'en']}</Typography>
+              <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>bbbbbbbbbbbbbbbbbbbbbb</Typography>
+              <Typography>cccccccccccccccc</Typography>
+              <Typography>dddddddddddddddddddddddddd</Typography>
+              <Typography>eeeeeeeeeeeeeeeeeeeeeee</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+              <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            </main>
+            <ScrollTop>
+              <Fab color="secondary" size="small" aria-label="scroll back to top">
+                <KeyboardArrowUpIcon />
+              </Fab>
+            </ScrollTop>
+          </LangContext.Provider>
+        </ColorContext.Provider>
       </ThemeProvider>
     </>
   );

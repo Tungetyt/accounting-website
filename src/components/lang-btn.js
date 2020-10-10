@@ -15,7 +15,7 @@ import Image from './image';
 import Layout from './layout';
 import dict from '../dict';
 import LangBtnContent from './lang-btn-content';
-import LangContext from '../context/lang-context';
+import { LangContext } from '../context/contexts';
 import { getItemByKeyIfPossible, localStorageKey, langNames } from '../helpers';
 
 const LangBtn = () => {
@@ -23,7 +23,6 @@ const LangBtn = () => {
 
   return (
     <Tooltip title={dict.langBtn[isPl ? 'pl' : 'en']} arrow TransitionComponent={Zoom}>
-
       <IconButton
         aria-label="language"
         onClick={() => {
