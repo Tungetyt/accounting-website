@@ -25,6 +25,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
 import HelpIcon from '@material-ui/icons/Help';
 import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 import dict from '../dict';
 import { LangContext, ColorContext } from '../context/contexts';
 import {
@@ -81,39 +82,39 @@ function ResponsiveDrawer(props) {
     <div>
       <div className={classes.toolbar} />
       <List>
-        <ListItem button>
+        <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
           <ListItemIcon><HomeIcon color="primary" /></ListItemIcon>
           <ListItemText
             disableTypography
-            primary={<Typography type="body2" style={{ color: theme.palette.primary.main }}>{dict.home[isPl ? 'pl' : 'en']}</Typography>}
+            primary={<Typography type="body2" style={{ color: theme.palette.primary.main, fontWeight: 'bold' }}>{dict.home[isPl ? 'pl' : 'en']}</Typography>}
           />
         </ListItem>
-        <ListItem button>
+        <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
           <ListItemIcon><BusinessCenterIcon color="primary" /></ListItemIcon>
           <ListItemText
             disableTypography
-            primary={<Typography type="body2" style={{ color: theme.palette.primary.main }}>{dict.services[isPl ? 'pl' : 'en']}</Typography>}
+            primary={<Typography type="body2" style={{ color: theme.palette.primary.main, fontWeight: 'bold' }}>{dict.services[isPl ? 'pl' : 'en']}</Typography>}
           />
         </ListItem>
-        <ListItem button>
+        <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
           <ListItemIcon><InfoIcon color="primary" /></ListItemIcon>
           <ListItemText
             disableTypography
-            primary={<Typography type="body2" style={{ color: theme.palette.primary.main }}>{dict.about[isPl ? 'pl' : 'en']}</Typography>}
+            primary={<Typography type="body2" style={{ color: theme.palette.primary.main, fontWeight: 'bold' }}>{dict.about[isPl ? 'pl' : 'en']}</Typography>}
           />
         </ListItem>
-        <ListItem button>
+        <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
           <ListItemIcon><HelpIcon color="primary" /></ListItemIcon>
           <ListItemText
             disableTypography
-            primary={<Typography type="body2" style={{ color: theme.palette.primary.main }}>{dict.faq[isPl ? 'pl' : 'en']}</Typography>}
+            primary={<Typography type="body2" style={{ color: theme.palette.primary.main, fontWeight: 'bold' }}>{dict.faq[isPl ? 'pl' : 'en']}</Typography>}
           />
         </ListItem>
-        <ListItem button>
+        <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
           <ListItemIcon><ContactPhoneIcon color="primary" /></ListItemIcon>
           <ListItemText
             disableTypography
-            primary={<Typography type="body2" style={{ color: theme.palette.primary.main }}>{dict.contact[isPl ? 'pl' : 'en']}</Typography>}
+            primary={<Typography type="body2" style={{ color: theme.palette.primary.main, fontWeight: 'bold' }}>{dict.contact[isPl ? 'pl' : 'en']}</Typography>}
           />
         </ListItem>
       </List>

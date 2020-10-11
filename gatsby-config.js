@@ -28,7 +28,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-material-ui',
-    'gatsby-plugin-scroll-indicator',
     {
       resolve: 'gatsby-plugin-scroll-indicator',
       options: {
@@ -44,6 +43,15 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/, // See below to configure properly
+        },
+      },
+    },
+    'gatsby-plugin-smoothscroll',
   ],
 };
