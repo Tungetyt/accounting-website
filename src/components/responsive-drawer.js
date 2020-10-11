@@ -20,11 +20,16 @@ import clsx from 'clsx';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import Button from '@material-ui/core/Button';
 import { red, yellow } from '@material-ui/core/colors';
+import InfoIcon from '@material-ui/icons/Info';
+import HomeIcon from '@material-ui/icons/Home';
+import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
+import HelpIcon from '@material-ui/icons/Help';
+import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
+import dict from '../dict';
+import { LangContext, ColorContext } from '../context/contexts';
 import {
   getItemByKeyIfPossible, localStorageKey, langNames, appTheme, themeNames, drawerWidth,
 } from '../helpers';
-import { LangContext, ColorContext } from '../context/contexts';
-import dict from '../dict';
 
 function ResponsiveDrawer(props) {
   const { window } = props;
@@ -77,28 +82,35 @@ function ResponsiveDrawer(props) {
       <div className={classes.toolbar} />
       <List>
         <ListItem button>
-          <ListItemIcon><InboxIcon color="primary" /></ListItemIcon>
+          <ListItemIcon><HomeIcon color="primary" /></ListItemIcon>
           <ListItemText
             disableTypography
             primary={<Typography type="body2" style={{ color: theme.palette.primary.main }}>{dict.home[isPl ? 'pl' : 'en']}</Typography>}
           />
         </ListItem>
         <ListItem button>
-          <ListItemIcon><InboxIcon color="primary" /></ListItemIcon>
+          <ListItemIcon><BusinessCenterIcon color="primary" /></ListItemIcon>
           <ListItemText
             disableTypography
             primary={<Typography type="body2" style={{ color: theme.palette.primary.main }}>{dict.services[isPl ? 'pl' : 'en']}</Typography>}
           />
         </ListItem>
         <ListItem button>
-          <ListItemIcon><InboxIcon color="primary" /></ListItemIcon>
+          <ListItemIcon><InfoIcon color="primary" /></ListItemIcon>
           <ListItemText
             disableTypography
             primary={<Typography type="body2" style={{ color: theme.palette.primary.main }}>{dict.about[isPl ? 'pl' : 'en']}</Typography>}
           />
         </ListItem>
         <ListItem button>
-          <ListItemIcon><InboxIcon color="primary" /></ListItemIcon>
+          <ListItemIcon><HelpIcon color="primary" /></ListItemIcon>
+          <ListItemText
+            disableTypography
+            primary={<Typography type="body2" style={{ color: theme.palette.primary.main }}>{dict.faq[isPl ? 'pl' : 'en']}</Typography>}
+          />
+        </ListItem>
+        <ListItem button>
+          <ListItemIcon><ContactPhoneIcon color="primary" /></ListItemIcon>
           <ListItemText
             disableTypography
             primary={<Typography type="body2" style={{ color: theme.palette.primary.main }}>{dict.contact[isPl ? 'pl' : 'en']}</Typography>}

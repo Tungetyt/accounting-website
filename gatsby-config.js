@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Vavicom',
     description: 'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
     author: '@gatsbyjs',
   },
@@ -18,13 +18,13 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Vavicom Accounting',
+        short_name: 'Vavicom',
         start_url: '/',
         background_color: '#5c6bc0',
         theme_color: '#5c6bc0',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/accounting_2.jpg', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-material-ui',

@@ -27,6 +27,10 @@ const dict = {
     pl: 'Powrót do góry',
     en: 'Back to top',
   },
+  faq: {
+    pl: 'FAQ',
+    en: 'FAQ',
+  },
 };
 
 export default dict;
