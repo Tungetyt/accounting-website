@@ -97,6 +97,7 @@ function ResponsiveDrawer(props) {
           <LangBtn />
         </Grid>
       </Grid>
+      <Divider />
       <List>
         <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
           <ListItemIcon><HomeIcon color="primary" /></ListItemIcon>
