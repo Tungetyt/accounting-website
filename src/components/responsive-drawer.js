@@ -59,9 +59,9 @@ function ResponsiveDrawer(props) {
       opacity: 0.85,
       backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.zeroElevation.backgroundColor,
     },
-    // listItemText: {
-    //   primary:
-    // }
+    listItemText: {
+      padding: 0,
+    },
 
   }));
   const classes = useStyles();
@@ -80,7 +80,7 @@ function ResponsiveDrawer(props) {
           <ListItemIcon><InboxIcon color="primary" /></ListItemIcon>
           <ListItemText
             disableTypography
-            primary={<Typography type="body2" style={{ color: theme.palette.primary.main }}>MyTitle</Typography>}
+            primary={<Typography type="body2" style={{ color: theme.palette.primary.main }}>{dict.home[isPl ? 'pl' : 'en']}</Typography>}
           />
         </ListItem>
         <ListItem button>
@@ -94,14 +94,14 @@ function ResponsiveDrawer(props) {
           <ListItemIcon><InboxIcon color="primary" /></ListItemIcon>
           <ListItemText
             disableTypography
-            primary={<Typography type="body2" style={{ color: theme.palette.primary.main }}>MyTitle</Typography>}
+            primary={<Typography type="body2" style={{ color: theme.palette.primary.main }}>{dict.about[isPl ? 'pl' : 'en']}</Typography>}
           />
         </ListItem>
         <ListItem button>
           <ListItemIcon><InboxIcon color="primary" /></ListItemIcon>
           <ListItemText
             disableTypography
-            primary={<Typography type="body2" style={{ color: theme.palette.primary.main }}>MyTitle</Typography>}
+            primary={<Typography type="body2" style={{ color: theme.palette.primary.main }}>{dict.contact[isPl ? 'pl' : 'en']}</Typography>}
           />
         </ListItem>
       </List>

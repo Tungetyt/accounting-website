@@ -115,9 +115,11 @@ const IndexPage = () => {
               <Typography>aaaaaaaaaaaaaaaaa</Typography>
             </main>
             <ScrollTop>
-              <Fab color="primary" size="small" aria-label="scroll back to top">
-                <KeyboardArrowUpIcon />
-              </Fab>
+              <Tooltip placement="top" title={dict.backToTopBtn[isPl ? 'pl' : 'en']} arrow TransitionComponent={Zoom} id="back-to-top-anchor">
+                <Fab color="primary" size="small" aria-label="scroll back to top">
+                  <KeyboardArrowUpIcon />
+                </Fab>
+              </Tooltip>
             </ScrollTop>
           </LangContext.Provider>
         </ColorContext.Provider>
