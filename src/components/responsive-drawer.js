@@ -26,11 +26,13 @@ import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
 import HelpIcon from '@material-ui/icons/Help';
 import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
 import scrollTo from 'gatsby-plugin-smoothscroll';
+import { Grid, Paper } from '@material-ui/core';
 import dict from '../dict';
 import { LangContext, ColorContext } from '../context/contexts';
 import {
   getItemByKeyIfPossible, localStorageKey, langNames, appTheme, themeNames, drawerWidth,
 } from '../helpers';
+import Brain from '../images/Brain_Drawing.svg';
 
 function ResponsiveDrawer(props) {
   const { window } = props;
@@ -55,14 +57,17 @@ function ResponsiveDrawer(props) {
     toolbar: theme.mixins.toolbar,
     drawerPaper: {
       width: drawerWidth,
-      backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.zeroElevation.backgroundColor,
+      backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.background.default,
     },
     content: {
       flexGrow: 1,
       padding: theme.spacing(3),
     },
     appBar: {
-      opacity: 0.85,
+      backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.zeroElevation.backgroundColor,
+      zIndex: theme.zIndex.drawer + 1,
+    },
+    appBarPaper: {
       backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.zeroElevation.backgroundColor,
     },
     listItemText: {
@@ -129,20 +134,46 @@ function ResponsiveDrawer(props) {
       <AppBar
         position="fixed"
         className={classes.appBar}
+        style={{ background: 'transparent', boxShadow: 'none' }}
       >
         <Toolbar>
-          <IconButton
-            color="primary"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            className={classes.menuButton}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap color="primary">
-            Responsive drawer
-          </Typography>
+          <Paper className={classes.appBarPaper}>
+
+            <Grid
+              container
+              direction="row"
+              justify="space-between"
+              alignItems="center"
+              spacing={3}
+            >
+              <Grid item>
+                <IconButton
+                  color="primary"
+                  aria-label="open drawer"
+                  edge="start"
+                  onClick={handleDrawerToggle}
+                  className={classes.menuButton}
+                >
+                  <MenuIcon />
+                </IconButton>
+              </Grid>
+              <Grid item>
+
+                <Brain width={50} height={50} fill="white" />
+              </Grid>
+
+              <Grid item>
+
+                <Typography variant="h6" noWrap color="primary">
+                  Vavicom
+                </Typography>
+                {' '}
+
+              </Grid>
+
+            </Grid>
+          </Paper>
+
         </Toolbar>
       </AppBar>
 

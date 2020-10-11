@@ -57,6 +57,7 @@ const IndexPage = () => {
             <SEO title="Vavicom" lang="pl" />
             <div id="back-to-top-anchor" />
             <ResponsiveDrawer />
+            <Paper />
             <main>
               <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>
               <Typography>bbbbbbbbbbbbbbbbbbbbbb</Typography>
