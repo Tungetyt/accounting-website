@@ -24,11 +24,14 @@ import {
   getItemByKeyIfPossible, localStorageKey, langNames, appTheme, themeNames, drawerWidth,
 } from '../helpers';
 import { LangContext, ColorContext } from '../context/contexts';
+import dict from '../dict';
 
 function ResponsiveDrawer(props) {
   const { window } = props;
   const [isMobileOpen, setIsMobileOpen] = React.useState(false);
   const [isDark, setIsDark] = useContext(ColorContext);
+  const [isPl, setIsPl] = useContext(LangContext);
+
   const useStyles = makeStyles((theme) => ({
     drawer: {
       [theme.breakpoints.up('sm')]: {
@@ -84,7 +87,7 @@ function ResponsiveDrawer(props) {
           <ListItemIcon><InboxIcon color="primary" /></ListItemIcon>
           <ListItemText
             disableTypography
-            primary={<Typography type="body2" style={{ color: theme.palette.primary.main }}>MyTitle</Typography>}
+            primary={<Typography type="body2" style={{ color: theme.palette.primary.main }}>{dict.services[isPl ? 'pl' : 'en']}</Typography>}
           />
         </ListItem>
         <ListItem button>

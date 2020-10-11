@@ -80,7 +80,6 @@ const IndexPage = () => {
                 </IconButton>
               </Tooltip>
               <LangBtn />
-              <Typography>{dict.test[isPl ? 'pl' : 'en']}</Typography>
               <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>
               <Typography>bbbbbbbbbbbbbbbbbbbbbb</Typography>
               <Typography>cccccccccccccccc</Typography>
@@ -116,7 +115,7 @@ const IndexPage = () => {
               <Typography>aaaaaaaaaaaaaaaaa</Typography>
             </main>
             <ScrollTop>
-              <Fab color="secondary" size="small" aria-label="scroll back to top">
+              <Fab color="primary" size="small" aria-label="scroll back to top">
                 <KeyboardArrowUpIcon />
               </Fab>
             </ScrollTop>
