@@ -22,8 +22,10 @@ import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import SEO from '../components/seo';
 import Image from '../components/image';
 import Layout from '../components/layout';
-import dict from '../dict';
+import ColorBtn from '../components/color-btn';
 import LangBtn from '../components/lang-btn';
+
+import dict from '../dict';
 import { LangContext, ColorContext } from '../context/contexts';
 import ThemeBtn from '../components/theme-btn';
 import ScrollTop from '../components/scroll-top';
@@ -64,23 +66,6 @@ const IndexPage = () => {
               <Typography>cccccccccccccccc</Typography>
               <Typography>dddddddddddddddddddddddddd</Typography>
               <Typography>eeeeeeeeeeeeeeeeeeeeeee</Typography>
-              <Tooltip title={dict.themeBtn[isPl ? 'pl' : 'en']} arrow TransitionComponent={Zoom} id="back-to-top-anchor">
-                <IconButton
-                  edge="end"
-                  color="primary"
-                  aria-label="mode"
-                  onClick={() => {
-                    const newTheme = isDark ? themeNames.light : themeNames.dark;
-                    if (typeof window !== 'undefined') {
-                      window.localStorage.setItem(localStorageKey.theme, newTheme);
-                    }
-                    setIsDark((prevIsDark) => !prevIsDark);
-                  }}
-                >
-                  {isDark ? <Brightness7Icon /> : <Brightness3Icon />}
-                </IconButton>
-              </Tooltip>
-              <LangBtn />
               <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>
               <Typography>bbbbbbbbbbbbbbbbbbbbbb</Typography>
               <Typography>cccccccccccccccc</Typography>

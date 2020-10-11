@@ -33,6 +33,8 @@ import {
   getItemByKeyIfPossible, localStorageKey, langNames, appTheme, themeNames, drawerWidth,
 } from '../helpers';
 import Brain from '../images/Brain_Drawing.svg';
+import ColorBtn from './color-btn';
+import LangBtn from './lang-btn';
 
 function ResponsiveDrawer(props) {
   const { window } = props;
@@ -54,7 +56,6 @@ function ResponsiveDrawer(props) {
       },
     },
     // necessary for content to be below app bar
-    toolbar: theme.mixins.toolbar,
     drawerPaper: {
       width: drawerWidth,
       backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.background.default,
@@ -64,16 +65,12 @@ function ResponsiveDrawer(props) {
       padding: theme.spacing(3),
     },
     appBar: {
-      backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.zeroElevation.backgroundColor,
+      backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.elevation1.backgroundColor,
       zIndex: theme.zIndex.drawer + 1,
     },
-    appBarPaper: {
-      backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.zeroElevation.backgroundColor,
+    elevation2: {
+      backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor,
     },
-    listItemText: {
-      padding: 0,
-    },
-
   }));
   const classes = useStyles();
 
@@ -85,7 +82,21 @@ function ResponsiveDrawer(props) {
 
   const drawer = (
     <div>
-      <div className={classes.toolbar} />
+      <Grid
+        container
+        direction="row"
+        justify="space-around"
+        alignItems="center"
+        spacing={0}
+
+      >
+        <Grid item>
+          <ColorBtn />
+        </Grid>
+        <Grid item>
+          <LangBtn />
+        </Grid>
+      </Grid>
       <List>
         <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
           <ListItemIcon><HomeIcon color="primary" /></ListItemIcon>
@@ -131,51 +142,50 @@ function ResponsiveDrawer(props) {
   return (
     <div className={classes.root}>
 
-      <AppBar
+      {/* <AppBar
         position="fixed"
         className={classes.appBar}
         style={{ background: 'transparent', boxShadow: 'none' }}
       >
-        <Toolbar>
-          <Paper className={classes.appBarPaper}>
+        <Toolbar> */}
+      {/* <Paper className={classes.elevation2}>
 
-            <Grid
-              container
-              direction="row"
-              justify="space-between"
-              alignItems="center"
-              spacing={3}
+        <Grid
+          container
+          direction="row"
+          justify="space-between"
+          alignItems="center"
+          spacing={3}
+        >
+          <Grid item>
+            <IconButton
+              color="primary"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              className={classes.menuButton}
             >
-              <Grid item>
-                <IconButton
-                  color="primary"
-                  aria-label="open drawer"
-                  edge="start"
-                  onClick={handleDrawerToggle}
-                  className={classes.menuButton}
-                >
-                  <MenuIcon />
-                </IconButton>
-              </Grid>
-              <Grid item>
+              <MenuIcon />
+            </IconButton>
+          </Grid>
+          <Grid item>
 
-                <Brain width={50} height={50} fill="white" />
-              </Grid>
+            <Brain width={50} height={50} fill="white" />
+          </Grid>
 
-              <Grid item>
+          <Grid item>
 
-                <Typography variant="h6" noWrap color="primary">
-                  Vavicom
-                </Typography>
-                {' '}
+            <Typography variant="h6" noWrap color="primary">
+              Vavicom
+            </Typography>
 
-              </Grid>
+          </Grid>
 
-            </Grid>
-          </Paper>
+        </Grid>
+      </Paper> */}
 
-        </Toolbar>
-      </AppBar>
+      {/* </Toolbar>
+      </AppBar> */}
 
       <nav className={classes.drawer} aria-label="mailbox folders">
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}

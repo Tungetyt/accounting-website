@@ -26,8 +26,11 @@ export const appTheme = {
       background: {
         default: indigo['50'],
       },
-      zeroElevation: {
+      elevation1: {
         backgroundColor: indigo['100'],
+      },
+      elevation2: {
+        backgroundColor: indigo['700'],
       },
     },
 
@@ -41,8 +44,11 @@ export const appTheme = {
       background: {
         default: indigo['900'],
       },
-      zeroElevation: {
+      elevation1: {
         backgroundColor: indigo['800'],
+      },
+      elevation2: {
+        backgroundColor: indigo['700'],
       },
     },
   },
