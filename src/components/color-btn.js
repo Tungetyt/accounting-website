@@ -1,4 +1,6 @@
-import React, { useState, useContext } from 'react';
+import React, {
+  useState, useContext, useEffect, useLayoutEffect, useRef,
+} from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -57,6 +59,19 @@ import ResponsiveDrawer from './responsive-drawer';
 const ColorBtn = () => {
   const [isDark, setIsDark] = useContext(ColorContext);
   const [isPl, setIsPl] = useContext(LangContext);
+
+  const firstUpdate = useRef(true);
+  useLayoutEffect(() => {
+    if (firstUpdate.current) {
+      firstUpdate.current = false;
+      return;
+    }
+    const newTheme = isDark ? themeNames.dark : themeNames.light;
+    if (typeof window !== 'undefined') {
+      window.localStorage.setItem(localStorageKey.theme, newTheme);
+    }
+  }, [isDark]);
+
   return (
     <Tooltip title={dict.themeBtn[isPl ? 'pl' : 'en']} arrow TransitionComponent={Zoom} id="back-to-top-anchor">
       <IconButton
@@ -64,10 +79,6 @@ const ColorBtn = () => {
         color="primary"
         aria-label="mode"
         onClick={() => {
-          const newTheme = isDark ? themeNames.light : themeNames.dark;
-          if (typeof window !== 'undefined') {
-            window.localStorage.setItem(localStorageKey.theme, newTheme);
-          }
           setIsDark((prevIsDark) => !prevIsDark);
         }}
       >
