@@ -53,5 +53,18 @@ module.exports = {
       },
     },
     'gatsby-plugin-smoothscroll',
+    {
+      resolve: 'gatsby-plugin-intl',
+      options: {
+        // language JSON resource path
+        path: `${__dirname}/src/intl`,
+        // supported language
+        languages: ['pl', 'en'],
+        // language file path
+        defaultLanguage: 'pl',
+        // option to redirect to `/ko` when connecting `/`
+        redirect: true,
+      },
+    },
   ],
 };

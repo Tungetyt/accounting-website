@@ -19,6 +19,7 @@ import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Fab from '@material-ui/core/Fab';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import { useIntl, Link, FormattedMessage } from 'gatsby-plugin-intl';
 import SEO from '../components/seo';
 import Image from '../components/image';
 import Layout from '../components/layout';
@@ -41,7 +42,7 @@ const IndexPage = () => {
   const [isPl, setIsPl] = useState(
     true,
   );
-
+  const intl = useIntl();
   useEffect(() => {
     setIsDark(getItemByKeyIfPossible(localStorageKey.theme) !== themeNames.light);
     setIsPl(getItemByKeyIfPossible(localStorageKey.language) !== langNames.en);
@@ -56,7 +57,7 @@ const IndexPage = () => {
           <LangContext.Provider value={[isPl, setIsPl]}>
 
             <CssBaseline />
-            <SEO title="Vavicom" lang="pl" />
+            <SEO title={intl.formatMessage({ id: 'title' })} />
             <div id="back-to-top-anchor" />
             <ResponsiveDrawer />
             <Paper />
