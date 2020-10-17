@@ -39,13 +39,10 @@ const IndexPage = (props) => {
   const [isDark, setIsDark] = useState(
     true,
   );
-  const [isPl, setIsPl] = useState(
-    true,
-  );
+
   const intl = useIntl();
   useEffect(() => {
     setIsDark(getItemByKeyIfPossible(localStorageKey.theme) !== themeNames.light);
-    setIsPl(getItemByKeyIfPossible(localStorageKey.language) !== langNames.en);
   }, []);
 
   const chosenTheme = createMuiTheme(isDark ? appTheme.dark : appTheme.light);
@@ -54,61 +51,58 @@ const IndexPage = (props) => {
     <>
       <ThemeProvider theme={chosenTheme}>
         <ColorContext.Provider value={[isDark, setIsDark]}>
-          <LangContext.Provider value={[isPl, setIsPl]}>
-
-            <CssBaseline />
-            <SEO title={intl.formatMessage({ id: 'title' })} />
-            <div id="back-to-top-anchor" />
-            <ResponsiveDrawer props={props} />
-            <Paper />
-            <main>
-              <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>bbbbbbbbbbbbbbbbbbbbbb</Typography>
-              <Typography>cccccccccccccccc</Typography>
-              <Typography>dddddddddddddddddddddddddd</Typography>
-              <Typography>eeeeeeeeeeeeeeeeeeeeeee</Typography>
-              <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>bbbbbbbbbbbbbbbbbbbbbb</Typography>
-              <Typography>cccccccccccccccc</Typography>
-              <Typography>dddddddddddddddddddddddddd</Typography>
-              <Typography>eeeeeeeeeeeeeeeeeeeeeee</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-              <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            </main>
-            <ScrollTop>
-              <Tooltip placement="top" title={dict.backToTopBtn[isPl ? 'pl' : 'en']} arrow TransitionComponent={Zoom} id="back-to-top-anchor">
-                <Fab color="primary" size="small" aria-label="scroll back to top">
-                  <KeyboardArrowUpIcon />
-                </Fab>
-              </Tooltip>
-            </ScrollTop>
-          </LangContext.Provider>
+          <CssBaseline />
+          <SEO title={intl.formatMessage({ id: 'title' })} />
+          <div id="back-to-top-anchor" />
+          <ResponsiveDrawer props={props} />
+          <Paper />
+          <main>
+            <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>bbbbbbbbbbbbbbbbbbbbbb</Typography>
+            <Typography>cccccccccccccccc</Typography>
+            <Typography>dddddddddddddddddddddddddd</Typography>
+            <Typography>eeeeeeeeeeeeeeeeeeeeeee</Typography>
+            <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>bbbbbbbbbbbbbbbbbbbbbb</Typography>
+            <Typography>cccccccccccccccc</Typography>
+            <Typography>dddddddddddddddddddddddddd</Typography>
+            <Typography>eeeeeeeeeeeeeeeeeeeeeee</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+          </main>
+          <ScrollTop>
+            <Tooltip placement="top" title={intl.formatMessage({ id: 'backToTopBtn' })} arrow TransitionComponent={Zoom} id="back-to-top-anchor">
+              <Fab color="primary" size="small" aria-label="scroll back to top">
+                <KeyboardArrowUpIcon />
+              </Fab>
+            </Tooltip>
+          </ScrollTop>
         </ColorContext.Provider>
       </ThemeProvider>
     </>

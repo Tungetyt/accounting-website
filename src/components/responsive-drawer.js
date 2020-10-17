@@ -27,6 +27,9 @@ import HelpIcon from '@material-ui/icons/Help';
 import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import { Grid, Paper } from '@material-ui/core';
+import {
+  useIntl, Link, FormattedMessage, injectIntl, IntlContextConsumer, changeLocale,
+} from 'gatsby-plugin-intl';
 import dict from '../dict';
 import { LangContext, ColorContext } from '../context/contexts';
 import {
@@ -40,7 +43,7 @@ function ResponsiveDrawer(props) {
   const { window } = props;
   const [isMobileOpen, setIsMobileOpen] = React.useState(false);
   const [isDark, setIsDark] = useContext(ColorContext);
-  const [isPl, setIsPl] = useContext(LangContext);
+  const intl = useIntl();
 
   const useStyles = makeStyles((theme) => ({
     drawer: {
@@ -103,35 +106,35 @@ function ResponsiveDrawer(props) {
           <ListItemIcon><HomeIcon color="primary" /></ListItemIcon>
           <ListItemText
             disableTypography
-            primary={<Typography type="body2" style={{ color: theme.palette.primary.main, fontWeight: 'bold' }}>{dict.home[isPl ? 'pl' : 'en']}</Typography>}
+            primary={<Typography type="body2" style={{ color: theme.palette.primary.main, fontWeight: 'bold' }}>{intl.formatMessage({ id: 'home' })}</Typography>}
           />
         </ListItem>
         <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
           <ListItemIcon><BusinessCenterIcon color="primary" /></ListItemIcon>
           <ListItemText
             disableTypography
-            primary={<Typography type="body2" style={{ color: theme.palette.primary.main, fontWeight: 'bold' }}>{dict.services[isPl ? 'pl' : 'en']}</Typography>}
+            primary={<Typography type="body2" style={{ color: theme.palette.primary.main, fontWeight: 'bold' }}>{intl.formatMessage({ id: 'services' })}</Typography>}
           />
         </ListItem>
         <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
           <ListItemIcon><InfoIcon color="primary" /></ListItemIcon>
           <ListItemText
             disableTypography
-            primary={<Typography type="body2" style={{ color: theme.palette.primary.main, fontWeight: 'bold' }}>{dict.about[isPl ? 'pl' : 'en']}</Typography>}
+            primary={<Typography type="body2" style={{ color: theme.palette.primary.main, fontWeight: 'bold' }}>{intl.formatMessage({ id: 'about' })}</Typography>}
           />
         </ListItem>
         <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
           <ListItemIcon><HelpIcon color="primary" /></ListItemIcon>
           <ListItemText
             disableTypography
-            primary={<Typography type="body2" style={{ color: theme.palette.primary.main, fontWeight: 'bold' }}>{dict.faq[isPl ? 'pl' : 'en']}</Typography>}
+            primary={<Typography type="body2" style={{ color: theme.palette.primary.main, fontWeight: 'bold' }}>{intl.formatMessage({ id: 'faq' })}</Typography>}
           />
         </ListItem>
         <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
           <ListItemIcon><ContactPhoneIcon color="primary" /></ListItemIcon>
           <ListItemText
             disableTypography
-            primary={<Typography type="body2" style={{ color: theme.palette.primary.main, fontWeight: 'bold' }}>{dict.contact[isPl ? 'pl' : 'en']}</Typography>}
+            primary={<Typography type="body2" style={{ color: theme.palette.primary.main, fontWeight: 'bold' }}>{intl.formatMessage({ id: 'contact' })}</Typography>}
           />
         </ListItem>
       </List>

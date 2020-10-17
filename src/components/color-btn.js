@@ -47,18 +47,20 @@ import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Fab from '@material-ui/core/Fab';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
-import SEO from './seo';
-import Image from './image';
-import Layout from './layout';
-import LangBtn from './lang-btn';
-import ThemeBtn from './theme-btn';
+import {
+  useIntl, Link, FormattedMessage, injectIntl, IntlContextConsumer, changeLocale,
+} from 'gatsby-plugin-intl';
 import ScrollTop from './scroll-top';
-
+import ThemeBtn from './theme-btn';
+import LangBtn from './lang-btn';
+import Layout from './layout';
+import Image from './image';
+import SEO from './seo';
 import ResponsiveDrawer from './responsive-drawer';
 
 const ColorBtn = () => {
   const [isDark, setIsDark] = useContext(ColorContext);
-  const [isPl, setIsPl] = useContext(LangContext);
+  const intl = useIntl();
 
   const firstUpdate = useRef(true);
   useLayoutEffect(() => {
@@ -73,7 +75,7 @@ const ColorBtn = () => {
   }, [isDark]);
 
   return (
-    <Tooltip title={dict.themeBtn[isPl ? 'pl' : 'en']} arrow TransitionComponent={Zoom} id="back-to-top-anchor">
+    <Tooltip title={intl.formatMessage({ id: 'themeBtn' })} arrow TransitionComponent={Zoom} id="back-to-top-anchor">
       <IconButton
         edge="end"
         color="primary"

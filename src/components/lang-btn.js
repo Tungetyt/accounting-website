@@ -33,6 +33,7 @@ const LangBtn = ({ location }) => {
             <Tooltip title={intl.formatMessage({ id: 'langBtn' })} arrow TransitionComponent={Zoom}>
               <IconButton
                 aria-label="language"
+                color="primary"
                 onClick={() => {
                   changeLocale(location.pathname.replace(/\//g, '') === 'pl' ? 'en' : 'pl');
                 }}
