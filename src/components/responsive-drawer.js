@@ -37,8 +37,6 @@ import { LangContext, ColorContext } from '../context/contexts';
 import {
   getItemByKeyIfPossible, localStorageKey, langNames, appTheme, themeNames, drawerWidth,
 } from '../helpers';
-import Logo from '../images/logo.svg';
-import Brain from '../images/Brain_Drawing.svg';
 import Umbrella from '../images/umbrella.svg';
 
 import ColorBtn from './color-btn';
@@ -203,13 +201,11 @@ function ResponsiveDrawer(props) {
           </Grid>
           <Grid item>
 
-            <Brain width={50} height={50} fill="white" />
           </Grid>
 
           <Grid item>
 
             <Typography variant="h6" noWrap color="primary">
-              Vavicom
             </Typography>
 
           </Grid>

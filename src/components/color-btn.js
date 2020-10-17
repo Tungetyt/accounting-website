@@ -33,7 +33,6 @@ import { LangContext, ColorContext } from '../context/contexts';
 import {
   getItemByKeyIfPossible, localStorageKey, langNames, appTheme, themeNames, drawerWidth,
 } from '../helpers';
-import Brain from '../images/Brain_Drawing.svg';
 import './layout.css';
 
 import Brightness3Icon from '@material-ui/icons/Brightness3';

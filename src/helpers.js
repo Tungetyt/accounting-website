@@ -27,7 +27,6 @@ export const appTheme = {
         backgroundColor: indigo['700'],
       },
     },
-
   },
   dark: {
     palette: {
