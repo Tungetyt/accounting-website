@@ -35,7 +35,7 @@ import {
 } from '../helpers';
 import ResponsiveDrawer from '../components/responsive-drawer';
 
-const IndexPage = () => {
+const IndexPage = (props) => {
   const [isDark, setIsDark] = useState(
     true,
   );
@@ -59,7 +59,7 @@ const IndexPage = () => {
             <CssBaseline />
             <SEO title={intl.formatMessage({ id: 'title' })} />
             <div id="back-to-top-anchor" />
-            <ResponsiveDrawer />
+            <ResponsiveDrawer props={props} />
             <Paper />
             <main>
               <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>

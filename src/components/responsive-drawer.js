@@ -94,7 +94,7 @@ function ResponsiveDrawer(props) {
           <ColorBtn />
         </Grid>
         <Grid item>
-          <LangBtn />
+          <LangBtn props={props} />
         </Grid>
       </Grid>
       <Divider />
