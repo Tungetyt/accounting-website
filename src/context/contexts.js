@@ -1,4 +1,4 @@
 import React from 'react';
 
-export const LangContext = React.createContext();
+// eslint-disable-next-line import/prefer-default-export
 export const ColorContext = React.createContext();
