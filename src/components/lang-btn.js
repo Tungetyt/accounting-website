@@ -11,9 +11,10 @@ import Brightness7Icon from '@material-ui/icons/Brightness7';
 import Tooltip from '@material-ui/core/Tooltip';
 import Zoom from '@material-ui/core/Zoom';
 import {
-  injectIntl, Link, FormattedMessage, useIntl, IntlContextConsumer, changeLocale,
+  useIntl, Link, FormattedMessage, injectIntl, IntlContextConsumer, changeLocale,
 } from 'gatsby-plugin-intl';
 import { Location } from '@reach/router';
+import TranslateIcon from '@material-ui/icons/Translate';
 import SEO from './seo';
 import Image from './image';
 import Layout from './layout';
@@ -23,27 +24,21 @@ import { LangContext } from '../context/contexts';
 import { getItemByKeyIfPossible, localStorageKey, langNames } from '../helpers';
 
 const LangBtn = ({ location }) => {
-  const [isPl, setIsPl] = useContext(LangContext);
   const intl = useIntl();
   return (
     <Location>
       {({ navigate, location }) => (
         <IntlContextConsumer>
           {({ languages, language: currentLocale }) => (
-            <Tooltip title={dict.langBtn[isPl ? 'pl' : 'en']} arrow TransitionComponent={Zoom}>
+            <Tooltip title={intl.formatMessage({ id: 'langBtn' })} arrow TransitionComponent={Zoom}>
               <IconButton
                 aria-label="language"
                 onClick={() => {
-                  const newLang = isPl ? langNames.en : langNames.pl;
-                  if (typeof window !== 'undefined') {
-                    window.localStorage.setItem(localStorageKey.language, newLang);
-                  }
-                  setIsPl((prevIsPolish) => !prevIsPolish);
                   changeLocale(location.pathname.replace(/\//g, '') === 'pl' ? 'en' : 'pl');
-                  console.log('language', location.pathname.replace(/\//g, ''), 'aaaaaa', navigate);
                 }}
               >
-                {isPl ? <LangBtnContent content="PL" /> : <LangBtnContent content="EN" />}
+                {/* {location.pathname.replace(/\//g, '') === 'pl' ? <LangBtnContent content="PL" /> : <LangBtnContent content="EN" />} */}
+                <TranslateIcon />
               </IconButton>
             </Tooltip>
           )}
