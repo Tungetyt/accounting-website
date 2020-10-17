@@ -70,10 +70,10 @@ function ResponsiveDrawer(props) {
       flexGrow: 1,
       padding: theme.spacing(3),
     },
-    appBar: {
-      backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.elevation1.backgroundColor,
-      zIndex: theme.zIndex.drawer + 1,
-    },
+    // appBar: {
+    //   backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.elevation1.backgroundColor,
+    //   zIndex: theme.zIndex.drawer + 1,
+    // },
     elevation2: {
       backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor,
     },
@@ -83,6 +83,9 @@ function ResponsiveDrawer(props) {
       // height: '100%',
       position: 'fixed',
       marginTop: '3px',
+      paddingRight: '12px',
+      backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.background.default,
+
     },
     hamburger: {
       marginTop: '-3px',
@@ -90,6 +93,9 @@ function ResponsiveDrawer(props) {
       top: '8px',
       right: '8px',
       paddingLeft: '12px',
+      backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.background.default,
+    },
+    background: {
       backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.background.default,
     },
   }));
@@ -112,21 +118,6 @@ function ResponsiveDrawer(props) {
         style={{
           marginTop: '3.5rem',
         }}
-      >
-        <Grid item>
-          <ColorBtn />
-        </Grid>
-        <Grid item>
-          <LangBtn props={props} />
-        </Grid>
-      </Grid>
-      <Divider />
-      <Grid
-        container
-        direction="row"
-        justify="space-around"
-        alignItems="center"
-        spacing={0}
       >
         <Grid item>
           <ColorBtn />
@@ -237,7 +228,7 @@ function ResponsiveDrawer(props) {
       >
         <Grid item> */}
 
-      <Paper className={classes.logoPaper} elevation={0}>
+      <Paper className={classes.logoPaper} elevation={0} variant="outlined">
         <Grid
           container
           direction="row"
@@ -262,7 +253,7 @@ function ResponsiveDrawer(props) {
         <Paper
           elevation={0}
           className={classes.hamburger}
-
+          variant="outlined"
         >
           <IconButton
             color="primary"
