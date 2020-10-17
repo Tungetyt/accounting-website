@@ -23,7 +23,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-sticky": "^6.0.3"
   },
   "devDependencies": {
     "eslint": "^7.10.0",

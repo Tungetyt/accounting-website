@@ -30,11 +30,15 @@ import { Grid, Paper } from '@material-ui/core';
 import {
   useIntl, Link, FormattedMessage, injectIntl, IntlContextConsumer, changeLocale,
 } from 'gatsby-plugin-intl';
+import { StickyContainer, Sticky } from 'react-sticky';
 import { LangContext, ColorContext } from '../context/contexts';
 import {
   getItemByKeyIfPossible, localStorageKey, langNames, appTheme, themeNames, drawerWidth,
 } from '../helpers';
+import Logo from '../images/logo.svg';
 import Brain from '../images/Brain_Drawing.svg';
+import Umbrella from '../images/umbrella.svg';
+
 import ColorBtn from './color-btn';
 import LangBtn from './lang-btn';
 
@@ -72,6 +76,11 @@ function ResponsiveDrawer(props) {
     },
     elevation2: {
       backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor,
+    },
+    logoPaper: {
+      // backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.background.default,
+      // width: '400px',
+      // height: '100%',
     },
   }));
   const classes = useStyles();
@@ -189,7 +198,53 @@ function ResponsiveDrawer(props) {
 
       {/* </Toolbar>
       </AppBar> */}
-
+      {/* <StickyContainer>
+        <Sticky>
+          {({ style }) => ( */}
+      <Grid
+        container
+        direction="row"
+        justify="space-between"
+        alignItems="center"
+        style={{ position: 'fixed', marginTop: '3px' }}
+      >
+        <Grid item>
+          <Paper className={classes.logoPaper} elevation={0}>
+            <Grid
+              container
+              direction="row"
+              justify="space-between"
+              alignItems="center"
+            >
+              <Grid item>
+                {/* <Logo width={50} height={50} fill="white" />
+                <Brain width={50} height={50} fill="white" /> */}
+                <Umbrella width={40} height={40} fill="white" />
+              </Grid>
+              <Grid item>
+                <Typography variant="h6" noWrap color="primary">
+                  V a v i c o m
+                </Typography>
+              </Grid>
+            </Grid>
+          </Paper>
+        </Grid>
+        <Grid item>
+          <IconButton
+            color="primary"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            className={classes.menuButton}
+            style={{ marginTop: '-3px' }}
+          >
+            <MenuIcon />
+          </IconButton>
+        </Grid>
+      </Grid>
+      {/* )}
+        </Sticky>
+      </StickyContainer> */}
       <nav className={classes.drawer} aria-label="mailbox folders">
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Hidden smUp implementation="css">
