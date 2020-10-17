@@ -23,7 +23,6 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import SEO from './seo';
 import Image from './image';
 import Layout from './layout';
-import dict from '../dict';
 import LangBtn from './lang-btn';
 import ThemeBtn from './theme-btn';
 import {

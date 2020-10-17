@@ -29,7 +29,6 @@ import HelpIcon from '@material-ui/icons/Help';
 import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import { Grid, Paper, ThemeProvider } from '@material-ui/core';
-import dict from '../dict';
 import { LangContext, ColorContext } from '../context/contexts';
 import {
   getItemByKeyIfPossible, localStorageKey, langNames, appTheme, themeNames, drawerWidth,

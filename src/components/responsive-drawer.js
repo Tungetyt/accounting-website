@@ -30,7 +30,6 @@ import { Grid, Paper } from '@material-ui/core';
 import {
   useIntl, Link, FormattedMessage, injectIntl, IntlContextConsumer, changeLocale,
 } from 'gatsby-plugin-intl';
-import dict from '../dict';
 import { LangContext, ColorContext } from '../context/contexts';
 import {
   getItemByKeyIfPossible, localStorageKey, langNames, appTheme, themeNames, drawerWidth,

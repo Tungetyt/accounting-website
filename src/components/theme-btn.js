@@ -11,7 +11,6 @@ import Brightness7Icon from '@material-ui/icons/Brightness7';
 import SEO from './seo';
 import Image from './image';
 import Layout from './layout';
-import dict from '../dict';
 import LangBtn from './lang-btn';
 import { getLanguageFromLS, localStorageKey, langNames } from '../helpers';
 

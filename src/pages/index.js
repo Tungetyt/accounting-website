@@ -26,7 +26,6 @@ import Layout from '../components/layout';
 import ColorBtn from '../components/color-btn';
 import LangBtn from '../components/lang-btn';
 
-import dict from '../dict';
 import { LangContext, ColorContext } from '../context/contexts';
 import ThemeBtn from '../components/theme-btn';
 import ScrollTop from '../components/scroll-top';
