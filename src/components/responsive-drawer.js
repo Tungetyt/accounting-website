@@ -26,7 +26,7 @@ import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
 import HelpIcon from '@material-ui/icons/Help';
 import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
 import scrollTo from 'gatsby-plugin-smoothscroll';
-import { Grid, Paper } from '@material-ui/core';
+import { Box, Grid, Paper } from '@material-ui/core';
 import {
   useIntl, Link, FormattedMessage, injectIntl, IntlContextConsumer, changeLocale,
 } from 'gatsby-plugin-intl';
@@ -56,7 +56,7 @@ function ResponsiveDrawer(props) {
       },
     },
     menuButton: {
-      marginRight: theme.spacing(2),
+      // marginRight: theme.spacing(2),
       [theme.breakpoints.up('sm')]: {
         display: 'none',
       },
@@ -81,6 +81,16 @@ function ResponsiveDrawer(props) {
       // backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.background.default,
       // width: '400px',
       // height: '100%',
+      position: 'fixed',
+      marginTop: '3px',
+    },
+    hamburger: {
+      marginTop: '-3px',
+      position: 'fixed',
+      top: '8px',
+      right: '8px',
+      paddingLeft: '12px',
+      backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.background.default,
     },
   }));
   const classes = useStyles();
@@ -99,7 +109,24 @@ function ResponsiveDrawer(props) {
         justify="space-around"
         alignItems="center"
         spacing={0}
-
+        style={{
+          marginTop: '3.5rem',
+        }}
+      >
+        <Grid item>
+          <ColorBtn />
+        </Grid>
+        <Grid item>
+          <LangBtn props={props} />
+        </Grid>
+      </Grid>
+      <Divider />
+      <Grid
+        container
+        direction="row"
+        justify="space-around"
+        alignItems="center"
+        spacing={0}
       >
         <Grid item>
           <ColorBtn />
@@ -152,7 +179,7 @@ function ResponsiveDrawer(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
   return (
-    <div className={classes.root}>
+    <div>
 
       {/* <AppBar
         position="fixed"
@@ -201,47 +228,57 @@ function ResponsiveDrawer(props) {
       {/* <StickyContainer>
         <Sticky>
           {({ style }) => ( */}
-      <Grid
+      {/* <Grid
         container
         direction="row"
         justify="space-between"
         alignItems="center"
         style={{ position: 'fixed', marginTop: '3px' }}
       >
-        <Grid item>
-          <Paper className={classes.logoPaper} elevation={0}>
-            <Grid
-              container
-              direction="row"
-              justify="space-between"
-              alignItems="center"
-            >
-              <Grid item>
-                {/* <Logo width={50} height={50} fill="white" />
+        <Grid item> */}
+
+      <Paper className={classes.logoPaper} elevation={0}>
+        <Grid
+          container
+          direction="row"
+          justify="space-between"
+          alignItems="center"
+        >
+          <Grid item>
+            {/* <Logo width={50} height={50} fill="white" />
                 <Brain width={50} height={50} fill="white" /> */}
-                <Umbrella width={40} height={40} fill="white" />
-              </Grid>
-              <Grid item>
-                <Typography variant="h6" noWrap color="primary">
-                  V a v i c o m
-                </Typography>
-              </Grid>
-            </Grid>
-          </Paper>
+            <Umbrella width={40} height={40} fill="white" />
+          </Grid>
+          <Grid item>
+            <Typography variant="h6" noWrap color="primary">
+              V a v i c o m
+            </Typography>
+          </Grid>
         </Grid>
-        <Grid item>
+      </Paper>
+      {/* </Grid>
+        <Grid item> */}
+      <Hidden smUp implementation="css">
+        <Paper
+          elevation={0}
+          className={classes.hamburger}
+
+        >
           <IconButton
             color="primary"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
             className={classes.menuButton}
-            style={{ marginTop: '-3px' }}
+
           >
             <MenuIcon />
           </IconButton>
-        </Grid>
-      </Grid>
+        </Paper>
+      </Hidden>
+
+      {/* </Grid>
+      </Grid> */}
       {/* )}
         </Sticky>
       </StickyContainer> */}
