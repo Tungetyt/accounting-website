@@ -18,20 +18,20 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Vavicom Accounting',
-        short_name: 'Vavicom',
+        name: 'Vavicom Accounting_name',
+        short_name: 'Vavicom_short_name',
         start_url: '/',
         background_color: '#5c6bc0',
         theme_color: '#5c6bc0',
         display: 'minimal-ui',
-        icon: 'src/images/accounting_2.jpg', // This path is relative to the root of the site.
+        icon: 'src/images/favicon.svg', // This path is relative to the root of the site.
       },
     },
     {
       resolve: 'gatsby-plugin-scroll-indicator',
       options: {
         // Configure color of the scroll indicator
-        color: '#5c6bc0',
+        color: '#7986cb',
         // Height of the scroll indicator 3px
         height: '3px',
         // Configure paths where the scroll indicator will appear '/', '/en/', '/pl/

@@ -47,19 +47,23 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
+  <style>
+	circle { fill: red }
+	@media (prefers-color-scheme: dark) {
+		circle { fill: green }
+	}
+</style>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
      style="display:inline">
     <circle
-       style="fill:none;stroke:#0827bd;stroke-width:5.00901;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path82"
        cx="45"
        cy="45"
        r="42.495495" />
     <circle
-       style="display:inline;fill:none;stroke:#002cb2;stroke-width:5.00901;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path82-4"
        cx="95.000008"
        cy="45"
