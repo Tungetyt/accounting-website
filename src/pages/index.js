@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import '../components/layout.css';
 import Typography from '@material-ui/core/Typography';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { ThemeProvider, Button, Grid } from '@material-ui/core';
+import {
+  ThemeProvider, Button, Grid, Hidden,
+} from '@material-ui/core';
 import { createMuiTheme, makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import IconButton from '@material-ui/core/IconButton';
@@ -82,30 +84,31 @@ const IndexPage = (props) => {
                   {intl.formatMessage({ id: 'landing.third' })}
                 </Typography>
               </Grid>
-              <Grid item>
-                <Grid
-                  container
-                  direction="row"
-                  justify="space-between"
-                  alignItems="center"
-                  spacing={3}
-
-                >
-                  <Grid item>
-                    <Umbrella width={80} height={80} fill={APP_THEME[isDark ? 'dark' : 'light'].palette.primary.main} />
-                  </Grid>
-                  <Grid item>
-                    <Typography
-                      variant="h2"
-                      noWrap
-                      color="primary"
-                      style={{ textDecoration: 'underline' }}
-                    >
-                      {COMPANY}
-                    </Typography>
+              <Hidden mdDown implementation="css">
+                <Grid item>
+                  <Grid
+                    container
+                    direction="row"
+                    justify="space-between"
+                    alignItems="center"
+                    spacing={3}
+                  >
+                    <Grid item>
+                      <Umbrella width={80} height={80} fill={APP_THEME[isDark ? 'dark' : 'light'].palette.primary.main} />
+                    </Grid>
+                    <Grid item>
+                      <Typography
+                        variant="h2"
+                        noWrap
+                        color="primary"
+                        style={{ textDecoration: 'underline' }}
+                      >
+                        {COMPANY}
+                      </Typography>
+                    </Grid>
                   </Grid>
                 </Grid>
-              </Grid>
+              </Hidden>
             </Grid>
             <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>
             <Typography>bbbbbbbbbbbbbbbbbbbbbb</Typography>
