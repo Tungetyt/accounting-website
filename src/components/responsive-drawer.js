@@ -99,6 +99,7 @@ function ResponsiveDrawer(props) {
     background: {
       backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.background.default,
     },
+    toolbar: theme.mixins.toolbar,
   }));
   const classes = useStyles();
 
@@ -110,15 +111,14 @@ function ResponsiveDrawer(props) {
 
   const drawer = (
     <div>
+      <div className={classes.toolbar} />
       <Grid
         container
         direction="row"
         justify="space-around"
         alignItems="center"
         spacing={0}
-        style={{
-          marginTop: '3.5rem',
-        }}
+
       >
         <Grid item>
           <ColorBtn />

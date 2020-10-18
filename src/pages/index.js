@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../components/layout.css';
 import Typography from '@material-ui/core/Typography';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { ThemeProvider, Button } from '@material-ui/core';
+import { ThemeProvider, Button, Grid } from '@material-ui/core';
 import { createMuiTheme, makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import IconButton from '@material-ui/core/IconButton';
@@ -25,19 +25,29 @@ import Image from '../components/image';
 import Layout from '../components/layout';
 import ColorBtn from '../components/color-btn';
 import LangBtn from '../components/lang-btn';
+import Umbrella from '../images/umbrella.svg';
 
 import { LangContext, ColorContext } from '../context/contexts';
 import ThemeBtn from '../components/theme-btn';
 import ScrollTop from '../components/scroll-top';
 import {
-  getItemByKeyIfPossible, localStorageKey, langNames, appTheme, themeNames,
+  getItemByKeyIfPossible, localStorageKey, langNames, appTheme, themeNames, drawerWidth,
 } from '../helpers';
 import ResponsiveDrawer from '../components/responsive-drawer';
+
+const useStyles = makeStyles((theme) => ({
+  main: {
+    [theme.breakpoints.up('sm')]: {
+      marginRight: drawerWidth,
+    },
+  },
+}));
 
 const IndexPage = (props) => {
   const [isDark, setIsDark] = useState(
     true,
   );
+  const classes = useStyles();
 
   const intl = useIntl();
   useEffect(() => {
@@ -54,8 +64,42 @@ const IndexPage = (props) => {
           <SEO title={intl.formatMessage({ id: 'title' })} />
           <div id="back-to-top-anchor" />
           <ResponsiveDrawer props={props} />
-          <Paper />
-          <main>
+          <main className={classes.main}>
+            <Grid
+              container
+              direction="row"
+              justify="space-evenly"
+              alignItems="center"
+            >
+              <Grid item>
+                <Typography variant="h6" color="primary">
+                  {intl.formatMessage({ id: 'landing.first' })}
+                  <br />
+                  {intl.formatMessage({ id: 'landing.second' })}
+                  <br />
+                  {intl.formatMessage({ id: 'landing.third' })}
+                </Typography>
+              </Grid>
+              <Grid item>
+                <Grid
+                  container
+                  direction="row"
+                  justify="space-between"
+                  alignItems="center"
+                >
+                  <Grid item>
+                    {/* <Logo width={50} height={50} fill="white" />
+                <Brain width={50} height={50} fill="white" /> */}
+                    <Umbrella width={40} height={40} fill={appTheme[isDark ? 'dark' : 'light'].palette.primary.main} />
+                  </Grid>
+                  <Grid item>
+                    <Typography variant="h6" noWrap color="primary">
+                      V a v i c o m
+                    </Typography>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Grid>
             <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>
             <Typography>bbbbbbbbbbbbbbbbbbbbbb</Typography>
             <Typography>cccccccccccccccc</Typography>
@@ -71,7 +115,7 @@ const IndexPage = (props) => {
             <Typography>aaaaaaaaaaaaaaaaa</Typography>
             <Typography>aaaaaaaaaaaaaaaaa</Typography>
             <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Typography style={{ wordWrap: 'break-word' }}>dnasuoindasjijjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjdmisadlias mdlksamndlsa ndlkasndlasnn</Typography>
             <Typography>aaaaaaaaaaaaaaaaa</Typography>
             <Typography>aaaaaaaaaaaaaaaaa</Typography>
             <Typography>aaaaaaaaaaaaaaaaa</Typography>

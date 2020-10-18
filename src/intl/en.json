@@ -13,6 +13,11 @@
       "header": "NOT FOUND",
       "description": "You just hit a route that doesn't exist... the sadness."
     },
-    "hamburger": "Navigation panel"
+    "hamburger": "Navigation panel",
+    "landing": {
+      "first": "MODERN",
+      "second": "ACCOUNTING",
+      "third": "OFFICE" 
+    }
   }
   
