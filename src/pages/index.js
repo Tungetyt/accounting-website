@@ -5,7 +5,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import {
   ThemeProvider, Button, Grid, Hidden,
 } from '@material-ui/core';
-import { createMuiTheme, makeStyles } from '@material-ui/core/styles';
+import { createMuiTheme, makeStyles, responsiveFontSizes } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import IconButton from '@material-ui/core/IconButton';
 import Brightness3Icon from '@material-ui/icons/Brightness3';
@@ -43,6 +43,11 @@ const useStyles = makeStyles((theme) => ({
       marginRight: DRAWER_WIDTH,
     },
   },
+  landingTitle: {
+    [theme.breakpoints.up('xs')]: {
+      marginRight: DRAWER_WIDTH,
+    },
+  },
 }));
 
 const IndexPage = (props) => {
@@ -56,7 +61,8 @@ const IndexPage = (props) => {
     setIsDark(getItemByKey(LOCAL_STORAGE_KEY.theme) !== THEME_NAMES.light);
   }, []);
 
-  const chosenTheme = createMuiTheme(isDark ? APP_THEME.dark : APP_THEME.light);
+  let chosenTheme = createMuiTheme(isDark ? APP_THEME.dark : APP_THEME.light);
+  chosenTheme = responsiveFontSizes(chosenTheme);
 
   return (
     <>
@@ -98,7 +104,7 @@ const IndexPage = (props) => {
                     </Grid>
                     <Grid item>
                       <Typography
-                        variant="h2"
+                        variant="h3"
                         noWrap
                         color="primary"
                         style={{ textDecoration: 'underline' }}
