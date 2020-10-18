@@ -35,7 +35,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import Zoom from '@material-ui/core/Zoom';
 import { LangContext, ColorContext } from '../context/contexts';
 import {
-  getItemByKeyIfPossible, localStorageKey, langNames, appTheme, themeNames, drawerWidth,
+  getItemByKey, LOCAL_STORAGE_KEY, langNames, APP_THEME, THEME_NAMES, DRAWER_WIDTH,
 } from '../helpers';
 import Umbrella from '../images/umbrella.svg';
 
@@ -51,7 +51,7 @@ function ResponsiveDrawer(props) {
   const useStyles = makeStyles((theme) => ({
     drawer: {
       [theme.breakpoints.up('sm')]: {
-        width: drawerWidth,
+        width: DRAWER_WIDTH,
         flexShrink: 0,
       },
     },
@@ -63,8 +63,8 @@ function ResponsiveDrawer(props) {
     },
     // necessary for content to be below app bar
     drawerPaper: {
-      width: drawerWidth,
-      backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.background.default,
+      width: DRAWER_WIDTH,
+      backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.background.default,
     },
     content: {
       flexGrow: 1,
@@ -75,7 +75,7 @@ function ResponsiveDrawer(props) {
     //   zIndex: theme.zIndex.drawer + 1,
     // },
     elevation2: {
-      backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor,
+      backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor,
     },
     logoPaper: {
       // backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.background.default,
@@ -85,7 +85,7 @@ function ResponsiveDrawer(props) {
       marginTop: '3px',
       paddingRight: '12px',
       paddingTop: '3px',
-      backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.background.default,
+      backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.background.default,
 
     },
     hamburger: {
@@ -94,10 +94,10 @@ function ResponsiveDrawer(props) {
       top: '8px',
       right: isMobileOpen ? '25px' : '8px',
       paddingLeft: '12px',
-      backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.background.default,
+      backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.background.default,
     },
     background: {
-      backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.background.default,
+      backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.background.default,
     },
     toolbar: theme.mixins.toolbar,
   }));
@@ -237,7 +237,7 @@ function ResponsiveDrawer(props) {
           <Grid item>
             {/* <Logo width={50} height={50} fill="white" />
                 <Brain width={50} height={50} fill="white" /> */}
-            <Umbrella width={40} height={40} fill={appTheme[isDark ? 'dark' : 'light'].palette.primary.main} />
+            <Umbrella width={40} height={40} fill={APP_THEME[isDark ? 'dark' : 'light'].palette.primary.main} />
           </Grid>
           <Grid item>
             <Typography variant="h6" noWrap color="primary">

@@ -31,14 +31,14 @@ import { LangContext, ColorContext } from '../context/contexts';
 import ThemeBtn from '../components/theme-btn';
 import ScrollTop from '../components/scroll-top';
 import {
-  getItemByKeyIfPossible, localStorageKey, langNames, appTheme, themeNames, drawerWidth,
+  getItemByKey, LOCAL_STORAGE_KEY, langNames, APP_THEME, THEME_NAMES, DRAWER_WIDTH,
 } from '../helpers';
 import ResponsiveDrawer from '../components/responsive-drawer';
 
 const useStyles = makeStyles((theme) => ({
   main: {
     [theme.breakpoints.up('sm')]: {
-      marginRight: drawerWidth,
+      marginRight: DRAWER_WIDTH,
     },
   },
 }));
@@ -51,10 +51,10 @@ const IndexPage = (props) => {
 
   const intl = useIntl();
   useEffect(() => {
-    setIsDark(getItemByKeyIfPossible(localStorageKey.theme) !== themeNames.light);
+    setIsDark(getItemByKey(LOCAL_STORAGE_KEY.theme) !== THEME_NAMES.light);
   }, []);
 
-  const chosenTheme = createMuiTheme(isDark ? appTheme.dark : appTheme.light);
+  const chosenTheme = createMuiTheme(isDark ? APP_THEME.dark : APP_THEME.light);
 
   return (
     <>
@@ -90,7 +90,7 @@ const IndexPage = (props) => {
                   <Grid item>
                     {/* <Logo width={50} height={50} fill="white" />
                 <Brain width={50} height={50} fill="white" /> */}
-                    <Umbrella width={40} height={40} fill={appTheme[isDark ? 'dark' : 'light'].palette.primary.main} />
+                    <Umbrella width={40} height={40} fill={APP_THEME[isDark ? 'dark' : 'light'].palette.primary.main} />
                   </Grid>
                   <Grid item>
                     <Typography variant="h6" noWrap color="primary">

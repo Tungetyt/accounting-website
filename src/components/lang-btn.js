@@ -20,7 +20,7 @@ import Image from './image';
 import Layout from './layout';
 import LangBtnContent from './lang-btn-content';
 import { LangContext } from '../context/contexts';
-import { getItemByKeyIfPossible, localStorageKey, langNames } from '../helpers';
+import { getItemByKey, LOCAL_STORAGE_KEY, langNames } from '../helpers';
 
 const LangBtn = ({ location }) => {
   const intl = useIntl();

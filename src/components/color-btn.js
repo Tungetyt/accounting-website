@@ -31,7 +31,7 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 import { Grid, Paper, ThemeProvider } from '@material-ui/core';
 import { LangContext, ColorContext } from '../context/contexts';
 import {
-  getItemByKeyIfPossible, localStorageKey, langNames, appTheme, themeNames, drawerWidth,
+  getItemByKey, LOCAL_STORAGE_KEY, langNames, APP_THEME, THEME_NAMES, DRAWER_WIDTH,
 } from '../helpers';
 import './layout.css';
 
@@ -66,9 +66,9 @@ const ColorBtn = () => {
       firstUpdate.current = false;
       return;
     }
-    const newTheme = isDark ? themeNames.dark : themeNames.light;
+    const newTheme = isDark ? THEME_NAMES.dark : THEME_NAMES.light;
     if (typeof window !== 'undefined') {
-      window.localStorage.setItem(localStorageKey.theme, newTheme);
+      window.localStorage.setItem(LOCAL_STORAGE_KEY.theme, newTheme);
     }
   }, [isDark]);
 

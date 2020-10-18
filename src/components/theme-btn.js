@@ -12,7 +12,7 @@ import SEO from './seo';
 import Image from './image';
 import Layout from './layout';
 import LangBtn from './lang-btn';
-import { getLanguageFromLS, localStorageKey, langNames } from '../helpers';
+import { getLanguageFromLS, LOCAL_STORAGE_KEY, langNames } from '../helpers';
 
 const ThemeBtn = () => {
   const themeNames = {
@@ -20,7 +20,7 @@ const ThemeBtn = () => {
     dark: 'dark',
   };
   const [isDark, setIsDark] = useState(
-    localStorage.getItem(localStorageKey.theme) !== themeNames.light,
+    localStorage.getItem(LOCAL_STORAGE_KEY.theme) !== themeNames.light,
   );
   return (
     <IconButton
@@ -29,7 +29,7 @@ const ThemeBtn = () => {
       aria-label="mode"
       onClick={() => {
         const newTheme = isDark ? themeNames.light : themeNames.dark;
-        localStorage.setItem(localStorageKey.theme, newTheme);
+        localStorage.setItem(LOCAL_STORAGE_KEY.theme, newTheme);
         setIsDark((prevIsDark) => !prevIsDark);
       }}
     >

@@ -26,7 +26,7 @@ import Layout from './layout';
 import LangBtn from './lang-btn';
 import ThemeBtn from './theme-btn';
 import {
-  getItemByKeyIfPossible, localStorageKey, langNames, drawerWidth,
+  getItemByKey, LOCAL_STORAGE_KEY, langNames, DRAWER_WIDTH,
 } from '../helpers';
 
 const ScrollTop = (props) => {
