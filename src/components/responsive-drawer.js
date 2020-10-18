@@ -35,7 +35,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import Zoom from '@material-ui/core/Zoom';
 import { LangContext, ColorContext } from '../context/contexts';
 import {
-  getItemByKey, LOCAL_STORAGE_KEY, langNames, APP_THEME, THEME_NAMES, DRAWER_WIDTH,
+  getItemByKey, LOCAL_STORAGE_KEY, langNames, APP_THEME, THEME_NAMES, DRAWER_WIDTH, COMPANY,
 } from '../helpers';
 import Umbrella from '../images/umbrella.svg';
 
@@ -240,8 +240,14 @@ function ResponsiveDrawer(props) {
             <Umbrella width={40} height={40} fill={APP_THEME[isDark ? 'dark' : 'light'].palette.primary.main} />
           </Grid>
           <Grid item>
-            <Typography variant="h6" noWrap color="primary">
-              V a v i c o m
+            <Typography
+              variant="h6"
+              noWrap
+              color="primary"
+              style={{ textDecoration: 'underline' }}
+            >
+              {COMPANY}
+
             </Typography>
           </Grid>
         </Grid>

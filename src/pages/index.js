@@ -31,7 +31,7 @@ import { LangContext, ColorContext } from '../context/contexts';
 import ThemeBtn from '../components/theme-btn';
 import ScrollTop from '../components/scroll-top';
 import {
-  getItemByKey, LOCAL_STORAGE_KEY, langNames, APP_THEME, THEME_NAMES, DRAWER_WIDTH,
+  getItemByKey, LOCAL_STORAGE_KEY, langNames, APP_THEME, THEME_NAMES, DRAWER_WIDTH, COMPANY,
 } from '../helpers';
 import ResponsiveDrawer from '../components/responsive-drawer';
 
@@ -70,9 +70,11 @@ const IndexPage = (props) => {
               direction="row"
               justify="space-evenly"
               alignItems="center"
+              style={{ paddingTop: '30vh' }}
+
             >
               <Grid item>
-                <Typography variant="h6" color="primary">
+                <Typography variant="h3" color="primary" style={{ lineHeight: '90%' }}>
                   {intl.formatMessage({ id: 'landing.first' })}
                   <br />
                   {intl.formatMessage({ id: 'landing.second' })}
@@ -86,15 +88,20 @@ const IndexPage = (props) => {
                   direction="row"
                   justify="space-between"
                   alignItems="center"
+                  spacing={3}
+
                 >
                   <Grid item>
-                    {/* <Logo width={50} height={50} fill="white" />
-                <Brain width={50} height={50} fill="white" /> */}
-                    <Umbrella width={40} height={40} fill={APP_THEME[isDark ? 'dark' : 'light'].palette.primary.main} />
+                    <Umbrella width={80} height={80} fill={APP_THEME[isDark ? 'dark' : 'light'].palette.primary.main} />
                   </Grid>
                   <Grid item>
-                    <Typography variant="h6" noWrap color="primary">
-                      V a v i c o m
+                    <Typography
+                      variant="h2"
+                      noWrap
+                      color="primary"
+                      style={{ textDecoration: 'underline' }}
+                    >
+                      {COMPANY}
                     </Typography>
                   </Grid>
                 </Grid>
