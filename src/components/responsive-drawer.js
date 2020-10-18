@@ -244,7 +244,7 @@ function ResponsiveDrawer(props) {
               variant="h6"
               noWrap
               color="primary"
-              style={{ textDecoration: 'underline' }}
+              style={{ textDecoration: 'underline', userSelect: 'none' }}
             >
               {COMPANY}
 

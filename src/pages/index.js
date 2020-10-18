@@ -82,7 +82,7 @@ const IndexPage = (props) => {
 
             >
               <Grid item>
-                <Typography variant="h3" color="primary" style={{ lineHeight: '90%' }}>
+                <Typography variant="h3" color="primary" style={{ lineHeight: '90%', userSelect: 'none' }}>
                   {intl.formatMessage({ id: 'landing.first' })}
                   <br />
                   {intl.formatMessage({ id: 'landing.second' })}
@@ -107,7 +107,7 @@ const IndexPage = (props) => {
                         variant="h3"
                         noWrap
                         color="primary"
-                        style={{ textDecoration: 'underline' }}
+                        style={{ textDecoration: 'underline', userSelect: 'none' }}
                       >
                         {COMPANY}
                       </Typography>
