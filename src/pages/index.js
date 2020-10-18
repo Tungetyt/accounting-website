@@ -43,11 +43,11 @@ const useStyles = makeStyles((theme) => ({
       marginRight: DRAWER_WIDTH,
     },
   },
-  landingTitle: {
-    [theme.breakpoints.up('xs')]: {
-      marginRight: DRAWER_WIDTH,
-    },
-  },
+  // landingTitle: {
+  //   [theme.breakpoints.up('xs')]: {
+  //     marginRight: DRAWER_WIDTH,
+  //   },
+  // },
 }));
 
 const IndexPage = (props) => {
@@ -69,7 +69,7 @@ const IndexPage = (props) => {
       <ThemeProvider theme={chosenTheme}>
         <ColorContext.Provider value={[isDark, setIsDark]}>
           <CssBaseline />
-          <SEO title={intl.formatMessage({ id: 'title' })} />
+          <SEO title="Vavicom" />
           <div id="back-to-top-anchor" />
           <ResponsiveDrawer props={props} />
           <main className={classes.main}>
@@ -78,8 +78,7 @@ const IndexPage = (props) => {
               direction="row"
               justify="space-evenly"
               alignItems="center"
-              style={{ paddingTop: '30vh' }}
-
+              style={{ paddingTop: '30vh', backgroundColor: 'green' }}
             >
               <Grid item>
                 <Typography variant="h3" color="primary" style={{ lineHeight: '90%', userSelect: 'none' }}>
