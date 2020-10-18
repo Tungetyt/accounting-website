@@ -237,7 +237,7 @@ function ResponsiveDrawer(props) {
           <Grid item>
             {/* <Logo width={50} height={50} fill="white" />
                 <Brain width={50} height={50} fill="white" /> */}
-            <Umbrella width={40} height={40} fill="white" />
+            <Umbrella width={40} height={40} fill={appTheme[isDark ? 'dark' : 'light'].palette.primary.main} />
           </Grid>
           <Grid item>
             <Typography variant="h6" noWrap color="primary">
