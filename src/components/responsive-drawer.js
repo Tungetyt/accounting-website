@@ -92,7 +92,7 @@ function ResponsiveDrawer(props) {
       marginTop: '-3px',
       position: 'fixed',
       top: '8px',
-      right: '8px',
+      right: isMobileOpen ? '25px' : '8px',
       paddingLeft: '12px',
       backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.background.default,
     },
