@@ -5,6 +5,10 @@ html {
   /* background-color: blue; */
 }
 
+body {
+  transition: all 0.25s linear;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;

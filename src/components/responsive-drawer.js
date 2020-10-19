@@ -100,6 +100,10 @@ function ResponsiveDrawer(props) {
       backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.background.default,
     },
     toolbar: theme.mixins.toolbar,
+    navItemTypo: {
+      color: theme.palette.primary.main,
+      fontWeight: 'bold',
+    },
   }));
   const classes = useStyles();
 
@@ -133,35 +137,35 @@ function ResponsiveDrawer(props) {
           <ListItemIcon><HomeIcon color="primary" /></ListItemIcon>
           <ListItemText
             disableTypography
-            primary={<Typography type="body2" style={{ color: theme.palette.primary.main, fontWeight: 'bold' }}>{intl.formatMessage({ id: 'home' })}</Typography>}
+            primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'home' })}</Typography>}
           />
         </ListItem>
         <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
           <ListItemIcon><BusinessCenterIcon color="primary" /></ListItemIcon>
           <ListItemText
             disableTypography
-            primary={<Typography type="body2" style={{ color: theme.palette.primary.main, fontWeight: 'bold' }}>{intl.formatMessage({ id: 'services' })}</Typography>}
+            primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'services' })}</Typography>}
           />
         </ListItem>
         <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
           <ListItemIcon><InfoIcon color="primary" /></ListItemIcon>
           <ListItemText
             disableTypography
-            primary={<Typography type="body2" style={{ color: theme.palette.primary.main, fontWeight: 'bold' }}>{intl.formatMessage({ id: 'about' })}</Typography>}
+            primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'about' })}</Typography>}
           />
         </ListItem>
         <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
           <ListItemIcon><HelpIcon color="primary" /></ListItemIcon>
           <ListItemText
             disableTypography
-            primary={<Typography type="body2" style={{ color: theme.palette.primary.main, fontWeight: 'bold' }}>{intl.formatMessage({ id: 'faq' })}</Typography>}
+            primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'faq' })}</Typography>}
           />
         </ListItem>
         <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
           <ListItemIcon><ContactPhoneIcon color="primary" /></ListItemIcon>
           <ListItemText
             disableTypography
-            primary={<Typography type="body2" style={{ color: theme.palette.primary.main, fontWeight: 'bold' }}>{intl.formatMessage({ id: 'contact' })}</Typography>}
+            primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'contact' })}</Typography>}
           />
         </ListItem>
       </List>
