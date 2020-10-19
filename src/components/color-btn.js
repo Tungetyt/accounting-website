@@ -78,6 +78,7 @@ const ColorBtn = () => {
         edge="end"
         color="primary"
         aria-label="mode"
+        style={{ transition: 'all 0.25s linear' }}
         onClick={() => {
           setIsDark((prevIsDark) => !prevIsDark);
         }}

@@ -33,6 +33,7 @@ const LangBtn = ({ location }) => {
               <IconButton
                 aria-label="language"
                 color="primary"
+                style={{ transition: 'all 0.25s linear' }}
                 onClick={() => {
                   changeLocale(location.pathname.replace(/\//g, '') === 'pl' ? 'en' : 'pl');
                 }}

@@ -65,6 +65,8 @@ function ResponsiveDrawer(props) {
     drawerPaper: {
       width: DRAWER_WIDTH,
       backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.background.default,
+      transition: 'all 0.25s linear',
+
     },
     content: {
       flexGrow: 1,
@@ -104,6 +106,9 @@ function ResponsiveDrawer(props) {
       color: theme.palette.primary.main,
       fontWeight: 'bold',
     },
+    icon: {
+      transition: 'all 0.25s linear',
+    },
   }));
   const classes = useStyles();
 
@@ -134,35 +139,35 @@ function ResponsiveDrawer(props) {
       <Divider />
       <List>
         <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
-          <ListItemIcon><HomeIcon color="primary" /></ListItemIcon>
+          <ListItemIcon><HomeIcon color="primary" className={classes.icon} /></ListItemIcon>
           <ListItemText
             disableTypography
             primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'home' })}</Typography>}
           />
         </ListItem>
         <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
-          <ListItemIcon><BusinessCenterIcon color="primary" /></ListItemIcon>
+          <ListItemIcon><BusinessCenterIcon color="primary" className={classes.icon} /></ListItemIcon>
           <ListItemText
             disableTypography
             primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'services' })}</Typography>}
           />
         </ListItem>
         <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
-          <ListItemIcon><InfoIcon color="primary" /></ListItemIcon>
+          <ListItemIcon><InfoIcon color="primary" className={classes.icon} /></ListItemIcon>
           <ListItemText
             disableTypography
             primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'about' })}</Typography>}
           />
         </ListItem>
         <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
-          <ListItemIcon><HelpIcon color="primary" /></ListItemIcon>
+          <ListItemIcon><HelpIcon color="primary" className={classes.icon} /></ListItemIcon>
           <ListItemText
             disableTypography
             primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'faq' })}</Typography>}
           />
         </ListItem>
         <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
-          <ListItemIcon><ContactPhoneIcon color="primary" /></ListItemIcon>
+          <ListItemIcon><ContactPhoneIcon color="primary" className={classes.icon} /></ListItemIcon>
           <ListItemText
             disableTypography
             primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'contact' })}</Typography>}
@@ -271,6 +276,7 @@ function ResponsiveDrawer(props) {
               edge="start"
               onClick={handleDrawerToggle}
               className={classes.menuButton}
+
             >
               <MenuIcon />
             </IconButton>
