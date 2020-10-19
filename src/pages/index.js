@@ -96,7 +96,7 @@ const IndexPage = (props) => {
                     direction="row"
                     justify="space-between"
                     alignItems="center"
-                    spacing={3}
+                    spacing={1}
                   >
                     <Grid item>
                       <Umbrella width={80} height={80} fill={APP_THEME[isDark ? 'dark' : 'light'].palette.primary.main} />

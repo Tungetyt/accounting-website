@@ -68,10 +68,10 @@ function ResponsiveDrawer(props) {
       transition: 'all 0.25s linear',
 
     },
-    content: {
-      flexGrow: 1,
-      padding: theme.spacing(3),
-    },
+    // content: {
+    //   flexGrow: 1,
+    //   padding: theme.spacing(3),
+    // },
     // appBar: {
     //   backgroundColor: appTheme[isDark ? 'dark' : 'light'].palette.elevation1.backgroundColor,
     //   zIndex: theme.zIndex.drawer + 1,
