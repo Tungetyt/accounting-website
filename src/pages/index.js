@@ -28,7 +28,6 @@ import {
 } from 'react-scroll';
 import SEO from '../components/seo';
 import Image from '../components/image';
-import Layout from '../components/layout';
 import ColorBtn from '../components/color-btn';
 import LangBtn from '../components/lang-btn';
 import LandingPage from '../components/landing-page';
@@ -77,7 +76,6 @@ const IndexPage = (props) => {
           <CssBaseline />
           <SEO title="Vavicom" />
           {/* <div id="back-to-top-anchor" /> */}
-          <Element name="back-to-top-anchor" className="element" />
           <ResponsiveDrawer props={props} />
           <main className={classes.main}>
             <LandingPage />

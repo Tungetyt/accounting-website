@@ -10,7 +10,6 @@ import Brightness3Icon from '@material-ui/icons/Brightness3';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 import SEO from './seo';
 import Image from './image';
-import Layout from './layout';
 import LangBtn from './lang-btn';
 import { getLanguageFromLS, LOCAL_STORAGE_KEY, langNames } from '../helpers';
 

@@ -10,7 +10,6 @@ import Brightness3Icon from '@material-ui/icons/Brightness3';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 import SEO from './seo';
 import Image from './image';
-import Layout from './layout';
 import { getItemByKey, LOCAL_STORAGE_KEY } from '../helpers';
 
 const useStyles = makeStyles({

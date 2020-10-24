@@ -50,7 +50,6 @@ import {
 import ScrollTop from './scroll-top';
 import ThemeBtn from './theme-btn';
 import LangBtn from './lang-btn';
-import Layout from './layout';
 import Image from './image';
 import SEO from './seo';
 import ResponsiveDrawer from './responsive-drawer';

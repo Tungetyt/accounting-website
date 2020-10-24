@@ -23,9 +23,11 @@ import Fab from '@material-ui/core/Fab';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import { useIntl, Link, FormattedMessage } from 'gatsby-plugin-intl';
 import Iframe from 'react-iframe';
+import {
+  Element, Events, animateScroll as scroll, scrollSpy, scroller,
+} from 'react-scroll';
 import SEO from './seo';
 import Image from './image';
-import Layout from './layout';
 import ColorBtn from './color-btn';
 import LangBtn from './lang-btn';
 import Umbrella from '../images/umbrella.svg';
@@ -44,48 +46,50 @@ const LandingPage = () => {
     true,
   );
   return (
-    <Grid
-      container
-      direction="row"
-      justify="space-evenly"
-      alignItems="center"
-      style={{ paddingTop: '30vh', paddingBottom: '70vh', backgroundColor: 'green' }}
-    >
-      <Grid item>
-        <Typography variant="h3" color="primary" style={{ lineHeight: '90%', userSelect: 'none' }}>
-          {intl.formatMessage({ id: 'landing.first' })}
-          <br />
-          {intl.formatMessage({ id: 'landing.second' })}
-          <br />
-          {intl.formatMessage({ id: 'landing.third' })}
-        </Typography>
-      </Grid>
-      <Hidden mdDown implementation="css">
+    <Element name="back-to-top-anchor">
+      <Grid
+        container
+        direction="row"
+        justify="space-evenly"
+        alignItems="center"
+        style={{ paddingTop: '30vh', paddingBottom: '70vh', backgroundColor: 'green' }}
+      >
         <Grid item>
-          <Grid
-            container
-            direction="row"
-            justify="space-between"
-            alignItems="center"
-            spacing={1}
-          >
-            <Grid item>
-              <Umbrella width={80} height={80} fill={APP_THEME[isDark ? 'dark' : 'light'].palette.primary.main} />
-            </Grid>
-            <Grid item>
-              <Typography
-                variant="h3"
-                noWrap
-                color="primary"
-                style={{ textDecoration: 'underline', userSelect: 'none' }}
-              >
-                {COMPANY}
-              </Typography>
+          <Typography variant="h3" color="primary" style={{ lineHeight: '90%', userSelect: 'none' }}>
+            {intl.formatMessage({ id: 'landing.first' })}
+            <br />
+            {intl.formatMessage({ id: 'landing.second' })}
+            <br />
+            {intl.formatMessage({ id: 'landing.third' })}
+          </Typography>
+        </Grid>
+        <Hidden mdDown implementation="css">
+          <Grid item>
+            <Grid
+              container
+              direction="row"
+              justify="space-between"
+              alignItems="center"
+              spacing={1}
+            >
+              <Grid item>
+                <Umbrella width={80} height={80} fill={APP_THEME[isDark ? 'dark' : 'light'].palette.primary.main} />
+              </Grid>
+              <Grid item>
+                <Typography
+                  variant="h3"
+                  noWrap
+                  color="primary"
+                  style={{ textDecoration: 'underline', userSelect: 'none' }}
+                >
+                  {COMPANY}
+                </Typography>
+              </Grid>
             </Grid>
           </Grid>
-        </Grid>
-      </Hidden>
-    </Grid>
+        </Hidden>
+      </Grid>
+    </Element>
   );
 };
 
