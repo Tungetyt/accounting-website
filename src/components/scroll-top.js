@@ -25,11 +25,10 @@ import Image from './image';
 import LangBtn from './lang-btn';
 import ThemeBtn from './theme-btn';
 import {
-  getItemByKey, LOCAL_STORAGE_KEY, langNames, DRAWER_WIDTH,
+  getItemByKey, LOCAL_STORAGE_KEY, langNames, DRAWER_WIDTH, NAVIGATION,
 } from '../helpers';
 
 const ScrollTop = (props) => {
-  // const theme = useTheme();
   const tooltipRight = (useMediaQuery('(min-width:600px)') ? 25 : 2);
 
   const useStyles = makeStyles((theme) => ({
@@ -39,7 +38,6 @@ const ScrollTop = (props) => {
       right: theme.spacing(tooltipRight),
     },
   }));
-  // const matches = useMediaQuery(theme.breakpoints.up('sm'));
 
   const { children, window } = props;
   const classes = useStyles();
@@ -52,9 +50,11 @@ const ScrollTop = (props) => {
     threshold: 100,
   });
 
+  const { home } = NAVIGATION;
+
   const handleClick = (event) => {
-    const anchor = (event.target.ownerDocument || document).querySelector('#home');
-    // console.log(matches);
+    const anchor = (event.target.ownerDocument || document).querySelector(`#${home}`);
+
     if (anchor) {
       anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }

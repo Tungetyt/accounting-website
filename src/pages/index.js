@@ -48,11 +48,6 @@ const useStyles = makeStyles((theme) => ({
       marginRight: DRAWER_WIDTH,
     },
   },
-  // landingTitle: {
-  //   [theme.breakpoints.up('xs')]: {
-  //     marginRight: DRAWER_WIDTH,
-  //   },
-  // },
 }));
 
 const IndexPage = (props) => {

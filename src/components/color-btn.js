@@ -71,7 +71,7 @@ const ColorBtn = () => {
   }, [isDark]);
 
   return (
-    <Tooltip title={intl.formatMessage({ id: 'themeBtn' })} arrow TransitionComponent={Zoom} id="back-to-top-anchor">
+    <Tooltip title={intl.formatMessage({ id: 'themeBtn' })} arrow TransitionComponent={Zoom}>
       <IconButton
         edge="end"
         color="primary"

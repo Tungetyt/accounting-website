@@ -36,7 +36,7 @@ import { LangContext, ColorContext } from '../context/contexts';
 import ThemeBtn from './theme-btn';
 import ScrollTop from './scroll-top';
 import {
-  getItemByKey, LOCAL_STORAGE_KEY, langNames, APP_THEME, THEME_NAMES, DRAWER_WIDTH, COMPANY,
+  NAVIGATION, getItemByKey, LOCAL_STORAGE_KEY, langNames, APP_THEME, THEME_NAMES, DRAWER_WIDTH, COMPANY,
 } from '../helpers';
 import ResponsiveDrawer from './responsive-drawer';
 
@@ -45,8 +45,11 @@ const LandingPage = () => {
   const [isDark, setIsDark] = useState(
     true,
   );
+
+  const { home } = NAVIGATION;
+
   return (
-    <Element name="home" id="home">
+    <Element name={home} id={home}>
       <Grid
         container
         direction="row"

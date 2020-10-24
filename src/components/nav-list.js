@@ -35,7 +35,7 @@ import Zoom from '@material-ui/core/Zoom';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import { LangContext, ColorContext } from '../context/contexts';
 import {
-  getItemByKey, LOCAL_STORAGE_KEY, langNames, APP_THEME, THEME_NAMES, DRAWER_WIDTH, COMPANY,
+  NAVIGATION, getItemByKey, LOCAL_STORAGE_KEY, langNames, APP_THEME, THEME_NAMES, DRAWER_WIDTH, COMPANY,
 } from '../helpers';
 import Umbrella from '../images/umbrella.svg';
 
@@ -59,6 +59,7 @@ const NavList = () => {
       backgroundColor: '#7986cb',
     },
   }));
+
   const classes = useStyles();
 
   function NavLink(props) {
@@ -84,27 +85,31 @@ const NavList = () => {
     />
   );
 
+  const {
+    home, services, about, faq, contact,
+  } = NAVIGATION;
+
   return (
     <List>
-      <NavLink to="home">
+      <NavLink to={home}>
         <ListItemIcon><HomeIcon color="primary" className={classes.icon} /></ListItemIcon>
-        <TextLink id="home" />
+        <TextLink id={home} />
       </NavLink>
-      <NavLink to="services">
+      <NavLink to={services}>
         <ListItemIcon><BusinessCenterIcon color="primary" className={classes.icon} /></ListItemIcon>
-        <TextLink id="services" />
+        <TextLink id={services} />
       </NavLink>
-      <NavLink to="about">
+      <NavLink to={about}>
         <ListItemIcon><InfoIcon color="primary" className={classes.icon} /></ListItemIcon>
-        <TextLink id="about" />
+        <TextLink id={about} />
       </NavLink>
-      <NavLink to="faq">
+      <NavLink to={faq}>
         <ListItemIcon><HelpIcon color="primary" className={classes.icon} /></ListItemIcon>
-        <TextLink id="faq" />
+        <TextLink id={faq} />
       </NavLink>
-      <NavLink to="contact">
+      <NavLink to={contact}>
         <ListItemIcon><ContactPhoneIcon color="primary" className={classes.icon} /></ListItemIcon>
-        <TextLink id="contact" />
+        <TextLink id={contact} />
       </NavLink>
     </List>
   );
