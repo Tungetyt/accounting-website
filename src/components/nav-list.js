@@ -45,6 +45,7 @@ import Logo from './logo';
 import Hamburger from './hamburger';
 
 function ListItemLink(props) {
+  // eslint-disable-next-line react/jsx-props-no-spreading
   return <ListItem button component={Link} {...props} />;
 }
 
@@ -59,15 +60,7 @@ const NavList = () => {
     icon: {
       transition: 'all 0.25s linear',
     },
-    link: {
-      color: '#FFFF00',
-    },
-    treeItem: {
-      // paddingTop: theme.spacing(1),
-      // '&[aria-selected="true"][aria-expanded="true"] > div:nth-of-type(1)': {
-      //   backgroundColor: 'red',
-      //   fontSize: '25px',
-      // },
+    active: {
       backgroundColor: '#7986cb',
     },
   }));
@@ -75,35 +68,35 @@ const NavList = () => {
 
   return (
     <List>
-      <ListItemLink activeClass={classes.treeItem} to="back-to-top-anchor" spy smooth duration={0} ignoreCancelEvents={false}>
+      <ListItemLink activeClass={classes.active} to="back-to-top-anchor" spy smooth duration={0} ignoreCancelEvents={false}>
         <ListItemIcon><HomeIcon color="primary" className={classes.icon} /></ListItemIcon>
         <ListItemText
           disableTypography
           primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'home' })}</Typography>}
         />
       </ListItemLink>
-      <ListItemLink activeClass={classes.treeItem} to="back-to-top-anchor" spy smooth duration={0} ignoreCancelEvents={false}>
+      <ListItemLink activeClass={classes.active} to="back-to-top-anchor" spy smooth duration={0} ignoreCancelEvents={false}>
         <ListItemIcon><BusinessCenterIcon color="primary" className={classes.icon} /></ListItemIcon>
         <ListItemText
           disableTypography
           primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'services' })}</Typography>}
         />
       </ListItemLink>
-      <ListItemLink activeClass={classes.treeItem} to="back-to-top-anchor" spy smooth duration={0} ignoreCancelEvents={false}>
+      <ListItemLink activeClass={classes.active} to="back-to-top-anchor" spy smooth duration={0} ignoreCancelEvents={false}>
         <ListItemIcon><InfoIcon color="primary" className={classes.icon} /></ListItemIcon>
         <ListItemText
           disableTypography
           primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'about' })}</Typography>}
         />
       </ListItemLink>
-      <ListItemLink activeClass={classes.treeItem} to="back-to-top-anchor" spy smooth duration={0} ignoreCancelEvents={false}>
+      <ListItemLink activeClass={classes.active} to="back-to-top-anchor" spy smooth duration={0} ignoreCancelEvents={false}>
         <ListItemIcon><HelpIcon color="primary" className={classes.icon} /></ListItemIcon>
         <ListItemText
           disableTypography
           primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'faq' })}</Typography>}
         />
       </ListItemLink>
-      <ListItemLink activeClass={classes.treeItem} to="back-to-top-anchor" spy smooth duration={0} ignoreCancelEvents={false}>
+      <ListItemLink activeClass={classes.active} to="back-to-top-anchor" spy smooth duration={0} ignoreCancelEvents={false}>
         <ListItemIcon><ContactPhoneIcon color="primary" className={classes.icon} /></ListItemIcon>
         <ListItemText
           disableTypography
