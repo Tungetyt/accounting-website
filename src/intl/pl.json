@@ -10,8 +10,9 @@
     "backToTopBtn": "Powrót do góry",
     "faq": "FAQ",
     "notfound": {
-      "header": "NOT FOUND",
-      "description": "You just hit a route that doesn't exist... the sadness."
+      "header": "404: Not Found",
+      "description": "Strona o takim adresie nie istnieje",
+      "goback": "Wróć do strony głównej"
     },
     "hamburger": "Panel nawigacyjny",
     "landing": {
