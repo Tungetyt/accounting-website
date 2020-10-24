@@ -9,6 +9,7 @@ export const THEME_NAMES = {
   light: 'light',
   dark: 'dark',
 };
+
 const EXTENDED_APP_THEME = {
   typography: {
     // h6 represents the company name in the logo
@@ -18,6 +19,7 @@ const EXTENDED_APP_THEME = {
     },
   },
 };
+
 export const APP_THEME = {
   light: {
     palette: {
