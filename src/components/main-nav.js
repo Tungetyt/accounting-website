@@ -50,7 +50,6 @@ const MainNav = (props) => {
   const { window } = props;
 
   const [isDark, setIsDark] = useContext(ColorContext);
-  const intl = useIntl();
 
   const useStyles = makeStyles((theme) => ({
     drawer: {
@@ -75,63 +74,6 @@ const MainNav = (props) => {
   }));
   const classes = useStyles();
 
-  //   const drawer = (
-  //     <div>
-  //       <div className={classes.toolbar} />
-  //       <Grid
-  //         container
-  //         direction="row"
-  //         justify="space-around"
-  //         alignItems="center"
-  //         spacing={0}
-  //       >
-  //         <Grid item>
-  //           <ColorBtn />
-  //         </Grid>
-  //         <Grid item>
-  //           <LangBtn />
-  //         </Grid>
-  //       </Grid>
-  //       <Divider />
-  //       <List>
-  //         <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
-  //           <ListItemIcon><HomeIcon color="primary" className={classes.icon} /></ListItemIcon>
-  //           <ListItemText
-  //             disableTypography
-  //             primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'home' })}</Typography>}
-  //           />
-  //         </ListItem>
-  //         <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
-  //           <ListItemIcon><BusinessCenterIcon color="primary" className={classes.icon} /></ListItemIcon>
-  //           <ListItemText
-  //             disableTypography
-  //             primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'services' })}</Typography>}
-  //           />
-  //         </ListItem>
-  //         <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
-  //           <ListItemIcon><InfoIcon color="primary" className={classes.icon} /></ListItemIcon>
-  //           <ListItemText
-  //             disableTypography
-  //             primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'about' })}</Typography>}
-  //           />
-  //         </ListItem>
-  //         <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
-  //           <ListItemIcon><HelpIcon color="primary" className={classes.icon} /></ListItemIcon>
-  //           <ListItemText
-  //             disableTypography
-  //             primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'faq' })}</Typography>}
-  //           />
-  //         </ListItem>
-  //         <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
-  //           <ListItemIcon><ContactPhoneIcon color="primary" className={classes.icon} /></ListItemIcon>
-  //           <ListItemText
-  //             disableTypography
-  //             primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'contact' })}</Typography>}
-  //           />
-  //         </ListItem>
-  //       </List>
-  //     </div>
-  //   );
   const container = window !== undefined ? () => window().document.body : undefined;
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
@@ -155,7 +97,7 @@ const MainNav = (props) => {
           disableBackdropTransition={!iOS}
           disableDiscovery={iOS}
         >
-          <DrawerContent isMobileOpen={isMobileOpen} />
+          <DrawerContent />
         </SwipeableDrawer>
       </Hidden>
       <Hidden xsDown implementation="css">
@@ -167,11 +109,19 @@ const MainNav = (props) => {
           anchor="right"
           open
         >
-          <DrawerContent isMobileOpen={isMobileOpen} />
+          <DrawerContent />
         </Drawer>
       </Hidden>
     </nav>
   );
+};
+
+MainNav.propTypes = {
+  /**
+   * Injected by the documentation to work in an iframe.
+   * You won't need it on your project.
+   */
+  window: PropTypes.func,
 };
 
 export default MainNav;

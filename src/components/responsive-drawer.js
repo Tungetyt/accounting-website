@@ -45,170 +45,20 @@ import Logo from './logo';
 import Hamburger from './hamburger';
 import MainNav from './main-nav';
 
-function ResponsiveDrawer(props) {
-  const { window } = props;
+function ResponsiveDrawer() {
   const [isMobileOpen, setIsMobileOpen] = React.useState(false);
-  const [isDark, setIsDark] = useContext(ColorContext);
-  const intl = useIntl();
-
-  const useStyles = makeStyles((theme) => ({
-    drawer: {
-      [theme.breakpoints.up('sm')]: {
-        width: DRAWER_WIDTH,
-        flexShrink: 0,
-      },
-    },
-    menuButton: {
-      [theme.breakpoints.up('sm')]: {
-        display: 'none',
-      },
-    },
-    drawerPaper: {
-      width: DRAWER_WIDTH,
-      backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.background.default,
-      transition: 'all 0.25s linear',
-    },
-    elevation2: {
-      backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor,
-    },
-    hamburger: {
-      marginTop: '-3px',
-      position: 'fixed',
-      top: '6px',
-      right: isMobileOpen ? '25px' : '8px',
-      paddingLeft: '12px',
-      backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.background.default,
-    },
-    background: {
-      backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.background.default,
-    },
-    toolbar: theme.mixins.toolbar,
-    navItemTypo: {
-      color: theme.palette.primary.main,
-      fontWeight: 'bold',
-    },
-    icon: {
-      transition: 'all 0.25s linear',
-    },
-  }));
-  const classes = useStyles();
 
   const handleDrawerToggle = () => {
     setIsMobileOpen((prevIsMobileOpen) => !prevIsMobileOpen);
   };
 
-  const drawer = (
-    <div>
-      <div className={classes.toolbar} />
-      <Grid
-        container
-        direction="row"
-        justify="space-around"
-        alignItems="center"
-        spacing={0}
-
-      >
-        <Grid item>
-          <ColorBtn />
-        </Grid>
-        <Grid item>
-          <LangBtn />
-        </Grid>
-      </Grid>
-      <Divider />
-      <List>
-        <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
-          <ListItemIcon><HomeIcon color="primary" className={classes.icon} /></ListItemIcon>
-          <ListItemText
-            disableTypography
-            primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'home' })}</Typography>}
-          />
-        </ListItem>
-        <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
-          <ListItemIcon><BusinessCenterIcon color="primary" className={classes.icon} /></ListItemIcon>
-          <ListItemText
-            disableTypography
-            primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'services' })}</Typography>}
-          />
-        </ListItem>
-        <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
-          <ListItemIcon><InfoIcon color="primary" className={classes.icon} /></ListItemIcon>
-          <ListItemText
-            disableTypography
-            primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'about' })}</Typography>}
-          />
-        </ListItem>
-        <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
-          <ListItemIcon><HelpIcon color="primary" className={classes.icon} /></ListItemIcon>
-          <ListItemText
-            disableTypography
-            primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'faq' })}</Typography>}
-          />
-        </ListItem>
-        <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
-          <ListItemIcon><ContactPhoneIcon color="primary" className={classes.icon} /></ListItemIcon>
-          <ListItemText
-            disableTypography
-            primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'contact' })}</Typography>}
-          />
-        </ListItem>
-      </List>
-    </div>
-  );
-
-  const container = window !== undefined ? () => window().document.body : undefined;
-  const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
   return (
     <div>
       <Logo />
-
       <Hamburger handleDrawerToggle={handleDrawerToggle} isMobileOpen={isMobileOpen} />
-
       <MainNav handleDrawerToggle={handleDrawerToggle} isMobileOpen={isMobileOpen} />
-      {/* <nav className={classes.drawer} aria-label="mailbox folders">
-        <Hidden smUp implementation="css">
-          <SwipeableDrawer
-            container={container}
-            variant="temporary"
-            anchor="right"
-            open={isMobileOpen}
-            onClose={handleDrawerToggle}
-            onOpen={handleDrawerToggle}
-            classes={{
-              paper: classes.drawerPaper,
-            }}
-            ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
-            }}
-            disableBackdropTransition={!iOS}
-            disableDiscovery={iOS}
-          >
-            {drawer}
-          </SwipeableDrawer>
-        </Hidden>
-        <Hidden xsDown implementation="css">
-          <Drawer
-            classes={{
-              paper: classes.drawerPaper,
-            }}
-            variant="permanent"
-            anchor="right"
-            open
-          >
-            {drawer}
-          </Drawer>
-        </Hidden>
-      </nav> */}
     </div>
   );
 }
-
-ResponsiveDrawer.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window: PropTypes.func,
-};
 
 export default ResponsiveDrawer;

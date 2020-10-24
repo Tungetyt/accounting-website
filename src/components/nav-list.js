@@ -43,34 +43,59 @@ import ColorBtn from './color-btn';
 import LangBtn from './lang-btn';
 import Logo from './logo';
 import Hamburger from './hamburger';
-import NavList from './nav-list';
 
-const DrawerContent = () => {
+const NavList = () => {
+  const intl = useIntl();
+
   const useStyles = makeStyles((theme) => ({
-    toolbar: theme.mixins.toolbar,
+    navItemTypo: {
+      color: theme.palette.primary.main,
+      fontWeight: 'bold',
+    },
+    icon: {
+      transition: 'all 0.25s linear',
+    },
   }));
   const classes = useStyles();
   return (
-    <div>
-      <div className={classes.toolbar} />
-      <Grid
-        container
-        direction="row"
-        justify="space-around"
-        alignItems="center"
-        spacing={0}
-      >
-        <Grid item>
-          <ColorBtn />
-        </Grid>
-        <Grid item>
-          <LangBtn />
-        </Grid>
-      </Grid>
-      <Divider />
-      <NavList />
-    </div>
+    <List>
+      <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
+        <ListItemIcon><HomeIcon color="primary" className={classes.icon} /></ListItemIcon>
+        <ListItemText
+          disableTypography
+          primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'home' })}</Typography>}
+        />
+      </ListItem>
+      <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
+        <ListItemIcon><BusinessCenterIcon color="primary" className={classes.icon} /></ListItemIcon>
+        <ListItemText
+          disableTypography
+          primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'services' })}</Typography>}
+        />
+      </ListItem>
+      <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
+        <ListItemIcon><InfoIcon color="primary" className={classes.icon} /></ListItemIcon>
+        <ListItemText
+          disableTypography
+          primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'about' })}</Typography>}
+        />
+      </ListItem>
+      <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
+        <ListItemIcon><HelpIcon color="primary" className={classes.icon} /></ListItemIcon>
+        <ListItemText
+          disableTypography
+          primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'faq' })}</Typography>}
+        />
+      </ListItem>
+      <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
+        <ListItemIcon><ContactPhoneIcon color="primary" className={classes.icon} /></ListItemIcon>
+        <ListItemText
+          disableTypography
+          primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'contact' })}</Typography>}
+        />
+      </ListItem>
+    </List>
   );
 };
 
-export default DrawerContent;
+export default NavList;
