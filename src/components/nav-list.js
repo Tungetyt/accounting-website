@@ -28,11 +28,12 @@ import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import { Box, Grid, Paper } from '@material-ui/core';
 import {
-  useIntl, Link, FormattedMessage, injectIntl, IntlContextConsumer, changeLocale,
+  useIntl, FormattedMessage, injectIntl, IntlContextConsumer, changeLocale,
 } from 'gatsby-plugin-intl';
 import { StickyContainer, Sticky } from 'react-sticky';
 import Tooltip from '@material-ui/core/Tooltip';
 import Zoom from '@material-ui/core/Zoom';
+import { Link, animateScroll as scroll } from 'react-scroll';
 import { LangContext, ColorContext } from '../context/contexts';
 import {
   getItemByKey, LOCAL_STORAGE_KEY, langNames, APP_THEME, THEME_NAMES, DRAWER_WIDTH, COMPANY,
@@ -43,6 +44,10 @@ import ColorBtn from './color-btn';
 import LangBtn from './lang-btn';
 import Logo from './logo';
 import Hamburger from './hamburger';
+
+function ListItemLink(props) {
+  return <ListItem button component={Link} {...props} />;
+}
 
 const NavList = () => {
   const intl = useIntl();
@@ -59,41 +64,41 @@ const NavList = () => {
   const classes = useStyles();
   return (
     <List>
-      <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
+      <ListItemLink to="back-to-top-anchor" spy smooth duration={0}>
         <ListItemIcon><HomeIcon color="primary" className={classes.icon} /></ListItemIcon>
         <ListItemText
           disableTypography
           primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'home' })}</Typography>}
         />
-      </ListItem>
-      <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
+      </ListItemLink>
+      <ListItemLink to="back-to-top-anchor" spy smooth duration={0}>
         <ListItemIcon><BusinessCenterIcon color="primary" className={classes.icon} /></ListItemIcon>
         <ListItemText
           disableTypography
           primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'services' })}</Typography>}
         />
-      </ListItem>
-      <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
+      </ListItemLink>
+      <ListItemLink to="back-to-top-anchor" spy smooth duration={0}>
         <ListItemIcon><InfoIcon color="primary" className={classes.icon} /></ListItemIcon>
         <ListItemText
           disableTypography
           primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'about' })}</Typography>}
         />
-      </ListItem>
-      <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
+      </ListItemLink>
+      <ListItemLink to="back-to-top-anchor" spy smooth duration={0}>
         <ListItemIcon><HelpIcon color="primary" className={classes.icon} /></ListItemIcon>
         <ListItemText
           disableTypography
           primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'faq' })}</Typography>}
         />
-      </ListItem>
-      <ListItem button onClick={() => scrollTo('#back-to-top-anchor')}>
+      </ListItemLink>
+      <ListItemLink to="back-to-top-anchor" spy smooth duration={0}>
         <ListItemIcon><ContactPhoneIcon color="primary" className={classes.icon} /></ListItemIcon>
         <ListItemText
           disableTypography
           primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'contact' })}</Typography>}
         />
-      </ListItem>
+      </ListItemLink>
     </List>
   );
 };

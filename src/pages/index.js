@@ -23,6 +23,9 @@ import Fab from '@material-ui/core/Fab';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import { useIntl, Link, FormattedMessage } from 'gatsby-plugin-intl';
 import Iframe from 'react-iframe';
+import {
+  Element, Events, animateScroll as scroll, scrollSpy, scroller,
+} from 'react-scroll';
 import SEO from '../components/seo';
 import Image from '../components/image';
 import Layout from '../components/layout';
@@ -73,10 +76,10 @@ const IndexPage = (props) => {
         <ColorContext.Provider value={[isDark, setIsDark]}>
           <CssBaseline />
           <SEO title="Vavicom" />
-          <div id="back-to-top-anchor" />
+          {/* <div id="back-to-top-anchor" /> */}
+          <Element name="back-to-top-anchor" className="element" />
           <ResponsiveDrawer props={props} />
           <main className={classes.main}>
-
             <LandingPage />
             <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>
             <Typography>bbbbbbbbbbbbbbbbbbbbbb</Typography>
