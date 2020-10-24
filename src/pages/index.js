@@ -75,7 +75,6 @@ const IndexPage = (props) => {
         <ColorContext.Provider value={[isDark, setIsDark]}>
           <CssBaseline />
           <SEO title="Vavicom" />
-          {/* <div id="back-to-top-anchor" /> */}
           <ResponsiveDrawer props={props} />
           <main className={classes.main}>
             <LandingPage />
@@ -132,7 +131,7 @@ const IndexPage = (props) => {
             <Button color="primary">fjsdifhjhaois</Button> */}
           </main>
           <ScrollTop>
-            <Tooltip placement="top" title={intl.formatMessage({ id: 'backToTopBtn' })} arrow TransitionComponent={Zoom} id="back-to-top-anchor">
+            <Tooltip placement="top" title={intl.formatMessage({ id: 'backToTopBtn' })} arrow TransitionComponent={Zoom}>
               <Fab color="primary" size="small" aria-label="scroll back to top">
                 <KeyboardArrowUpIcon />
               </Fab>

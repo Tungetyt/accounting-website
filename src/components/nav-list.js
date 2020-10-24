@@ -44,11 +44,6 @@ import LangBtn from './lang-btn';
 import Logo from './logo';
 import Hamburger from './hamburger';
 
-function ListItemLink(props) {
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  return <ListItem button component={Link} {...props} />;
-}
-
 const NavList = () => {
   const intl = useIntl();
 
@@ -66,43 +61,51 @@ const NavList = () => {
   }));
   const classes = useStyles();
 
+  function NavLink(props) {
+    console.log('props', props);
+    return (
+      <ListItem
+        activeClass={classes.active}
+        spy
+        smooth
+        duration={0}
+        ignoreCancelEvents={false}
+        button
+        component={Link}
+        {...props}
+      />
+    );
+  }
+
+  const TextLink = ({ id }) => (
+    <ListItemText
+      disableTypography
+      primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id })}</Typography>}
+    />
+  );
+
   return (
     <List>
-      <ListItemLink activeClass={classes.active} to="back-to-top-anchor" spy smooth duration={0} ignoreCancelEvents={false}>
+      <NavLink to="home">
         <ListItemIcon><HomeIcon color="primary" className={classes.icon} /></ListItemIcon>
-        <ListItemText
-          disableTypography
-          primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'home' })}</Typography>}
-        />
-      </ListItemLink>
-      <ListItemLink activeClass={classes.active} to="back-to-top-anchor" spy smooth duration={0} ignoreCancelEvents={false}>
+        <TextLink id="home" />
+      </NavLink>
+      <NavLink to="services">
         <ListItemIcon><BusinessCenterIcon color="primary" className={classes.icon} /></ListItemIcon>
-        <ListItemText
-          disableTypography
-          primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'services' })}</Typography>}
-        />
-      </ListItemLink>
-      <ListItemLink activeClass={classes.active} to="back-to-top-anchor" spy smooth duration={0} ignoreCancelEvents={false}>
+        <TextLink id="services" />
+      </NavLink>
+      <NavLink to="about">
         <ListItemIcon><InfoIcon color="primary" className={classes.icon} /></ListItemIcon>
-        <ListItemText
-          disableTypography
-          primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'about' })}</Typography>}
-        />
-      </ListItemLink>
-      <ListItemLink activeClass={classes.active} to="back-to-top-anchor" spy smooth duration={0} ignoreCancelEvents={false}>
+        <TextLink id="about" />
+      </NavLink>
+      <NavLink to="faq">
         <ListItemIcon><HelpIcon color="primary" className={classes.icon} /></ListItemIcon>
-        <ListItemText
-          disableTypography
-          primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'faq' })}</Typography>}
-        />
-      </ListItemLink>
-      <ListItemLink activeClass={classes.active} to="back-to-top-anchor" spy smooth duration={0} ignoreCancelEvents={false}>
+        <TextLink id="faq" />
+      </NavLink>
+      <NavLink to="contact">
         <ListItemIcon><ContactPhoneIcon color="primary" className={classes.icon} /></ListItemIcon>
-        <ListItemText
-          disableTypography
-          primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id: 'contact' })}</Typography>}
-        />
-      </ListItemLink>
+        <TextLink id="contact" />
+      </NavLink>
     </List>
   );
 };

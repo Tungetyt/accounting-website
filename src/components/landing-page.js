@@ -46,7 +46,7 @@ const LandingPage = () => {
     true,
   );
   return (
-    <Element name="back-to-top-anchor">
+    <Element name="home" id="home">
       <Grid
         container
         direction="row"
