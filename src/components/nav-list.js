@@ -29,7 +29,6 @@ import { Box, Grid, Paper } from '@material-ui/core';
 import {
   useIntl, FormattedMessage, injectIntl, IntlContextConsumer, changeLocale,
 } from 'gatsby-plugin-intl';
-import { StickyContainer, Sticky } from 'react-sticky';
 import Tooltip from '@material-ui/core/Tooltip';
 import Zoom from '@material-ui/core/Zoom';
 import { Link, animateScroll as scroll } from 'react-scroll';
