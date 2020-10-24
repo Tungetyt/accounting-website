@@ -22,6 +22,7 @@ import Container from '@material-ui/core/Container';
 import Fab from '@material-ui/core/Fab';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import { useIntl, Link, FormattedMessage } from 'gatsby-plugin-intl';
+import Iframe from 'react-iframe';
 import SEO from '../components/seo';
 import Image from '../components/image';
 import Layout from '../components/layout';
@@ -78,7 +79,7 @@ const IndexPage = (props) => {
               direction="row"
               justify="space-evenly"
               alignItems="center"
-              style={{ paddingTop: '30vh', backgroundColor: 'green' }}
+              style={{ paddingTop: '30vh', paddingBottom: '70vh', backgroundColor: 'green' }}
             >
               <Grid item>
                 <Typography variant="h3" color="primary" style={{ lineHeight: '90%', userSelect: 'none' }}>
@@ -115,6 +116,7 @@ const IndexPage = (props) => {
                 </Grid>
               </Hidden>
             </Grid>
+
             <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>
             <Typography>bbbbbbbbbbbbbbbbbbbbbb</Typography>
             <Typography>cccccccccccccccc</Typography>
@@ -153,6 +155,19 @@ const IndexPage = (props) => {
             <Typography>aaaaaaaaaaaaaaaaa</Typography>
             <Typography>aaaaaaaaaaaaaaaaa</Typography>
             <Typography>aaaaaaaaaaaaaaaaa</Typography>
+            <Iframe
+              url="https://scratch.mit.edu/projects/438540369/embed"
+              width="485px"
+              height="402px"
+              id="myId"
+              className="myClassname"
+              display="initial"
+              position="relative"
+              allowFullScreen
+              scrolling="no"
+              frameBorder="0"
+            />
+            <Button color="primary">fjsdifhjhaois</Button>
           </main>
           <ScrollTop>
             <Tooltip placement="top" title={intl.formatMessage({ id: 'backToTopBtn' })} arrow TransitionComponent={Zoom} id="back-to-top-anchor">
