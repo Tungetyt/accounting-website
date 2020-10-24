@@ -46,8 +46,7 @@ import Hamburger from './hamburger';
 import DrawerContent from './drawer-content';
 
 const MainNav = (props) => {
-  const { handleDrawerToggle, isMobileOpen } = props;
-  const { window } = props;
+  const { handleDrawerToggle, isMobileOpen, window } = props;
 
   const [isDark, setIsDark] = useContext(ColorContext);
 
@@ -61,14 +60,6 @@ const MainNav = (props) => {
     drawerPaper: {
       width: DRAWER_WIDTH,
       backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.background.default,
-      transition: 'all 0.25s linear',
-    },
-    toolbar: theme.mixins.toolbar,
-    navItemTypo: {
-      color: theme.palette.primary.main,
-      fontWeight: 'bold',
-    },
-    icon: {
       transition: 'all 0.25s linear',
     },
   }));
