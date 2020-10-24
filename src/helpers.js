@@ -9,7 +9,15 @@ export const THEME_NAMES = {
   light: 'light',
   dark: 'dark',
 };
-
+const EXTENDED_APP_THEME = {
+  typography: {
+    // h6 represents the company name in the logo
+    h6: {
+      textDecoration: 'underline',
+      userSelect: 'none',
+    },
+  },
+};
 export const APP_THEME = {
   light: {
     palette: {
@@ -27,6 +35,7 @@ export const APP_THEME = {
         backgroundColor: indigo['700'],
       },
     },
+    ...EXTENDED_APP_THEME,
   },
   dark: {
     palette: {
@@ -44,6 +53,7 @@ export const APP_THEME = {
         backgroundColor: indigo['700'],
       },
     },
+    ...EXTENDED_APP_THEME,
   },
 };
 

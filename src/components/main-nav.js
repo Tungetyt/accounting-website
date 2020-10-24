@@ -43,11 +43,11 @@ import ColorBtn from './color-btn';
 import LangBtn from './lang-btn';
 import Logo from './logo';
 import Hamburger from './hamburger';
-import MainNav from './main-nav';
 
-function ResponsiveDrawer(props) {
+const MainNav = (props) => {
+  const { handleDrawerToggle, isMobileOpen } = props;
   const { window } = props;
-  const [isMobileOpen, setIsMobileOpen] = React.useState(false);
+
   const [isDark, setIsDark] = useContext(ColorContext);
   const intl = useIntl();
 
@@ -93,10 +93,6 @@ function ResponsiveDrawer(props) {
   }));
   const classes = useStyles();
 
-  const handleDrawerToggle = () => {
-    setIsMobileOpen((prevIsMobileOpen) => !prevIsMobileOpen);
-  };
-
   const drawer = (
     <div>
       <div className={classes.toolbar} />
@@ -106,7 +102,6 @@ function ResponsiveDrawer(props) {
         justify="space-around"
         alignItems="center"
         spacing={0}
-
       >
         <Grid item>
           <ColorBtn />
@@ -155,60 +150,46 @@ function ResponsiveDrawer(props) {
       </List>
     </div>
   );
-
   const container = window !== undefined ? () => window().document.body : undefined;
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
+
   return (
-    <div>
-      <Logo />
-
-      <Hamburger handleDrawerToggle={handleDrawerToggle} isMobileOpen={isMobileOpen} />
-
-      <MainNav handleDrawerToggle={handleDrawerToggle} isMobileOpen={isMobileOpen} />
-      {/* <nav className={classes.drawer} aria-label="mailbox folders">
-        <Hidden smUp implementation="css">
-          <SwipeableDrawer
-            container={container}
-            variant="temporary"
-            anchor="right"
-            open={isMobileOpen}
-            onClose={handleDrawerToggle}
-            onOpen={handleDrawerToggle}
-            classes={{
-              paper: classes.drawerPaper,
-            }}
-            ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
-            }}
-            disableBackdropTransition={!iOS}
-            disableDiscovery={iOS}
-          >
-            {drawer}
-          </SwipeableDrawer>
-        </Hidden>
-        <Hidden xsDown implementation="css">
-          <Drawer
-            classes={{
-              paper: classes.drawerPaper,
-            }}
-            variant="permanent"
-            anchor="right"
-            open
-          >
-            {drawer}
-          </Drawer>
-        </Hidden>
-      </nav> */}
-    </div>
+    <nav className={classes.drawer} aria-label="mailbox folders">
+      {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+      <Hidden smUp implementation="css">
+        <SwipeableDrawer
+          container={container}
+          variant="temporary"
+          anchor="right"
+          open={isMobileOpen}
+          onClose={handleDrawerToggle}
+          onOpen={handleDrawerToggle}
+          classes={{
+            paper: classes.drawerPaper,
+          }}
+          ModalProps={{
+            keepMounted: true, // Better open performance on mobile.
+          }}
+          disableBackdropTransition={!iOS}
+          disableDiscovery={iOS}
+        >
+          {drawer}
+        </SwipeableDrawer>
+      </Hidden>
+      <Hidden xsDown implementation="css">
+        <Drawer
+          classes={{
+            paper: classes.drawerPaper,
+          }}
+          variant="permanent"
+          anchor="right"
+          open
+        >
+          {drawer}
+        </Drawer>
+      </Hidden>
+    </nav>
   );
-}
-
-ResponsiveDrawer.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window: PropTypes.func,
 };
 
-export default ResponsiveDrawer;
+export default MainNav;

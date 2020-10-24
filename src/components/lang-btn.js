@@ -22,7 +22,7 @@ import LangBtnContent from './lang-btn-content';
 import { LangContext } from '../context/contexts';
 import { getItemByKey, LOCAL_STORAGE_KEY, langNames } from '../helpers';
 
-const LangBtn = ({ location }) => {
+const LangBtn = () => {
   const intl = useIntl();
   return (
     <Location>

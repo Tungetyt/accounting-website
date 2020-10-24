@@ -28,6 +28,8 @@ import Image from '../components/image';
 import Layout from '../components/layout';
 import ColorBtn from '../components/color-btn';
 import LangBtn from '../components/lang-btn';
+import LandingPage from '../components/landing-page';
+
 import Umbrella from '../images/umbrella.svg';
 
 import { LangContext, ColorContext } from '../context/contexts';
@@ -74,49 +76,8 @@ const IndexPage = (props) => {
           <div id="back-to-top-anchor" />
           <ResponsiveDrawer props={props} />
           <main className={classes.main}>
-            <Grid
-              container
-              direction="row"
-              justify="space-evenly"
-              alignItems="center"
-              style={{ paddingTop: '30vh', paddingBottom: '70vh', backgroundColor: 'green' }}
-            >
-              <Grid item>
-                <Typography variant="h3" color="primary" style={{ lineHeight: '90%', userSelect: 'none' }}>
-                  {intl.formatMessage({ id: 'landing.first' })}
-                  <br />
-                  {intl.formatMessage({ id: 'landing.second' })}
-                  <br />
-                  {intl.formatMessage({ id: 'landing.third' })}
-                </Typography>
-              </Grid>
-              <Hidden mdDown implementation="css">
-                <Grid item>
-                  <Grid
-                    container
-                    direction="row"
-                    justify="space-between"
-                    alignItems="center"
-                    spacing={1}
-                  >
-                    <Grid item>
-                      <Umbrella width={80} height={80} fill={APP_THEME[isDark ? 'dark' : 'light'].palette.primary.main} />
-                    </Grid>
-                    <Grid item>
-                      <Typography
-                        variant="h3"
-                        noWrap
-                        color="primary"
-                        style={{ textDecoration: 'underline', userSelect: 'none' }}
-                      >
-                        {COMPANY}
-                      </Typography>
-                    </Grid>
-                  </Grid>
-                </Grid>
-              </Hidden>
-            </Grid>
 
+            <LandingPage />
             <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>
             <Typography>bbbbbbbbbbbbbbbbbbbbbb</Typography>
             <Typography>cccccccccccccccc</Typography>
