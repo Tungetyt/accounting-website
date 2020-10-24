@@ -52,7 +52,6 @@ module.exports = {
         },
       },
     },
-    'gatsby-plugin-smoothscroll',
     {
       resolve: 'gatsby-plugin-intl',
       options: {

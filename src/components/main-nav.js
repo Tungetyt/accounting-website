@@ -25,7 +25,6 @@ import HomeIcon from '@material-ui/icons/Home';
 import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
 import HelpIcon from '@material-ui/icons/Help';
 import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
-import scrollTo from 'gatsby-plugin-smoothscroll';
 import { Box, Grid, Paper } from '@material-ui/core';
 import {
   useIntl, Link, FormattedMessage, injectIntl, IntlContextConsumer, changeLocale,
