@@ -26,10 +26,6 @@ import Iframe from 'react-iframe';
 import {
   Element, Events, animateScroll as scroll, scrollSpy, scroller,
 } from 'react-scroll';
-import {
-  withScriptjs, withGoogleMap, GoogleMap, Marker,
-} from 'react-google-maps';
-import ReactMapboxGl, { Layer, Feature } from 'react-mapbox-gl';
 import SEO from '../components/seo';
 import Image from '../components/image';
 import ColorBtn from '../components/color-btn';
@@ -45,7 +41,6 @@ import {
   getItemByKey, LOCAL_STORAGE_KEY, langNames, APP_THEME, THEME_NAMES, DRAWER_WIDTH, COMPANY,
 } from '../helpers';
 import ResponsiveDrawer from '../components/responsive-drawer';
-import 'mapbox-gl/dist/mapbox-gl.css';
 
 const useStyles = makeStyles((theme) => ({
   main: {
@@ -54,11 +49,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-
-const Map = ReactMapboxGl({
-  accessToken:
-    process.env.GATSBY_MAPBOX_ACCESS_TOKEN,
-});
 
 const IndexPage = (props) => {
   const [isDark, setIsDark] = useState(
@@ -73,15 +63,6 @@ const IndexPage = (props) => {
 
   let chosenTheme = createMuiTheme(isDark ? APP_THEME.dark : APP_THEME.light);
   chosenTheme = responsiveFontSizes(chosenTheme);
-  const coordinate = [21.0122, 52.2297];
-  const MyMapComponent = withScriptjs(withGoogleMap((props) => (
-    <GoogleMap
-      defaultZoom={8}
-      defaultCenter={{ lat: -34.397, lng: 150.644 }}
-    >
-      {props.isMarkerShown && <Marker position={{ lat: -34.397, lng: 150.644 }} />}
-    </GoogleMap>
-  )));
 
   return (
     <>
@@ -130,56 +111,6 @@ const IndexPage = (props) => {
             <Typography>aaaaaaaaaaaaaaaaa</Typography>
             <Typography>aaaaaaaaaaaaaaaaa</Typography>
             <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            {/* <Map
-              style="mapbox://styles/mapbox/streets-v9"
-              containerStyle={{
-                height: '60vh',
-                width: '60vw',
-              }}
-            >
-              <Layer
-                type="circle"
-                id="marker"
-                paint={{
-                  'circle-color': '#ff5200',
-                  'circle-stroke-width': 1,
-                  'circle-stroke-color': '#fff',
-                  'circle-stroke-opacity': 1,
-                }}
-              >
-                <Feature coordinates={[-0.132, 51.518]} />
-                <Feature coordinates={[-0.465, 51.258]} />
-              </Layer>
-            </Map> */}
-            <Map
-              style="mapbox://styles/mapbox/streets-v9"
-              containerStyle={{
-                height: '60vh',
-                width: '60vw',
-              }}
-              center={coordinate}
-            >
-              <Layer
-                type="circle"
-                id="marker"
-                paint={{
-                  'circle-color': '#ff5200',
-                  'circle-stroke-width': 1,
-                  'circle-stroke-color': '#fff',
-                  'circle-stroke-opacity': 1,
-                }}
-              >
-                <Feature coordinates={coordinate} />
-              </Layer>
-            </Map>
-
-            {/* <MyMapComponent
-              isMarkerShown
-              googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
-              loadingElement={<div style={{ height: '100%' }} />}
-              containerElement={<div style={{ height: '400px' }} />}
-              mapElement={<div style={{ height: '100%' }} />}
-            /> */}
             {/* <Iframe
               url="https://scratch.mit.edu/projects/438540369/embed"
               width="485px"
