@@ -27,9 +27,14 @@
     "react-google-maps": "^9.4.5",
     "react-helmet": "^6.1.0",
     "react-iframe": "^1.8.0",
+<<<<<<< HEAD
     "react-leaflet": "^2.8.0",
     "react-mapbox-gl": "^5.0.0",
     "react-scroll": "^1.8.1"
+=======
+    "react-scroll": "^1.8.1",
+    "react-sticky": "^6.0.3"
+>>>>>>> parent of 13d6b98... Remove react-sticky
   },
   "devDependencies": {
     "eslint": "^7.10.0",

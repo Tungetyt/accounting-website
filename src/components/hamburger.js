@@ -29,6 +29,7 @@ import { Box, Grid, Paper } from '@material-ui/core';
 import {
   useIntl, Link, FormattedMessage, injectIntl, IntlContextConsumer, changeLocale,
 } from 'gatsby-plugin-intl';
+import { StickyContainer, Sticky } from 'react-sticky';
 import Tooltip from '@material-ui/core/Tooltip';
 import Zoom from '@material-ui/core/Zoom';
 import { LangContext, ColorContext } from '../context/contexts';
