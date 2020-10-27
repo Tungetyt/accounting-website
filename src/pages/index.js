@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../components/layout.css';
+
 import Typography from '@material-ui/core/Typography';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import {
@@ -26,13 +27,14 @@ import Iframe from 'react-iframe';
 import {
   Element, Events, animateScroll as scroll, scrollSpy, scroller,
 } from 'react-scroll';
+import {
+  Map, Marker, Popup, TileLayer,
+} from 'react-leaflet';
 import SEO from '../components/seo';
 import Image from '../components/image';
 import ColorBtn from '../components/color-btn';
 import LangBtn from '../components/lang-btn';
 import LandingPage from '../components/landing-page';
-
-import Umbrella from '../images/umbrella.svg';
 
 import { LangContext, ColorContext } from '../context/contexts';
 import ThemeBtn from '../components/theme-btn';
@@ -63,7 +65,7 @@ const IndexPage = (props) => {
 
   let chosenTheme = createMuiTheme(isDark ? APP_THEME.dark : APP_THEME.light);
   chosenTheme = responsiveFontSizes(chosenTheme);
-
+  const coordinates = [52.2297, 21.0122];
   return (
     <>
       <ThemeProvider theme={chosenTheme}>
@@ -111,6 +113,20 @@ const IndexPage = (props) => {
             <Typography>aaaaaaaaaaaaaaaaa</Typography>
             <Typography>aaaaaaaaaaaaaaaaa</Typography>
             <Typography>aaaaaaaaaaaaaaaaa</Typography>
+
+            {typeof window !== 'undefined' && (
+            <Map center={coordinates} zoom={13} style={{ width: '60vw', height: '60vh' }}>
+              <TileLayer
+                url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+                attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+              />
+
+              <Marker position={coordinates}>
+                <Popup>hey</Popup>
+              </Marker>
+
+            </Map>
+            )}
             {/* <Iframe
               url="https://scratch.mit.edu/projects/438540369/embed"
               width="485px"
