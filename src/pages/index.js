@@ -119,6 +119,8 @@ const IndexPage = (props) => {
               <TileLayer
                 url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
                 attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+                // tileSize={1024}
+                // zoomOffset={-1}
               />
 
               <Marker position={coordinates}>
