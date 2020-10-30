@@ -43,6 +43,7 @@ import {
   getItemByKey, LOCAL_STORAGE_KEY, langNames, APP_THEME, THEME_NAMES, DRAWER_WIDTH, COMPANY,
 } from '../helpers';
 import ResponsiveDrawer from '../components/responsive-drawer';
+import Logo from '../components/logo';
 
 const useStyles = makeStyles((theme) => ({
   main: {
@@ -72,6 +73,7 @@ const IndexPage = (props) => {
         <ColorContext.Provider value={[isDark, setIsDark]}>
           <CssBaseline />
           <SEO title="Vavicom" />
+          <Logo />
           <ResponsiveDrawer props={props} />
           <main className={classes.main}>
             <LandingPage />

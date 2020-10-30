@@ -39,7 +39,6 @@ import Umbrella from '../images/umbrella.svg';
 
 import ColorBtn from './color-btn';
 import LangBtn from './lang-btn';
-import Logo from './logo';
 import Hamburger from './hamburger';
 import MainNav from './main-nav';
 
@@ -52,7 +51,6 @@ function ResponsiveDrawer() {
 
   return (
     <div>
-      <Logo />
       <Hamburger handleDrawerToggle={handleDrawerToggle} isMobileOpen={isMobileOpen} />
       <MainNav handleDrawerToggle={handleDrawerToggle} isMobileOpen={isMobileOpen} />
     </div>
