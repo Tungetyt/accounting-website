@@ -67,7 +67,7 @@ const MainNav = (props) => {
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
   return (
-    <nav className={classes.drawer} aria-label="mailbox folders">
+    <div className={classes.drawer} aria-label="mailbox folders">
       {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
       <Hidden smUp implementation="css">
         <SwipeableDrawer
@@ -101,7 +101,7 @@ const MainNav = (props) => {
           <DrawerContent />
         </Drawer>
       </Hidden>
-    </nav>
+    </div>
   );
 };
 

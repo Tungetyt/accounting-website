@@ -89,28 +89,30 @@ const NavList = () => {
   } = NAVIGATION;
 
   return (
-    <List>
-      <NavLink to={home}>
-        <ListItemIcon><HomeIcon color="primary" className={classes.icon} /></ListItemIcon>
-        <TextLink id={home} />
-      </NavLink>
-      <NavLink to={services}>
-        <ListItemIcon><BusinessCenterIcon color="primary" className={classes.icon} /></ListItemIcon>
-        <TextLink id={services} />
-      </NavLink>
-      <NavLink to={about}>
-        <ListItemIcon><InfoIcon color="primary" className={classes.icon} /></ListItemIcon>
-        <TextLink id={about} />
-      </NavLink>
-      <NavLink to={faq}>
-        <ListItemIcon><HelpIcon color="primary" className={classes.icon} /></ListItemIcon>
-        <TextLink id={faq} />
-      </NavLink>
-      <NavLink to={contact}>
-        <ListItemIcon><ContactPhoneIcon color="primary" className={classes.icon} /></ListItemIcon>
-        <TextLink id={contact} />
-      </NavLink>
-    </List>
+    <nav>
+      <List>
+        <NavLink to={home}>
+          <ListItemIcon><HomeIcon color="primary" className={classes.icon} /></ListItemIcon>
+          <TextLink id={home} />
+        </NavLink>
+        <NavLink to={services}>
+          <ListItemIcon><BusinessCenterIcon color="primary" className={classes.icon} /></ListItemIcon>
+          <TextLink id={services} />
+        </NavLink>
+        <NavLink to={about}>
+          <ListItemIcon><InfoIcon color="primary" className={classes.icon} /></ListItemIcon>
+          <TextLink id={about} />
+        </NavLink>
+        <NavLink to={faq}>
+          <ListItemIcon><HelpIcon color="primary" className={classes.icon} /></ListItemIcon>
+          <TextLink id={faq} />
+        </NavLink>
+        <NavLink to={contact}>
+          <ListItemIcon><ContactPhoneIcon color="primary" className={classes.icon} /></ListItemIcon>
+          <TextLink id={contact} />
+        </NavLink>
+      </List>
+    </nav>
   );
 };
 
