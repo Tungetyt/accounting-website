@@ -59,13 +59,12 @@ const NavList = () => {
     },
   }));
 
-  const classes = useStyles();
+  const { active, navItemTypo, icon } = useStyles();
 
   function NavLink(props) {
-    console.log('props', props);
     return (
       <ListItem
-        activeClass={classes.active}
+        activeClass={active}
         spy
         smooth
         duration={0}
@@ -80,7 +79,7 @@ const NavList = () => {
   const TextLink = ({ id }) => (
     <ListItemText
       disableTypography
-      primary={<Typography type="body2" className={classes.navItemTypo}>{intl.formatMessage({ id })}</Typography>}
+      primary={<Typography type="body2" className={navItemTypo}>{intl.formatMessage({ id })}</Typography>}
     />
   );
 
@@ -92,23 +91,23 @@ const NavList = () => {
     <nav>
       <List>
         <NavLink to={home}>
-          <ListItemIcon><HomeIcon color="primary" className={classes.icon} /></ListItemIcon>
+          <ListItemIcon><HomeIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={home} />
         </NavLink>
         <NavLink to={services}>
-          <ListItemIcon><BusinessCenterIcon color="primary" className={classes.icon} /></ListItemIcon>
+          <ListItemIcon><BusinessCenterIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={services} />
         </NavLink>
         <NavLink to={about}>
-          <ListItemIcon><InfoIcon color="primary" className={classes.icon} /></ListItemIcon>
+          <ListItemIcon><InfoIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={about} />
         </NavLink>
         <NavLink to={faq}>
-          <ListItemIcon><HelpIcon color="primary" className={classes.icon} /></ListItemIcon>
+          <ListItemIcon><HelpIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={faq} />
         </NavLink>
         <NavLink to={contact}>
-          <ListItemIcon><ContactPhoneIcon color="primary" className={classes.icon} /></ListItemIcon>
+          <ListItemIcon><ContactPhoneIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={contact} />
         </NavLink>
       </List>

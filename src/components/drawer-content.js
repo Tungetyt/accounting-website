@@ -47,10 +47,12 @@ const DrawerContent = () => {
   const useStyles = makeStyles((theme) => ({
     toolbar: theme.mixins.toolbar,
   }));
-  const classes = useStyles();
+
+  const { toolbar } = useStyles();
+
   return (
     <div>
-      <div className={classes.toolbar} />
+      <div className={toolbar} />
       <Grid
         container
         direction="row"

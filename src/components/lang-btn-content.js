@@ -18,11 +18,11 @@ const useStyles = makeStyles({
   },
 });
 const LangBtnContent = ({ content }) => {
-  const classes = useStyles();
+  const { btn } = useStyles();
 
   return (
     <div>
-      <Typography noWrap className={classes.btn} color="primary">{content}</Typography>
+      <Typography noWrap className={btn} color="primary">{content}</Typography>
     </div>
   );
 };

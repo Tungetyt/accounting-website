@@ -37,7 +37,6 @@ const LangBtn = () => {
                   changeLocale(location.pathname.replace(/\//g, '') === 'pl' ? 'en' : 'pl');
                 }}
               >
-                {/* {location.pathname.replace(/\//g, '') === 'pl' ? <LangBtnContent content="PL" /> : <LangBtnContent content="EN" />} */}
                 <TranslateIcon />
               </IconButton>
             </Tooltip>

@@ -11,15 +11,15 @@ import Brightness7Icon from '@material-ui/icons/Brightness7';
 import SEO from './seo';
 import Image from './image';
 import LangBtn from './lang-btn';
-import { getLanguageFromLS, LOCAL_STORAGE_KEY, langNames } from '../helpers';
+import {
+  getLanguageFromLS, LOCAL_STORAGE_KEY, langNames, THEME_NAMES,
+} from '../helpers';
 
 const ThemeBtn = () => {
-  const themeNames = {
-    light: 'light',
-    dark: 'dark',
-  };
+  const { light, dark } = THEME_NAMES;
+
   const [isDark, setIsDark] = useState(
-    localStorage.getItem(LOCAL_STORAGE_KEY.theme) !== themeNames.light,
+    localStorage.getItem(LOCAL_STORAGE_KEY.theme) !== light,
   );
   return (
     <IconButton
@@ -27,7 +27,7 @@ const ThemeBtn = () => {
       color="primary"
       aria-label="mode"
       onClick={() => {
-        const newTheme = isDark ? themeNames.light : themeNames.dark;
+        const newTheme = isDark ? light : dark;
         localStorage.setItem(LOCAL_STORAGE_KEY.theme, newTheme);
         setIsDark((prevIsDark) => !prevIsDark);
       }}

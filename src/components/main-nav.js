@@ -61,13 +61,14 @@ const MainNav = (props) => {
       transition: 'all 0.25s linear',
     },
   }));
-  const classes = useStyles();
+
+  const { drawer, drawerPaper } = useStyles();
 
   const container = window !== undefined ? () => window().document.body : undefined;
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
   return (
-    <div className={classes.drawer} aria-label="mailbox folders">
+    <div className={drawer} aria-label="mailbox folders">
       {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
       <Hidden smUp implementation="css">
         <SwipeableDrawer
@@ -78,7 +79,7 @@ const MainNav = (props) => {
           onClose={handleDrawerToggle}
           onOpen={handleDrawerToggle}
           classes={{
-            paper: classes.drawerPaper,
+            paper: drawerPaper,
           }}
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
@@ -92,7 +93,7 @@ const MainNav = (props) => {
       <Hidden xsDown implementation="css">
         <Drawer
           classes={{
-            paper: classes.drawerPaper,
+            paper: drawerPaper,
           }}
           variant="permanent"
           anchor="right"

@@ -54,10 +54,10 @@ const Logo = () => {
 
   }));
 
-  const classes = useStyles();
+  const { logoPaper } = useStyles();
 
   return (
-    <Paper className={classes.logoPaper} elevation={0} variant="outlined">
+    <Paper className={logoPaper} elevation={0} variant="outlined">
       <Grid
         container
         direction="row"

@@ -60,13 +60,14 @@ const Hamburger = ({ handleDrawerToggle, isMobileOpen }) => {
       backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.background.default,
     },
   }));
-  const classes = useStyles();
+
+  const { menuButton, hamburger } = useStyles();
 
   return (
     <Hidden smUp implementation="css">
       <Paper
         elevation={0}
-        className={classes.hamburger}
+        className={hamburger}
         variant="outlined"
       >
         <Tooltip placement="top" title={intl.formatMessage({ id: 'hamburger' })} arrow TransitionComponent={Zoom}>
@@ -75,7 +76,7 @@ const Hamburger = ({ handleDrawerToggle, isMobileOpen }) => {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            className={classes.menuButton}
+            className={menuButton}
           >
             <MenuIcon />
           </IconButton>

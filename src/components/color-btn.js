@@ -57,16 +57,18 @@ import ResponsiveDrawer from './responsive-drawer';
 const ColorBtn = () => {
   const [isDark, setIsDark] = useContext(ColorContext);
   const intl = useIntl();
-
   const firstUpdate = useRef(true);
+  const { light, dark } = THEME_NAMES;
+  const { theme } = LOCAL_STORAGE_KEY;
+
   useLayoutEffect(() => {
     if (firstUpdate.current) {
       firstUpdate.current = false;
       return;
     }
-    const newTheme = isDark ? THEME_NAMES.dark : THEME_NAMES.light;
+    const newTheme = isDark ? dark : light;
     if (typeof window !== 'undefined') {
-      window.localStorage.setItem(LOCAL_STORAGE_KEY.theme, newTheme);
+      window.localStorage.setItem(theme, newTheme);
     }
   }, [isDark]);
 

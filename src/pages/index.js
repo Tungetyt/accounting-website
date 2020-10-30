@@ -57,7 +57,8 @@ const IndexPage = (props) => {
   const [isDark, setIsDark] = useState(
     true,
   );
-  const classes = useStyles();
+
+  const { main } = useStyles();
 
   const intl = useIntl();
   useEffect(() => {
@@ -75,7 +76,7 @@ const IndexPage = (props) => {
           <SEO title="Vavicom" />
           <Logo />
           <ResponsiveDrawer props={props} />
-          <main className={classes.main}>
+          <main className={main}>
             <LandingPage />
             <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>
             <Typography>bbbbbbbbbbbbbbbbbbbbbb</Typography>
