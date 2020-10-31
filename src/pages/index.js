@@ -86,44 +86,6 @@ const IndexPage = (props) => {
           <main className={main}>
             <LandingPage />
             <TabPanel />
-            <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>bbbbbbbbbbbbbbbbbbbbbb</Typography>
-            <Typography>cccccccccccccccc</Typography>
-            <Typography>dddddddddddddddddddddddddd</Typography>
-            <Typography>eeeeeeeeeeeeeeeeeeeeeee</Typography>
-            <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>bbbbbbbbbbbbbbbbbbbbbb</Typography>
-            <Typography>cccccccccccccccc</Typography>
-            <Typography>dddddddddddddddddddddddddd</Typography>
-            <Typography>eeeeeeeeeeeeeeeeeeeeeee</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            <Typography style={{ wordWrap: 'break-word' }}>dnasuoindasjijjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjdmisadlias mdlksamndlsa ndlkasndlasnn</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
-            <Typography>aaaaaaaaaaaaaaaaa</Typography>
 
             {typeof window !== 'undefined' && (
               <Map center={coordinates} zoom={13} style={{ width: '60vw', height: '60vh' }}>

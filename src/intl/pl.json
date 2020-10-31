@@ -1,32 +1,59 @@
 {
-    "title": "Vavicom PL",
-    "description": "Kick off your next, great Gatsby project with this default-starter-intl. This barebones starter ships with the main Gatsby configuration files you might need.",
-    "langBtn": "Change to English",
-    "themeBtn": "Przełącz motyw na jasny/ciemny",
-    "services": "USŁUGI",
-    "about": "O NAS",
-    "home": "HOME",
-    "contact": "KONTAKT",
-    "backToTopBtn": "Powrót do góry",
-    "faq": "FAQ",
-    "notfound": {
-      "header": "404: Not Found",
-      "description": "Strona o takim adresie nie istnieje",
-      "goback": "Wróć do strony głównej"
-    },
-    "hamburger": "Panel nawigacyjny",
-    "landing": {
-      "first": "NOWOCZESNE",
-      "second": "BIURO",
-      "third": "RACHUNKOWE" 
-    },
-    "servicesSection": {
-      "accounting": "KSIĘGOWOŚĆ",
-      "hrAndPayroll": "KADRY I PŁACE",
-      "taxServices": "USŁUGI PODATKOWE",
-      "legalServices": "USŁUGI PRAWNE",
-      "financialServices": "USŁUGI FINANSOWE",
-      "businessServices": "USŁUGI BIZNESOWE"
-    }
+  "title": "Vavicom PL",
+  "description": "Kick off your next, great Gatsby project with this default-starter-intl. This barebones starter ships with the main Gatsby configuration files you might need.",
+  "langBtn": "Change to English",
+  "themeBtn": "Przełącz motyw na jasny/ciemny",
+  "services": "USŁUGI",
+  "about": "O NAS",
+  "home": "HOME",
+  "contact": "KONTAKT",
+  "backToTopBtn": "Powrót do góry",
+  "faq": "FAQ",
+  "notfound": {
+    "header": "404: Not Found",
+    "description": "Strona o takim adresie nie istnieje",
+    "goback": "Wróć do strony głównej"
+  },
+  "hamburger": "Panel nawigacyjny",
+  "landing": {
+    "first": "NOWOCZESNE",
+    "second": "BIURO",
+    "third": "RACHUNKOWE"
+  },
+  "servicesSection": {
+    "accounting": "KSIĘGOWOŚĆ",
+    "hrAndPayroll": "KADRY I PŁACE",
+    "taxServices": "USŁUGI PODATKOWE",
+    "legalServices": "USŁUGI PRAWNE",
+    "financialServices": "USŁUGI FINANSOWE",
+    "businessServices": "USŁUGI BIZNESOWE"
+  },
+  "readMore": "CZYTAJ WIĘCEJ",
+  "accounting": {
+    "info": [
+      "Skomplikowane i często zmieniajcie się standardy rachunkowości i sprawozdawczości finansowej wymagają nieustannego śledzenia zmian przepisów prawa.",
+      "Zlecając bieżące prowadzenie ksiąg rachunkowych i sporządzanie sprawozdań finansowych zgodnie z aktualnymi wymogami przepisów, możesz przestać koncentrować się na śledzeniu zmian w przepisach i skupić się na codziennym prowadzeniu biznesu.",
+      "Nasze usługi:"
+    ],
+    "services": [
+      "sporządzanie lub aktualizacja polityki rachunkowości we współpracy z Klientem,",
+      "przygotowanie bazy danych w systemie finansowo – księgowym;",
+      "ewidencję dokumentów otrzymywanych do Państwa i kontrahentów;",
+      "bieżące prowadzenia ksiąg rachunkowych,",
+      "raportowanie danych finansowych do zarządu firmy oraz grupy zgodnie z Państwa wymogami;",
+      "przygotowanie statutowych sprawozdań finansowych oraz pomoc w sporządzeniu sprawozdania zarządu z działalności;",
+      "przygotowanie sprawozdań i raportów dla Narodowego Banku Polskiego i Głównego Urzędu Statystycznego;",
+      "współpraca z audytorami;"
+    ],
+    "more": [
+      "Naszym Klientom oferujemy kompleksowe usługi księgowe, rachunkowe, finansowe i zarządcze dla firm, które rozliczają się na podstawie księgi handlowej, KPiR, ryczałtu czy karty podatkowej. Stawiamy na nowoczesne rozwiązania, optymalizujemy procesy obiegu danych, a także tworzymy dla naszych Klientów narzędzia pozwalające na osiągnięcie lepszej wydajności pracy i zwiększenia ich konkurencyjności. Usługi księgowe są podstawą działalności Biura Rachunkowego VAVICOM. Naszym priorytetem jest zagwarantowanie klientom obsługi księgowej zawsze na czas i przy zachowaniu najwyższych standardów jakości. Świadczone przez nas usługi księgowe i sprawozdawczości zawsze dostosowujemy do konkretnych oczekiwań zarówno pod względem formalnym, jak i merytorycznym z uwzględnieniem terminów wymaganych przez klienta.",
+      "Świadczymy kompleksową obsługę podmiotów gospodarczych w szczególności mikro, małych i średnich przedsiębiorstw. Podstawowym celem jest wypełnienie bieżących obowiązków podatnika w zakresie prowadzenia ksiąg rachunkowych oraz sprawozdawczości podatkowej.",
+      "Proponujemy konkurencyjne ceny:",
+      [
+        "Ewidencja przychodów dla potrzeb podatku zryczałtowanego od 100 zł.",
+        "KPIR księga przychodów i rozchodów od 150 zł.",
+        "Księgowość rachunkowa (księgi handlowe) od 350 zł."
+      ]
+    ]
   }
-  
+}

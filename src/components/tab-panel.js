@@ -23,8 +23,9 @@ import { useIntl, Link, FormattedMessage } from 'gatsby-plugin-intl';
 import {
   NAVIGATION, getItemByKey, LOCAL_STORAGE_KEY, langNames, APP_THEME, THEME_NAMES, DRAWER_WIDTH, COMPANY,
 } from '../helpers';
-import Hamburger from './hamburger';
+import OfferCard from './offer-card';
 import { LangContext, ColorContext } from '../context/contexts';
+import Image from './image';
 
 function TabPanel(props) {
   const {
@@ -73,7 +74,6 @@ export default function ScrollableTabsButtonAuto() {
       flexGrow: 1,
       backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation1.backgroundColor,
       width: '99%',
-      height: '1000px',
       margin: 'auto',
     },
     tabs: {
@@ -112,7 +112,8 @@ export default function ScrollableTabsButtonAuto() {
           </Tabs>
         </AppBar>
         <TabPanel value={value} index={0}>
-          Item One
+          <OfferCard offer="accounting" />
+
         </TabPanel>
         <TabPanel value={value} index={1}>
           Item Two
