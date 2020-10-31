@@ -19,6 +19,14 @@
       "first": "NOWOCZESNE",
       "second": "BIURO",
       "third": "RACHUNKOWE" 
+    },
+    "servicesSection": {
+      "accounting": "KSIĘGOWOŚĆ",
+      "hrAndPayroll": "KADRY I PŁACE",
+      "taxServices": "USŁUGI PODATKOWE",
+      "legalServices": "USŁUGI PRAWNE",
+      "financialServices": "USŁUGI FINANSOWE",
+      "businessServices": "USŁUGI BIZNESOWE"
     }
   }
   

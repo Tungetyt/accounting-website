@@ -44,11 +44,10 @@ import {
 } from '../helpers';
 import ResponsiveDrawer from '../components/responsive-drawer';
 import Logo from '../components/logo';
+import TabPanel from '../components/tab-panel';
 
 const IndexPage = (props) => {
-  const [isDark, setIsDark] = useState(
-    true,
-  );
+  const [isDark, setIsDark] = useState(true);
 
   const useStyles = makeStyles((theme) => ({
     main: {
@@ -86,7 +85,7 @@ const IndexPage = (props) => {
           <div id="top" />
           <main className={main}>
             <LandingPage />
-            <Paper className={contentPaper} />
+            <TabPanel />
             <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>
             <Typography>bbbbbbbbbbbbbbbbbbbbbb</Typography>
             <Typography>cccccccccccccccc</Typography>

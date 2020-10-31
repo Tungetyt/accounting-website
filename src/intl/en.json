@@ -19,6 +19,14 @@
       "first": "MODERN",
       "second": "ACCOUNTING",
       "third": "OFFICE" 
+    },
+    "servicesSection": {
+      "accounting": "ACCOUNTING",
+      "hrAndPayroll": "HR & PAYROLL",
+      "taxServices": "TAX SERVICES",
+      "legalServices": "LEGAL SERVICES",
+      "financialServices": "FINANCIAL SERVICES",
+      "businessServices": "BUSINESS SERVICES"
     }
   }
   
