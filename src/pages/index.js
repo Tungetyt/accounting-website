@@ -30,6 +30,7 @@ import {
 import {
   Map, Marker, Popup, TileLayer,
 } from 'react-leaflet';
+import { FacebookProvider, Page } from 'react-facebook';
 import SEO from '../components/seo';
 import Image from '../components/image';
 import ColorBtn from '../components/color-btn';
@@ -73,7 +74,6 @@ const IndexPage = (props) => {
   let chosenTheme = createMuiTheme(isDark ? APP_THEME.dark : APP_THEME.light);
   chosenTheme = responsiveFontSizes(chosenTheme);
   const coordinates = [52.2297, 21.0122];
-
   return (
     <>
       <ThemeProvider theme={chosenTheme}>
@@ -84,7 +84,9 @@ const IndexPage = (props) => {
           <ResponsiveDrawer props={props} />
           <div id="top" />
           <main className={main}>
+
             <LandingPage />
+
             <TabPanel />
 
             {typeof window !== 'undefined' && (
@@ -113,7 +115,9 @@ const IndexPage = (props) => {
               frameBorder="0"
             />
             <Button color="primary">fjsdifhjhaois</Button> */}
-
+            <FacebookProvider appId={process.env.GATSBY_FACEBOOK_APP_ID}>
+              <Page href="https://www.facebook.com/Biuro-Rachunkowe-Vavicom-J%C3%B3zefos%C5%82aw-Warszawa-100928011806919/?hc_ref=ARTxt7vKhgJpl3zZMlfTmi0KFs2ze7KOXJguAdYdJtoR1a1SFsyQG8QL-841D6dLqJc&fref=nf" tabs="timeline" />
+            </FacebookProvider>
           </main>
           <ScrollTop>
             <Tooltip placement="top" title={intl.formatMessage({ id: 'backToTopBtn' })} arrow TransitionComponent={Zoom}>

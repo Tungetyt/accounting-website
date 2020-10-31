@@ -31,6 +31,8 @@ import {
 } from 'gatsby-plugin-intl';
 import Tooltip from '@material-ui/core/Tooltip';
 import Zoom from '@material-ui/core/Zoom';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import { FacebookProvider, Page } from 'react-facebook';
 import { LangContext, ColorContext } from '../context/contexts';
 import {
   getItemByKey, LOCAL_STORAGE_KEY, langNames, APP_THEME, THEME_NAMES, DRAWER_WIDTH, COMPANY,
@@ -68,7 +70,39 @@ const DrawerContent = () => {
         </Grid>
       </Grid>
       <Divider />
+      <Grid
+        container
+        direction="row"
+        justify="space-around"
+        alignItems="center"
+        spacing={0}
+      >
+        <Grid item>
+          {/* <Tooltip title={intl.formatMessage({ id: 'themeBtn' })} arrow TransitionComponent={Zoom}>
+            <IconButton
+              edge="end"
+              color="primary"
+              aria-label="mode"
+              style={{ transition: 'all 0.25s linear' }}
+              onClick={() => {
+                setIsDark((prevIsDark) => !prevIsDark);
+              }}
+            >
+              <FacebookIcon />
+            </IconButton>
+          </Tooltip> */}
+
+        </Grid>
+        <Grid item>
+          <LangBtn />
+        </Grid>
+      </Grid>
+      <Divider />
       <NavList />
+
+      {/* <FacebookProvider appId="1038343519927187">
+        <Page href="https://www.facebook.com/Biuro-Rachunkowe-Vavicom-J%C3%B3zefos%C5%82aw-Warszawa-100928011806919/?hc_ref=ARTxt7vKhgJpl3zZMlfTmi0KFs2ze7KOXJguAdYdJtoR1a1SFsyQG8QL-841D6dLqJc&fref=nf" tabs="timeline" />
+      </FacebookProvider> */}
     </div>
   );
 };

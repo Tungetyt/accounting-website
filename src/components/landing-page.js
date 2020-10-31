@@ -26,6 +26,7 @@ import Iframe from 'react-iframe';
 import {
   Element, Events, animateScroll as scroll, scrollSpy, scroller,
 } from 'react-scroll';
+import { FacebookProvider, Page } from 'react-facebook';
 import SEO from './seo';
 import Image from './image';
 import ColorBtn from './color-btn';
@@ -92,6 +93,7 @@ const LandingPage = () => {
           </Grid>
         </Hidden>
       </Grid>
+
     </Element>
   );
 };
