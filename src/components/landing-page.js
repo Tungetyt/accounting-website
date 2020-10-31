@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './layout.css';
 import Typography from '@material-ui/core/Typography';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -42,9 +42,7 @@ import ResponsiveDrawer from './responsive-drawer';
 
 const LandingPage = () => {
   const intl = useIntl();
-  const [isDark, setIsDark] = useState(
-    true,
-  );
+  const [isDark, setIsDark] = useContext(ColorContext);
 
   const { home } = NAVIGATION;
 

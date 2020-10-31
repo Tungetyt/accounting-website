@@ -1,4 +1,6 @@
-import React, { useState, useEffect, useStyles } from 'react';
+import React, {
+  useState, useEffect, useStyles, useContext,
+} from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -22,6 +24,7 @@ import {
   NAVIGATION, getItemByKey, LOCAL_STORAGE_KEY, langNames, APP_THEME, THEME_NAMES, DRAWER_WIDTH, COMPANY,
 } from '../helpers';
 import Hamburger from './hamburger';
+import { LangContext, ColorContext } from '../context/contexts';
 
 function TabPanel(props) {
   const {
@@ -60,7 +63,7 @@ function a11yProps(index) {
 
 export default function ScrollableTabsButtonAuto() {
   const [value, setValue] = React.useState(0);
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useContext(ColorContext);
 
   const { services } = NAVIGATION;
   const intl = useIntl();
