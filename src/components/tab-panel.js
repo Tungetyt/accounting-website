@@ -20,6 +20,11 @@ import {
   Element, Events, animateScroll as scroll, scrollSpy, scroller,
 } from 'react-scroll';
 import { useIntl, Link, FormattedMessage } from 'gatsby-plugin-intl';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faChess, faMoneyCheckAlt, faBook, faGavel, faHandHoldingUsd, faSearchDollar,
+} from '@fortawesome/free-solid-svg-icons';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import {
   NAVIGATION, getItemByKey, LOCAL_STORAGE_KEY, langNames, APP_THEME, THEME_NAMES, DRAWER_WIDTH, COMPANY,
 } from '../helpers';
@@ -68,6 +73,7 @@ export default function ScrollableTabsButtonAuto() {
 
   const { services } = NAVIGATION;
   const intl = useIntl();
+  const tooltipRight = (useMediaQuery('(min-width:600px)') ? 'auto' : 'on');
 
   const useStyles = makeStyles((theme) => ({
     root: {
@@ -81,6 +87,12 @@ export default function ScrollableTabsButtonAuto() {
     },
     scroller: {
       flexGrow: '0',
+      // [theme.breakpoints.up('sm')]: {
+      //   scrollButtons: 'off',
+      // },
+      // [theme.breakpoints.down('sm')]: {
+      //   scrollButtons: 'off',
+      // },
     },
   }));
   const { root, tabs, scroller } = useStyles();
@@ -99,16 +111,16 @@ export default function ScrollableTabsButtonAuto() {
             indicatorColor="primary"
             textColor={APP_THEME[isDark ? 'dark' : 'light'].palette.primary.main}
             variant="scrollable"
-            scrollButtons="auto"
+            scrollButtons={tooltipRight}
             aria-label="scrollable auto tabs example"
             classes={{ root: tabs, scroller }}
           >
-            <Tab label={intl.formatMessage({ id: 'servicesSection.accounting' })} icon={<PhoneIcon />} {...a11yProps(0)} />
-            <Tab label={intl.formatMessage({ id: 'servicesSection.hrAndPayroll' })} icon={<FavoriteIcon />} {...a11yProps(1)} />
-            <Tab label={intl.formatMessage({ id: 'servicesSection.taxServices' })} icon={<PersonPinIcon />} {...a11yProps(2)} />
-            <Tab label={intl.formatMessage({ id: 'servicesSection.legalServices' })} icon={<HelpIcon />} {...a11yProps(3)} />
-            <Tab label={intl.formatMessage({ id: 'servicesSection.financialServices' })} icon={<ShoppingBasket />} {...a11yProps(4)} />
-            <Tab label={intl.formatMessage({ id: 'servicesSection.businessServices' })} icon={<ThumbDown />} {...a11yProps(5)} />
+            <Tab label={intl.formatMessage({ id: 'servicesSection.accounting' })} icon={<FontAwesomeIcon size="lg" icon={faBook} />} {...a11yProps(0)} />
+            <Tab label={intl.formatMessage({ id: 'servicesSection.hrAndPayroll' })} icon={<FontAwesomeIcon size="lg" icon={faHandHoldingUsd} />} {...a11yProps(1)} />
+            <Tab label={intl.formatMessage({ id: 'servicesSection.taxServices' })} icon={<FontAwesomeIcon size="lg" icon={faMoneyCheckAlt} />} {...a11yProps(2)} />
+            <Tab label={intl.formatMessage({ id: 'servicesSection.legalServices' })} icon={<FontAwesomeIcon icon={faGavel} />} {...a11yProps(3)} />
+            <Tab label={intl.formatMessage({ id: 'servicesSection.financialServices' })} icon={<FontAwesomeIcon size="lg" icon={faSearchDollar} />} {...a11yProps(4)} />
+            <Tab label={intl.formatMessage({ id: 'servicesSection.businessServices' })} icon={<FontAwesomeIcon size="lg" icon={faChess} />} {...a11yProps(5)} />
           </Tabs>
         </AppBar>
         <TabPanel value={value} index={0}>
