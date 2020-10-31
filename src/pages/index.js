@@ -68,6 +68,7 @@ const IndexPage = (props) => {
   let chosenTheme = createMuiTheme(isDark ? APP_THEME.dark : APP_THEME.light);
   chosenTheme = responsiveFontSizes(chosenTheme);
   const coordinates = [52.2297, 21.0122];
+
   return (
     <>
       <ThemeProvider theme={chosenTheme}>
@@ -76,6 +77,7 @@ const IndexPage = (props) => {
           <SEO title="Vavicom" />
           <Logo />
           <ResponsiveDrawer props={props} />
+          <div id="top" />
           <main className={main}>
             <LandingPage />
             <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>

@@ -29,6 +29,7 @@
     "react-helmet": "^6.1.0",
     "react-iframe": "^1.8.0",
     "react-leaflet": "^2.8.0",
+    "react-rellax-wrapper": "^1.0.5",
     "react-scroll": "^1.8.1"
   },
   "devDependencies": {

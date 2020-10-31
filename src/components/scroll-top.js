@@ -53,7 +53,7 @@ const ScrollTop = (props) => {
   const { home } = NAVIGATION;
 
   const handleClick = (event) => {
-    const anchor = (event.target.ownerDocument || document).querySelector(`#${home}`);
+    const anchor = (event.target.ownerDocument || document).querySelector('#top');
 
     if (anchor) {
       anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });

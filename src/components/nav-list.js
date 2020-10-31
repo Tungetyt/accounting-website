@@ -45,6 +45,7 @@ import Hamburger from './hamburger';
 
 const NavList = () => {
   const intl = useIntl();
+  const [isDark, setIsDark] = useContext(ColorContext);
 
   const useStyles = makeStyles((theme) => ({
     navItemTypo: {
@@ -55,7 +56,7 @@ const NavList = () => {
       transition: 'all 0.25s linear',
     },
     active: {
-      backgroundColor: '#7986cb',
+      backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.indigo300,
     },
   }));
 
