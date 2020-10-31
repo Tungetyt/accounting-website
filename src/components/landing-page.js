@@ -55,7 +55,7 @@ const LandingPage = () => {
         direction="row"
         justify="space-evenly"
         alignItems="center"
-        style={{ paddingTop: '30vh', paddingBottom: '70vh', backgroundColor: 'green' }}
+        style={{ paddingTop: '30vh', paddingBottom: '70vh' }}
       >
         <Grid item>
           <Typography variant="h3" color="primary" style={{ lineHeight: '90%', userSelect: 'none' }}>

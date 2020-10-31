@@ -45,20 +45,26 @@ import {
 import ResponsiveDrawer from '../components/responsive-drawer';
 import Logo from '../components/logo';
 
-const useStyles = makeStyles((theme) => ({
-  main: {
-    [theme.breakpoints.up('sm')]: {
-      marginRight: DRAWER_WIDTH,
-    },
-  },
-}));
-
 const IndexPage = (props) => {
   const [isDark, setIsDark] = useState(
     true,
   );
 
-  const { main } = useStyles();
+  const useStyles = makeStyles((theme) => ({
+    main: {
+      [theme.breakpoints.up('sm')]: {
+        marginRight: DRAWER_WIDTH,
+      },
+    },
+    contentPaper: {
+      backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation1.backgroundColor,
+      width: '99%',
+      height: '1000px',
+      margin: 'auto',
+    },
+  }));
+
+  const { main, contentPaper } = useStyles();
 
   const intl = useIntl();
   useEffect(() => {
@@ -80,6 +86,7 @@ const IndexPage = (props) => {
           <div id="top" />
           <main className={main}>
             <LandingPage />
+            <Paper className={contentPaper} />
             <Typography color="primary">aaaaaaaaaaaaaaaaa</Typography>
             <Typography>bbbbbbbbbbbbbbbbbbbbbb</Typography>
             <Typography>cccccccccccccccc</Typography>
@@ -120,19 +127,17 @@ const IndexPage = (props) => {
             <Typography>aaaaaaaaaaaaaaaaa</Typography>
 
             {typeof window !== 'undefined' && (
-            <Map center={coordinates} zoom={13} style={{ width: '60vw', height: '60vh' }}>
-              <TileLayer
-                url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
-                attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
-                // tileSize={1024}
-                // zoomOffset={-1}
-              />
+              <Map center={coordinates} zoom={13} style={{ width: '60vw', height: '60vh' }}>
+                <TileLayer
+                  url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+                  attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+                />
 
-              <Marker position={coordinates}>
-                <Popup>hey</Popup>
-              </Marker>
+                <Marker position={coordinates}>
+                  <Popup>hey</Popup>
+                </Marker>
 
-            </Map>
+              </Map>
             )}
             {/* <Iframe
               url="https://scratch.mit.edu/projects/438540369/embed"
@@ -147,6 +152,7 @@ const IndexPage = (props) => {
               frameBorder="0"
             />
             <Button color="primary">fjsdifhjhaois</Button> */}
+
           </main>
           <ScrollTop>
             <Tooltip placement="top" title={intl.formatMessage({ id: 'backToTopBtn' })} arrow TransitionComponent={Zoom}>
