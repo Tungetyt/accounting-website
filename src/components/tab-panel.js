@@ -68,7 +68,7 @@ function a11yProps(index) {
 }
 
 export default function ScrollableTabsButtonAuto() {
-  const [value, setValue] = React.useState(0);
+  const [chosenTab, setValue] = React.useState(0);
   const [isDark, setIsDark] = useContext(ColorContext);
 
   const { services } = NAVIGATION;
@@ -87,12 +87,6 @@ export default function ScrollableTabsButtonAuto() {
     },
     scroller: {
       flexGrow: '0',
-      // [theme.breakpoints.up('sm')]: {
-      //   scrollButtons: 'off',
-      // },
-      // [theme.breakpoints.down('sm')]: {
-      //   scrollButtons: 'off',
-      // },
     },
   }));
   const { root, tabs, scroller } = useStyles();
@@ -106,7 +100,7 @@ export default function ScrollableTabsButtonAuto() {
       <Paper className={root}>
         <AppBar position="static" color="default">
           <Tabs
-            value={value}
+            value={chosenTab}
             onChange={handleChange}
             indicatorColor="primary"
             textColor={APP_THEME[isDark ? 'dark' : 'light'].palette.primary.main}
@@ -123,23 +117,23 @@ export default function ScrollableTabsButtonAuto() {
             <Tab label={intl.formatMessage({ id: 'servicesSection.businessServices' })} icon={<FontAwesomeIcon size="lg" icon={faChess} />} {...a11yProps(5)} />
           </Tabs>
         </AppBar>
-        <TabPanel value={value} index={0}>
+        <TabPanel value={chosenTab} index={0}>
           <OfferCard offer="accounting" />
 
         </TabPanel>
-        <TabPanel value={value} index={1}>
+        <TabPanel value={chosenTab} index={1}>
           Item Two
         </TabPanel>
-        <TabPanel value={value} index={2}>
+        <TabPanel value={chosenTab} index={2}>
           Item Three
         </TabPanel>
-        <TabPanel value={value} index={3}>
+        <TabPanel value={chosenTab} index={3}>
           Item Four
         </TabPanel>
-        <TabPanel value={value} index={4}>
+        <TabPanel value={chosenTab} index={4}>
           Item Five
         </TabPanel>
-        <TabPanel value={value} index={5}>
+        <TabPanel value={chosenTab} index={5}>
           Item Six
         </TabPanel>
       </Paper>
