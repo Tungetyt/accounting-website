@@ -69,34 +69,7 @@ const DrawerContent = () => {
           <LangBtn />
         </Grid>
       </Grid>
-      <Divider />
-      <Grid
-        container
-        direction="row"
-        justify="space-around"
-        alignItems="center"
-        spacing={0}
-      >
-        <Grid item>
-          {/* <Tooltip title={intl.formatMessage({ id: 'themeBtn' })} arrow TransitionComponent={Zoom}>
-            <IconButton
-              edge="end"
-              color="primary"
-              aria-label="mode"
-              style={{ transition: 'all 0.25s linear' }}
-              onClick={() => {
-                setIsDark((prevIsDark) => !prevIsDark);
-              }}
-            >
-              <FacebookIcon />
-            </IconButton>
-          </Tooltip> */}
 
-        </Grid>
-        <Grid item>
-          <LangBtn />
-        </Grid>
-      </Grid>
       <Divider />
       <NavList />
 

@@ -55,7 +55,7 @@ const LandingPage = () => {
         justify="space-evenly"
         alignItems="center"
         style={{
-          paddingTop: '30vh', paddingBottom: '70vh', marginBottom: '53px', backgroundColor: 'green',
+          paddingTop: '30vh', paddingBottom: '70vh', marginBottom: '53px',
         }}
       >
         <Grid item>

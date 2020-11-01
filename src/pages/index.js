@@ -73,8 +73,11 @@ const IndexPage = (props) => {
 
   let chosenTheme = createMuiTheme(isDark ? APP_THEME.dark : APP_THEME.light);
   chosenTheme = responsiveFontSizes(chosenTheme);
+
   const coordinates = [52.2297, 21.0122];
+
   const { GATSBY_FACEBOOK_APP_ID } = process.env;
+
   return (
     <>
       <ThemeProvider theme={chosenTheme}>

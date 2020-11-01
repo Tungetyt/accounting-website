@@ -50,7 +50,7 @@ const Logo = () => {
       paddingRight: '12px',
       paddingTop: '3px',
       backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.background.default,
-      zIndex: '1',
+      zIndex: '99999',
     },
 
   }));

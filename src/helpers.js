@@ -34,7 +34,7 @@ export const APP_THEME = {
         backgroundColor: indigo['100'],
       },
       elevation2: {
-        backgroundColor: indigo['700'],
+        backgroundColor: indigo['200'],
       },
       indigo300: indigo['300'],
     },

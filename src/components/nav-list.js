@@ -56,7 +56,7 @@ const NavList = () => {
       transition: 'all 0.25s linear',
     },
     active: {
-      backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.indigo300,
+      backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor,
     },
   }));
 
