@@ -28,9 +28,10 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import {
   NAVIGATION, getItemByKey, LOCAL_STORAGE_KEY, langNames, APP_THEME, THEME_NAMES, DRAWER_WIDTH, COMPANY,
 } from '../helpers';
-import OfferCard from './offer-card';
+import AccountingOffer from './accounting-offer';
 import { LangContext, ColorContext } from '../context/contexts';
 import Image from './image';
+import HrAndPayrollOffer from './hr-and-payroll-offer';
 
 function TabPanel(props) {
   const {
@@ -118,11 +119,11 @@ export default function ScrollableTabsButtonAuto() {
           </Tabs>
         </AppBar>
         <TabPanel value={chosenTab} index={0}>
-          <OfferCard offer="accounting" />
+          <AccountingOffer offer="accounting" />
 
         </TabPanel>
         <TabPanel value={chosenTab} index={1}>
-          Item Two
+          <HrAndPayrollOffer />
         </TabPanel>
         <TabPanel value={chosenTab} index={2}>
           Item Three

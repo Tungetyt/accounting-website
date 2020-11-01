@@ -16,9 +16,9 @@
   },
   "hamburger": "Panel nawigacyjny",
   "landing": {
-    "first": "NOWOCZESNE",
-    "second": "BIURO",
-    "third": "RACHUNKOWE"
+    "first": "BIURO",
+    "second": "RACHUNKOWE",
+    "third": "VAVICOM"
   },
   "servicesSection": {
     "accounting": "KSIĘGOWOŚĆ",
@@ -30,88 +30,115 @@
   },
   "readMore": "CZYTAJ WIĘCEJ",
   "accounting": {
-    "info": [
-      "Skomplikowane i często zmieniajcie się standardy rachunkowości i sprawozdawczości finansowej wymagają nieustannego śledzenia zmian przepisów prawa.",
-      "Zlecając bieżące prowadzenie ksiąg rachunkowych i sporządzanie sprawozdań finansowych zgodnie z aktualnymi wymogami przepisów, możesz przestać koncentrować się na śledzeniu zmian w przepisach i skupić się na codziennym prowadzeniu biznesu.",
-      "Nasze usługi:"
-    ],
-    "services": [
-      "sporządzanie lub aktualizacja polityki rachunkowości we współpracy z Klientem,",
-      "przygotowanie bazy danych w systemie finansowo – księgowym;",
-      "ewidencję dokumentów otrzymywanych do Państwa i kontrahentów;",
-      "bieżące prowadzenia ksiąg rachunkowych,",
-      "raportowanie danych finansowych do zarządu firmy oraz grupy zgodnie z Państwa wymogami;",
-      "przygotowanie statutowych sprawozdań finansowych oraz pomoc w sporządzeniu sprawozdania zarządu z działalności;",
-      "przygotowanie sprawozdań i raportów dla Narodowego Banku Polskiego i Głównego Urzędu Statystycznego;",
-      "współpraca z audytorami;"
-    ],
-    "more": [
-      "Naszym Klientom oferujemy kompleksowe usługi księgowe, rachunkowe, finansowe i zarządcze dla firm, które rozliczają się na podstawie księgi handlowej, KPiR, ryczałtu czy karty podatkowej. Stawiamy na nowoczesne rozwiązania, optymalizujemy procesy obiegu danych, a także tworzymy dla naszych Klientów narzędzia pozwalające na osiągnięcie lepszej wydajności pracy i zwiększenia ich konkurencyjności. Usługi księgowe są podstawą działalności Biura Rachunkowego VAVICOM. Naszym priorytetem jest zagwarantowanie klientom obsługi księgowej zawsze na czas i przy zachowaniu najwyższych standardów jakości. Świadczone przez nas usługi księgowe i sprawozdawczości zawsze dostosowujemy do konkretnych oczekiwań zarówno pod względem formalnym, jak i merytorycznym z uwzględnieniem terminów wymaganych przez klienta.",
-      "Świadczymy kompleksową obsługę podmiotów gospodarczych w szczególności mikro, małych i średnich przedsiębiorstw. Podstawowym celem jest wypełnienie bieżących obowiązków podatnika w zakresie prowadzenia ksiąg rachunkowych oraz sprawozdawczości podatkowej.",
-      "Proponujemy konkurencyjne ceny:",
-      [
-        "Ewidencja przychodów dla potrzeb podatku zryczałtowanego od 100 zł.",
-        "KPIR księga przychodów i rozchodów od 150 zł.",
-        "Księgowość rachunkowa (księgi handlowe) od 350 zł."
-      ]
-    ]
+    "info": {
+      "0": "Skomplikowane i często zmieniajcie się standardy rachunkowości i sprawozdawczości finansowej wymagają nieustannego śledzenia zmian przepisów prawa.",
+      "1": "Zlecając bieżące prowadzenie ksiąg rachunkowych i sporządzanie sprawozdań finansowych zgodnie z aktualnymi wymogami przepisów, możesz przestać koncentrować się na śledzeniu zmian w przepisach i skupić się na codziennym prowadzeniu biznesu.",
+      "2": "Nasze usługi:"
+    },
+    "services": {
+      "0":"sporządzanie lub aktualizacja polityki rachunkowości we współpracy z Klientem,",
+      "1":"przygotowanie bazy danych w systemie finansowo – księgowym;",
+      "2":"ewidencję dokumentów otrzymywanych do Państwa i kontrahentów;",
+      "3":"bieżące prowadzenia ksiąg rachunkowych,",
+      "4":"raportowanie danych finansowych do zarządu firmy oraz grupy zgodnie z Państwa wymogami;",
+      "5":"przygotowanie statutowych sprawozdań finansowych oraz pomoc w sporządzeniu sprawozdania zarządu z działalności;",
+      "6":"przygotowanie sprawozdań i raportów dla Narodowego Banku Polskiego i Głównego Urzędu Statystycznego;",
+      "7":"współpraca z audytorami;"
+    },
+    "more": {
+      "0": "Naszym Klientom oferujemy kompleksowe usługi księgowe, rachunkowe, finansowe i zarządcze dla firm, które rozliczają się na podstawie księgi handlowej, KPiR, ryczałtu czy karty podatkowej. Stawiamy na nowoczesne rozwiązania, optymalizujemy procesy obiegu danych, a także tworzymy dla naszych Klientów narzędzia pozwalające na osiągnięcie lepszej wydajności pracy i zwiększenia ich konkurencyjności. Usługi księgowe są podstawą działalności Biura Rachunkowego VAVICOM. Naszym priorytetem jest zagwarantowanie klientom obsługi księgowej zawsze na czas i przy zachowaniu najwyższych standardów jakości. Świadczone przez nas usługi księgowe i sprawozdawczości zawsze dostosowujemy do konkretnych oczekiwań zarówno pod względem formalnym, jak i merytorycznym z uwzględnieniem terminów wymaganych przez klienta.",
+      "1": "Świadczymy kompleksową obsługę podmiotów gospodarczych w szczególności mikro, małych i średnich przedsiębiorstw. Podstawowym celem jest wypełnienie bieżących obowiązków podatnika w zakresie prowadzenia ksiąg rachunkowych oraz sprawozdawczości podatkowej.",
+      "2": "Proponujemy konkurencyjne ceny:",
+      "3": {
+        "0": "Ewidencja przychodów dla potrzeb podatku zryczałtowanego od 100 zł.",
+        "1": "KPIR księga przychodów i rozchodów od 150 zł.",
+        "2": "Księgowość rachunkowa (księgi handlowe) od 350 zł."
+      }
+    }
   },
-  "faqSection": [
-    {
+  "hr": {
+    "info": {
+      "0": "Skomplikowane i często zmieniajcie się standardy rachunkowości i sprawozdawczości finansowej wymagają nieustannego śledzenia zmian przepisów prawa.",
+      "1": "Zlecając bieżące prowadzenie ksiąg rachunkowych i sporządzanie sprawozdań finansowych zgodnie z aktualnymi wymogami przepisów, możesz przestać koncentrować się na śledzeniu zmian w przepisach i skupić się na codziennym prowadzeniu biznesu.",
+      "2": "Nasze usługi:"
+    },
+    "services": {
+      "0":"sporządzanie lub aktualizacja polityki rachunkowości we współpracy z Klientem,",
+      "1":"przygotowanie bazy danych w systemie finansowo – księgowym;",
+      "2":"ewidencję dokumentów otrzymywanych do Państwa i kontrahentów;",
+      "3":"bieżące prowadzenia ksiąg rachunkowych,",
+      "4":"raportowanie danych finansowych do zarządu firmy oraz grupy zgodnie z Państwa wymogami;",
+      "5":"przygotowanie statutowych sprawozdań finansowych oraz pomoc w sporządzeniu sprawozdania zarządu z działalności;",
+      "6":"przygotowanie sprawozdań i raportów dla Narodowego Banku Polskiego i Głównego Urzędu Statystycznego;",
+      "7":"współpraca z audytorami;"
+    },
+    "more": {
+      "0": "Naszym Klientom oferujemy kompleksowe usługi księgowe, rachunkowe, finansowe i zarządcze dla firm, które rozliczają się na podstawie księgi handlowej, KPiR, ryczałtu czy karty podatkowej. Stawiamy na nowoczesne rozwiązania, optymalizujemy procesy obiegu danych, a także tworzymy dla naszych Klientów narzędzia pozwalające na osiągnięcie lepszej wydajności pracy i zwiększenia ich konkurencyjności. Usługi księgowe są podstawą działalności Biura Rachunkowego VAVICOM. Naszym priorytetem jest zagwarantowanie klientom obsługi księgowej zawsze na czas i przy zachowaniu najwyższych standardów jakości. Świadczone przez nas usługi księgowe i sprawozdawczości zawsze dostosowujemy do konkretnych oczekiwań zarówno pod względem formalnym, jak i merytorycznym z uwzględnieniem terminów wymaganych przez klienta.",
+      "1": "Świadczymy kompleksową obsługę podmiotów gospodarczych w szczególności mikro, małych i średnich przedsiębiorstw. Podstawowym celem jest wypełnienie bieżących obowiązków podatnika w zakresie prowadzenia ksiąg rachunkowych oraz sprawozdawczości podatkowej.",
+      "2": "Proponujemy konkurencyjne ceny:",
+      "3": {
+        "0": "Ewidencja przychodów dla potrzeb podatku zryczałtowanego od 100 zł.",
+        "1": "KPIR księga przychodów i rozchodów od 150 zł.",
+        "2": "Księgowość rachunkowa (księgi handlowe) od 350 zł."
+      }
+    }
+  },
+  "faqSection": {
+    "0": {
       "q":"Na czym polega księgowość online?",
       "a":"W dzisiejszych czasach Internet jest nieodzownym elementem prowadzenia każdej firmy. Dla tych z Państwa, którzy poszukują nowinek technologicznych i ułatwień w prowadzeniu działalności, przygotowaliśmy nowatorskie rozwiązanie księgowość online. Jako jedno z nielicznych biur rachunkowych w Polsce posiadamy platformę sprzętowo-programową umożliwiającą pełną integrację, wymianę danych między klientem a biurem oraz zdalny dostęp do wszelkich informacji z dowolnego miejsca na świecie."
     },
-    {
+    "1": {
       "q":"Co to jest integracja systemów?",
       "a":"Zlecenie obsługi księgowej innej firmie odciąża przedsiębiorstwo, jednak nie uwalnia go od ciążących na nim obowiązków, jak wystawianie faktur VAT, rejestracja wpłat do kasy, wystawianie przelewów, obsługa magazynu czy moduły produkcji. W chwili, gdy tak zarejestrowane operacje zostaną uzupełnione o dane księgowe (koszty, płace, księgowania), relatywnie niewielkim nakładem czasowym bieżąca informacja o stanie przedsiębiorstwa dostępna będzie po jednym „kliknięciu”."
     },
-    {
+    "2": {
       "q":"Jaka jest oszczędność czasu przy księgowości online?",
       "a":"Usługi, które proponujemy, to znakomity sposób na zaoszczędzenie czasu w przypadku mniejszych przedsiębiorstw. Skorzystanie z nich zaoszczędzi Państwa pracownikom czas, który musieli poświęcać tradycyjnemu modelowi współpracy z biurem rachunkowym i na bieżąco uzyskiwać informacje bez potrzeby wizyt w biurze. Po księgowość online z wielkim powodzeniem mogą sięgnąć także duże przedsiębiorstwa. Z jednej strony posiadające kompletny system wspomagający przedsiębiorstwo. Z drugiej zaś – uzyskując nadzór i bieżącą kontrolę nad poprawnością wprowadzanych i księgowanych danych."
     },
-    {
+    "3": {
       "q":"Jak jest dostępność do danych w księgowość online?",
       "a":"Księgowość przez internet umożliwia bieżący dostęp do zasobów rachunkowych firmy. Pozwala tworzyć raporty, analizy, wykresy i zestawienia oraz daje firmie bieżący dostęp do jej kontrahentów i stanów magazynowych. Dzięki księgowości online mogą Państwo kontrolować swoją firmę 24 godziny na dobę. W wygodny sposób korzystać z dostępu do informacji na temat swojego przedsiębiorstwa w dowolnym miejscu na świecie."
     },
-    {
+    "4": {
       "q":"Dlaczego warto zlecać księgowość zewnętrznym biurom rachunkowym?",
       "a":"Nie musicie kupować żadnego dodatkowego systemu finansowo-księgowego; szukać księgowych z dużym doświadczeniem, którzy będą na bieżąco poszerzać kompetencje; ponosić dodatkowych kosztów personalnych za zatrudnianie pracownika ani angażować się w utrzymanie pracownika i jego stanowiska prac. Klient zyskuje zawsze bieżącą wiedzę o aktualnych przepisach podatkowych."
     },
-    {
+    "5": {
       "q":"Czy można zmienić biuro rachunkowe w ciągu roku?",
       "a":"Biuro rachunkowe można zmienić w dowolnym momencie. Należy jednak podkreślić, że najdogodniejszym momentem zmiany biura rachunkowego jest początek nowego okresu fiskalnego – dzięki temu nowe biuro rachunkowe ma pełną odpowiedzialność za okres sprawozdawczy.\nNajczęstsze motywacje naszych Klientów do zmiany biura rachunkowego w ciąg roku to zmiany personalne w firmie i podjęcie decyzji o przejściu na usługi zewnętrzne, rażące zaniedbania w terminowości rozliczeń podatkowych obecnego biura, rażące obniżenie jakości obsługi dotychczasowego biura.\nPodejmując decyzję o zmianie biura rachunkowego w ciągu roku fiskalnego trzeba z nowym biurem dokładnie omówić zakres odpowiedzialności za przejmowane księgi – nie każde biuro chce brać odpowiedzialność za księgowania i rozliczenia podatkowe zrobione przez inne biuro, a tym samym może odmówić sporządzenia i podpisania rocznych deklaracji czy sprawozdania finansowego lub zarządać dodatkowego wynagrodzenia za weryfikację tych zapisów."
     },
-    {
+    "6": {
       "q":"Szkoda Ci czasu na analizowanie szybko zmieniających się przepisów?",
       "a":"Brak stabilności prawa podatkowego, wielokrotnie niejasne i niejednoznaczne przepisy, sprzeczne interpretacje urzędów skarbowych czy nawet sądów – to nieliczne problemy z jakimi zmaga się polski podatnik. Biuro rachunkowe w całości zdejmuje ten ciężar z przedsiębiorcy.\nPrzedsiębiorcy nie mają ani czasu ani zasobów merytorycznych aby śledzić zmiany w przepisach, a za ewentualne błędy w rozliczeniach nie mogą się tłumaczyć  nieznajomością prawa. Wielokrotnie nie mają również możliwości merytorycznego skontrolowania jakości rozliczeń podatkowych wykonywanych przez własnych pracowników etatowych."
     },
-    {
+    "7": {
       "q":"Obawiasz się błędów jakie możesz zrobić samodzielnie prowadząc księgowość?",
       "a":"Jest wiele pułapek w polskim prawie, z którymi przedsiębiorcy i biura rachunkowe muszą się zmagać w codziennych rozliczeniach. Kary za niedopełnienie zobowiązać podatkowych są bardzo dotkliwe. Jeżeli drogi Kliencie nie chcesz marnować czasu na pasjonującą lekturę co raz to nowych przepisów podatkowych – zapraszamy do współpracy!"
     },
-    {
+    "8": {
       "q":"Martwisz się, że dokumenty mogą być zagubione?",
       "a":"Biuro Rachunkowe VAVICOM współpracuje ze swoimi Klientami w oparciu o nowoczesną platformę wymiany dokumentów. Każdy z naszych Klientów w każdym momencie widzi jakie faktury nam przekazał i kiedy to zrobił. Dokumenty można przekazać na wiele sposobów – chociażby bezpośrednio z telefonu (faktura za paliwo), mailem lub też bezpośrednio na platformie. System ten jest bardzo przyjazny dla użytkownika. Dodatkowo Klienci mają możliwość bezpłatnego korzystania z dodatkowych funkcjonalności platformy m.in – wystawianie faktur sprzedaży, generowanie przelewów do dostawców (integracja z bankiem), wprowadzenie systemu online do akceptacji faktur, archiwizowanie innej dokumentacji firmy (np. umowy)."
     },
-    {
+    "9": {
       "q":"Masz złe doświadczenie ze współpracy z biurami rachunkowymi?",
       "a":"Stworzyliśmy środowisko pracy, w którym jesteśmy częścią struktury naszego Klienta, wspieramy go w bieżącej działalności, a biorąc pod uwagę zmieniające się przepisy i specyfikę Klienta proaktywnie proponujemy rozwiązania. Gwarantem jakości jest doświadczony zespół i niespotykanie niska rotacja zespołu.\nDołącz do grona naszych zadowolonych Klientów!"
     },
-    {
+    "10": {
       "q":"Nie masz z kim skonsultować bieżących decyzji księgowo-finansowych?",
       "a":"Jesteśmy finansowym partnerem biznesowym, nasza misją jest budowanie przewagi konkurencyjnej naszych klientów poprzez profesjonalną obsługę rachunkową. Dlatego też dbamy o to, aby nasi Klienci dostawali od nas regularne informacje o zmieniających się przepisach dotyczących ich firmy."
     },
-    {
+    "11": {
       "q":"Wiesz czym jest księgowość hybrydowa?",
       "a":"Księgowość hybrydowa to połączenie tradycyjnej księgowości z księgowością internetową. Takie połączenie pozwala na wdrożenie wszystkiego co pozytywne z obu modelów i jednoczesne wyeliminowanie słabych punktów.\nBiuro Rachunkowe VAVICOM stawia na połączenie nowoczesnych rozwiązań technologicznych z jakże potrzebnym bezpośrednim kontaktem z osobą obsługującą. Najważniejszy dla nas jest Klient, któremu zapewniamy bieżący kontakt ze stałym opiekunem, systemy informatyczne wspierają nas jedynie w usprawnieniu komunikacji z Klientem oraz usprawnieniu procesu wymiany dokumentów.\nBiuro rachunkowe VAVICOM  – Zaufanie, które procentuje!"
     },
-    {
+    "12": {
       "q":"W jakiej formie przekazujesz dokumenty do biura?",
       "a":"Zdecydowana większość naszych Klientów współpracuje z nami w oparciu o nowoczesną platformę wymiany dokumentów. Nasi Klienci w każdym momencie widzą jakie faktury nam przekazali. Klienci preferujący tradycyjne metody współpracy dostarczają nam dokumenty osobiście lub za pośrednictwem kuriera."
     },
-    {
+    "13": {
       "q":"Ważna jest dla ciebie kompleksowość obsługi, profesjonalizm I terminowość?",
       "a":"Gwarantujemy komfort i poczucie bezpieczeństwa w powierzonych sprawach; dodatkowo poufność i dyskrecję. Bezpieczne systemy informatyczne."
     }
-  ]
+  }
 }

@@ -46,6 +46,7 @@ import {
 import ResponsiveDrawer from '../components/responsive-drawer';
 import Logo from '../components/logo';
 import TabPanel from '../components/tab-panel';
+import StyledBackgroundSection from '../components/landing-image';
 
 const IndexPage = (props) => {
   const [isDark, setIsDark] = useState(true);
@@ -56,15 +57,15 @@ const IndexPage = (props) => {
         marginRight: DRAWER_WIDTH,
       },
     },
-    contentPaper: {
-      backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation1.backgroundColor,
-      width: '99%',
-      height: '1000px',
-      margin: 'auto',
-    },
+    // contentPaper: {
+    //   backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation1.backgroundColor,
+    //   width: '99%',
+    //   height: '1000px',
+    //   margin: 'auto',
+    // },
   }));
 
-  const { main, contentPaper } = useStyles();
+  const { main } = useStyles();
 
   const intl = useIntl();
   useEffect(() => {
@@ -88,41 +89,77 @@ const IndexPage = (props) => {
           <ResponsiveDrawer props={props} />
           <div id="top" />
           <main className={main}>
-
             <LandingPage />
-
             <TabPanel />
-
             {typeof window !== 'undefined' && (
-              <Map center={coordinates} zoom={13} style={{ width: '60vw', height: '60vh' }}>
-                <TileLayer
-                  url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
-                  attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
-                />
+              <>
+                <br />
+                <Grid
+                  container
+                  direction="row"
+                  justify="center"
+                  alignItems="center"
+                >
+                  <Grid
+                    item
+                    style={{ width: '99%' }}
+                  >
+                    <Paper style={{ backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation1.backgroundColor }}>
+                      <Grid
+                        container
+                        direction="row"
+                        justify="center"
+                        alignItems="center"
+                      >
+                        <Grid item>
+                          <Map center={coordinates} zoom={13} style={{ width: '60vw', height: '60vh' }}>
+                            <TileLayer
+                              url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+                              attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+                            />
+                            <Marker position={coordinates}>
+                              <Popup>hey</Popup>
+                            </Marker>
+                          </Map>
+                        </Grid>
+                      </Grid>
+                    </Paper>
+                  </Grid>
 
-                <Marker position={coordinates}>
-                  <Popup>hey</Popup>
-                </Marker>
-
-              </Map>
+                </Grid>
+              </>
             )}
-            {/* <Iframe
-              url="https://scratch.mit.edu/projects/438540369/embed"
-              width="485px"
-              height="402px"
-              id="myId"
-              className="myClassname"
-              display="initial"
-              position="relative"
-              allowFullScreen
-              scrolling="no"
-              frameBorder="0"
-            />
-            <Button color="primary">fjsdifhjhaois</Button> */}
             {GATSBY_FACEBOOK_APP_ID && (
-            <FacebookProvider appId={GATSBY_FACEBOOK_APP_ID}>
-              <Page href="https://www.facebook.com/Biuro-Rachunkowe-Vavicom-J%C3%B3zefos%C5%82aw-Warszawa-100928011806919/?hc_ref=ARTxt7vKhgJpl3zZMlfTmi0KFs2ze7KOXJguAdYdJtoR1a1SFsyQG8QL-841D6dLqJc&fref=nf" tabs="timeline" />
-            </FacebookProvider>
+              <>
+                <br />
+                <Grid
+                  container
+                  direction="row"
+                  justify="center"
+                  alignItems="center"
+                >
+                  <Grid
+                    item
+                    style={{ width: '99%' }}
+                  >
+                    <Paper style={{ backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation1.backgroundColor }}>
+                      <Grid
+                        container
+                        direction="row"
+                        justify="center"
+                        alignItems="center"
+                      >
+                        <Grid item>
+                          <FacebookProvider appId={GATSBY_FACEBOOK_APP_ID}>
+                            <Page href="https://www.facebook.com/Biuro-Rachunkowe-Vavicom-J%C3%B3zefos%C5%82aw-Warszawa-100928011806919/?hc_ref=ARTxt7vKhgJpl3zZMlfTmi0KFs2ze7KOXJguAdYdJtoR1a1SFsyQG8QL-841D6dLqJc&fref=nf" tabs="timeline" />
+                          </FacebookProvider>
+                        </Grid>
+                      </Grid>
+                    </Paper>
+                  </Grid>
+
+                </Grid>
+              </>
             )}
           </main>
           <ScrollTop>
