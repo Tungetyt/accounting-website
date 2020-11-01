@@ -58,18 +58,19 @@ export default function HrAndPayrollOffer({ offer }) {
           container
           direction="row"
           justify="center"
-          alignItems="center"
+          alignItems="flex-start"
           spacing="3"
           style={{ padding: '6px' }}
         >
           <Grid item style={{ width: '600px' }}>
             {/* <div style={{ maxWidth: '3000px' }}> */}
-            <Image alt="accounting image" filename="accounting_2.jpg" />
+            <Image alt="hrAndPayroll image" filename="financial-accounting.jpg" />
             {/* </div> */}
           </Grid>
           <Grid item>
-            <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'accounting.info.0' })}</Typography>
-            <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'accounting.info.1' })}</Typography>
+            <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'hrAndPayroll.info.0' })}</Typography>
+            <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'hrAndPayroll.info.1' })}</Typography>
+            <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'hrAndPayroll.info.2' })}</Typography>
           </Grid>
 
         </Grid>
@@ -85,28 +86,40 @@ export default function HrAndPayrollOffer({ offer }) {
             <Grid
               item
             >
-              <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'accounting.info.2' })}</Typography>
+              <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'hrAndPayroll.info.3' })}</Typography>
               <ul>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'accounting.services.0' })}</Typography>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'hrAndPayroll.services.0' })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'accounting.services.1' })}</Typography>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'hrAndPayroll.services.1' })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'accounting.services.2' })}</Typography>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'hrAndPayroll.services.2' })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'accounting.services.3' })}</Typography>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'hrAndPayroll.services.3' })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'accounting.services.4' })}</Typography>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'hrAndPayroll.services.4' })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'accounting.services.6' })}</Typography>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'hrAndPayroll.services.6' })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'accounting.services.7' })}</Typography>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'hrAndPayroll.services.7' })}</Typography>
+                </li>
+                <li>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'hrAndPayroll.services.8' })}</Typography>
+                </li>
+                <li>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'hrAndPayroll.services.9' })}</Typography>
+                </li>
+                <li>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'hrAndPayroll.services.10' })}</Typography>
+                </li>
+                <li>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'hrAndPayroll.services.11' })}</Typography>
                 </li>
               </ul>
             </Grid>
@@ -122,11 +135,11 @@ export default function HrAndPayrollOffer({ offer }) {
             spacing="3"
           >
             <Grid item>
-              <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'accounting.more.0' })}</Typography>
+              <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'hrAndPayroll.more.0' })}</Typography>
 
             </Grid>
             <Grid item>
-              <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'accounting.more.1' })}</Typography>
+              <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'hrAndPayroll.more.1' })}</Typography>
             </Grid>
 
           </Grid>
@@ -141,16 +154,16 @@ export default function HrAndPayrollOffer({ offer }) {
             <Grid
               item
             >
-              <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'accounting.more.2' })}</Typography>
+              <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'hrAndPayroll.more.2' })}</Typography>
               <ul>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'accounting.more.3.0' })}</Typography>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'hrAndPayroll.more.3.0' })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'accounting.more.3.1' })}</Typography>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'hrAndPayroll.more.3.1' })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'accounting.more.3.2' })}</Typography>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'hrAndPayroll.more.3.2' })}</Typography>
                 </li>
 
               </ul>

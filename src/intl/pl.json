@@ -56,31 +56,61 @@
       }
     }
   },
-  "hr": {
+  "hrAndPayroll": {
     "info": {
-      "0": "Skomplikowane i często zmieniajcie się standardy rachunkowości i sprawozdawczości finansowej wymagają nieustannego śledzenia zmian przepisów prawa.",
-      "1": "Zlecając bieżące prowadzenie ksiąg rachunkowych i sporządzanie sprawozdań finansowych zgodnie z aktualnymi wymogami przepisów, możesz przestać koncentrować się na śledzeniu zmian w przepisach i skupić się na codziennym prowadzeniu biznesu.",
-      "2": "Nasze usługi:"
+      "0": "Zapewniamy kompleksową obsługę w zakresie naliczania płac zgodnie z obowiązującymi przepisami prawa pracy, ubezpieczeń społecznych oraz podatku dochodowego od osób fizycznych.",
+      "1": "Dbamy również o prawidłowe, zgodne z kodeksem pracy, administrowanie teczkami personalnymi i całą dokumentacją dotyczącą stosunku pracy i urlopów. Przygotowujemy deklaracje rozliczeniowe do ZUS, PFRON oraz urzędu skarbowego. Współpracujemy z tymi instytucjami w zakresie przygotowanej dokumentacji w przypadku jakichkolwiek pytań.",
+      "2": "Zakres usług obejmuje także pomoc w procesie zatrudniania nowych oraz odchodzących pracowników. Dbamy o to, żeby procesy kadrowe i płacowe realizowane dla Państwa były zgodne z przepisami, efektywne i łatwe w realizacji. Powyższe usługi z zakresu administracji kadrowo - płacowej oprócz tradycyjnej metody ich realizacji, w uzgodnionym z Klientem zakresie, mogą być równolegle świadczone w systemie dostępu on-line.",
+      "3": "Nasze usługi:"
     },
     "services": {
-      "0":"sporządzanie lub aktualizacja polityki rachunkowości we współpracy z Klientem,",
+      "0":"naliczanie wynagrodzeń z uwzględnieniem dodatków i potrąceń;",
       "1":"przygotowanie bazy danych w systemie finansowo – księgowym;",
-      "2":"ewidencję dokumentów otrzymywanych do Państwa i kontrahentów;",
-      "3":"bieżące prowadzenia ksiąg rachunkowych,",
-      "4":"raportowanie danych finansowych do zarządu firmy oraz grupy zgodnie z Państwa wymogami;",
-      "5":"przygotowanie statutowych sprawozdań finansowych oraz pomoc w sporządzeniu sprawozdania zarządu z działalności;",
-      "6":"przygotowanie sprawozdań i raportów dla Narodowego Banku Polskiego i Głównego Urzędu Statystycznego;",
-      "7":"współpraca z audytorami;"
+      "2":"sporządzanie deklaracji PIT i ZUS w imieniu pracodawcy;",
+      "3":"przygotowywanie dokumentacji płacowej dla firmy i jej pracowników;",
+      "4":"asysta przy płatnościach wynagrodzeń i składek na ubezpieczenia społeczne;",
+      "5":"przygotowywanie i składanie rocznych informacji o dochodach/deklaracji (PIT-11, PIT-4R, PIT-40);",
+      "6":"tworzenie i administracja teczek personalnych;",
+      "7":"ewidencja i kontrola wymiaru urlopów pracowniczych;",
+      "8":"monitorowanie ważności badań lekarskich i szkoleń BHP",
+      "9":"przygotowywanie świadectw pracy;",
+      "10":"przygotowywanie i rozliczanie list płac dla osób zatrudnionych na podstawie umów cywilno-prawnych;",
+      "11":"sporządzanie informacji o przychodach z innych źródeł (PIT-8C)."
     },
     "more": {
-      "0": "Naszym Klientom oferujemy kompleksowe usługi księgowe, rachunkowe, finansowe i zarządcze dla firm, które rozliczają się na podstawie księgi handlowej, KPiR, ryczałtu czy karty podatkowej. Stawiamy na nowoczesne rozwiązania, optymalizujemy procesy obiegu danych, a także tworzymy dla naszych Klientów narzędzia pozwalające na osiągnięcie lepszej wydajności pracy i zwiększenia ich konkurencyjności. Usługi księgowe są podstawą działalności Biura Rachunkowego VAVICOM. Naszym priorytetem jest zagwarantowanie klientom obsługi księgowej zawsze na czas i przy zachowaniu najwyższych standardów jakości. Świadczone przez nas usługi księgowe i sprawozdawczości zawsze dostosowujemy do konkretnych oczekiwań zarówno pod względem formalnym, jak i merytorycznym z uwzględnieniem terminów wymaganych przez klienta.",
-      "1": "Świadczymy kompleksową obsługę podmiotów gospodarczych w szczególności mikro, małych i średnich przedsiębiorstw. Podstawowym celem jest wypełnienie bieżących obowiązków podatnika w zakresie prowadzenia ksiąg rachunkowych oraz sprawozdawczości podatkowej.",
+      "0": "Nasze oferta Oferujemy rozwiązania uwzględniające specyfikę struktury organizacyjnej obowiązującej w Państwa firmie, złożoność składników płacowych i raportów kadrowo-płacowych. Szybko reagujemy i jesteśmy elastyczni w stosunku do Państwa potrzeb i wymagań. Kalkulacja wynagrodzeń jest kwestią delikatną, dlatego wiele firm wymaga, by usługi prowadzenia administracji płacowej były świadczone za pośrednictwem firm zewnętrznych. Zapewniamy całkowitą poufność i bezpieczeństwo w przechowywaniu danych kadrowo-płacowych oraz redukcję kosztów.",
+      "1": "Naszą szeroką ofertę kierujemy do każdego pracodawcy, który zatrudnia pracowników, niezależnie od wielkości firmy również pomagamy samozatrudnionych prowadzących działalność gospodarczą.",
       "2": "Proponujemy konkurencyjne ceny:",
       "3": {
-        "0": "Ewidencja przychodów dla potrzeb podatku zryczałtowanego od 100 zł.",
+        "0": "Usługi Płacowe  od 35 zł",
         "1": "KPIR księga przychodów i rozchodów od 150 zł.",
-        "2": "Księgowość rachunkowa (księgi handlowe) od 350 zł."
+        "2": "Usługi Płacowe  od 35 zł"
       }
+    }
+  },
+  "taxServices": {
+    "info": {
+      "0": "Polski system podatkowy w większości przypadków nakłada obowiązek płacenia podatków w cyklu miesięcznym.",
+      "1": "Wymaga to systematycznego kalkulowania zobowiązań podatkowych oraz sporządzania dla organów skarbowych wielu informacji i zeznań podatkowych o różnych terminach wymagalności. Biuro Rachunkowe VAVICOM oferuje usługi sporządzania wymaganych deklaracji podatkowych, jak również wsparcie w kontaktach z organami podatkowymi, obejmujące m.in. obsługę kontroli podatkowych."
+    },
+    "info1": {
+      "0":"Nasze prace w ramach przygotowania rozliczeń z tytułu CIT obejmują kompleksowe przygotowanie miesięcznych kalkulacji oraz rocznego zeznania CIT-8. W szczególności, usługi te zawierają przygotowanie:",
+      "1":"Miesięcznych oraz rocznej kalkulacji CIT wraz ze szczegółowymi informacjami;",
+      "2":"rocznego zeznania CIT-8 wraz ze stosownymi załącznikami sporządzonego na podstawie rocznej kalkulacji CIT;",
+      "3":"kwoty podatku należnego, który Spółka zobowiązana jest przelać na rachunek bankowy urzędu skarbowego. Spółka jest odpowiedzialna za dokonanie przelewu przed upływem ustawowego terminu płatności.",
+      "4":"Rozliczenia podatku VAT obejmują przygotowanie rejestrów oraz deklaracji VAT, w tym:"
+    },
+    "services": {
+      "0":"sporządzanie rejestrów zakupu i sprzedaży VAT na podstawie dokumentacji;",
+      "1":"przedstawianie propozycji traktowania wybranych transakcji, które mogłyby wpływać na wysokość zobowiązania podatkowego;",
+      "2":"sporządzanie deklaracji VAT w oparciu o rejestry VAT;",
+      "3":"informowanie o kwocie podatku VAT do zapłaty;",
+      "4":"sporządzanie deklaracji VAT-UE – informacji podsumowującej o dokonanych wewnątrzwspólnotowych transakcjach, a także korekty deklaracji VAT-UE;",
+      "5":"przygotowanie miesięcznych deklaracji Intrastat (jeśli będzie to wymagane);",
+      "6":"wskazanie kwoty potencjalnego zwrotu podatku VAT na deklaracji VAT oraz przygotowywanie wniosków o zwrot podatku VAT (w razie potrzeby)."
+    },
+    "more": {
+      "0": "Nasza usługa obejmuje sporządzanie na podstawie ksiąg kalkulacji podatku dochodowego od osób prawnych oraz VAT za dany okres lub rok podatkowy oraz przygotowanie odpowiednich deklaracji podatkowych. Przygotowujemy również zestawienia podsumowujące podatek VAT w handlu wewnątrzwspólnotowym oraz deklaracje Intrastat."
     }
   },
   "faqSection": {

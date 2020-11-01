@@ -26,7 +26,7 @@ import {
 
 import { LangContext, ColorContext } from '../context/contexts';
 
-export default function AccountingOffer({ offer }) {
+export default function TaxServiceOffer({ offer }) {
   const [expanded, setExpanded] = React.useState(false);
   const intl = useIntl();
   const [isDark, setIsDark] = useContext(ColorContext);
@@ -59,18 +59,19 @@ export default function AccountingOffer({ offer }) {
           direction="row"
           justify="center"
           alignItems="center"
-          spacing={3}
+          spacing="3"
           style={{ padding: '6px' }}
         >
           <Grid item style={{ width: '600px' }}>
             {/* <div style={{ maxWidth: '3000px' }}> */}
-            <Image alt="accounting image" filename="accounting_2.jpg" />
+            <Image alt="taxServices image" filename="2366512.jpg" />
             {/* </div> */}
           </Grid>
           <Grid item>
-            <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'accounting.info.0' })}</Typography>
-            <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'accounting.info.1' })}</Typography>
+            <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info.0' })}</Typography>
+            <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info.1' })}</Typography>
           </Grid>
+
         </Grid>
       </CardActionArea>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
@@ -78,54 +79,23 @@ export default function AccountingOffer({ offer }) {
           <Grid
             container
             direction="row"
-            justify="center"
-            alignItems="center"
-          >
-            <Grid
-              item
-            >
-              <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'accounting.info.2' })}</Typography>
-              <ul>
-                <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'accounting.services.0' })}</Typography>
-                </li>
-                <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'accounting.services.1' })}</Typography>
-                </li>
-                <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'accounting.services.2' })}</Typography>
-                </li>
-                <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'accounting.services.3' })}</Typography>
-                </li>
-                <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'accounting.services.4' })}</Typography>
-                </li>
-                <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'accounting.services.6' })}</Typography>
-                </li>
-                <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'accounting.services.7' })}</Typography>
-                </li>
-              </ul>
-            </Grid>
-
-          </Grid>
-          <Divider />
-          <br />
-          <Grid
-            container
-            direction="row"
-            justify="center"
             alignItems="flex-start"
-            spacing={3}
           >
-            <Grid item>
-              <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'accounting.more.0' })}</Typography>
-
-            </Grid>
-            <Grid item>
-              <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'accounting.more.1' })}</Typography>
+            <Grid
+              item
+            >
+              <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info1.0' })}</Typography>
+              <ul>
+                <li>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'taxServices.info1.1' })}</Typography>
+                </li>
+                <li>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'taxServices.info1.2' })}</Typography>
+                </li>
+                <li>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'taxServices.info1.3' })}</Typography>
+                </li>
+              </ul>
             </Grid>
 
           </Grid>
@@ -134,28 +104,39 @@ export default function AccountingOffer({ offer }) {
           <Grid
             container
             direction="row"
-            justify="center"
-            alignItems="center"
+            alignItems="flex-start"
           >
             <Grid
               item
             >
-              <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'accounting.more.2' })}</Typography>
+              <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info1.4' })}</Typography>
               <ul>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'accounting.more.3.0' })}</Typography>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'taxServices.services.0' })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'accounting.more.3.1' })}</Typography>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'taxServices.services.1' })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'accounting.more.3.2' })}</Typography>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'taxServices.services.2' })}</Typography>
                 </li>
-
+                <li>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'taxServices.services.3' })}</Typography>
+                </li>
+                <li>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'taxServices.services.4' })}</Typography>
+                </li>
+                <li>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'taxServices.services.5' })}</Typography>
+                </li>
+                <li>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'taxServices.services.6' })}</Typography>
+                </li>
               </ul>
             </Grid>
 
           </Grid>
+
         </CardContent>
       </Collapse>
     </Card>

@@ -32,6 +32,7 @@ import AccountingOffer from './accounting-offer';
 import { LangContext, ColorContext } from '../context/contexts';
 import Image from './image';
 import HrAndPayrollOffer from './hr-and-payroll-offer';
+import TaxServiceOffer from './tax-services-offer';
 
 function TabPanel(props) {
   const {
@@ -119,14 +120,14 @@ export default function ScrollableTabsButtonAuto() {
           </Tabs>
         </AppBar>
         <TabPanel value={chosenTab} index={0}>
-          <AccountingOffer offer="accounting" />
+          <AccountingOffer />
 
         </TabPanel>
         <TabPanel value={chosenTab} index={1}>
           <HrAndPayrollOffer />
         </TabPanel>
         <TabPanel value={chosenTab} index={2}>
-          Item Three
+          <TaxServiceOffer />
         </TabPanel>
         <TabPanel value={chosenTab} index={3}>
           Item Four

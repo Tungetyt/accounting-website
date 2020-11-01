@@ -27,6 +27,9 @@ import {
   Element, Events, animateScroll as scroll, scrollSpy, scroller,
 } from 'react-scroll';
 import { FacebookProvider, Page } from 'react-facebook';
+import Card from '@material-ui/core/Card';
+import CardHeader from '@material-ui/core/CardHeader';
+import CardMedia from '@material-ui/core/CardMedia';
 import SEO from './seo';
 import Image from './image';
 import ColorBtn from './color-btn';
@@ -49,6 +52,18 @@ const LandingPage = () => {
 
   return (
     <Element name={home} id={home}>
+      {/* <Card>
+        fjidsahfiodsaoighdsaioghiodsaahgiosdhaiofhio
+        <CardMedia
+          component={Image}
+          alt="accounting image"
+          filename="landing.jpg"
+          title="Paella dish"
+        />
+      </Card> */}
+      <div style={{ width: '1000px', height: '1000px' }}>
+        <Image alt="accounting image" filename="landing.jpg" />
+      </div>
       <Grid
         container
         direction="row"

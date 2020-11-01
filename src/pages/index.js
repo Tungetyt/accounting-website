@@ -31,6 +31,9 @@ import {
   Map, Marker, Popup, TileLayer,
 } from 'react-leaflet';
 import { FacebookProvider, Page } from 'react-facebook';
+import Card from '@material-ui/core/Card';
+import CardHeader from '@material-ui/core/CardHeader';
+import CardMedia from '@material-ui/core/CardMedia';
 import SEO from '../components/seo';
 import Image from '../components/image';
 import ColorBtn from '../components/color-btn';
@@ -75,7 +78,7 @@ const IndexPage = (props) => {
   let chosenTheme = createMuiTheme(isDark ? APP_THEME.dark : APP_THEME.light);
   chosenTheme = responsiveFontSizes(chosenTheme);
 
-  const coordinates = [52.2297, 21.0122];
+  const coordinates = [52.10726, 21.04587];
 
   const { GATSBY_FACEBOOK_APP_ID } = process.env;
 
@@ -89,6 +92,8 @@ const IndexPage = (props) => {
           <ResponsiveDrawer props={props} />
           <div id="top" />
           <main className={main}>
+            {/* <Paper style={{ backgroundImage: `url(${LandingImage})` }} /> */}
+
             <LandingPage />
             <TabPanel />
             {typeof window !== 'undefined' && (
@@ -118,7 +123,10 @@ const IndexPage = (props) => {
                               attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
                             />
                             <Marker position={coordinates}>
-                              <Popup>hey</Popup>
+                              <Popup>
+                                ul. Ogrodowa 6,
+                                05-500 Józefosław
+                              </Popup>
                             </Marker>
                           </Map>
                         </Grid>

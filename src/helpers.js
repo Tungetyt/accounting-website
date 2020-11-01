@@ -64,7 +64,7 @@ export const APP_THEME = {
 
 export const DRAWER_WIDTH = 180;
 
-export const COMPANY = 'V a v i c o m';
+export const COMPANY = 'V A V I C O M';
 
 export const NAVIGATION = {
   home: 'home',
