@@ -6,6 +6,7 @@ import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
 import Typography from '@material-ui/core/Typography';
 import { useIntl, FormattedMessage } from 'gatsby-plugin-intl';
+import { Paper } from '@material-ui/core';
 
 const Banner = () => {
   const data = useStaticQuery(graphql`
@@ -27,66 +28,68 @@ const Banner = () => {
   const intl = useIntl();
 
   return (
-    <BannerWrapper>
-      <BackgroundImage
-        Tag="section"
-        className="hero-image"
-        fluid={data.file.childImageSharp.fluid}
-      >
-        <div className="hero-content">
-          <motion.h1
-            initial="hidden"
-            animate="visible"
-            variants={variants}
-            transition={{ ease: 'easeOut', duration: 0.8, delay: 1 }}
-          >
-            <Typography variant="h3" color="primary" style={{ lineHeight: '90%', userSelect: 'none' }}>
-              {intl.formatMessage({ id: 'landing.first' })}
-              <br />
-              {intl.formatMessage({ id: 'landing.second' })}
-              <br />
-              {intl.formatMessage({ id: 'landing.third' })}
-            </Typography>
-          </motion.h1>
-          <motion.p
-            initial="hidden"
-            animate="visible"
-            variants={variants}
-            transition={{ ease: 'easeOut', duration: 0.8, delay: 1.5 }}
-          >
-            Startup is here to help you achieve your business and personal
-            goals, all through a stylish theme
-          </motion.p>
-          <motion.p
-            initial="hidden"
-            animate="visible"
-            variants={variants}
-            transition={{ ease: 'easeOut', duration: 0.8, delay: 1.5 }}
-          >
-            Startup is here to help you achieve your business and personal
-            goals, all through a stylish theme
-          </motion.p>
-          <motion.p
-            initial="hidden"
-            animate="visible"
-            variants={variants}
-            transition={{ ease: 'easeOut', duration: 0.8, delay: 1.5 }}
-          >
-            Startup is here to help you achieve your business and personal
-            goals, all through a stylish theme
-          </motion.p>
-          <motion.p
-            initial="hidden"
-            animate="visible"
-            variants={variants}
-            transition={{ ease: 'easeOut', duration: 0.8, delay: 1.5 }}
-          >
-            Startup is here to help you achieve your business and personal
-            goals, all through a stylish theme
-          </motion.p>
-        </div>
-      </BackgroundImage>
-    </BannerWrapper>
+    <Paper elevation={24}>
+      <BannerWrapper>
+        <BackgroundImage
+          Tag="section"
+          className="hero-image"
+          fluid={data.file.childImageSharp.fluid}
+        >
+          <div className="hero-content">
+            <motion.h1
+              initial="hidden"
+              animate="visible"
+              variants={variants}
+              transition={{ ease: 'easeOut', duration: 0.8, delay: 1 }}
+            >
+              <Typography variant="h3" color="primary" style={{ lineHeight: '90%', userSelect: 'none' }}>
+                {intl.formatMessage({ id: 'landing.first' })}
+                <br />
+                {intl.formatMessage({ id: 'landing.second' })}
+                <br />
+                {intl.formatMessage({ id: 'landing.third' })}
+              </Typography>
+            </motion.h1>
+            <motion.p
+              initial="hidden"
+              animate="visible"
+              variants={variants}
+              transition={{ ease: 'easeOut', duration: 0.8, delay: 1.5 }}
+            >
+              Startup is here to help you achieve your business and personal
+              goals, all through a stylish theme
+            </motion.p>
+            <motion.p
+              initial="hidden"
+              animate="visible"
+              variants={variants}
+              transition={{ ease: 'easeOut', duration: 0.8, delay: 1.5 }}
+            >
+              Startup is here to help you achieve your business and personal
+              goals, all through a stylish theme
+            </motion.p>
+            <motion.p
+              initial="hidden"
+              animate="visible"
+              variants={variants}
+              transition={{ ease: 'easeOut', duration: 0.8, delay: 1.5 }}
+            >
+              Startup is here to help you achieve your business and personal
+              goals, all through a stylish theme
+            </motion.p>
+            <motion.p
+              initial="hidden"
+              animate="visible"
+              variants={variants}
+              transition={{ ease: 'easeOut', duration: 0.8, delay: 1.5 }}
+            >
+              Startup is here to help you achieve your business and personal
+              goals, all through a stylish theme
+            </motion.p>
+          </div>
+        </BackgroundImage>
+      </BannerWrapper>
+    </Paper>
   );
 };
 
