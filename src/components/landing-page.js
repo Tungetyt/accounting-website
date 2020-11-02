@@ -61,9 +61,9 @@ const LandingPage = () => {
           title="Paella dish"
         />
       </Card> */}
-      <div style={{ width: '1000px', height: '1000px' }}>
+      {/* <div style={{ width: '1000px', height: '1000px' }}>
         <Image alt="accounting image" filename="landing.jpg" />
-      </div>
+      </div> */}
       <Grid
         container
         direction="row"

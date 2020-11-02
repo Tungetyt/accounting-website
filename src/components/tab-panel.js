@@ -1,5 +1,5 @@
 import React, {
-  useState, useEffect, useStyles, useContext,
+  useState, useEffect, useContext,
 } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
