@@ -33,6 +33,7 @@ export default function AccountingOffer({ offer }) {
   const useStyles = makeStyles((theme) => ({
     root: {
       backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor,
+      paddingBottom: '5vh',
     },
     expand: {
       transform: 'rotate(0deg)',

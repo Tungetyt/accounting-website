@@ -2,6 +2,7 @@ import indigo from '@material-ui/core/colors/indigo';
 import blue from '@material-ui/core/colors/blue';
 import lightBlue from '@material-ui/core/colors/lightBlue';
 import cyan from '@material-ui/core/colors/cyan';
+import blueGrey from '@material-ui/core/colors/blueGrey';
 
 export const LOCAL_STORAGE_KEY = {
   theme: 'theme-ui-color-mode',
@@ -28,16 +29,16 @@ export const APP_THEME = {
     palette: {
       type: THEME_NAMES.light,
       primary: {
-        main: lightBlue['900'],
+        main: blueGrey['900'],
       },
       background: {
-        default: lightBlue['50'],
+        default: blueGrey['50'],
       },
       elevation1: {
-        backgroundColor: lightBlue['100'],
+        backgroundColor: blueGrey['100'],
       },
       elevation2: {
-        backgroundColor: lightBlue['200'],
+        backgroundColor: blueGrey['200'],
       },
     },
     ...EXTENDED_APP_THEME,
@@ -46,16 +47,16 @@ export const APP_THEME = {
     palette: {
       type: THEME_NAMES.dark,
       primary: {
-        main: lightBlue['50'],
+        main: blueGrey['50'],
       },
       background: {
-        default: lightBlue['900'],
+        default: blueGrey['900'],
       },
       elevation1: {
-        backgroundColor: lightBlue['800'],
+        backgroundColor: blueGrey['800'],
       },
       elevation2: {
-        backgroundColor: lightBlue['700'],
+        backgroundColor: blueGrey['700'],
       },
     },
     ...EXTENDED_APP_THEME,

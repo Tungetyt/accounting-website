@@ -79,7 +79,9 @@ export default function TaxServiceOffer({ offer }) {
           <Grid
             container
             direction="row"
-            alignItems="flex-start"
+            alignItems="center"
+            justify="center"
+
           >
             <Grid
               item
@@ -104,7 +106,9 @@ export default function TaxServiceOffer({ offer }) {
           <Grid
             container
             direction="row"
-            alignItems="flex-start"
+            alignItems="center"
+            justify="center"
+
           >
             <Grid
               item

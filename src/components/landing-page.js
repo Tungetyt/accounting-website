@@ -43,6 +43,7 @@ import {
   NAVIGATION, getItemByKey, LOCAL_STORAGE_KEY, langNames, APP_THEME, THEME_NAMES, DRAWER_WIDTH, COMPANY,
 } from '../helpers';
 import ResponsiveDrawer from './responsive-drawer';
+import Banner from './banner';
 
 const LandingPage = () => {
   const intl = useIntl();
@@ -64,7 +65,9 @@ const LandingPage = () => {
       {/* <div style={{ width: '1000px', height: '1000px' }}>
         <Image alt="accounting image" filename="landing.jpg" />
       </div> */}
-      <Grid
+      <Banner />
+      <Box style={{ marginBottom: '53px' }} />
+      {/* <Grid
         container
         direction="row"
         justify="space-evenly"
@@ -107,7 +110,7 @@ const LandingPage = () => {
             </Grid>
           </Grid>
         </Hidden>
-      </Grid>
+      </Grid> */}
 
     </Element>
   );

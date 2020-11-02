@@ -49,8 +49,7 @@ import {
 import ResponsiveDrawer from '../components/responsive-drawer';
 import Logo from '../components/logo';
 import TabPanel from '../components/tab-panel';
-import StyledBackgroundSection from '../components/landing-image';
-import BackgroundImage from '../components/background-image';
+import Banner from '../components/banner';
 
 const IndexPage = (props) => {
   const [isDark, setIsDark] = useState(true);
@@ -89,15 +88,6 @@ const IndexPage = (props) => {
         <ColorContext.Provider value={[isDark, setIsDark]}>
           <CssBaseline />
           <SEO title="Vavicom" />
-
-          <BackgroundImage
-            background
-            resolutions="large"
-            src="../images/accounting_2.jpg"
-            alt="test"
-            size="cover"
-          />
-
           <Logo />
           <ResponsiveDrawer props={props} />
           <div id="top" />

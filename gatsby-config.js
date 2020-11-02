@@ -83,6 +83,12 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-styled-components',
+      options: {
+        // Add any options here
+      },
+    },
+    {
       resolve: 'gatsby-plugin-intl',
       options: {
         // language JSON resource path
@@ -101,5 +107,6 @@ module.exports = {
         linkStyles: true, // (default: true) Enable/disable loading stylesheets via CDN
       },
     },
+
   ],
 };
