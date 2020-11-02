@@ -11,7 +11,7 @@ import { Paper } from '@material-ui/core';
 const Banner = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "city.jpg" }) {
+      file(relativePath: { eq: "city_auto_x2_colored_toned.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2000, quality: 90) {
             ...GatsbyImageSharpFluid_withWebp

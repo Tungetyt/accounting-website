@@ -58,7 +58,7 @@ const Hamburger = ({ handleDrawerToggle, isMobileOpen }) => {
       right: isMobileOpen ? '25px' : '8px',
       paddingLeft: '12px',
       backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.background.default,
-      zIndex: '99999',
+      zIndex: '1100',
     },
   }));
 
