@@ -13,7 +13,7 @@ const Banner = () => {
     query {
       file(relativePath: { eq: "city_auto_x2_colored_toned.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 2000, quality: 90) {
+          fluid(maxWidth: 2000, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
