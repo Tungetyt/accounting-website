@@ -70,7 +70,7 @@ function a11yProps(index) {
 }
 
 export default function ScrollableTabsButtonAuto() {
-  const [chosenTab, setValue] = React.useState(0);
+  const [chosenTab, setChosenTab] = React.useState(0);
   const [isDark, setIsDark] = useContext(ColorContext);
 
   const { services } = NAVIGATION;
@@ -94,7 +94,7 @@ export default function ScrollableTabsButtonAuto() {
   const { root, tabs, scroller } = useStyles();
 
   const handleChange = (event, newValue) => {
-    setValue(newValue);
+    setChosenTab(newValue);
   };
 
   return (
