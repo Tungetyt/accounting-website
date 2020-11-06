@@ -17,9 +17,10 @@ import {
 
 const ThemeBtn = () => {
   const { light, dark } = THEME_NAMES;
+  const { theme } = LOCAL_STORAGE_KEY;
 
   const [isDark, setIsDark] = useState(
-    localStorage.getItem(LOCAL_STORAGE_KEY.theme) !== light,
+    localStorage.getItem(theme) !== light,
   );
   return (
     <IconButton
@@ -28,7 +29,7 @@ const ThemeBtn = () => {
       aria-label="mode"
       onClick={() => {
         const newTheme = isDark ? light : dark;
-        localStorage.setItem(LOCAL_STORAGE_KEY.theme, newTheme);
+        localStorage.setItem(theme, newTheme);
         setIsDark((prevIsDark) => !prevIsDark);
       }}
     >
