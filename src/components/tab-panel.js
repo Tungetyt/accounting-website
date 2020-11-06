@@ -82,7 +82,7 @@ export default function ScrollableTabsButtonAuto() {
       flexGrow: 1,
       backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation1.backgroundColor,
       width: '99%',
-      // margin: 'auto',
+      margin: 'auto',
     },
     tabs: {
       justifyContent: 'center',
