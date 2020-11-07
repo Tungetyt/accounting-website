@@ -44,13 +44,15 @@ import { LangContext, ColorContext } from '../context/contexts';
 import ThemeBtn from '../components/theme-btn';
 import ScrollTop from '../components/scroll-top';
 import {
-  getItemByKey, LOCAL_STORAGE_KEY, langNames, APP_THEME, THEME_NAMES, DRAWER_WIDTH, COMPANY,
+  getItemByKey, LOCAL_STORAGE_KEY, langNames, APP_THEME, THEME_NAMES, DRAWER_WIDTH, COMPANY, ADDRESS,
 } from '../helpers';
 import ResponsiveDrawer from '../components/responsive-drawer';
 import Logo from '../components/logo';
 import TabPanel from '../components/tab-panel';
 import Banner from '../components/banner';
 import Faq from '../components/faq';
+import SectionWrapper from '../components/section-wrapper';
+import OpenMap from '../components/open-map';
 
 const IndexPage = (props) => {
   const [isDark, setIsDark] = useState(true);
@@ -79,8 +81,6 @@ const IndexPage = (props) => {
   let chosenTheme = createMuiTheme(isDark ? APP_THEME.dark : APP_THEME.light);
   chosenTheme = responsiveFontSizes(chosenTheme);
 
-  const coordinates = [52.10726, 21.04587];
-
   const { GATSBY_FACEBOOK_APP_ID } = process.env;
 
   return (
@@ -88,7 +88,7 @@ const IndexPage = (props) => {
       <ThemeProvider theme={chosenTheme}>
         <ColorContext.Provider value={[isDark, setIsDark]}>
           <CssBaseline />
-          <SEO title="Vavicom" />
+          <SEO title={COMPANY} />
           <Logo />
           <ResponsiveDrawer props={props} />
           <div id="top" />
@@ -96,104 +96,28 @@ const IndexPage = (props) => {
 
             <LandingPage />
             <TabPanel />
-            {typeof window !== 'undefined' && (
-              <>
-                <br />
-                <Grid
-                  container
-                  direction="row"
-                  justify="center"
-                  alignItems="center"
-                >
-                  <Grid
-                    item
-                    style={{ width: '99%' }}
-                  >
-                    <Paper style={{ backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation1.backgroundColor }}>
-                      <Grid
-                        container
-                        direction="row"
-                        justify="center"
-                        alignItems="center"
-                      >
-                        <Grid item>
-                          <Map center={coordinates} zoom={13} style={{ width: '60vw', height: '60vh' }}>
-                            <TileLayer
-                              url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
-                              attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
-                            />
-                            <Marker position={coordinates}>
-                              <Popup>
-                                ul. Ogrodowa 6,
-                                05-500 Józefosław
-                              </Popup>
-                            </Marker>
-                          </Map>
-                        </Grid>
-                      </Grid>
-                    </Paper>
-                  </Grid>
 
-                </Grid>
-              </>
-            )}
             <br />
-            <Grid
-              container
-              direction="row"
-              justify="center"
-              alignItems="center"
-            >
-              <Grid
-                item
-                style={{ width: '99%' }}
-              >
-                <Paper style={{ backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation1.backgroundColor }}>
-                  <Grid
-                    container
-                    direction="row"
-                    justify="center"
-                    alignItems="center"
-                  >
-                    <Grid item>
-                      <Faq />
+            <SectionWrapper>
+              <Faq />
+            </SectionWrapper>
 
-                    </Grid>
-                  </Grid>
-                </Paper>
-              </Grid>
-
-            </Grid>
             {GATSBY_FACEBOOK_APP_ID && (
               <>
                 <br />
-                <Grid
-                  container
-                  direction="row"
-                  justify="center"
-                  alignItems="center"
-                >
-                  <Grid
-                    item
-                    style={{ width: '99%' }}
-                  >
-                    <Paper style={{ backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation1.backgroundColor }}>
-                      <Grid
-                        container
-                        direction="row"
-                        justify="center"
-                        alignItems="center"
-                      >
-                        <Grid item>
-                          <FacebookProvider appId={GATSBY_FACEBOOK_APP_ID}>
-                            <Page href="https://www.facebook.com/Biuro-Rachunkowe-Vavicom-J%C3%B3zefos%C5%82aw-Warszawa-100928011806919/?hc_ref=ARTxt7vKhgJpl3zZMlfTmi0KFs2ze7KOXJguAdYdJtoR1a1SFsyQG8QL-841D6dLqJc&fref=nf" tabs="timeline" />
-                          </FacebookProvider>
-                        </Grid>
-                      </Grid>
-                    </Paper>
-                  </Grid>
-
-                </Grid>
+                <SectionWrapper>
+                  <FacebookProvider appId={GATSBY_FACEBOOK_APP_ID}>
+                    <Page href="https://www.facebook.com/Biuro-Rachunkowe-Vavicom-J%C3%B3zefos%C5%82aw-Warszawa-100928011806919/?hc_ref=ARTxt7vKhgJpl3zZMlfTmi0KFs2ze7KOXJguAdYdJtoR1a1SFsyQG8QL-841D6dLqJc&fref=nf" tabs="timeline" />
+                  </FacebookProvider>
+                </SectionWrapper>
+              </>
+            )}
+            {typeof window !== 'undefined' && (
+              <>
+                <br />
+                <SectionWrapper>
+                  <OpenMap />
+                </SectionWrapper>
               </>
             )}
           </main>
