@@ -93,7 +93,6 @@ const IndexPage = (props) => {
           <ResponsiveDrawer props={props} />
           <div id="top" />
           <main className={main}>
-            {/* <Paper style={{ backgroundImage: `url(${LandingImage})` }} /> */}
 
             <LandingPage />
             <TabPanel />
