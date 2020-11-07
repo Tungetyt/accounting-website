@@ -24,21 +24,23 @@ export const THEME_NAMES = {
 //   },
 // };
 
+const color = blueGrey;
+
 export const APP_THEME = {
   light: {
     palette: {
       type: THEME_NAMES.light,
       primary: {
-        main: blueGrey['900'],
+        main: color['900'],
       },
       background: {
-        default: blueGrey['50'],
+        default: color['50'],
       },
       elevation1: {
-        backgroundColor: blueGrey['100'],
+        backgroundColor: color['100'],
       },
       elevation2: {
-        backgroundColor: blueGrey['200'],
+        backgroundColor: color['200'],
       },
     },
     // ...EXTENDED_APP_THEME,
@@ -47,16 +49,16 @@ export const APP_THEME = {
     palette: {
       type: THEME_NAMES.dark,
       primary: {
-        main: blueGrey['50'],
+        main: color['50'],
       },
       background: {
-        default: blueGrey['900'],
+        default: color['900'],
       },
       elevation1: {
-        backgroundColor: blueGrey['800'],
+        backgroundColor: color['800'],
       },
       elevation2: {
-        backgroundColor: blueGrey['700'],
+        backgroundColor: color['700'],
       },
     },
     // ...EXTENDED_APP_THEME,

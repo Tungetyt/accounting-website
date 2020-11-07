@@ -55,7 +55,13 @@ export default function Faq() {
     <Element name={faq}>
       <div className={root}>
         {en.faqSection.map((f, i) => (
-          <Accordion className={accordion} expanded={expanded === i} onChange={handleChange(i)}>
+          <Accordion
+            // eslint-disable-next-line react/no-array-index-key
+            key={i}
+            className={accordion}
+            expanded={expanded === i}
+            onChange={handleChange(i)}
+          >
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
             >
