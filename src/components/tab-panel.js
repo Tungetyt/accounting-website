@@ -17,7 +17,7 @@ import ShoppingBasket from '@material-ui/icons/ShoppingBasket';
 import ThumbDown from '@material-ui/icons/ThumbDown';
 import ThumbUp from '@material-ui/icons/ThumbUp';
 import {
-  Element, Events, animateScroll as scroll, scrollSpy, scroller, Link,
+  Element, Events, animateScroll as scroll, scrollSpy, Link,
 } from 'react-scroll';
 import { useIntl, FormattedMessage } from 'gatsby-plugin-intl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -49,7 +49,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box p={3}>
-          <Typography>{children}</Typography>
+          {children}
         </Box>
       )}
     </div>

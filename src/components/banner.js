@@ -61,8 +61,13 @@ const Banner = () => {
               variants={variants}
               transition={{ ease: 'easeOut', duration: 0.8, delay: 1.5 }}
             >
-              Startup is here to help you achieve your business and personal
-              goals, all through a stylish theme
+              <Paper elevation={0} style={{ backgroundColor: isDark ? 'rgba(38, 50, 56, 0.6)' : 'rgba(236, 239, 241, 0.7)' }}>
+                <Typography variant="h6" color="primary" style={{ lineHeight: '90%', userSelect: 'none' }}>
+                  {intl.formatMessage({ id: 'landing.address' })}
+
+                </Typography>
+
+              </Paper>
             </motion.p>
           </div>
         </BackgroundImage>

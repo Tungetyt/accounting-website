@@ -103,7 +103,7 @@ const NavList = () => {
           <ListItemIcon><InfoIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={about} />
         </NavLink>
-        <NavLink to={faq}>
+        <NavLink to={faq} offset={-53}>
           <ListItemIcon><HelpIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={faq} />
         </NavLink>

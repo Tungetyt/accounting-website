@@ -63,9 +63,7 @@ export default function AccountingOffer({ offer }) {
           style={{ padding: '6px', paddingBottom: '5vh' }}
         >
           <Grid item style={{ width: '600px' }}>
-            {/* <div style={{ maxWidth: '3000px' }}> */}
             <Image alt="accounting image" filename="accounting_2.jpg" />
-            {/* </div> */}
           </Grid>
           <Grid item>
             <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'accounting.info.0' })}</Typography>

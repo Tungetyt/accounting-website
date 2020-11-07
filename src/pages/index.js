@@ -50,6 +50,7 @@ import ResponsiveDrawer from '../components/responsive-drawer';
 import Logo from '../components/logo';
 import TabPanel from '../components/tab-panel';
 import Banner from '../components/banner';
+import Faq from '../components/faq';
 
 const IndexPage = (props) => {
   const [isDark, setIsDark] = useState(true);
@@ -137,6 +138,33 @@ const IndexPage = (props) => {
                 </Grid>
               </>
             )}
+            <br />
+            <Grid
+              container
+              direction="row"
+              justify="center"
+              alignItems="center"
+            >
+              <Grid
+                item
+                style={{ width: '99%' }}
+              >
+                <Paper style={{ backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation1.backgroundColor }}>
+                  <Grid
+                    container
+                    direction="row"
+                    justify="center"
+                    alignItems="center"
+                  >
+                    <Grid item>
+                      <Faq />
+
+                    </Grid>
+                  </Grid>
+                </Paper>
+              </Grid>
+
+            </Grid>
             {GATSBY_FACEBOOK_APP_ID && (
               <>
                 <br />

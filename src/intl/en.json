@@ -18,7 +18,8 @@
   "landing": {
     "first": "MODERN",
     "second": "ACCOUNTING",
-    "third": "OFFICE"
+    "third": "OFFICE",
+    "address": "JÓZEFOSŁAW WARSAW PIASECZNO"
   },
   "servicesSection": {
     "accounting": "ACCOUNTING",
