@@ -14,15 +14,15 @@ export const THEME_NAMES = {
   dark: 'dark',
 };
 
-const EXTENDED_APP_THEME = {
-  typography: {
-    // h6 represents the company name in the logo
-    h6: {
-      textDecoration: 'underline',
-      userSelect: 'none',
-    },
-  },
-};
+// const EXTENDED_APP_THEME = {
+//   typography: {
+//     // h6 represents the company name in the logo
+//     h6: {
+//       textDecoration: 'underline',
+//       userSelect: 'none',
+//     },
+//   },
+// };
 
 export const APP_THEME = {
   light: {
@@ -41,7 +41,7 @@ export const APP_THEME = {
         backgroundColor: blueGrey['200'],
       },
     },
-    ...EXTENDED_APP_THEME,
+    // ...EXTENDED_APP_THEME,
   },
   dark: {
     palette: {
@@ -59,13 +59,13 @@ export const APP_THEME = {
         backgroundColor: blueGrey['700'],
       },
     },
-    ...EXTENDED_APP_THEME,
+    // ...EXTENDED_APP_THEME,
   },
 };
 
 export const DRAWER_WIDTH = 180;
 
-export const COMPANY = 'V A V I C O M';
+export const COMPANY = 'VAVICOM';
 
 export const NAVIGATION = {
   home: 'home',

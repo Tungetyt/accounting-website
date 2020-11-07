@@ -62,7 +62,11 @@ const Banner = () => {
               transition={{ ease: 'easeOut', duration: 0.8, delay: 1.5 }}
             >
               <Paper elevation={0} style={{ backgroundColor: isDark ? 'rgba(38, 50, 56, 0.6)' : 'rgba(236, 239, 241, 0.7)' }}>
-                <Typography variant="h6" color="primary" style={{ lineHeight: '90%', userSelect: 'none' }}>
+                <Typography
+                  variant="h6"
+                  color="primary"
+                  style={{ lineHeight: '90%', userSelect: 'none', textDecoration: 'underline' }}
+                >
                   {intl.formatMessage({ id: 'landing.address' })}
 
                 </Typography>

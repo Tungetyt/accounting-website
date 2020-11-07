@@ -19,11 +19,12 @@ import FaqQuestion from './faq-question';
 
 export default function Faq() {
   const [expanded, setExpanded] = React.useState(false);
-
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
   const [isDark, setIsDark] = useContext(ColorContext);
+  // const { backgroundColor } = APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor;
+
   const useStyles = makeStyles((theme) => ({
     root: {
       width: '100%',
@@ -40,17 +41,50 @@ export default function Faq() {
     accordion: {
       backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor,
     },
+    text: {
+      maxWidth: '600px',
+    },
   }));
   const {
-    root, heading, secondaryHeading, accordion,
+    root, heading, secondaryHeading, accordion, text,
   } = useStyles();
   const { faq } = NAVIGATION;
   const intl = useIntl();
+  const faqCount = en.faqSection.length;
 
   return (
     <Element name={faq}>
       <div className={root}>
-        {en.faqSection.map((obj, i) => (
+        {en.faqSection.map((f, i) => (
+          <Accordion className={accordion} expanded={expanded === i} onChange={handleChange(i)}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+            >
+              <Typography align="justify" className={text}>{intl.formatMessage({ id: `faqSection.${i}.${Object.keys(f)[0]}` })}</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                <Typography align="justify" className={text}>{intl.formatMessage({ id: `faqSection.${i}.${Object.keys(f)[1]}` })}</Typography>
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+        ))}
+
+        {/* {[...Array(faqCount)].map((x, i) => (
+          <Accordion className={accordion} expanded={expanded === i} onChange={handleChange(i)}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+            >
+              <Typography align="justify" style={{ maxWidth: '600px' }}>{intl.formatMessage({ id: `${obj.q}` })}</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                <Typography align="justify" style={{ maxWidth: '600px' }}>{intl.formatMessage({ id: `${obj.a}` })}</Typography>
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+        ))} */}
+        {/* {en.faqSection.map((obj, i) => (
 
           <Accordion style={{ backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor }} expanded={expanded === i} onChange={handleChange(i)}>
             <AccordionSummary
@@ -65,7 +99,7 @@ export default function Faq() {
               </Typography>
             </AccordionDetails>
           </Accordion>
-        ))}
+        ))} */}
         {/* <Accordion className={accordion} expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
