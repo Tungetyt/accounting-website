@@ -116,7 +116,6 @@ export default function LegalOffer() {
                 </li>
               </ul>
             </Grid>
-
           </Grid>
           <Divider />
           <br />
