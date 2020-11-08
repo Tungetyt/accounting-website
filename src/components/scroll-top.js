@@ -1,32 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import './layout.css';
-import Typography from '@material-ui/core/Typography';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { ThemeProvider, Button } from '@material-ui/core';
-import { createMuiTheme, makeStyles, useTheme } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import IconButton from '@material-ui/core/IconButton';
-import Brightness3Icon from '@material-ui/icons/Brightness3';
-import Brightness7Icon from '@material-ui/icons/Brightness7';
-import Tooltip from '@material-ui/core/Tooltip';
-import Zoom from '@material-ui/core/Zoom';
-import indigo from '@material-ui/core/colors/indigo';
-import PropTypes from 'prop-types';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import Box from '@material-ui/core/Box';
-import Container from '@material-ui/core/Container';
-import Fab from '@material-ui/core/Fab';
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import { makeStyles } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import SEO from './seo';
-import Image from './image';
-import LangBtn from './lang-btn';
-import ThemeBtn from './theme-btn';
-import {
-  getItemByKey, LOCAL_STORAGE_KEY, langNames, DRAWER_WIDTH, NAVIGATION,
-} from '../helpers';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import Zoom from '@material-ui/core/Zoom';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { NAVIGATION } from '../helpers';
+import './layout.css';
 
 const ScrollTop = (props) => {
   const tooltipRight = (useMediaQuery('(min-width:600px)') ? 25 : 2);

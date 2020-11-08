@@ -1,16 +1,7 @@
-import React, { useState } from 'react';
-import './layout.css';
+import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { ThemeProvider, Button } from '@material-ui/core';
-import { createMuiTheme, makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import IconButton from '@material-ui/core/IconButton';
-import Brightness3Icon from '@material-ui/icons/Brightness3';
-import Brightness7Icon from '@material-ui/icons/Brightness7';
-import SEO from './seo';
-import Image from './image';
-import { getItemByKey, LOCAL_STORAGE_KEY } from '../helpers';
+import React from 'react';
+import './layout.css';
 
 const useStyles = makeStyles({
   btn: {

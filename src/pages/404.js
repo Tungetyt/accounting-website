@@ -1,7 +1,7 @@
-import React from 'react';
 import {
-  useIntl, FormattedMessage, injectIntl, IntlContextConsumer, changeLocale,
+  useIntl
 } from 'gatsby-plugin-intl';
+import React from 'react';
 import SEO from '../components/seo';
 
 const NotFoundPage = () => {

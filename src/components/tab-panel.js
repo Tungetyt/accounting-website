@@ -1,36 +1,23 @@
-import React, {
-  useState, useEffect, useContext,
-} from 'react';
-import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
+import {
+  faBook, faChess, faGavel, faHandHoldingUsd, faMoneyCheckAlt, faSearchDollar
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Paper from '@material-ui/core/Paper';
-import PhoneIcon from '@material-ui/icons/Phone';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import PersonPinIcon from '@material-ui/icons/PersonPin';
-import HelpIcon from '@material-ui/icons/Help';
-import ShoppingBasket from '@material-ui/icons/ShoppingBasket';
-import ThumbDown from '@material-ui/icons/ThumbDown';
-import ThumbUp from '@material-ui/icons/ThumbUp';
-import {
-  Element, Events, animateScroll as scroll, scrollSpy, Link,
-} from 'react-scroll';
-import { useIntl, FormattedMessage } from 'gatsby-plugin-intl';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faChess, faMoneyCheckAlt, faBook, faGavel, faHandHoldingUsd, faSearchDollar,
-} from '@fortawesome/free-solid-svg-icons';
+import { makeStyles } from '@material-ui/core/styles';
+import Tab from '@material-ui/core/Tab';
+import Tabs from '@material-ui/core/Tabs';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { useIntl } from 'gatsby-plugin-intl';
+import PropTypes from 'prop-types';
+import React, { useContext } from 'react';
 import {
-  NAVIGATION, getItemByKey, LOCAL_STORAGE_KEY, langNames, APP_THEME, THEME_NAMES, DRAWER_WIDTH, COMPANY,
-} from '../helpers';
+  Element, Link
+} from 'react-scroll';
+import { ColorContext } from '../context/contexts';
+import { APP_THEME, NAVIGATION } from '../helpers';
 import AccountingOffer from './accounting-offer';
-import { LangContext, ColorContext } from '../context/contexts';
-import Image from './image';
 import HrAndPayrollOffer from './hr-and-payroll-offer';
 import TaxServiceOffer from './tax-services-offer';
 

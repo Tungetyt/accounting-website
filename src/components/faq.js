@@ -1,21 +1,15 @@
-import React, {
-  useState, useEffect, useContext,
-} from 'react'; import { makeStyles } from '@material-ui/core/styles';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
+import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import {
-  Element, Events, animateScroll as scroll, scrollSpy, Link,
-} from 'react-scroll';
-import { useIntl, FormattedMessage } from 'gatsby-plugin-intl';
-import {
-  NAVIGATION, getItemByKey, LOCAL_STORAGE_KEY, langNames, APP_THEME, THEME_NAMES, DRAWER_WIDTH, COMPANY,
-} from '../helpers';
-import { LangContext, ColorContext } from '../context/contexts';
+import { useIntl } from 'gatsby-plugin-intl';
+import React, { useContext } from 'react';
+import { Element } from 'react-scroll';
+import { ColorContext } from '../context/contexts';
+import { APP_THEME, NAVIGATION } from '../helpers';
 import en from '../intl/en.json';
-import FaqQuestion from './faq-question';
 
 export default function Faq() {
   const [expanded, setExpanded] = React.useState(false);

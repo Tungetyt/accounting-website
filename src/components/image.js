@@ -1,6 +1,6 @@
-import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
+import { graphql, StaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
+import React from 'react';
 
 // Note: You can change "images" to whatever you'd like.
 
