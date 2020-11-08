@@ -12,9 +12,7 @@ import clsx from 'clsx';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
 import { ColorContext } from '../context/contexts';
-import {
-  APP_THEME
-} from '../helpers';
+import { APP_THEME } from '../helpers';
 import Image from './image';
 
 export default function AccountingOffer() {

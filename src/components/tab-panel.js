@@ -1,3 +1,4 @@
+/* eslint-disable comma-dangle */
 import {
   faBook, faChess, faGavel, faHandHoldingUsd, faMoneyCheckAlt, faSearchDollar
 } from '@fortawesome/free-solid-svg-icons';
@@ -12,9 +13,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useIntl } from 'gatsby-plugin-intl';
 import PropTypes from 'prop-types';
 import React, { useContext } from 'react';
-import {
-  Element, Link
-} from 'react-scroll';
+import { Element, Link } from 'react-scroll';
 import { ColorContext } from '../context/contexts';
 import { APP_THEME, NAVIGATION } from '../helpers';
 import AccountingOffer from './accounting-offer';
@@ -58,7 +57,7 @@ function a11yProps(index) {
 
 export default function ScrollableTabsButtonAuto() {
   const [chosenTab, setChosenTab] = React.useState(0);
-  const [isDark, setIsDark] = useContext(ColorContext);
+  const [isDark] = useContext(ColorContext);
 
   const { services } = NAVIGATION;
   const intl = useIntl();
@@ -80,7 +79,7 @@ export default function ScrollableTabsButtonAuto() {
   }));
   const { root, tabs, scroller } = useStyles();
 
-  const handleChange = (event, newValue) => {
+  const handleChange = (e, newValue) => {
     setChosenTab(newValue);
   };
 

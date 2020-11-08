@@ -52,9 +52,7 @@ export default function TaxServiceOffer() {
           style={{ padding: '6px' }}
         >
           <Grid item style={{ width: '600px' }}>
-            {/* <div style={{ maxWidth: '3000px' }}> */}
             <Image alt="taxServices image" filename="2366512.jpg" />
-            {/* </div> */}
           </Grid>
           <Grid item>
             <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info.0' })}</Typography>
@@ -135,9 +133,7 @@ export default function TaxServiceOffer() {
                 </li>
               </ul>
             </Grid>
-
           </Grid>
-
         </CardContent>
       </Collapse>
     </Card>

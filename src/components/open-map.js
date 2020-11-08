@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  // eslint-disable-next-line comma-dangle
   Map, Marker, Popup, TileLayer
 } from 'react-leaflet';
 import { ADDRESS } from '../helpers';

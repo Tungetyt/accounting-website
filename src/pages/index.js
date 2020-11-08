@@ -22,6 +22,7 @@ import SEO from '../components/seo';
 import TabPanel from '../components/tab-panel';
 import { ColorContext } from '../context/contexts';
 import {
+  // eslint-disable-next-line comma-dangle
   APP_THEME, COMPANY, DRAWER_WIDTH, getItemByKey, LOCAL_STORAGE_KEY, THEME_NAMES
 } from '../helpers';
 

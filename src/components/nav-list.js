@@ -9,9 +9,7 @@ import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
 import HelpIcon from '@material-ui/icons/Help';
 import HomeIcon from '@material-ui/icons/Home';
 import InfoIcon from '@material-ui/icons/Info';
-import {
-  useIntl
-} from 'gatsby-plugin-intl';
+import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
 import { Link } from 'react-scroll';
 import { ColorContext } from '../context/contexts';

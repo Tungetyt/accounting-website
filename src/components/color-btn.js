@@ -3,9 +3,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import Zoom from '@material-ui/core/Zoom';
 import Brightness3Icon from '@material-ui/icons/Brightness3';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
-import {
-  useIntl
-} from 'gatsby-plugin-intl';
+import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext, useLayoutEffect, useRef } from 'react';
 import { ColorContext } from '../context/contexts';
 import { LOCAL_STORAGE_KEY, THEME_NAMES } from '../helpers';
