@@ -17,7 +17,10 @@ import { Element, Link } from 'react-scroll';
 import { ColorContext } from '../context/contexts';
 import { APP_THEME, NAVIGATION, OFFSET } from '../helpers';
 import AccountingOffer from './accounting-offer';
+import BusinessOffer from './business-offer';
+import FinancialOffer from './financial-offer';
 import HrAndPayrollOffer from './hr-and-payroll-offer';
+import LegalOffer from './legal-offer';
 import TaxServiceOffer from './tax-services-offer';
 
 function TabPanel(props) {
@@ -116,13 +119,13 @@ export default function ScrollableTabsButtonAuto() {
           <TaxServiceOffer />
         </TabPanel>
         <TabPanel value={chosenTab} index={3}>
-          Item Four
+          <LegalOffer />
         </TabPanel>
         <TabPanel value={chosenTab} index={4}>
-          Item Five
+          <FinancialOffer />
         </TabPanel>
         <TabPanel value={chosenTab} index={5}>
-          Item Six
+          <BusinessOffer />
         </TabPanel>
       </Paper>
     </Element>

@@ -33,15 +33,20 @@ export default function AccountingOffer() {
     expandOpen: {
       transform: 'rotate(180deg)',
     },
+    text: {
+      maxWidth: '600px',
+    },
   }));
-  const classes = useStyles();
+  const {
+    text, root, expand, expandOpen,
+  } = useStyles();
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
 
   return (
-    <Card className={classes.root}>
+    <Card className={root}>
       <CardActionArea onClick={handleExpandClick}>
         <Grid
           container
@@ -55,13 +60,13 @@ export default function AccountingOffer() {
             <Image alt="accounting image" filename="accounting_2.jpg" />
           </Grid>
           <Grid item>
-            <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'accounting.info.0' })}</Typography>
-            <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'accounting.info.1' })}</Typography>
+            <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: 'accounting.info.0' })}</Typography>
+            <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: 'accounting.info.1' })}</Typography>
           </Grid>
         </Grid>
         <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded,
+          className={clsx(expand, {
+            [expandOpen]: expanded,
           })}
           style={{ float: 'right' }}
           onClick={handleExpandClick}
@@ -82,7 +87,7 @@ export default function AccountingOffer() {
             <Grid
               item
             >
-              <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'accounting.info.2' })}</Typography>
+              <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: 'accounting.info.2' })}</Typography>
               <ul>
                 <li>
                   <Typography paragraph align="justify">{ intl.formatMessage({ id: 'accounting.services.0' })}</Typography>
@@ -119,11 +124,11 @@ export default function AccountingOffer() {
             spacing={3}
           >
             <Grid item>
-              <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'accounting.more.0' })}</Typography>
+              <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: 'accounting.more.0' })}</Typography>
 
             </Grid>
             <Grid item>
-              <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'accounting.more.1' })}</Typography>
+              <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: 'accounting.more.1' })}</Typography>
             </Grid>
 
           </Grid>
@@ -138,7 +143,7 @@ export default function AccountingOffer() {
             <Grid
               item
             >
-              <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'accounting.more.2' })}</Typography>
+              <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: 'accounting.more.2' })}</Typography>
               <ul>
                 <li>
                   <Typography paragraph align="justify">{ intl.formatMessage({ id: 'accounting.more.3.0' })}</Typography>
