@@ -53,6 +53,7 @@ export const DRAWER_WIDTH = 180;
 
 export const COMPANY = 'V A V I C O M';
 export const ADDRESS = 'Ogrodowa 6, 05-500 Józefosław';
+export const PHONE_NUMBER = '+48 602 237 246';
 
 export const NAVIGATION = {
   home: 'home',

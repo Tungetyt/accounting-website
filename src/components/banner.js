@@ -38,7 +38,7 @@ const Banner = () => {
           fluid={data.file.childImageSharp.fluid}
         >
           <div className="hero-content">
-            <motion.h1
+            <motion.p
               initial="hidden"
               animate="visible"
               variants={variants}
@@ -54,7 +54,7 @@ const Banner = () => {
                 </Typography>
 
               </Paper>
-            </motion.h1>
+            </motion.p>
             <motion.p
               initial="hidden"
               animate="visible"

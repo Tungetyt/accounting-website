@@ -9,7 +9,7 @@ import React, { useContext } from 'react';
 import { Element } from 'react-scroll';
 import { ColorContext } from '../context/contexts';
 import { APP_THEME, NAVIGATION } from '../helpers';
-import en from '../intl/en.json';
+import { faqSection } from '../intl/en.json';
 
 export default function Faq() {
   const [expanded, setExpanded] = React.useState(false);
@@ -39,7 +39,7 @@ export default function Faq() {
   return (
     <Element name={faq}>
       <div className={root}>
-        {en.faqSection.map((f, i) => (
+        {faqSection.map((f, i) => (
           <Accordion
             // eslint-disable-next-line react/no-array-index-key
             key={i}
