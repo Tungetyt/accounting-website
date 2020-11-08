@@ -35,7 +35,7 @@ import { LangContext, ColorContext } from '../context/contexts';
 import {
   getItemByKey, LOCAL_STORAGE_KEY, langNames, APP_THEME, THEME_NAMES, DRAWER_WIDTH, COMPANY,
 } from '../helpers';
-import Umbrella from '../images/umbrella.svg';
+import LogoIcon from '../images/logo.svg';
 
 import ColorBtn from './color-btn';
 import LangBtn from './lang-btn';
@@ -64,11 +64,12 @@ const Logo = () => {
         direction="row"
         justify="space-between"
         alignItems="center"
+        spacing={1}
       >
         <Grid item>
           {/* <Logo width={50} height={50} fill="white" />
                 <Brain width={50} height={50} fill="white" /> */}
-          <Umbrella width={40} height={40} fill={APP_THEME[isDark ? 'dark' : 'light'].palette.primary.main} />
+          <LogoIcon width={40} height={30} />
         </Grid>
         <Grid item>
           <Typography

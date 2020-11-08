@@ -8,6 +8,9 @@ import Typography from '@material-ui/core/Typography';
 import { useIntl, FormattedMessage } from 'gatsby-plugin-intl';
 import { Paper } from '@material-ui/core';
 import { LangContext, ColorContext } from '../context/contexts';
+import {
+  getItemByKey, LOCAL_STORAGE_KEY, langNames, APP_THEME, THEME_NAMES, DRAWER_WIDTH, COMPANY,
+} from '../helpers';
 
 const Banner = () => {
   const data = useStaticQuery(graphql`
@@ -50,7 +53,7 @@ const Banner = () => {
                   <br />
                   {intl.formatMessage({ id: 'landing.second' })}
                   <br />
-                  {intl.formatMessage({ id: 'landing.third' })}
+                  {COMPANY.replace(/\s/g, '')}
                 </Typography>
 
               </Paper>

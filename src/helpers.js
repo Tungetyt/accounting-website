@@ -1,7 +1,3 @@
-import indigo from '@material-ui/core/colors/indigo';
-import blue from '@material-ui/core/colors/blue';
-import lightBlue from '@material-ui/core/colors/lightBlue';
-import cyan from '@material-ui/core/colors/cyan';
 import blueGrey from '@material-ui/core/colors/blueGrey';
 
 export const LOCAL_STORAGE_KEY = {
@@ -67,7 +63,7 @@ export const APP_THEME = {
 
 export const DRAWER_WIDTH = 180;
 
-export const COMPANY = 'VAVICOM';
+export const COMPANY = 'V A V I C O M';
 export const ADDRESS = 'Ogrodowa 6, 05-500 Józefosław';
 
 export const NAVIGATION = {
