@@ -6,7 +6,7 @@ import { APP_THEME } from '../helpers';
 import './layout.css';
 
 const SectionWrapper = ({ children }) => {
-  const [isDark, setIsDark] = useContext(ColorContext);
+  const [isDark] = useContext(ColorContext);
 
   return (
     <section>

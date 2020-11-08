@@ -17,20 +17,11 @@ export default function Faq() {
     setExpanded(isExpanded ? panel : false);
   };
 
-  const [isDark, setIsDark] = useContext(ColorContext);
+  const [isDark] = useContext(ColorContext);
 
-  const useStyles = makeStyles((theme) => ({
+  const useStyles = makeStyles(() => ({
     root: {
       width: '100%',
-    },
-    heading: {
-      fontSize: theme.typography.pxToRem(15),
-      flexBasis: '33.33%',
-      flexShrink: 0,
-    },
-    secondaryHeading: {
-      fontSize: theme.typography.pxToRem(15),
-      color: theme.palette.text.secondary,
     },
     accordion: {
       backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor,
@@ -40,7 +31,7 @@ export default function Faq() {
     },
   }));
   const {
-    root, heading, secondaryHeading, accordion, text,
+    root, accordion, text,
   } = useStyles();
   const { faq } = NAVIGATION;
   const intl = useIntl();

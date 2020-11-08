@@ -1,6 +1,4 @@
-import {
-  useIntl
-} from 'gatsby-plugin-intl';
+import { useIntl } from 'gatsby-plugin-intl';
 import React from 'react';
 import SEO from '../components/seo';
 

@@ -21,7 +21,7 @@ const Banner = () => {
       }
     }
   `);
-  const [isDark, setIsDark] = useContext(ColorContext);
+  const [isDark] = useContext(ColorContext);
 
   const variants = {
     visible: { opacity: 1, y: 0 },

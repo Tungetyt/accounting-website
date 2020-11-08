@@ -19,7 +19,7 @@ import { APP_THEME, NAVIGATION } from '../helpers';
 
 const NavList = () => {
   const intl = useIntl();
-  const [isDark, setIsDark] = useContext(ColorContext);
+  const [isDark] = useContext(ColorContext);
 
   const useStyles = makeStyles((theme) => ({
     navItemTypo: {

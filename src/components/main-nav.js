@@ -11,7 +11,7 @@ import DrawerContent from './drawer-content';
 const MainNav = (props) => {
   const { handleDrawerToggle, isMobileOpen, window } = props;
 
-  const [isDark, setIsDark] = useContext(ColorContext);
+  const [isDark] = useContext(ColorContext);
 
   const useStyles = makeStyles((theme) => ({
     drawer: {

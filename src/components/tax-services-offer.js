@@ -15,10 +15,10 @@ import { ColorContext } from '../context/contexts';
 import { APP_THEME } from '../helpers';
 import Image from './image';
 
-export default function TaxServiceOffer({ offer }) {
+export default function TaxServiceOffer() {
   const [expanded, setExpanded] = React.useState(false);
   const intl = useIntl();
-  const [isDark, setIsDark] = useContext(ColorContext);
+  const [isDark] = useContext(ColorContext);
   const useStyles = makeStyles((theme) => ({
     root: {
       backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor,

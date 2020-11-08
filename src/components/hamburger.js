@@ -5,16 +5,14 @@ import { makeStyles } from '@material-ui/core/styles';
 import Tooltip from '@material-ui/core/Tooltip';
 import Zoom from '@material-ui/core/Zoom';
 import MenuIcon from '@material-ui/icons/Menu';
-import {
-  useIntl
-} from 'gatsby-plugin-intl';
+import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
 import { ColorContext } from '../context/contexts';
 import { APP_THEME } from '../helpers';
 
 const Hamburger = ({ handleDrawerToggle, isMobileOpen }) => {
   const intl = useIntl();
-  const [isDark, setIsDark] = useContext(ColorContext);
+  const [isDark] = useContext(ColorContext);
 
   const useStyles = makeStyles((theme) => ({
     menuButton: {

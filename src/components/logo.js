@@ -7,9 +7,9 @@ import { APP_THEME, COMPANY } from '../helpers';
 import LogoIcon from '../images/logo.svg';
 
 const Logo = () => {
-  const [isDark, setIsDark] = useContext(ColorContext);
+  const [isDark] = useContext(ColorContext);
 
-  const useStyles = makeStyles((theme) => ({
+  const useStyles = makeStyles(() => ({
     logoPaper: {
       position: 'fixed',
       marginTop: '3px',

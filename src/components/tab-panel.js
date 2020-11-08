@@ -64,7 +64,7 @@ export default function ScrollableTabsButtonAuto() {
   const intl = useIntl();
   const tooltipRight = (useMediaQuery('(min-width:600px)') ? 'auto' : 'on');
 
-  const useStyles = makeStyles((theme) => ({
+  const useStyles = makeStyles(() => ({
     root: {
       flexGrow: 1,
       backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation1.backgroundColor,

@@ -4,7 +4,8 @@ import React from 'react';
 
 // Note: You can change "images" to whatever you'd like.
 
-const Image = (props) => (
+const Image = ({ filename, alt }) => (
+
   <StaticQuery
     query={graphql`
       query {
@@ -24,13 +25,13 @@ const Image = (props) => (
       }
     `}
     render={(data) => {
-      const image = data.images.edges.find((n) => n.node.relativePath.includes(props.filename));
+      const image = data.images.edges.find((n) => n.node.relativePath.includes(filename));
       if (!image) {
         return null;
       }
 
       // const imageSizes = image.node.childImageSharp.sizes; sizes={imageSizes}
-      return <Img alt={props.alt} fluid={image.node.childImageSharp.fluid} />;
+      return <Img alt={alt} fluid={image.node.childImageSharp.fluid} />;
     }}
   />
 );

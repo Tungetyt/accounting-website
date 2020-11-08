@@ -12,13 +12,12 @@ import { APP_THEME } from '../helpers';
 
 const FaqQuestion = ({ obj, contentKey }) => {
   const intl = useIntl();
-  const [isDark, setIsDark] = useContext(ColorContext);
+  const [isDark] = useContext(ColorContext);
   const [expanded, setExpanded] = React.useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
-  console.log('obj', obj);
   return (
     <Accordion style={{ backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor }} expanded={expanded === contentKey} onChange={handleChange(contentKey)}>
       <AccordionSummary

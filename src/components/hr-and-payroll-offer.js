@@ -18,7 +18,7 @@ import Image from './image';
 export default function HrAndPayrollOffer({ offer }) {
   const [expanded, setExpanded] = React.useState(false);
   const intl = useIntl();
-  const [isDark, setIsDark] = useContext(ColorContext);
+  const [isDark] = useContext(ColorContext);
   const useStyles = makeStyles((theme) => ({
     root: {
       backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor,
