@@ -120,38 +120,12 @@ export default function LegalOffer() {
           </Grid>
           <Divider />
           <br />
-          {/* <Grid
-            container
-            direction="row"
-            justify="center"
-            alignItems="flex-start"
-            spacing={3}
-          >
-            <Grid item>
-              <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: 'legalServices.10' })}</Typography>
-
-            </Grid>
-            <Grid item>
-              <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: 'legalServices.11' })}</Typography>
-            </Grid>
-            <Grid item>
-              <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: 'legalServices.12' })}</Typography>
-            </Grid>
-            <Grid item>
-              <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: 'legalServices.13' })}</Typography>
-            </Grid>
-            <Grid item>
-              <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: 'legalServices.14' })}</Typography>
-            </Grid>
-
-          </Grid> */}
           <div style={{ columnWidth: '600px' }}>
             <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.10` })}</Typography>
             <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.11` })}</Typography>
             <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.12` })}</Typography>
             <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.13` })}</Typography>
             <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.14` })}</Typography>
-
           </div>
         </CardContent>
       </Collapse>
