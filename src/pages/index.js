@@ -58,16 +58,12 @@ const IndexPage = (props) => {
           <ResponsiveDrawer props={props} />
           <div id="top" />
           <main className={main}>
-
             <LandingPage />
             <TabPanel />
-            npm i -S clsx
-
             <br />
             <SectionWrapper>
               <Faq />
             </SectionWrapper>
-
             {GATSBY_FACEBOOK_APP_ID && (
               <>
                 <br />
