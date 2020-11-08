@@ -44,7 +44,7 @@ export default function FinancialOffer() {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-
+  const offerName = 'financialServices';
   return (
     <Card className={root}>
       <CardActionArea onClick={handleExpandClick}>
@@ -60,8 +60,8 @@ export default function FinancialOffer() {
             <Image alt="financial image" filename="financial.jpg" />
           </Grid>
           <Grid item>
-            <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: 'financialServices.0' })}</Typography>
-            <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: 'financialServices.1' })}</Typography>
+            <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.0` })}</Typography>
+            <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.1` })}</Typography>
 
           </Grid>
         </Grid>
@@ -89,28 +89,28 @@ export default function FinancialOffer() {
             <Grid
               item
             >
-              <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: 'financialServices.2' })}</Typography>
+              <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.2` })}</Typography>
               <ul>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'financialServices.3' })}</Typography>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.` })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'financialServices.4' })}</Typography>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.4` })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'financialServices.5' })}</Typography>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.5` })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'financialServices.6' })}</Typography>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.6` })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'financialServices.7' })}</Typography>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.7` })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'financialServices.8' })}</Typography>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.8` })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'financialServices.9' })}</Typography>
+                  <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.9` })}</Typography>
                 </li>
               </ul>
             </Grid>
@@ -118,26 +118,11 @@ export default function FinancialOffer() {
           </Grid>
           <Divider />
           <br />
-          <Grid
-            container
-            direction="row"
-            justify="center"
-            alignItems="flex-start"
-            spacing={3}
-          >
-            <Grid item>
-              <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: 'financialServices.10' })}</Typography>
-
-            </Grid>
-            <Grid item>
-              <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: 'financialServices.11' })}</Typography>
-            </Grid>
-            <Grid item>
-              <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: 'financialServices.12' })}</Typography>
-            </Grid>
-
-          </Grid>
-
+          <div style={{ columnWidth: '600px' }}>
+            <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.10` })}</Typography>
+            <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.11` })}</Typography>
+            <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.12` })}</Typography>
+          </div>
         </CardContent>
       </Collapse>
     </Card>

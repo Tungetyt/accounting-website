@@ -39,6 +39,7 @@ export default function HrAndPayrollOffer({ offer }) {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
+  const offerName = 'hrAndPayroll';
 
   return (
     <Card className={classes.root}>
@@ -57,9 +58,9 @@ export default function HrAndPayrollOffer({ offer }) {
             {/* </div> */}
           </Grid>
           <Grid item>
-            <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'hrAndPayroll.info.0' })}</Typography>
-            <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'hrAndPayroll.info.1' })}</Typography>
-            <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'hrAndPayroll.info.2' })}</Typography>
+            <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: `${offerName}.info.0` })}</Typography>
+            <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: `${offerName}.info.1` })}</Typography>
+            <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: `${offerName}.info.2` })}</Typography>
           </Grid>
 
         </Grid>
@@ -86,41 +87,13 @@ export default function HrAndPayrollOffer({ offer }) {
             <Grid
               item
             >
-              <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'hrAndPayroll.info.3' })}</Typography>
+              <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: `${offerName}.info.3` })}</Typography>
               <ul>
-                <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'hrAndPayroll.services.0' })}</Typography>
-                </li>
-                <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'hrAndPayroll.services.1' })}</Typography>
-                </li>
-                <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'hrAndPayroll.services.2' })}</Typography>
-                </li>
-                <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'hrAndPayroll.services.3' })}</Typography>
-                </li>
-                <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'hrAndPayroll.services.4' })}</Typography>
-                </li>
-                <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'hrAndPayroll.services.6' })}</Typography>
-                </li>
-                <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'hrAndPayroll.services.7' })}</Typography>
-                </li>
-                <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'hrAndPayroll.services.8' })}</Typography>
-                </li>
-                <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'hrAndPayroll.services.9' })}</Typography>
-                </li>
-                <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'hrAndPayroll.services.10' })}</Typography>
-                </li>
-                <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'hrAndPayroll.services.11' })}</Typography>
-                </li>
+                {Array(12).fill(null).map((line, i) => (
+                  <li>
+                    <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.services.${i}` })}</Typography>
+                  </li>
+                ))}
               </ul>
             </Grid>
 
@@ -134,13 +107,19 @@ export default function HrAndPayrollOffer({ offer }) {
             alignItems="flex-start"
             spacing="3"
           >
-            <Grid item>
+            {Array(2).fill(null).map((line, i) => (
+              <Grid item>
+                <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: `${offerName}.more.${i}` })}</Typography>
+
+              </Grid>
+            ))}
+            {/* <Grid item>
               <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'hrAndPayroll.more.0' })}</Typography>
 
             </Grid>
             <Grid item>
               <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'hrAndPayroll.more.1' })}</Typography>
-            </Grid>
+            </Grid> */}
 
           </Grid>
           <Divider />
