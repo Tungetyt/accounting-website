@@ -60,7 +60,7 @@ export default function AccountingOffer({ offer }) {
           justify="center"
           alignItems="center"
           spacing={3}
-          style={{ padding: '6px', paddingBottom: '5vh' }}
+          style={{ padding: '6px' }}
         >
           <Grid item style={{ width: '600px' }}>
             <Image alt="accounting image" filename="accounting_2.jpg" />
@@ -70,6 +70,17 @@ export default function AccountingOffer({ offer }) {
             <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'accounting.info.1' })}</Typography>
           </Grid>
         </Grid>
+        <IconButton
+          className={clsx(classes.expand, {
+            [classes.expandOpen]: expanded,
+          })}
+          style={{ float: 'right' }}
+          onClick={handleExpandClick}
+          aria-expanded={expanded}
+          aria-label="show more"
+        >
+          <ExpandMoreIcon />
+        </IconButton>
       </CardActionArea>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>

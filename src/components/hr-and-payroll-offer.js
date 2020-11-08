@@ -74,6 +74,17 @@ export default function HrAndPayrollOffer({ offer }) {
           </Grid>
 
         </Grid>
+        <IconButton
+          className={clsx(classes.expand, {
+            [classes.expandOpen]: expanded,
+          })}
+          style={{ float: 'right' }}
+          onClick={handleExpandClick}
+          aria-expanded={expanded}
+          aria-label="show more"
+        >
+          <ExpandMoreIcon />
+        </IconButton>
       </CardActionArea>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>

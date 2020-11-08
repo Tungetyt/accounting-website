@@ -71,8 +71,18 @@ export default function TaxServiceOffer({ offer }) {
             <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info.0' })}</Typography>
             <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info.1' })}</Typography>
           </Grid>
-
         </Grid>
+        <IconButton
+          className={clsx(classes.expand, {
+            [classes.expandOpen]: expanded,
+          })}
+          style={{ float: 'right' }}
+          onClick={handleExpandClick}
+          aria-expanded={expanded}
+          aria-label="show more"
+        >
+          <ExpandMoreIcon />
+        </IconButton>
       </CardActionArea>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
@@ -81,7 +91,6 @@ export default function TaxServiceOffer({ offer }) {
             direction="row"
             alignItems="center"
             justify="center"
-
           >
             <Grid
               item
@@ -108,7 +117,6 @@ export default function TaxServiceOffer({ offer }) {
             direction="row"
             alignItems="center"
             justify="center"
-
           >
             <Grid
               item
