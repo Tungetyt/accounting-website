@@ -13,7 +13,8 @@ const Logo = () => {
     logoPaper: {
       position: 'fixed',
       marginTop: '3px',
-      paddingRight: '12px',
+      paddingRight: '4px',
+      paddingLeft: '4px',
       paddingTop: '3px',
       backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.background.default,
       zIndex: '1100',

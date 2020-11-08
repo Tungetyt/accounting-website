@@ -13,7 +13,7 @@ import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
 import { Link } from 'react-scroll';
 import { ColorContext } from '../context/contexts';
-import { APP_THEME, NAVIGATION } from '../helpers';
+import { APP_THEME, NAVIGATION, OFFSET } from '../helpers';
 
 const NavList = () => {
   const intl = useIntl();
@@ -67,7 +67,7 @@ const NavList = () => {
           <ListItemIcon><HomeIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={home} />
         </NavLink>
-        <NavLink to={services} offset={-53}>
+        <NavLink to={services} offset={OFFSET}>
           <ListItemIcon><BusinessCenterIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={services} />
         </NavLink>
@@ -75,7 +75,7 @@ const NavList = () => {
           <ListItemIcon><InfoIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={about} />
         </NavLink>
-        <NavLink to={faq} offset={-53}>
+        <NavLink to={faq} offset={OFFSET}>
           <ListItemIcon><HelpIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={faq} />
         </NavLink>

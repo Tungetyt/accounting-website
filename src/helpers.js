@@ -10,16 +10,6 @@ export const THEME_NAMES = {
   dark: 'dark',
 };
 
-// const EXTENDED_APP_THEME = {
-//   typography: {
-//     // h6 represents the company name in the logo
-//     h6: {
-//       textDecoration: 'underline',
-//       userSelect: 'none',
-//     },
-//   },
-// };
-
 const color = blueGrey;
 
 export const APP_THEME = {
@@ -39,7 +29,6 @@ export const APP_THEME = {
         backgroundColor: color['200'],
       },
     },
-    // ...EXTENDED_APP_THEME,
   },
   dark: {
     palette: {
@@ -57,7 +46,6 @@ export const APP_THEME = {
         backgroundColor: color['700'],
       },
     },
-    // ...EXTENDED_APP_THEME,
   },
 };
 
@@ -73,3 +61,5 @@ export const NAVIGATION = {
   faq: 'faq',
   contact: 'contact',
 };
+
+export const OFFSET = -42;
