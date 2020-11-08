@@ -63,12 +63,6 @@ const IndexPage = (props) => {
         marginRight: DRAWER_WIDTH,
       },
     },
-    // contentPaper: {
-    //   backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation1.backgroundColor,
-    //   width: '99%',
-    //   height: '1000px',
-    //   margin: 'auto',
-    // },
   }));
 
   const { main } = useStyles();
