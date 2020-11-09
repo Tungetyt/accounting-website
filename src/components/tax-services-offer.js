@@ -11,6 +11,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import clsx from 'clsx';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
+import Tilt from 'react-parallax-tilt';
 import { ColorContext } from '../context/contexts';
 import { APP_THEME } from '../helpers';
 import Image from './image';
@@ -52,7 +53,10 @@ export default function TaxServiceOffer() {
           style={{ padding: '6px' }}
         >
           <Grid item style={{ width: '600px' }}>
-            <Image alt="taxServices image" filename="2366512.jpg" />
+            <Tilt>
+              <Image alt="taxServices image" filename="tok.jpg" />
+
+            </Tilt>
           </Grid>
           <Grid item>
             <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info.0' })}</Typography>
@@ -95,8 +99,15 @@ export default function TaxServiceOffer() {
                 </li>
               </ul>
             </Grid>
+            <Grid item style={{ width: '300px' }}>
+              <Tilt>
+                <Image alt="def image" filename="def.jpg" />
+              </Tilt>
+            </Grid>
 
           </Grid>
+          <br />
+
           <Divider />
           <br />
           <Grid

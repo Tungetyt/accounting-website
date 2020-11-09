@@ -11,11 +11,12 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import clsx from 'clsx';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
+import Tilt from 'react-parallax-tilt';
 import { ColorContext } from '../context/contexts';
 import { APP_THEME } from '../helpers';
 import Image from './image';
 
-export default function HrAndPayrollOffer({ offer }) {
+export default function HrAndPayrollOffer() {
   const [expanded, setExpanded] = React.useState(false);
   const intl = useIntl();
   const [isDark] = useContext(ColorContext);
@@ -54,7 +55,9 @@ export default function HrAndPayrollOffer({ offer }) {
         >
           <Grid item style={{ width: '600px' }}>
             {/* <div style={{ maxWidth: '3000px' }}> */}
-            <Image alt="hrAndPayroll image" filename="financial-accounting.jpg" />
+            <Tilt>
+              <Image alt="hrAndPayroll image" filename="abc.jpg" />
+            </Tilt>
             {/* </div> */}
           </Grid>
           <Grid item>
@@ -104,16 +107,38 @@ export default function HrAndPayrollOffer({ offer }) {
             container
             direction="row"
             justify="center"
+            alignItems="center"
+            spacing={2}
+
+          >
+            <Grid item>
+              <div style={{ columnWidth: '600px' }}>
+                <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.more.${0}` })}</Typography>
+                <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.more.${1}` })}</Typography>
+              </div>
+            </Grid>
+            <Grid item style={{ width: '600px' }}>
+              <Tilt>
+                <Image alt="abc image" filename="financial-accounting.jpg" />
+
+              </Tilt>
+            </Grid>
+
+          </Grid>
+          <br />
+          {/* <Grid
+            container
+            direction="row"
+            justify="center"
             alignItems="flex-start"
             spacing="3"
           >
             {Array(2).fill(null).map((line, i) => (
               <Grid item>
-                <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: `${offerName}.more.${i}` })}</Typography>
 
               </Grid>
-            ))}
-            {/* <Grid item>
+            ))} */}
+          {/* <Grid item>
               <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'hrAndPayroll.more.0' })}</Typography>
 
             </Grid>
@@ -121,7 +146,7 @@ export default function HrAndPayrollOffer({ offer }) {
               <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'hrAndPayroll.more.1' })}</Typography>
             </Grid> */}
 
-          </Grid>
+          {/* </Grid> */}
           <Divider />
           <br />
           <Grid

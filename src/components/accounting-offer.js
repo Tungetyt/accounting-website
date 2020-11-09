@@ -11,6 +11,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import clsx from 'clsx';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
+import Tilt from 'react-parallax-tilt';
 import { ColorContext } from '../context/contexts';
 import { APP_THEME } from '../helpers';
 import CenterWrapper from './center-wrapper';
@@ -60,7 +61,10 @@ export default function AccountingOffer() {
           style={{ padding: '6px' }}
         >
           <Grid item style={{ width: '600px' }}>
-            <Image alt="accounting image" filename="accounting_2.jpg" />
+            <Tilt>
+              <Image alt="mor image" filename="mor.jpeg" />
+
+            </Tilt>
           </Grid>
           <Grid item>
             {Array(2).fill(null).map((line, i) => (
@@ -96,10 +100,30 @@ export default function AccountingOffer() {
 
           <Divider />
           <br />
-          <div style={{ columnWidth: '600px' }}>
-            <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.more.0` })}</Typography>
-            <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.more.1` })}</Typography>
-          </div>
+
+          <Grid
+            container
+            direction="row"
+            justify="center"
+            alignItems="center"
+            spacing={2}
+
+          >
+            <Grid item>
+              <div style={{ columnWidth: '600px' }}>
+                <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.more.0` })}</Typography>
+                <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.more.1` })}</Typography>
+              </div>
+            </Grid>
+            <Grid item style={{ width: '600px' }}>
+              <Tilt>
+
+                <Image alt="2 image" filename="flames.jpg" />
+
+              </Tilt>
+            </Grid>
+
+          </Grid>
           <Divider />
           <br />
           <CenterWrapper>

@@ -11,8 +11,10 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import clsx from 'clsx';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
+import Tilt from 'react-parallax-tilt';
 import { ColorContext } from '../context/contexts';
 import { APP_THEME } from '../helpers';
+import CenterWrapper from './center-wrapper';
 import Image from './image';
 
 export default function FinancialOffer() {
@@ -57,7 +59,10 @@ export default function FinancialOffer() {
           style={{ padding: '6px' }}
         >
           <Grid item style={{ width: '600px' }}>
-            <Image alt="financial image" filename="financial.jpg" />
+            <Tilt>
+              <Image alt="financial image" filename="financial.jpg" />
+
+            </Tilt>
           </Grid>
           <Grid item>
             <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.0` })}</Typography>
@@ -114,15 +119,25 @@ export default function FinancialOffer() {
                 </li>
               </ul>
             </Grid>
+            <Grid item style={{ width: '600px, hei' }}>
+              <Tilt>
+                <Image alt="accounting_2 image" filename="accounting_2.jpg" />
 
+              </Tilt>
+            </Grid>
           </Grid>
+          <br />
+
           <Divider />
           <br />
-          <div style={{ columnWidth: '600px' }}>
-            <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.10` })}</Typography>
-            <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.11` })}</Typography>
-            <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.12` })}</Typography>
-          </div>
+          <CenterWrapper>
+            <div style={{ columnWidth: '600px' }}>
+              <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.10` })}</Typography>
+              <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.11` })}</Typography>
+              <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.12` })}</Typography>
+            </div>
+
+          </CenterWrapper>
         </CardContent>
       </Collapse>
     </Card>
