@@ -41,7 +41,7 @@ const About = () => {
         direction="row"
         justify="center"
         alignItems="center"
-        spacing="3"
+        spacing={3}
         style={{ maxWidth: '600px' }}
       >
         <Grid item>
