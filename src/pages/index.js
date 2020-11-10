@@ -9,7 +9,7 @@ import Zoom from '@material-ui/core/Zoom';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useEffect, useState } from 'react';
-import { FacebookProvider, Page } from 'react-facebook';
+import About from '../components/about';
 import Faq from '../components/faq';
 import LandingPage from '../components/landing-page';
 import '../components/layout.css';
@@ -47,7 +47,7 @@ const IndexPage = (props) => {
   let chosenTheme = createMuiTheme(isDark ? APP_THEME.dark : APP_THEME.light);
   chosenTheme = responsiveFontSizes(chosenTheme);
 
-  const { GATSBY_FACEBOOK_APP_ID } = process.env;
+  // const { GATSBY_FACEBOOK_APP_ID } = process.env;
 
   return (
     <>
@@ -63,9 +63,13 @@ const IndexPage = (props) => {
             <TabPanel />
             <br />
             <SectionWrapper>
+              <About />
+            </SectionWrapper>
+            <br />
+            <SectionWrapper>
               <Faq />
             </SectionWrapper>
-            {GATSBY_FACEBOOK_APP_ID && (
+            {/* {GATSBY_FACEBOOK_APP_ID && (
               <>
                 <br />
                 <SectionWrapper>
@@ -74,7 +78,7 @@ const IndexPage = (props) => {
                   </FacebookProvider>
                 </SectionWrapper>
               </>
-            )}
+            )} */}
             {typeof window !== 'undefined' && (
               <>
                 <br />
