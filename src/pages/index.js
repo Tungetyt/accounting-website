@@ -10,11 +10,11 @@ import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useEffect, useState } from 'react';
 import About from '../components/about';
+import Contact from '../components/contact';
 import Faq from '../components/faq';
 import LandingPage from '../components/landing-page';
 import '../components/layout.css';
 import Logo from '../components/logo';
-import OpenMap from '../components/open-map';
 import ResponsiveDrawer from '../components/responsive-drawer';
 import ScrollTop from '../components/scroll-top';
 import SectionWrapper from '../components/section-wrapper';
@@ -62,12 +62,17 @@ const IndexPage = (props) => {
             <LandingPage />
             <TabPanel />
             <br />
+            <br />
             <SectionWrapper>
               <About />
             </SectionWrapper>
             <br />
             <SectionWrapper>
               <Faq />
+            </SectionWrapper>
+            <br />
+            <SectionWrapper>
+              <Contact />
             </SectionWrapper>
             {/* {GATSBY_FACEBOOK_APP_ID && (
               <>
@@ -79,14 +84,14 @@ const IndexPage = (props) => {
                 </SectionWrapper>
               </>
             )} */}
-            {typeof window !== 'undefined' && (
+            {/* {typeof window !== 'undefined' && (
               <>
                 <br />
                 <SectionWrapper>
                   <OpenMap />
                 </SectionWrapper>
               </>
-            )}
+            )} */}
           </main>
           <ScrollTop>
             <Tooltip placement="top" title={intl.formatMessage({ id: 'backToTopBtn' })} arrow TransitionComponent={Zoom}>
