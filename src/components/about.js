@@ -2,13 +2,13 @@
 /* eslint-disable indent */
 /* eslint-disable max-len */
 import {
-  Grid, IconButton, Tooltip
+  Grid
 } from '@material-ui/core';
-import Zoom from '@material-ui/core/Zoom';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import { useIntl } from 'gatsby-plugin-intl';
 import React from 'react';
 import { FacebookProvider, Page } from 'react-facebook';
+import { Element } from 'react-scroll';
+import { NAVIGATION } from '../helpers';
 import {
   aboutBtn, clientValueBtn, getToKnowUsBtn, ourClientsBtn, safetyBtn, whatDifferBtn, whyCooperateBtn, workTogetherBtn
 } from '../intl/pl.json';
@@ -26,54 +26,57 @@ const About = () => {
   const workTogetherData = Object.values(workTogetherBtn).slice(0, -1);
   const safetyData = Object.values(safetyBtn).slice(0, -1);
   const ourClientsData = Object.values(ourClientsBtn).slice(0, -1);
+  const { about } = NAVIGATION;
 
   return (
-    <Grid
-      container
-      direction="row"
-      justify="space-evenly"
-      alignItems="center"
-      spacing={5}
-    >
+    <Element name={about}>
+
       <Grid
         container
-        item
         direction="row"
-        justify="center"
+        justify="space-evenly"
         alignItems="center"
-        spacing={3}
-        style={{ maxWidth: '600px' }}
+        spacing={5}
       >
-        <Grid item>
-          <DialogInfo title={intl.formatMessage({ id: 'aboutBtn.title' })} data={aboutData} />
-        </Grid>
-        <Grid item>
-          <DialogInfo title={intl.formatMessage({ id: 'clientValueBtn.title' })} data={clientValueData} />
-        </Grid>
-        <Grid item>
-          <DialogInfo title={intl.formatMessage({ id: 'whyCooperateBtn.title' })} data={whyCooperateData} />
-        </Grid>
-        <Grid item>
-          <DialogInfo title={intl.formatMessage({ id: 'whatDifferBtn.title' })} data={whatDifferData} />
-        </Grid>
-        <Grid item>
-          <DialogInfo title={intl.formatMessage({ id: 'getToKnowUsBtn.title' })} data={getToKnowUsData} />
-        </Grid>
-        <Grid item>
-          <DialogInfo title={intl.formatMessage({ id: 'workTogetherBtn.title' })} data={workTogetherData} />
-        </Grid>
-        <Grid item>
-          <DialogInfo title={intl.formatMessage({ id: 'safetyBtn.title' })} data={safetyData} />
-        </Grid>
-        <Grid item>
-          <DialogInfo title={intl.formatMessage({ id: 'ourClientsBtn.title' })} data={ourClientsData} isJustified={false} />
-        </Grid>
+        <Grid
+          container
+          item
+          direction="row"
+          justify="center"
+          alignItems="center"
+          spacing={3}
+          style={{ maxWidth: '600px' }}
+        >
+          <Grid item>
+            <DialogInfo title={intl.formatMessage({ id: 'aboutBtn.title' })} data={aboutData} />
+          </Grid>
+          <Grid item>
+            <DialogInfo title={intl.formatMessage({ id: 'clientValueBtn.title' })} data={clientValueData} />
+          </Grid>
+          <Grid item>
+            <DialogInfo title={intl.formatMessage({ id: 'whyCooperateBtn.title' })} data={whyCooperateData} />
+          </Grid>
+          <Grid item>
+            <DialogInfo title={intl.formatMessage({ id: 'whatDifferBtn.title' })} data={whatDifferData} />
+          </Grid>
+          <Grid item>
+            <DialogInfo title={intl.formatMessage({ id: 'getToKnowUsBtn.title' })} data={getToKnowUsData} />
+          </Grid>
+          <Grid item>
+            <DialogInfo title={intl.formatMessage({ id: 'workTogetherBtn.title' })} data={workTogetherData} />
+          </Grid>
+          <Grid item>
+            <DialogInfo title={intl.formatMessage({ id: 'safetyBtn.title' })} data={safetyData} />
+          </Grid>
+          <Grid item>
+            <DialogInfo title={intl.formatMessage({ id: 'ourClientsBtn.title' })} data={ourClientsData} isJustified={false} />
+          </Grid>
 
-      </Grid>
-      <Grid
-        item
-      >
-        {GATSBY_FACEBOOK_APP_ID && (
+        </Grid>
+        <Grid
+          item
+        >
+          {GATSBY_FACEBOOK_APP_ID && (
           <>
             <br />
             <SectionWrapper>
@@ -83,20 +86,11 @@ const About = () => {
             </SectionWrapper>
           </>
         )}
-      </Grid>
-      <Grid item>
-        <Tooltip title="LinkedIn" arrow TransitionComponent={Zoom}>
-          <IconButton
-            tooltip="LinkedIn"
-            linkButton
-            href="https://www.linkedin.com/company/accounting-office-vavicom/"
-          >
+        </Grid>
 
-            <LinkedInIcon />
-          </IconButton>
-        </Tooltip>
       </Grid>
-    </Grid>
+
+    </Element>
   );
 };
 

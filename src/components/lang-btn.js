@@ -22,6 +22,7 @@ const LangBtn = () => {
                 onClick={() => {
                   changeLocale(location.pathname.replace(/\//g, '') === 'pl' ? 'en' : 'pl');
                 }}
+
               >
                 <TranslateIcon />
               </IconButton>
