@@ -1,7 +1,11 @@
 /* eslint-disable comma-dangle */
 /* eslint-disable indent */
 /* eslint-disable max-len */
-import { Grid } from '@material-ui/core';
+import {
+  Grid, IconButton, Tooltip
+} from '@material-ui/core';
+import Zoom from '@material-ui/core/Zoom';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import { useIntl } from 'gatsby-plugin-intl';
 import React from 'react';
 import { FacebookProvider, Page } from 'react-facebook';
@@ -27,11 +31,13 @@ const About = () => {
     <Grid
       container
       direction="row"
-      justify="center"
+      justify="space-evenly"
       alignItems="center"
+      spacing={5}
     >
       <Grid
         container
+        item
         direction="row"
         justify="center"
         alignItems="center"
@@ -77,6 +83,18 @@ const About = () => {
             </SectionWrapper>
           </>
         )}
+      </Grid>
+      <Grid item>
+        <Tooltip title="LinkedIn" arrow TransitionComponent={Zoom}>
+          <IconButton
+            tooltip="LinkedIn"
+            linkButton
+            href="https://www.linkedin.com/company/accounting-office-vavicom/"
+          >
+
+            <LinkedInIcon />
+          </IconButton>
+        </Tooltip>
       </Grid>
     </Grid>
   );

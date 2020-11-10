@@ -4,7 +4,10 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import Zoom from '@material-ui/core/Zoom';
 import React from 'react';
+
+const Transition = React.forwardRef((props, ref) => <Zoom ref={ref} {...props} />);
 
 export default function DialogInfo({ title, data = [], isJustified = true }) {
   const [open, setOpen] = React.useState(false);
@@ -28,7 +31,7 @@ export default function DialogInfo({ title, data = [], isJustified = true }) {
   }, [open]);
 
   return (
-    <div>
+    <>
       <Button style={{ backgroundColor: '#212121', color: '#FFFFFF' }} onClick={handleClickOpen('paper')}>{title}</Button>
       <Dialog
         open={open}
@@ -36,6 +39,7 @@ export default function DialogInfo({ title, data = [], isJustified = true }) {
         scroll="paper"
         aria-labelledby="scroll-dialog-title"
         aria-describedby="scroll-dialog-description"
+        TransitionComponent={Transition}
       >
         <DialogTitle id="scroll-dialog-title">{title}</DialogTitle>
         <DialogContent>
@@ -56,6 +60,6 @@ export default function DialogInfo({ title, data = [], isJustified = true }) {
           </Button>
         </DialogActions> */}
       </Dialog>
-    </div>
+    </>
   );
 }
