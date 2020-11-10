@@ -11,6 +11,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import clsx from 'clsx';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
+import Tilt from 'react-parallax-tilt';
 import { ColorContext } from '../context/contexts';
 import { APP_THEME } from '../helpers';
 import Image from './image';
@@ -59,7 +60,10 @@ export default function BusinessOffer() {
           style={{ padding: '6px' }}
         >
           <Grid item style={{ width: '600px' }}>
-            <Image alt="business image" filename="business.jpg" />
+            <Tilt>
+              <Image alt="business image" filename="business.jpg" />
+            </Tilt>
+
           </Grid>
           <Grid item>
             <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.0` })}</Typography>
@@ -118,14 +122,29 @@ export default function BusinessOffer() {
           </Grid>
           <Divider />
           <br />
-          <div style={{ columnWidth: '600px' }}>
-            <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.10` })}</Typography>
-            <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.11` })}</Typography>
-            <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.12` })}</Typography>
-            <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.13` })}</Typography>
-            <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.14` })}</Typography>
 
-          </div>
+          <Grid
+            container
+            direction="row"
+            justify="center"
+            alignItems="center"
+            spacing={2}
+          >
+            <Grid item>
+              <div style={{ columnWidth: '600px' }}>
+                <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.10` })}</Typography>
+                <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.11` })}</Typography>
+                <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.12` })}</Typography>
+                <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.13` })}</Typography>
+                <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.14` })}</Typography>
+              </div>
+            </Grid>
+            <Grid item style={{ width: '300px' }}>
+              <Tilt>
+                <Image alt="ert image" filename="ert.jpg" />
+              </Tilt>
+            </Grid>
+          </Grid>
         </CardContent>
       </Collapse>
     </Card>

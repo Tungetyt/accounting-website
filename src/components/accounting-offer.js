@@ -100,14 +100,12 @@ export default function AccountingOffer() {
 
           <Divider />
           <br />
-
           <Grid
             container
             direction="row"
             justify="center"
             alignItems="center"
             spacing={2}
-
           >
             <Grid item>
               <div style={{ columnWidth: '600px' }}>
@@ -117,12 +115,9 @@ export default function AccountingOffer() {
             </Grid>
             <Grid item style={{ width: '600px' }}>
               <Tilt>
-
                 <Image alt="2 image" filename="flames.jpg" />
-
               </Tilt>
             </Grid>
-
           </Grid>
           <Divider />
           <br />

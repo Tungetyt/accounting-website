@@ -14,7 +14,6 @@ import React, { useContext } from 'react';
 import Tilt from 'react-parallax-tilt';
 import { ColorContext } from '../context/contexts';
 import { APP_THEME } from '../helpers';
-import CenterWrapper from './center-wrapper';
 import Image from './image';
 
 export default function FinancialOffer() {
@@ -119,25 +118,33 @@ export default function FinancialOffer() {
                 </li>
               </ul>
             </Grid>
-            <Grid item style={{ width: '600px, hei' }}>
-              <Tilt>
-                <Image alt="accounting_2 image" filename="accounting_2.jpg" />
 
-              </Tilt>
-            </Grid>
           </Grid>
           <br />
 
           <Divider />
           <br />
-          <CenterWrapper>
-            <div style={{ columnWidth: '600px' }}>
-              <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.10` })}</Typography>
-              <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.11` })}</Typography>
-              <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.12` })}</Typography>
-            </div>
+          <Grid
+            container
+            direction="row"
+            justify="center"
+            alignItems="center"
+            spacing={2}
+          >
+            <Grid item>
+              <div style={{ columnWidth: '600px' }}>
+                <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.10` })}</Typography>
+                <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.11` })}</Typography>
+                <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.12` })}</Typography>
+              </div>
+            </Grid>
+            <Grid item style={{ width: '600px' }}>
+              <Tilt>
+                <Image alt="2 image" filename="accounting_2.jpg" />
+              </Tilt>
+            </Grid>
+          </Grid>
 
-          </CenterWrapper>
         </CardContent>
       </Collapse>
     </Card>
