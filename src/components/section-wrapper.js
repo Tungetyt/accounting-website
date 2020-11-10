@@ -29,6 +29,7 @@ const SectionWrapper = ({ children }) => {
         </Grid>
 
       </Grid>
+      <br />
     </section>
   );
 };
