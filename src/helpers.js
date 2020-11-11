@@ -52,8 +52,11 @@ export const APP_THEME = {
 export const DRAWER_WIDTH = 180;
 
 export const COMPANY = 'VAVICOM';
-export const ADDRESS = 'Ogrodowa 6, 05-500 Józefosław';
+export const STREET = 'Ogrodowa 6';
+export const TOWN = '05-500 Józefosław';
 export const PHONE_NUMBER = '+48 602 237 246';
+export const EMAIL = 'vavicom.info@gmail.com';
+export const EMAIL2 = 'info@vavicom.pl';
 
 export const NAVIGATION = {
   home: 'home',

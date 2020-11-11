@@ -1,7 +1,9 @@
 import {
-  Grid
+  Grid, IconButton, Tooltip
 } from '@material-ui/core';
 import Paper from '@material-ui/core/Paper';
+import Zoom from '@material-ui/core/Zoom';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
 import { Element } from 'react-scroll';
@@ -20,16 +22,15 @@ const Contact = () => {
       <Grid
         container
         direction="row"
-        justify="space-evenly"
+        justify="center"
         alignItems="center"
-        spacing={5}
+        // spacing={10}
+
       >
         <Grid item>
           {typeof window !== 'undefined' && (
           <>
-
             <OpenMap />
-
           </>
           )}
         </Grid>
@@ -38,18 +39,67 @@ const Contact = () => {
           direction="row"
           justify="center"
           alignItems="center"
-          spacing={3}
           style={{ maxWidth: '600px' }}
         >
           <Grid item>
-
             <Paper style={{ backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor }}>
-              test
+              <Grid
+                item
+                direction="row"
+                justify="center"
+                alignItems="center"
+                style={{ maxWidth: '600px' }}
+              >
+                <Grid item xs={2}>
+                  <Tooltip title="LinkedIn" arrow TransitionComponent={Zoom}>
+                    <IconButton
+                      tooltip="LinkedIn"
+                      linkButton
+                      href="https://www.linkedin.com/company/accounting-office-vavicom/"
+                    >
+                      <LinkedInIcon />
+                    </IconButton>
+                  </Tooltip>
+                </Grid>
+                <Grid item xs={2}>
+                  <Tooltip title="LinkedIn" arrow TransitionComponent={Zoom}>
+                    <IconButton
+                      tooltip="LinkedIn"
+                      linkButton
+                      href="https://www.linkedin.com/company/accounting-office-vavicom/"
+                    >
+                      <LinkedInIcon />
+                    </IconButton>
+                  </Tooltip>
+                </Grid>
+                <Grid item xs={2}>
+                  <Tooltip title="LinkedIn" arrow TransitionComponent={Zoom}>
+                    <IconButton
+                      tooltip="LinkedIn"
+                      linkButton
+                      href="https://www.linkedin.com/company/accounting-office-vavicom/"
+                    >
+                      <LinkedInIcon />
+                    </IconButton>
+                  </Tooltip>
+                </Grid>
+                <Grid item xs={2}>
+                  <Tooltip title="LinkedIn" arrow TransitionComponent={Zoom}>
+                    <IconButton
+                      tooltip="LinkedIn"
+                      linkButton
+                      href="https://www.linkedin.com/company/accounting-office-vavicom/"
+                    >
+                      <LinkedInIcon />
+                    </IconButton>
+                  </Tooltip>
+                </Grid>
+
+              </Grid>
             </Paper>
           </Grid>
         </Grid>
       </Grid>
-
     </Element>
   );
 };

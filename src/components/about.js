@@ -25,7 +25,7 @@ const About = () => {
   const safetyData = Object.values(safetyBtn).slice(0, -1);
   const ourClientsData = Object.values(ourClientsBtn).slice(0, -1);
   const { about } = NAVIGATION;
-
+  const margin = '1rem';
   return (
     <Element name={about}>
 
@@ -34,7 +34,6 @@ const About = () => {
         direction="row"
         justify="space-evenly"
         alignItems="center"
-        spacing={5}
       >
         <Grid
           container
@@ -42,31 +41,30 @@ const About = () => {
           direction="row"
           justify="center"
           alignItems="center"
-          spacing={3}
           style={{ maxWidth: '600px' }}
         >
-          <Grid item>
+          <Grid item style={{ margin }}>
             <DialogInfo title={intl.formatMessage({ id: 'aboutBtn.title' })} data={aboutData} />
           </Grid>
-          <Grid item>
+          <Grid item style={{ margin }}>
             <DialogInfo title={intl.formatMessage({ id: 'clientValueBtn.title' })} data={clientValueData} />
           </Grid>
-          <Grid item>
+          <Grid item style={{ margin }}>
             <DialogInfo title={intl.formatMessage({ id: 'whyCooperateBtn.title' })} data={whyCooperateData} />
           </Grid>
-          <Grid item>
+          <Grid item style={{ margin }}>
             <DialogInfo title={intl.formatMessage({ id: 'whatDifferBtn.title' })} data={whatDifferData} />
           </Grid>
-          <Grid item>
+          <Grid item style={{ margin }}>
             <DialogInfo title={intl.formatMessage({ id: 'getToKnowUsBtn.title' })} data={getToKnowUsData} />
           </Grid>
-          <Grid item>
+          <Grid item style={{ margin }}>
             <DialogInfo title={intl.formatMessage({ id: 'workTogetherBtn.title' })} data={workTogetherData} />
           </Grid>
-          <Grid item>
+          <Grid item style={{ margin }}>
             <DialogInfo title={intl.formatMessage({ id: 'safetyBtn.title' })} data={safetyData} />
           </Grid>
-          <Grid item>
+          <Grid item style={{ margin }}>
             <DialogInfo title={intl.formatMessage({ id: 'ourClientsBtn.title' })} data={ourClientsData} isJustified={false} />
           </Grid>
 

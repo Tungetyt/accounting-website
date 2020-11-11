@@ -29,11 +29,9 @@ const Logo = () => {
         direction="row"
         justify="space-between"
         alignItems="center"
-        spacing={1}
         wrap="nowrap"
       >
-        <Grid item>
-
+        <Grid item style={{ marginRight: '6px' }}>
           <LogoIcon width={40} height={30} />
         </Grid>
         <Grid item>

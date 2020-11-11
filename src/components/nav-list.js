@@ -71,7 +71,7 @@ const NavList = () => {
           <ListItemIcon><BusinessCenterIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={services} />
         </NavLink>
-        <NavLink to={about}>
+        <NavLink to={about} offset={OFFSET}>
           <ListItemIcon><InfoIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={about} />
         </NavLink>
@@ -79,7 +79,7 @@ const NavList = () => {
           <ListItemIcon><HelpIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={faq} />
         </NavLink>
-        <NavLink to={contact}>
+        <NavLink to={contact} offset={OFFSET}>
           <ListItemIcon><ContactPhoneIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={contact} />
         </NavLink>

@@ -21,7 +21,6 @@ const DrawerContent = () => {
         direction="row"
         justify="space-around"
         alignItems="center"
-        spacing={0}
       >
         <Grid item>
           <ColorBtn />

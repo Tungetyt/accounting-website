@@ -15,7 +15,6 @@ import Faq from '../components/faq';
 import LandingPage from '../components/landing-page';
 import '../components/layout.css';
 import Logo from '../components/logo';
-import OpenMap from '../components/open-map';
 import ResponsiveDrawer from '../components/responsive-drawer';
 import ScrollTop from '../components/scroll-top';
 import SectionWrapper from '../components/section-wrapper';
@@ -75,25 +74,6 @@ const IndexPage = (props) => {
             <SectionWrapper>
               <Contact />
             </SectionWrapper>
-            {/* {GATSBY_FACEBOOK_APP_ID && (
-              <>
-                <br />
-                <SectionWrapper>
-                  <FacebookProvider appId={GATSBY_FACEBOOK_APP_ID}>
-                    <Page href="https://www.facebook.com/Biuro-Rachunkowe-Vavicom-J%C3%B3zefos%C5%82aw-Warszawa-100928011806919/?hc_ref=ARTxt7vKhgJpl3zZMlfTmi0KFs2ze7KOXJguAdYdJtoR1a1SFsyQG8QL-841D6dLqJc&fref=nf" tabs="timeline" />
-                  </FacebookProvider>
-                </SectionWrapper>
-              </>
-            )} */}
-            {typeof window !== 'undefined' && (
-              <>
-                <br />
-                <SectionWrapper>
-                  <OpenMap />
-                </SectionWrapper>
-                est
-              </>
-            )}
           </main>
           <ScrollTop>
             <Tooltip placement="top" title={intl.formatMessage({ id: 'backToTopBtn' })} arrow TransitionComponent={Zoom}>
