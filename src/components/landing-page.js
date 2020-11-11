@@ -3,7 +3,6 @@ import React from 'react';
 import { Element } from 'react-scroll';
 import { NAVIGATION } from '../helpers';
 import Banner from './banner';
-import './layout.css';
 
 const LandingPage = () => {
   const { home } = NAVIGATION;

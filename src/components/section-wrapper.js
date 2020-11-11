@@ -4,7 +4,6 @@ import React, { useContext } from 'react';
 import { ColorContext } from '../context/contexts';
 import { APP_THEME } from '../helpers';
 import CenterWrapper from './center-wrapper';
-import './layout.css';
 
 const SectionWrapper = ({ children }) => {
   const [isDark] = useContext(ColorContext);

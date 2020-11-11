@@ -3,7 +3,6 @@ import Brightness3Icon from '@material-ui/icons/Brightness3';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 import React, { useState } from 'react';
 import { LOCAL_STORAGE_KEY, THEME_NAMES } from '../helpers';
-import './layout.css';
 
 const ThemeBtn = () => {
   const { light, dark } = THEME_NAMES;

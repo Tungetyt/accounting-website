@@ -5,7 +5,6 @@ import TranslateIcon from '@material-ui/icons/Translate';
 import { Location } from '@reach/router';
 import { changeLocale, IntlContextConsumer, useIntl } from 'gatsby-plugin-intl';
 import React from 'react';
-import './layout.css';
 
 const LangBtn = () => {
   const intl = useIntl();

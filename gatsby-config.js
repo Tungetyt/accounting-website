@@ -61,7 +61,7 @@ module.exports = {
       resolve: 'gatsby-plugin-scroll-indicator',
       options: {
         // Configure color of the scroll indicator
-        color: '#7986cb',
+        color: '#78909c',
         // Height of the scroll indicator 3px
         height: '3px',
         // Configure paths where the scroll indicator will appear '/', '/en/', '/pl/

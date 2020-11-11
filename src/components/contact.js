@@ -9,8 +9,6 @@ import React, { useContext } from 'react';
 import { Element } from 'react-scroll';
 import { ColorContext } from '../context/contexts';
 import { APP_THEME, NAVIGATION } from '../helpers';
-import './layout.css';
-import OpenMap from './open-map';
 
 const Contact = () => {
   const intl = useIntl();
@@ -27,13 +25,13 @@ const Contact = () => {
         // spacing={10}
 
       >
-        <Grid item>
+        {/* <Grid item>
           {typeof window !== 'undefined' && (
           <>
             <OpenMap />
           </>
           )}
-        </Grid>
+        </Grid> */}
         <Grid
           item
           direction="row"

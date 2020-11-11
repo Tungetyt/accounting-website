@@ -7,7 +7,6 @@ import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext, useLayoutEffect, useRef } from 'react';
 import { ColorContext } from '../context/contexts';
 import { LOCAL_STORAGE_KEY, THEME_NAMES } from '../helpers';
-import './layout.css';
 
 const ColorBtn = () => {
   const [isDark, setIsDark] = useContext(ColorContext);

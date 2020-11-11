@@ -4,7 +4,6 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Zoom from '@material-ui/core/Zoom';
 import PropTypes from 'prop-types';
 import React from 'react';
-import './layout.css';
 
 const ScrollTop = (props) => {
   const tooltipRight = (useMediaQuery('(min-width:600px)') ? 25 : 2);
