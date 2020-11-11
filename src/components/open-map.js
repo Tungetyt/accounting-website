@@ -12,7 +12,7 @@ const OpenMap = () => {
   return (
     <Map center={coordinates} zoom={13} style={{ width: '60vw', height: '60vh' }}>
       <TileLayer
-        url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
       />
       <Marker position={coordinates}>
