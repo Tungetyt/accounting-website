@@ -1,6 +1,5 @@
-import { Grid, Paper } from '@material-ui/core';
+import { Grid, Paper, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
 import React, { useContext } from 'react';
 import { ColorContext } from '../context/contexts';
 import { APP_THEME, COMPANY } from '../helpers';
@@ -19,7 +18,6 @@ const Logo = () => {
       backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.background.default,
       zIndex: '1100',
     },
-
   }));
 
   const { logoPaper } = useStyles();
@@ -32,10 +30,10 @@ const Logo = () => {
         justify="space-between"
         alignItems="center"
         spacing={1}
+        wrap="nowrap"
       >
         <Grid item>
-          {/* <Logo width={50} height={50} fill="white" />
-                <Brain width={50} height={50} fill="white" /> */}
+
           <LogoIcon width={40} height={30} />
         </Grid>
         <Grid item>
@@ -43,10 +41,8 @@ const Logo = () => {
             variant="h6"
             noWrap
             color="primary"
-            // style={{ textDecoration: 'underline', userSelect: 'none' }}
           >
             {COMPANY}
-
           </Typography>
         </Grid>
       </Grid>

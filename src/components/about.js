@@ -6,14 +6,12 @@ import {
 } from '@material-ui/core';
 import { useIntl } from 'gatsby-plugin-intl';
 import React from 'react';
-import { FacebookProvider, Page } from 'react-facebook';
 import { Element } from 'react-scroll';
 import { NAVIGATION } from '../helpers';
 import {
   aboutBtn, clientValueBtn, getToKnowUsBtn, ourClientsBtn, safetyBtn, whatDifferBtn, whyCooperateBtn, workTogetherBtn
 } from '../intl/pl.json';
 import DialogInfo from './dialog-info';
-import SectionWrapper from './section-wrapper';
 
 const About = () => {
   const { GATSBY_FACEBOOK_APP_ID } = process.env;
@@ -73,7 +71,7 @@ const About = () => {
           </Grid>
 
         </Grid>
-        <Grid
+        {/* <Grid
           item
         >
           {GATSBY_FACEBOOK_APP_ID && (
@@ -86,7 +84,7 @@ const About = () => {
             </SectionWrapper>
           </>
         )}
-        </Grid>
+        </Grid> */}
 
       </Grid>
 

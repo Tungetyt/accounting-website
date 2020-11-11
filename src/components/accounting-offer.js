@@ -119,6 +119,8 @@ export default function AccountingOffer() {
               </Tilt>
             </Grid>
           </Grid>
+          <br />
+
           <Divider />
           <br />
           <CenterWrapper>

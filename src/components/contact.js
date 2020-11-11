@@ -1,5 +1,5 @@
 import {
-    Grid
+  Grid
 } from '@material-ui/core';
 import Paper from '@material-ui/core/Paper';
 import { useIntl } from 'gatsby-plugin-intl';
@@ -24,13 +24,15 @@ const Contact = () => {
         alignItems="center"
         spacing={5}
       >
-        {typeof window !== 'undefined' && (
+        <Grid item>
+          {typeof window !== 'undefined' && (
           <>
-            <Grid item>
-              <OpenMap />
-            </Grid>
+
+            <OpenMap />
+
           </>
-        )}
+          )}
+        </Grid>
         <Grid
           container
           item
