@@ -22,9 +22,11 @@ const SectionWrapper = ({ children }) => {
           style={{ width: '99%' }}
         >
           <Paper style={{ backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation1.backgroundColor }}>
+            <br />
             <CenterWrapper>
               {children}
             </CenterWrapper>
+            <br />
           </Paper>
         </Grid>
 
