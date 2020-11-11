@@ -34,7 +34,6 @@ const Contact = () => {
           )}
         </Grid>
         <Grid
-          container
           item
           direction="row"
           justify="center"
