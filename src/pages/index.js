@@ -1,6 +1,4 @@
-import {
-  ThemeProvider
-} from '@material-ui/core';
+import { ThemeProvider } from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Fab from '@material-ui/core/Fab';
 import { createMuiTheme, makeStyles, responsiveFontSizes } from '@material-ui/core/styles';
