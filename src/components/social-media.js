@@ -20,6 +20,7 @@ const SocialMedia = () => {
             <IconButton
               tooltip="Facebook"
               linkButton
+              color="primary"
               href="https://www.facebook.com/Biuro-Rachunkowe-Vavicom-J%C3%B3zefos%C5%82aw-Warszawa-100928011806919/?hc_ref=ARTxt7vKhgJpl3zZMlfTmi0KFs2ze7KOXJguAdYdJtoR1a1SFsyQG8QL-841D6dLqJc&fref=nf/"
             >
               <FacebookIcon />
@@ -31,6 +32,7 @@ const SocialMedia = () => {
             <IconButton
               tooltip="LinkedIn"
               linkButton
+              color="primary"
               href="https://www.linkedin.com/company/accounting-office-vavicom/"
             >
               <LinkedInIcon />
@@ -42,6 +44,7 @@ const SocialMedia = () => {
             <IconButton
               tooltip="Twitter"
               linkButton
+              color="primary"
               href="https://www.linkedin.com/company/accounting-office-vavicom/"
             >
               <TwitterIcon />
@@ -53,6 +56,7 @@ const SocialMedia = () => {
             <IconButton
               tooltip="Instagram"
               linkButton
+              color="primary"
               href="https://www.linkedin.com/company/accounting-office-vavicom/"
             >
               <InstagramIcon />
