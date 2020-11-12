@@ -22,8 +22,6 @@ const Contact = () => {
         direction="row"
         justify="center"
         alignItems="center"
-        // spacing={10}
-
       >
         <Grid item style={{ marginRight: '4rem', marginBottom: '2rem' }}>
           {typeof window !== 'undefined' && (
