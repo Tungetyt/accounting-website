@@ -14,7 +14,11 @@ const SocialMedia = () => {
 
   return (
     <Paper style={{ backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor }}>
-      <Grid container>
+      <Grid
+        container
+        justify="space-around"
+        alignItems="center"
+      >
         <Grid item>
           <Tooltip title="Facebook" arrow TransitionComponent={Zoom}>
             <IconButton
@@ -46,6 +50,7 @@ const SocialMedia = () => {
               linkButton
               color="primary"
               href="https://www.linkedin.com/company/accounting-office-vavicom/"
+              disabled
             >
               <TwitterIcon />
             </IconButton>
@@ -58,6 +63,7 @@ const SocialMedia = () => {
               linkButton
               color="primary"
               href="https://www.linkedin.com/company/accounting-office-vavicom/"
+              disabled
             >
               <InstagramIcon />
             </IconButton>
