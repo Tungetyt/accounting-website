@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Biuro Rachunkowe',
-    description: 'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
-    author: '@gatsbyjs',
+    description: 'Biuro Rachunkowe Vavicom Józefosław Warszawa Piaseczno',
+    author: '@tungetyt',
   },
   plugins: [
     {
