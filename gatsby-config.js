@@ -54,7 +54,7 @@ module.exports = {
         background_color: '#5c6bc0',
         theme_color: '#5c6bc0',
         display: 'minimal-ui',
-        icon: 'src/images/accounting_2.jpg', // This path is relative to the root of the site.
+        icon: 'src/images/logo.svg', // This path is relative to the root of the site.
       },
     },
     {
