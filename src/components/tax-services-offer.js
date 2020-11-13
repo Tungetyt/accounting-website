@@ -83,9 +83,7 @@ export default function TaxServiceOffer() {
             alignItems="center"
             justify="center"
           >
-            <Grid
-              item
-            >
+            <Grid item>
               <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info1.0' })}</Typography>
               <ul>
                 <li>
