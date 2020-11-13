@@ -62,7 +62,7 @@ export default function LegalOffer() {
         >
           <Grid item style={{ width: '600px' }}>
             <Tilt>
-              <Image alt="legal image" filename="legal.jpg" />
+              <Image alt="legal service" filename="legal.jpg" />
 
             </Tilt>
           </Grid>
@@ -137,7 +137,7 @@ export default function LegalOffer() {
 
           <CenterWrapper>
             <Tilt style={{ width: '200px' }}>
-              <Image alt="lok image" filename="lok.jpg" />
+              <Image alt="more legal service" filename="lok.jpg" />
             </Tilt>
 
           </CenterWrapper>

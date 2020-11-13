@@ -54,7 +54,7 @@ export default function TaxServiceOffer() {
         >
           <Grid item style={{ width: '600px' }}>
             <Tilt>
-              <Image alt="taxServices image" filename="tok.jpg" />
+              <Image alt="tax services" filename="tok.jpg" />
 
             </Tilt>
           </Grid>
@@ -99,7 +99,7 @@ export default function TaxServiceOffer() {
             </Grid>
             <Grid item style={{ width: '300px' }}>
               <Tilt>
-                <Image alt="def image" filename="def.jpg" />
+                <Image alt="more tax services" filename="def.jpg" />
               </Tilt>
             </Grid>
 

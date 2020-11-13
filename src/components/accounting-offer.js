@@ -62,7 +62,7 @@ export default function AccountingOffer() {
         >
           <Grid item style={{ width: '600px' }}>
             <Tilt>
-              <Image alt="mor image" filename="mor.jpeg" />
+              <Image alt="accounting" filename="mor.jpeg" />
 
             </Tilt>
           </Grid>
@@ -115,7 +115,7 @@ export default function AccountingOffer() {
             </Grid>
             <Grid item style={{ width: '600px' }}>
               <Tilt>
-                <Image alt="2 image" filename="flames.jpg" />
+                <Image alt="accouting fire" filename="flames.jpg" />
               </Tilt>
             </Grid>
           </Grid>

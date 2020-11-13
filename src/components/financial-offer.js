@@ -59,7 +59,7 @@ export default function FinancialOffer() {
         >
           <Grid item style={{ width: '600px' }}>
             <Tilt>
-              <Image alt="financial image" filename="financial.jpg" />
+              <Image alt="financial" filename="financial.jpg" />
 
             </Tilt>
           </Grid>
@@ -140,7 +140,7 @@ export default function FinancialOffer() {
             </Grid>
             <Grid item style={{ width: '600px' }}>
               <Tilt>
-                <Image alt="2 image" filename="accounting_2.jpg" />
+                <Image alt="more financial" filename="accounting_2.jpg" />
               </Tilt>
             </Grid>
           </Grid>

@@ -56,7 +56,7 @@ export default function HrAndPayrollOffer() {
           <Grid item style={{ width: '600px' }}>
             {/* <div style={{ maxWidth: '3000px' }}> */}
             <Tilt>
-              <Image alt="hrAndPayroll image" filename="abc.jpg" />
+              <Image alt="hr and payroll" filename="abc.jpg" />
             </Tilt>
             {/* </div> */}
           </Grid>
@@ -119,7 +119,7 @@ export default function HrAndPayrollOffer() {
             </Grid>
             <Grid item style={{ width: '600px' }}>
               <Tilt>
-                <Image alt="abc image" filename="financial-accounting.jpg" />
+                <Image alt="more hr and payroll" filename="financial-accounting.jpg" />
 
               </Tilt>
             </Grid>
