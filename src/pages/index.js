@@ -73,7 +73,6 @@ const IndexPage = (props) => {
               <Contact />
             </SectionWrapper>
           </main>
-          <div>test</div>
           <ScrollTop>
             <Tooltip placement="top" title={intl.formatMessage({ id: 'backToTopBtn' })} arrow TransitionComponent={Zoom}>
               <Fab color="primary" size="small" aria-label="scroll back to top">
