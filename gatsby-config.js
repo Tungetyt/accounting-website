@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    description: 'Biuro Rachunkowe VAVICOM Piaseczno, Józefosław, Warszawa. Oferujemy usługi księgowości, obsługę kadr i płac oraz doradztwo podatkowe, finansowe i prawne dla firm z całej Polski. Zapewniamy profesjonalną obsługę podmiotów gospodarczych osób fizycznych. Proponujemy konkurencyjne ceny. Pomagamy założyć działalność gospodarczą i firmę.',
+    description: 'Biuro Rachunkowe VAVICOM Piaseczno, Józefosław, Warszawa. Księgowość, Kadry i Płace, Podatki, Finanse, Biznes',
     author: '@tungetyt',
   },
   plugins: [
