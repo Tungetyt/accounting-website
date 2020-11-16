@@ -21,7 +21,7 @@ import TabPanel from '../components/tab-panel';
 import { ColorContext } from '../context/contexts';
 import {
   // eslint-disable-next-line comma-dangle
-  APP_THEME, DRAWER_WIDTH, getItemByKey, LOCAL_STORAGE_KEY, THEME_NAMES
+  APP_THEME, DRAWER_WIDTH, getItemByKey, LOCAL_STORAGE_KEY, THEME_NAMES, TITLE
 } from '../helpers';
 
 const IndexPage = (props) => {
@@ -45,14 +45,12 @@ const IndexPage = (props) => {
   let chosenTheme = createMuiTheme(isDark ? APP_THEME.dark : APP_THEME.light);
   chosenTheme = responsiveFontSizes(chosenTheme);
 
-  // const { GATSBY_FACEBOOK_APP_ID } = process.env;
-
   return (
     <>
       <ThemeProvider theme={chosenTheme}>
         <ColorContext.Provider value={[isDark, setIsDark]}>
           <CssBaseline />
-          <SEO />
+          <SEO title={TITLE} />
           <Logo />
           <ResponsiveDrawer props={props} />
           <div id="top" />
