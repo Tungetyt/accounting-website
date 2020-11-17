@@ -6,7 +6,7 @@ import {
 import { STREET, TOWN } from '../helpers';
 
 const OpenMap = () => {
-  const coordinates = [52.10726, 21.04587];
+  const coordinates = [52.10008, 21.03460];
   const size = '70vh';
   return (
     <Map center={coordinates} zoom={13} style={{ width: size, height: size }}>
