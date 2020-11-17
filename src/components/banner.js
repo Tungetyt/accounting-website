@@ -61,9 +61,11 @@ const Banner = () => {
             <Paper elevation={0} className={opaqueColor}>
 
               <Typography
-                variant="h4"
+                variant="h2"
                 color="primary"
-                style={{ lineHeight: '90%', userSelect: 'none', textDecoration: 'underline' }}
+                style={{
+                  lineHeight: '90%', userSelect: 'none', textDecoration: 'underline', fontSize: '1.5rem',
+                }}
               >
                 {intl.formatMessage({ id: 'landing.address' })}
 
