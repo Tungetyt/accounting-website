@@ -50,7 +50,7 @@ const Banner = () => {
           <div className="hero-content">
             {/* <Paper elevation={0} style={{ backgroundColor: isDark ? 'rgba(38, 50, 56, 0.6)' : 'rgba(236, 239, 241, 0.7)', marginBottom: '2rem' }}> */}
             <Paper elevation={0} className={opaqueColor} style={{ marginBottom: '2rem' }}>
-              <Typography variant="h3" color="primary" style={{ lineHeight: '90%', userSelect: 'none' }}>
+              <Typography variant="h1" color="primary" style={{ lineHeight: '90%', userSelect: 'none' }}>
                 {intl.formatMessage({ id: 'landing.first' })}
                 <br />
                 {intl.formatMessage({ id: 'landing.second' })}
@@ -63,7 +63,7 @@ const Banner = () => {
             <Paper elevation={0} className={opaqueColor}>
 
               <Typography
-                variant="h6"
+                variant="h4"
                 color="primary"
                 style={{ lineHeight: '90%', userSelect: 'none', textDecoration: 'underline' }}
               >
