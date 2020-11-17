@@ -16,7 +16,7 @@ import {
 const ContactInfoMainContent = () => {
   const intl = useIntl();
   const [isDark] = useContext(ColorContext);
-
+  const color = isDark ? '#FFFFFF' : 'primary';
   return (
     <Paper style={{ backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor, padding: '1rem' }}>
       <Grid container direction="column">
@@ -29,16 +29,16 @@ const ContactInfoMainContent = () => {
             wrap="nowrap"
           >
             <Grid item style={{ marginRight: '12px' }}>
-              <BusinessIcon color={isDark ? '#FFFFFF' : 'primary'} />
+              <BusinessIcon color={color} />
             </Grid>
             <Grid item>
-              <Typography color={isDark ? '#FFFFFF' : 'primary'}>
+              <Typography color={color}>
                 {intl.formatMessage({ id: 'contactSection.name' })}
               </Typography>
-              <Typography color={isDark ? '#FFFFFF' : 'primary'}>
+              <Typography color={color}>
                 {intl.formatMessage({ id: 'contactSection.street' })}
               </Typography>
-              <Typography color={isDark ? '#FFFFFF' : 'primary'}>
+              <Typography color={color}>
                 {intl.formatMessage({ id: 'contactSection.town' })}
               </Typography>
             </Grid>
@@ -53,10 +53,10 @@ const ContactInfoMainContent = () => {
             wrap="nowrap"
           >
             <Grid item style={{ marginRight: '12px' }}>
-              <PhoneIcon color={isDark ? '#FFFFFF' : 'primary'} />
+              <PhoneIcon color={color} />
             </Grid>
             <Grid item>
-              <Typography color={isDark ? '#FFFFFF' : 'primary'}>
+              <Typography color={color}>
                 {PHONE_NUMBER}
               </Typography>
             </Grid>
@@ -71,13 +71,13 @@ const ContactInfoMainContent = () => {
             wrap="nowrap"
           >
             <Grid item style={{ marginRight: '12px' }}>
-              <EmailIcon color={isDark ? '#FFFFFF' : 'primary'} />
+              <EmailIcon color={color} />
             </Grid>
             <Grid item>
-              <Typography color={isDark ? '#FFFFFF' : 'primary'}>
+              <Typography color={color}>
                 {EMAIL}
               </Typography>
-              <Typography color={isDark ? '#FFFFFF' : 'primary'}>
+              <Typography color={color}>
                 {EMAIL2}
               </Typography>
             </Grid>
