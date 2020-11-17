@@ -167,9 +167,6 @@ export default function HrAndPayrollOffer() {
                 <li>
                   <Typography paragraph align="justify">{ intl.formatMessage({ id: 'hrAndPayroll.more.3.1' })}</Typography>
                 </li>
-                <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'hrAndPayroll.more.3.2' })}</Typography>
-                </li>
 
               </ul>
             </Grid>
