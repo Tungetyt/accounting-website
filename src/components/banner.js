@@ -48,7 +48,6 @@ const Banner = () => {
           style={{ paddingBottom: '5rem' }}
         >
           <div className="hero-content">
-            {/* <Paper elevation={0} style={{ backgroundColor: isDark ? 'rgba(38, 50, 56, 0.6)' : 'rgba(236, 239, 241, 0.7)', marginBottom: '2rem' }}> */}
             <Paper elevation={0} className={opaqueColor} style={{ marginBottom: '2rem' }}>
               <Typography variant="h1" color="primary" style={{ lineHeight: '90%', userSelect: 'none' }}>
                 {intl.formatMessage({ id: 'landing.first' })}
@@ -59,7 +58,6 @@ const Banner = () => {
               </Typography>
 
             </Paper>
-            {/* <Paper elevation={0} style={{ backgroundColor: isDark ? 'rgba(38, 50, 56, 0.6)' : 'rgba(236, 239, 241, 0.7)' }}> */}
             <Paper elevation={0} className={opaqueColor}>
 
               <Typography

@@ -74,20 +74,6 @@ const About = () => {
             </Grid>
 
           </Grid>
-          {/* <Grid
-          item
-        >
-          {GATSBY_FACEBOOK_APP_ID && (
-          <>
-            <br />
-            <SectionWrapper>
-              <FacebookProvider appId={GATSBY_FACEBOOK_APP_ID}>
-                <Page href="https://www.facebook.com/Biuro-Rachunkowe-Vavicom-J%C3%B3zefos%C5%82aw-Warszawa-100928011806919/?hc_ref=ARTxt7vKhgJpl3zZMlfTmi0KFs2ze7KOXJguAdYdJtoR1a1SFsyQG8QL-841D6dLqJc&fref=nf" tabs="timeline" />
-              </FacebookProvider>
-            </SectionWrapper>
-          </>
-        )}
-        </Grid> */}
 
         </Grid>
       </Paper>
