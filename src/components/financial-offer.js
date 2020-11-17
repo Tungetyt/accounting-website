@@ -59,7 +59,7 @@ export default function FinancialOffer() {
         >
           <Grid item style={{ width: '600px' }}>
             <Tilt>
-              <Image alt="financial" filename="financial.jpg" />
+              <Image alt="financial" filename="16E-biznes-po-pol-miliona-zlotych-dla-270-firm-108796-640x640.jpg" />
 
             </Tilt>
           </Grid>
