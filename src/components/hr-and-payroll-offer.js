@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import { Divider } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -93,7 +94,7 @@ export default function HrAndPayrollOffer() {
               <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: `${offerName}.info.3` })}</Typography>
               <ul>
                 {Array(12).fill(null).map((line, i) => (
-                  <li>
+                  <li key={i}>
                     <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.services.${i}` })}</Typography>
                   </li>
                 ))}

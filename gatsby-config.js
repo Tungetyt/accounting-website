@@ -18,8 +18,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Vavicom Accounting_name',
-        short_name: 'Vavicom_short_name',
+        name: 'Vavicom Biuro Rachunkowe',
+        short_name: 'Vavicom Biuro',
         start_url: '/',
         background_color: '#5c6bc0',
         theme_color: '#5c6bc0',

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import { Divider } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -68,7 +69,7 @@ export default function AccountingOffer() {
           </Grid>
           <Grid item>
             {Array(2).fill(null).map((line, i) => (
-              <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.info.${i}` })}</Typography>
+              <Typography key={i} paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.info.${i}` })}</Typography>
             ))}
 
           </Grid>
@@ -91,7 +92,7 @@ export default function AccountingOffer() {
             <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.info.2` })}</Typography>
             <ul>
               {Array(8).fill(null).map((line, i) => (
-                <li>
+                <li key={i}>
                   <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.services.${i}` })}</Typography>
                 </li>
               ))}
@@ -127,7 +128,7 @@ export default function AccountingOffer() {
             <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: 'accounting.more.2' })}</Typography>
             <ul>
               {Array(3).fill(null).map((line, i) => (
-                <li>
+                <li key={i}>
                   <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.more.3.${i}` })}</Typography>
                 </li>
               ))}

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import { Typography } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -48,17 +49,9 @@ export default function DialogInfo({ title, data = [], isJustified = true }) {
             ref={descriptionElementRef}
             tabIndex={-1}
           >
-            {data.map((text) => <Typography paragraph align={isJustified ? 'justify' : 'left'}>{text}</Typography>)}
+            {data.map((text, i) => <Typography key={i} paragraph align={isJustified ? 'justify' : 'left'}>{text}</Typography>)}
           </DialogContentText>
         </DialogContent>
-        {/* <DialogActions>
-          <Button onClick={handleClose} color="primary">
-            Cancel
-          </Button>
-          <Button onClick={handleClose} color="primary">
-            Subscribe
-          </Button>
-        </DialogActions> */}
       </Dialog>
     </>
   );
