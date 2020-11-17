@@ -1,13 +1,11 @@
 /* eslint-disable comma-dangle */
 import {
-  Box,
-  Grid, Hidden
+  Grid
 } from '@material-ui/core';
 import React from 'react';
 import { Element } from 'react-scroll';
 import { NAVIGATION } from '../helpers';
 import ContactInfo from './contact-info';
-import OpenMap from './open-map';
 
 const Contact = () => {
   const { contact } = NAVIGATION;
@@ -19,7 +17,7 @@ const Contact = () => {
         justify="center"
         alignItems="center"
       >
-        <Grid item>
+        {/* <Grid item>
           {typeof window !== 'undefined' && (
           <>
             <Hidden smDown implementation="css">
@@ -29,7 +27,7 @@ const Contact = () => {
             </Hidden>
           </>
           )}
-        </Grid>
+        </Grid> */}
 
         <Grid item>
           <ContactInfo />
