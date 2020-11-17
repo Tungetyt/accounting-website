@@ -21,7 +21,7 @@ import TabPanel from '../components/tab-panel';
 import { ColorContext } from '../context/contexts';
 import {
   // eslint-disable-next-line comma-dangle
-  APP_THEME, DRAWER_WIDTH, getItemByKey, LOCAL_STORAGE_KEY, THEME_NAMES, TITLE
+  APP_THEME, DESCRIPTION, DRAWER_WIDTH, getItemByKey, LOCAL_STORAGE_KEY, THEME_NAMES, TITLE
 } from '../helpers';
 
 const IndexPage = (props) => {
@@ -50,7 +50,7 @@ const IndexPage = (props) => {
       <ThemeProvider theme={chosenTheme}>
         <ColorContext.Provider value={[isDark, setIsDark]}>
           <CssBaseline />
-          <SEO title={TITLE} />
+          <SEO title={TITLE} description={DESCRIPTION} />
           <Logo />
           <ResponsiveDrawer props={props} />
           <div id="top" />
