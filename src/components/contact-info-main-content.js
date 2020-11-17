@@ -29,16 +29,16 @@ const ContactInfoMainContent = () => {
             wrap="nowrap"
           >
             <Grid item style={{ marginRight: '12px' }}>
-              <BusinessIcon color="primary" />
+              <BusinessIcon color={isDark ? '#FFFFFF' : 'primary'} />
             </Grid>
             <Grid item>
-              <Typography color="primary">
+              <Typography color={isDark ? '#FFFFFF' : 'primary'}>
                 {intl.formatMessage({ id: 'contactSection.name' })}
               </Typography>
-              <Typography color="primary">
+              <Typography color={isDark ? '#FFFFFF' : 'primary'}>
                 {intl.formatMessage({ id: 'contactSection.street' })}
               </Typography>
-              <Typography color="primary">
+              <Typography color={isDark ? '#FFFFFF' : 'primary'}>
                 {intl.formatMessage({ id: 'contactSection.town' })}
               </Typography>
             </Grid>
@@ -53,10 +53,10 @@ const ContactInfoMainContent = () => {
             wrap="nowrap"
           >
             <Grid item style={{ marginRight: '12px' }}>
-              <PhoneIcon color="primary" />
+              <PhoneIcon color={isDark ? '#FFFFFF' : 'primary'} />
             </Grid>
             <Grid item>
-              <Typography color="primary">
+              <Typography color={isDark ? '#FFFFFF' : 'primary'}>
                 {PHONE_NUMBER}
               </Typography>
             </Grid>
@@ -71,13 +71,13 @@ const ContactInfoMainContent = () => {
             wrap="nowrap"
           >
             <Grid item style={{ marginRight: '12px' }}>
-              <EmailIcon color="primary" />
+              <EmailIcon color={isDark ? '#FFFFFF' : 'primary'} />
             </Grid>
             <Grid item>
-              <Typography color="primary">
+              <Typography color={isDark ? '#FFFFFF' : 'primary'}>
                 {EMAIL}
               </Typography>
-              <Typography color="primary">
+              <Typography color={isDark ? '#FFFFFF' : 'primary'}>
                 {EMAIL2}
               </Typography>
             </Grid>
