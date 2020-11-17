@@ -1,4 +1,5 @@
 import { Paper } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import { graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
@@ -7,11 +8,12 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { ColorContext } from '../context/contexts';
 import { COMPANY } from '../helpers';
+import './layout.css';
 
 const Banner = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "city_auto_x2_colored_toned.jpg" }) {
+      file(relativePath: { eq: "banner.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2000, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
@@ -21,6 +23,14 @@ const Banner = () => {
     }
   `);
   const [isDark] = useContext(ColorContext);
+
+  const useStyles = makeStyles(() => ({
+    opaqueColor: {
+      backgroundColor: isDark ? 'rgba(13, 71, 161, 0.8)' : 'rgba(227, 242, 253, 0.8)',
+    },
+  }));
+
+  const { opaqueColor } = useStyles();
 
   const variants = {
     visible: { opacity: 1, y: 0 },
@@ -38,13 +48,8 @@ const Banner = () => {
           style={{ paddingBottom: '5rem' }}
         >
           <div className="hero-content">
-            {/* <motion.p
-              initial="hidden"
-              animate="visible"
-              variants={variants}
-              transition={{ ease: 'easeOut', duration: 0.8, delay: 1 }}
-            > */}
-            <Paper elevation={0} style={{ backgroundColor: isDark ? 'rgba(38, 50, 56, 0.6)' : 'rgba(236, 239, 241, 0.7)', marginBottom: '2rem' }}>
+            {/* <Paper elevation={0} style={{ backgroundColor: isDark ? 'rgba(38, 50, 56, 0.6)' : 'rgba(236, 239, 241, 0.7)', marginBottom: '2rem' }}> */}
+            <Paper elevation={0} className={opaqueColor} style={{ marginBottom: '2rem' }}>
               <Typography variant="h3" color="primary" style={{ lineHeight: '90%', userSelect: 'none' }}>
                 {intl.formatMessage({ id: 'landing.first' })}
                 <br />
@@ -54,14 +59,9 @@ const Banner = () => {
               </Typography>
 
             </Paper>
-            {/* </motion.p>
-            <motion.p
-              initial="hidden"
-              animate="visible"
-              variants={variants}
-              transition={{ ease: 'easeOut', duration: 0.8, delay: 1.5 }}
-            > */}
-            <Paper elevation={0} style={{ backgroundColor: isDark ? 'rgba(38, 50, 56, 0.6)' : 'rgba(236, 239, 241, 0.7)' }}>
+            {/* <Paper elevation={0} style={{ backgroundColor: isDark ? 'rgba(38, 50, 56, 0.6)' : 'rgba(236, 239, 241, 0.7)' }}> */}
+            <Paper elevation={0} className={opaqueColor}>
+
               <Typography
                 variant="h6"
                 color="primary"
@@ -72,7 +72,6 @@ const Banner = () => {
               </Typography>
 
             </Paper>
-            {/* </motion.p> */}
           </div>
         </BackgroundImage>
       </BannerWrapper>

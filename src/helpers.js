@@ -1,4 +1,4 @@
-import blueGrey from '@material-ui/core/colors/blueGrey';
+import blue from '@material-ui/core/colors/blue';
 
 export const LOCAL_STORAGE_KEY = {
   theme: 'theme-ui-color-mode',
@@ -10,7 +10,7 @@ export const THEME_NAMES = {
   dark: 'dark',
 };
 
-const color = blueGrey;
+const color = blue;
 
 export const APP_THEME = {
   light: {
