@@ -91,27 +91,27 @@
   },
   "taxServices": {
     "info": {
-      "0": "Polski system podatkowy w większości przypadków nakłada obowiązek płacenia podatków w cyklu miesięcznym.",
+      "0": "Polski system podatkowy w większości przypadków nakłada cykliczny obowiązek płacenia podatków.",
       "1": "Wymaga to systematycznego kalkulowania zobowiązań podatkowych oraz sporządzania dla organów skarbowych wielu informacji i zeznań podatkowych o różnych terminach wymagalności. Biuro Rachunkowe VAVICOM oferuje usługi sporządzania wymaganych deklaracji podatkowych, jak również wsparcie w kontaktach z organami podatkowymi, obejmujące m.in. obsługę kontroli podatkowych."
     },
     "info1": {
-      "0":"Nasze prace w ramach przygotowania rozliczeń z tytułu CIT obejmują kompleksowe przygotowanie miesięcznych kalkulacji oraz rocznego zeznania CIT-8. W szczególności, usługi te zawierają przygotowanie:",
-      "1":"Miesięcznych oraz rocznej kalkulacji CIT wraz ze szczegółowymi informacjami;",
-      "2":"rocznego zeznania CIT-8 wraz ze stosownymi załącznikami sporządzonego na podstawie rocznej kalkulacji CIT;",
-      "3":"kwoty podatku należnego, który Spółka zobowiązana jest przelać na rachunek bankowy urzędu skarbowego. Spółka jest odpowiedzialna za dokonanie przelewu przed upływem ustawowego terminu płatności.",
+      "0":"Nasze prace w ramach przygotowania rozliczeń z tytułu CIT obejmują kompleksowe przygotowanie okresowych kalkulacji oraz rocznego zeznania CIT-8. W szczególności, usługi te zawierają przygotowanie:",
+      "1":"Okresowych oraz rocznej kalkulacji CIT wraz ze szczegółowymi informacjami;",
+      "2":"rocznego rozliczenia, przygotowanie i złożenia zeznania podatkowego CIT-8 wraz ze stosownymi załącznikami sporządzonego na podstawie okresowych kalkulacji CIT;",
+      "3":"ustalenie kwoty podatku należnego, który Spółka zobowiązana jest przelać na rachunek bankowy urzędu skarbowego przed upływem ustawowego terminu płatności.",
       "4":"Rozliczenia podatku VAT obejmują przygotowanie rejestrów oraz deklaracji VAT, w tym:"
     },
     "services": {
-      "0":"sporządzanie rejestrów zakupu i sprzedaży VAT na podstawie dokumentacji;",
-      "1":"przedstawianie propozycji traktowania wybranych transakcji, które mogłyby wpływać na wysokość zobowiązania podatkowego;",
+      "0":"sporządzanie rejestrów zakupu i sprzedaży VAT na podstawie otrzymanej dokumentacji;",
+      "1":"przedstawianie propozycji klasyfikacji transakcji, które mogłyby wpływać na wysokość zobowiązania podatkowego, tzw. koszty uzyskania przychodów;",
       "2":"sporządzanie deklaracji VAT w oparciu o rejestry VAT;",
-      "3":"informowanie o kwocie podatku VAT do zapłaty;",
-      "4":"sporządzanie deklaracji VAT-UE – informacji podsumowującej o dokonanych wewnątrzwspólnotowych transakcjach, a także korekty deklaracji VAT-UE;",
+      "3":"informowanie o wysokości zobowiązania podatkowego VAT do zapłaty;",
+      "4":"sporządzanie deklaracji VAT-UE – informacji podsumowującej o dokonanych wewnątrzwspólnotowych transakcjach zakupu i sprzedaży, a także korekty deklaracji VAT-UE;",
       "5":"przygotowanie miesięcznych deklaracji Intrastat (jeśli będzie to wymagane);",
       "6":"wskazanie kwoty potencjalnego zwrotu podatku VAT na deklaracji VAT oraz przygotowywanie wniosków o zwrot podatku VAT (w razie potrzeby)."
     },
     "more": {
-      "0": "Nasza usługa obejmuje sporządzanie na podstawie ksiąg kalkulacji podatku dochodowego od osób prawnych oraz VAT za dany okres lub rok podatkowy oraz przygotowanie odpowiednich deklaracji podatkowych. Przygotowujemy również zestawienia podsumowujące podatek VAT w handlu wewnątrzwspólnotowym oraz deklaracje Intrastat."
+      "0": "Nasza usługa obejmuje sporządzanie na podstawie ksiąg kalkulacji podatku dochodowego od osób prawnych oraz VAT za dany okres obrachunkowy lub rok podatkowy oraz przygotowanie odpowiednich deklaracji podatkowych. Przygotowujemy również zestawienia podsumowujące podatek VAT w handlu wewnątrzwspólnotowym UE oraz deklaracje Intrastat."
     }
   },
   "legalServices": {
