@@ -1,6 +1,6 @@
 /* eslint-disable comma-dangle */
 import {
-    Grid, Typography
+  Grid, Typography
 } from '@material-ui/core';
 import Paper from '@material-ui/core/Paper';
 import BusinessIcon from '@material-ui/icons/Business';
@@ -10,7 +10,7 @@ import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
 import { ColorContext } from '../context/contexts';
 import {
-    APP_THEME, EMAIL, EMAIL2, PHONE_NUMBER
+  APP_THEME, EMAIL, EMAIL2, PHONE_NUMBER
 } from '../helpers';
 
 const ContactInfoMainContent = () => {
@@ -29,16 +29,16 @@ const ContactInfoMainContent = () => {
             wrap="nowrap"
           >
             <Grid item style={{ marginRight: '12px' }}>
-              <BusinessIcon />
+              <BusinessIcon color="primary" />
             </Grid>
             <Grid item>
-              <Typography>
+              <Typography color="primary">
                 {intl.formatMessage({ id: 'contactSection.name' })}
               </Typography>
-              <Typography>
+              <Typography color="primary">
                 {intl.formatMessage({ id: 'contactSection.street' })}
               </Typography>
-              <Typography>
+              <Typography color="primary">
                 {intl.formatMessage({ id: 'contactSection.town' })}
               </Typography>
             </Grid>
@@ -53,10 +53,10 @@ const ContactInfoMainContent = () => {
             wrap="nowrap"
           >
             <Grid item style={{ marginRight: '12px' }}>
-              <PhoneIcon />
+              <PhoneIcon color="primary" />
             </Grid>
             <Grid item>
-              <Typography>
+              <Typography color="primary">
                 {PHONE_NUMBER}
               </Typography>
             </Grid>
@@ -71,13 +71,13 @@ const ContactInfoMainContent = () => {
             wrap="nowrap"
           >
             <Grid item style={{ marginRight: '12px' }}>
-              <EmailIcon />
+              <EmailIcon color="primary" />
             </Grid>
             <Grid item>
-              <Typography>
+              <Typography color="primary">
                 {EMAIL}
               </Typography>
-              <Typography>
+              <Typography color="primary">
                 {EMAIL2}
               </Typography>
             </Grid>

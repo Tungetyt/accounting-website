@@ -2,12 +2,15 @@
 /* eslint-disable indent */
 /* eslint-disable max-len */
 import {
-  Grid
+  Grid, Paper
 } from '@material-ui/core';
 import { useIntl } from 'gatsby-plugin-intl';
-import React from 'react';
+import React, { useContext } from 'react';
 import { Element } from 'react-scroll';
-import { NAVIGATION } from '../helpers';
+import { ColorContext } from '../context/contexts';
+import {
+  APP_THEME, NAVIGATION
+} from '../helpers';
 import {
   aboutBtn, clientValueBtn, getToKnowUsBtn, ourClientsBtn, safetyBtn, whatDifferBtn, whyCooperateBtn, workTogetherBtn
 } from '../intl/pl.json';
@@ -26,50 +29,52 @@ const About = () => {
   const ourClientsData = Object.values(ourClientsBtn).slice(0, -1);
   const { about } = NAVIGATION;
   const margin = '1rem';
+  const [isDark] = useContext(ColorContext);
+
   return (
     <Element name={about}>
-
-      <Grid
-        container
-        direction="row"
-        justify="space-evenly"
-        alignItems="center"
-      >
+      <Paper style={{ backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor, padding: '1rem' }}>
         <Grid
           container
-          item
           direction="row"
-          justify="center"
+          justify="space-evenly"
           alignItems="center"
-          style={{ maxWidth: '600px' }}
         >
-          <Grid item style={{ margin }}>
-            <DialogInfo title={intl.formatMessage({ id: 'aboutBtn.title' })} data={aboutData} />
-          </Grid>
-          <Grid item style={{ margin }}>
-            <DialogInfo title={intl.formatMessage({ id: 'clientValueBtn.title' })} data={clientValueData} />
-          </Grid>
-          <Grid item style={{ margin }}>
-            <DialogInfo title={intl.formatMessage({ id: 'whyCooperateBtn.title' })} data={whyCooperateData} />
-          </Grid>
-          <Grid item style={{ margin }}>
-            <DialogInfo title={intl.formatMessage({ id: 'whatDifferBtn.title' })} data={whatDifferData} />
-          </Grid>
-          <Grid item style={{ margin }}>
-            <DialogInfo title={intl.formatMessage({ id: 'getToKnowUsBtn.title' })} data={getToKnowUsData} />
-          </Grid>
-          <Grid item style={{ margin }}>
-            <DialogInfo title={intl.formatMessage({ id: 'workTogetherBtn.title' })} data={workTogetherData} />
-          </Grid>
-          <Grid item style={{ margin }}>
-            <DialogInfo title={intl.formatMessage({ id: 'safetyBtn.title' })} data={safetyData} />
-          </Grid>
-          <Grid item style={{ margin }}>
-            <DialogInfo title={intl.formatMessage({ id: 'ourClientsBtn.title' })} data={ourClientsData} isJustified={false} />
-          </Grid>
+          <Grid
+            container
+            item
+            direction="row"
+            justify="center"
+            alignItems="center"
+            style={{ maxWidth: '600px' }}
+          >
+            <Grid item style={{ margin }}>
+              <DialogInfo title={intl.formatMessage({ id: 'aboutBtn.title' })} data={aboutData} />
+            </Grid>
+            <Grid item style={{ margin }}>
+              <DialogInfo title={intl.formatMessage({ id: 'clientValueBtn.title' })} data={clientValueData} />
+            </Grid>
+            <Grid item style={{ margin }}>
+              <DialogInfo title={intl.formatMessage({ id: 'whyCooperateBtn.title' })} data={whyCooperateData} />
+            </Grid>
+            <Grid item style={{ margin }}>
+              <DialogInfo title={intl.formatMessage({ id: 'whatDifferBtn.title' })} data={whatDifferData} />
+            </Grid>
+            <Grid item style={{ margin }}>
+              <DialogInfo title={intl.formatMessage({ id: 'getToKnowUsBtn.title' })} data={getToKnowUsData} />
+            </Grid>
+            <Grid item style={{ margin }}>
+              <DialogInfo title={intl.formatMessage({ id: 'workTogetherBtn.title' })} data={workTogetherData} />
+            </Grid>
+            <Grid item style={{ margin }}>
+              <DialogInfo title={intl.formatMessage({ id: 'safetyBtn.title' })} data={safetyData} />
+            </Grid>
+            <Grid item style={{ margin }}>
+              <DialogInfo title={intl.formatMessage({ id: 'ourClientsBtn.title' })} data={ourClientsData} isJustified={false} />
+            </Grid>
 
-        </Grid>
-        {/* <Grid
+          </Grid>
+          {/* <Grid
           item
         >
           {GATSBY_FACEBOOK_APP_ID && (
@@ -84,8 +89,8 @@ const About = () => {
         )}
         </Grid> */}
 
-      </Grid>
-
+        </Grid>
+      </Paper>
     </Element>
   );
 };
