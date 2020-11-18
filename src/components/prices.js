@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable comma-dangle */
 import {
@@ -5,8 +6,7 @@ import {
     Paper,
     Typography
 } from '@material-ui/core';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { makeStyles } from '@material-ui/core/styles';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
 import { Element } from 'react-scroll';
@@ -15,9 +15,6 @@ import { APP_THEME, NAVIGATION } from '../helpers';
 
 const Prices = () => {
   const { prices } = NAVIGATION;
-  const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up('md'));
-  // const classes = useStyles();
   const intl = useIntl();
   const [isDark] = useContext(ColorContext);
   const useStyles = makeStyles(() => ({
