@@ -62,8 +62,7 @@ const SocialMedia = () => {
               tooltip="Instagram"
               linkButton
               color="primary"
-              href="https://www.linkedin.com/company/accounting-office-vavicom/"
-              disabled
+              href="https://www.instagram.com/vavicom2020/"
             >
               <InstagramIcon />
             </IconButton>
