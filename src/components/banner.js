@@ -39,7 +39,7 @@ const Banner = () => {
   const intl = useIntl();
 
   return (
-    <Paper elevation={24}>
+    <Paper elevation={24} className={opaqueColor}>
       <BannerWrapper>
         <BackgroundImage
           Tag="section"
