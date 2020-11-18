@@ -26,7 +26,8 @@ const Contact = () => {
   const useStyles = makeStyles(() => ({
     paper: {
       backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor,
-      padding: '1rem'
+      padding: '1rem',
+      margin: '1rem'
     }
   }));
   const { paper } = useStyles();
@@ -38,7 +39,6 @@ const Contact = () => {
         direction="row"
         justify="center"
         alignItems="center"
-        spacing={3}
       >
         <Grid item>
           {typeof window !== 'undefined' && matches && (
@@ -50,8 +50,13 @@ const Contact = () => {
           </Box>
           )}
         </Grid>
-        <Grid item>
-          <Paper className={paper} style={{ width: '600px' }}>
+        <Grid
+          item
+          style={{
+            width: '100%', height: 'auto', maxWidth: '600px', marginBottom: '1rem'
+          }}
+        >
+          <Paper className={paper}>
             <Typography paragraph align="center">{ intl.formatMessage({ id: 'contactSection.ourOffice' })}</Typography>
             <Image alt="our office" filename="6Ogrodowa64.jpg" />
           </Paper>
