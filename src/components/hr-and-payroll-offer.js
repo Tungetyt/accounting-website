@@ -50,7 +50,7 @@ export default function HrAndPayrollOffer() {
           container
           direction="row"
           justify="center"
-          alignItems="flex-start"
+          alignItems="center"
           spacing="3"
           style={{ padding: '6px' }}
         >

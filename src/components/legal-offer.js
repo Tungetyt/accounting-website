@@ -63,7 +63,6 @@ export default function LegalOffer() {
           <Grid item style={{ width: '600px' }}>
             <Tilt>
               <Image alt="legal service" filename="8OIP_4x.jpg" />
-
             </Tilt>
           </Grid>
           <Grid item>
