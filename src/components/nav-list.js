@@ -9,6 +9,7 @@ import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
 import HelpIcon from '@material-ui/icons/Help';
 import HomeIcon from '@material-ui/icons/Home';
 import InfoIcon from '@material-ui/icons/Info';
+import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
 import { Link } from 'react-scroll';
@@ -57,7 +58,7 @@ const NavList = () => {
   );
 
   const {
-    home, services, about, faq, contact,
+    home, services, about, faq, contact, prices,
   } = NAVIGATION;
 
   return (
@@ -70,6 +71,10 @@ const NavList = () => {
         <NavLink to={services} offset={OFFSET}>
           <ListItemIcon><BusinessCenterIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={services} />
+        </NavLink>
+        <NavLink to={prices} offset={OFFSET}>
+          <ListItemIcon><LocalOfferIcon color="primary" className={icon} /></ListItemIcon>
+          <TextLink id={prices} />
         </NavLink>
         <NavLink to={about} offset={OFFSET}>
           <ListItemIcon><InfoIcon color="primary" className={icon} /></ListItemIcon>

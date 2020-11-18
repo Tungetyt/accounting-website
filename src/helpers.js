@@ -64,6 +64,7 @@ export const NAVIGATION = {
   about: 'about',
   faq: 'faq',
   contact: 'contact',
+  prices: 'prices',
 };
 
 export const OFFSET = -42;

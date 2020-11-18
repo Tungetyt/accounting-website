@@ -13,6 +13,7 @@ import Faq from '../components/faq';
 import LandingPage from '../components/landing-page';
 import '../components/layout.css';
 import Logo from '../components/logo';
+import Prices from '../components/prices';
 import ResponsiveDrawer from '../components/responsive-drawer';
 import ScrollTop from '../components/scroll-top';
 import SectionWrapper from '../components/section-wrapper';
@@ -58,6 +59,10 @@ const IndexPage = (props) => {
             <LandingPage />
             <TabPanel />
             <br />
+            <br />
+            <SectionWrapper>
+              <Prices />
+            </SectionWrapper>
             <br />
             <SectionWrapper>
               <About />

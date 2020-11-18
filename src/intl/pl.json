@@ -7,6 +7,7 @@
   "about": "O NAS",
   "home": "HOME",
   "contact": "KONTAKT",
+  "prices": "CENNIK",
   "backToTopBtn": "Powrót do góry",
   "faq": "FAQ",
   "notfound": {
@@ -162,6 +163,17 @@
     "12":"Możemy przeanalizować treści umów zawartych z kontrahentami, zidentyfikować potencjalne możliwości renegocjacji stawek. Z uwagi na sytuację epidemiologiczną, dopuszczalne jest podjęcie kroków, zmierzających do zmiany lub renegocjacji zawartych umów, w szczególności w aspekcie modyfikacji warunków wynagrodzenia i płatności oraz odstąpienia od umowy.",
     "13":"Kiedy jedyną szansą przed utratą płynności finansowej, pozostaje przeprowadzenie postępowania restrukturyzacyjnego przedsiębiorstwa, jesteśmy gotowi opracować plan w zakresie zmniejszenia, odroczenia lub rozłożenia na raty należności publicznoprawnych oraz wobec kontrahentów.",
     "14":"Digitalizacja jest usługą wdrożenia najnowocześniejszych rozwiązań technologicznych i informatycznych, które gwarantują utrzymanie najwyższej jakości obsługi kontrahentów, przy jednoczesnym optymalnym wykorzystaniu posiadanych zasobów. Często związana jest z przemodelowaniem dotychczasowego planu biznesowego i sposobu działania, przynosi poprawę komunikacji wewnętrznej i zewnętrznej oraz znacznie przyspiesza dostęp do informacji, pozwalającej na dokładniejsze i skuteczniejsze kontrolowanie procesów."
+  },
+  "pricesSection":{
+    "prices" : [
+      "Kadry i płace – od 35 zł",
+      "Księga przychodów i rozchodów – od 150 zł",
+      "Księgi rachunkowe – od 350 zł"
+    ],
+    "specialOffer":[
+      "Oferujemy również specjalny rabat dla wszystkich zmieniających biuro rachunkowe.",
+      "Zapewniamy bezpłatną pomoc przy zakładaniu własnej działalności gospodarczej i firmy."
+    ]
   },
   "aboutBtn": {
     "title": "O NAS",
