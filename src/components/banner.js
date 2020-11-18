@@ -8,7 +8,6 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { ColorContext } from '../context/contexts';
 import { COMPANY } from '../helpers';
-import './layout.css';
 
 const Banner = () => {
   const data = useStaticQuery(graphql`
