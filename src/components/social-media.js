@@ -49,8 +49,7 @@ const SocialMedia = () => {
               tooltip="Twitter"
               linkButton
               color="primary"
-              href="https://www.linkedin.com/company/accounting-office-vavicom/"
-              disabled
+              href="https://twitter.com/VAVICOM2"
             >
               <TwitterIcon />
             </IconButton>
