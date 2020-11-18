@@ -45,7 +45,7 @@ const Prices = () => {
             <ul>
               {Array(3).fill(null).map((line, i) => (
                 <li key={i}>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: `${sectionName}.prices.${i}` })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: `${sectionName}.prices.${i}` })}</Typography>
                 </li>
               ))}
             </ul>
@@ -54,7 +54,7 @@ const Prices = () => {
         <Grid item>
           <Paper className={paper}>
             {Array(2).fill(null).map((line, i) => (
-              <Typography key={i} paragraph align="justify">{ intl.formatMessage({ id: `${sectionName}.specialOffer.${i}` })}</Typography>
+              <Typography key={i} paragraph>{ intl.formatMessage({ id: `${sectionName}.specialOffer.${i}` })}</Typography>
             ))}
           </Paper>
         </Grid>
