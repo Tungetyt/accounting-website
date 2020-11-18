@@ -26,6 +26,7 @@ import {
 } from '../helpers';
 
 const IndexPage = (props) => {
+  // init value for isDark does not matter. The value is set in useEffect anyway.
   const [isDark, setIsDark] = useState(true);
 
   const useStyles = makeStyles((theme) => ({

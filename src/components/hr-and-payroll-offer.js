@@ -55,11 +55,9 @@ export default function HrAndPayrollOffer() {
           style={{ padding: '6px' }}
         >
           <Grid item style={{ width: '600px' }}>
-            {/* <div style={{ maxWidth: '3000px' }}> */}
             <Tilt>
               <Image alt="hr and payroll" filename="12Podatek-VAT-kiedy-decyzja-wymiarowa-Ojq7ie.jpg" />
             </Tilt>
-            {/* </div> */}
           </Grid>
           <Grid item>
             <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: `${offerName}.info.0` })}</Typography>
@@ -127,27 +125,6 @@ export default function HrAndPayrollOffer() {
 
           </Grid>
           <br />
-          {/* <Grid
-            container
-            direction="row"
-            justify="center"
-            alignItems="flex-start"
-            spacing="3"
-          >
-            {Array(2).fill(null).map((line, i) => (
-              <Grid item>
-
-              </Grid>
-            ))} */}
-          {/* <Grid item>
-              <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'hrAndPayroll.more.0' })}</Typography>
-
-            </Grid>
-            <Grid item>
-              <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'hrAndPayroll.more.1' })}</Typography>
-            </Grid> */}
-
-          {/* </Grid> */}
           <Divider />
           <br />
           <Grid
