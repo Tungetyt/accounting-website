@@ -165,15 +165,24 @@
     "14":"Digitalizacja jest usługą wdrożenia najnowocześniejszych rozwiązań technologicznych i informatycznych, które gwarantują utrzymanie najwyższej jakości obsługi kontrahentów, przy jednoczesnym optymalnym wykorzystaniu posiadanych zasobów. Często związana jest z przemodelowaniem dotychczasowego planu biznesowego i sposobu działania, przynosi poprawę komunikacji wewnętrznej i zewnętrznej oraz znacznie przyspiesza dostęp do informacji, pozwalającej na dokładniejsze i skuteczniejsze kontrolowanie procesów."
   },
   "pricesSection":{
-    "prices" : [
-      "Kadry i płace – od 35 zł",
-      "Księga przychodów i rozchodów – od 150 zł",
-      "Księgi rachunkowe – od 350 zł"
+    "offers" : [
+      "Kadry i płace",
+      "Księga przychodów i rozchodów",
+      "Księgi rachunkowe"
+    ],
+    "prices": [
+      "od 35 zł",
+      "od 150 zł", 
+      "od 350 zł" 
     ],
     "specialOffer":[
       "Oferujemy również specjalny rabat dla wszystkich zmieniających biuro rachunkowe.",
       "Zapewniamy bezpłatną pomoc przy zakładaniu własnej działalności gospodarczej i firmy."
-    ]
+    ],
+    "dataTable":{
+      "offer": "Offer",
+      "price": "Price"
+    }
   },
   "aboutBtn": {
     "title": "O NAS",

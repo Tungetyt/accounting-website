@@ -12,6 +12,16 @@ export const THEME_NAMES = {
 
 const color = blue;
 
+const APP_THEME_EXTENDED = {
+  overrides: {
+    MUIDataTableBodyCell: {
+      root: {
+        backgroundColor: color['400'],
+      },
+    },
+  },
+};
+
 export const APP_THEME = {
   light: {
     palette: {
@@ -29,6 +39,7 @@ export const APP_THEME = {
         backgroundColor: color['200'],
       },
     },
+    ...APP_THEME_EXTENDED,
   },
   dark: {
     palette: {
@@ -46,6 +57,7 @@ export const APP_THEME = {
         backgroundColor: color['700'],
       },
     },
+    ...APP_THEME_EXTENDED,
   },
 };
 

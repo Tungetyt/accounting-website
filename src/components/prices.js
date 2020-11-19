@@ -2,9 +2,9 @@
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable comma-dangle */
 import {
-    Grid,
-    Paper,
-    Typography
+  Grid,
+  Paper,
+  Typography
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { useIntl } from 'gatsby-plugin-intl';
@@ -12,6 +12,7 @@ import React, { useContext } from 'react';
 import { Element } from 'react-scroll';
 import { ColorContext } from '../context/contexts';
 import { APP_THEME, NAVIGATION } from '../helpers';
+import DataTable from './data-table';
 
 const Prices = () => {
   const { prices } = NAVIGATION;
@@ -38,15 +39,7 @@ const Prices = () => {
         <Grid
           item
         >
-          <Paper className={paper}>
-            <ul>
-              {Array(3).fill(null).map((line, i) => (
-                <li key={i}>
-                  <Typography paragraph>{ intl.formatMessage({ id: `${sectionName}.prices.${i}` })}</Typography>
-                </li>
-              ))}
-            </ul>
-          </Paper>
+          <DataTable />
         </Grid>
         <Grid item>
           <Paper className={paper}>
