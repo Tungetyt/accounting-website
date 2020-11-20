@@ -58,7 +58,6 @@ export default function DataTable() {
       data={rows}
       columns={columns}
       options={options}
-      style={{ backgroundColor: 'red' }}
     />
   );
 }
