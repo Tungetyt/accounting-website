@@ -71,10 +71,10 @@ const ContactInfoMainContent = () => {
             </Grid>
             <Grid item>
               <Typography color={color}>
-                {PHONE_NUMBER}
+                {PHONE_NUMBER2}
               </Typography>
               <Typography color={color}>
-                {PHONE_NUMBER2}
+                {PHONE_NUMBER}
               </Typography>
             </Grid>
           </Grid>
