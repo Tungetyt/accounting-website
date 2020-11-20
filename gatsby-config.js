@@ -3,10 +3,17 @@ module.exports = {
     title: 'BIURO RACHUNKOWE VAVICOM PIASECZNO JÓZEFOSŁAW WARSZAWA',
     description: 'Biuro Rachunkowe VAVICOM Piaseczno, Józefosław, Warszawa. Księgowość, Kadry i Płace, Podatki, Finanse, Biznes',
     author: '@tungetyt',
-    siteUrl: 'https://www.vavicom.pl',
+    siteUrl: 'https://vavicom.pl',
   },
   plugins: [
-    'gatsby-plugin-robots-txt',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://vavicom.pl',
+        sitemap: 'https://vavicom.pl/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
     'gatsby-plugin-sitemap',
     'gatsby-plugin-react-helmet',
     {
@@ -14,6 +21,12 @@ module.exports = {
       options: {
         name: 'images',
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: 'https://vavicom.pl',
       },
     },
     'gatsby-plugin-fontawesome-css',
