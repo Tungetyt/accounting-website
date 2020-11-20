@@ -11,7 +11,7 @@ export default function DataTable() {
       label: intl.formatMessage({ id: `${SECTION_DATA_TABLE}.offer` }),
       options: {
         filter: false,
-        sort: true,
+        sort: false,
       },
     },
     {
@@ -19,7 +19,7 @@ export default function DataTable() {
       label: intl.formatMessage({ id: `${SECTION_DATA_TABLE}.price` }),
       options: {
         filter: false,
-        sort: true,
+        sort: false,
       },
     },
   ];
