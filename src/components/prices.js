@@ -57,7 +57,7 @@ const Prices = () => {
               <Typography
                 key={i}
                 style={{
- marginLeft: '1rem', color: color1, textAlign: 'center', textShadow: `0 0 5px ${color1}, 0 0 10px ${color1}, 0 0 15px ${color2}, 0 0 20px ${color2}, 0 0 25px ${color2}, 0 0 30px ${color2}, 0 0 35px ${color2}`
+ marginLeft: '1%', marginRight: '1%', color: color1, textAlign: 'center', textShadow: `0 0 5px ${color1}, 0 0 10px ${color1}, 0 0 15px ${color2}, 0 0 20px ${color2}, 0 0 25px ${color2}, 0 0 30px ${color2}, 0 0 35px ${color2}`
 }}
                 paragraph
               >
