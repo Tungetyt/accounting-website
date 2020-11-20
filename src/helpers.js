@@ -16,7 +16,7 @@ const APP_THEME_EXTENDED = {
   overrides: {
     MUIDataTableBodyCell: {
       root: {
-        backgroundColor: color['400'],
+        backgroundColor: color[500],
       },
     },
   },
