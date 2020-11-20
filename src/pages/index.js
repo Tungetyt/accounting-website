@@ -52,7 +52,7 @@ const IndexPage = (props) => {
       <ThemeProvider theme={chosenTheme}>
         <ColorContext.Provider value={[isDark, setIsDark]}>
           <CssBaseline />
-          <SEO description={DESCRIPTION} />
+          <SEO title="VAVICOM PIASECZNO JÓZEFOSŁAW WARSZAWA" description={DESCRIPTION} />
           <Logo />
           <ResponsiveDrawer props={props} />
           <div id="top" />

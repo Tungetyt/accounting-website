@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'BIURO RACHUNKOWE VAVICOM PIASECZNO JÓZEFOSŁAW WARSZAWA',
+    title: 'BIURO RACHUNKOWE',
     description: 'Biuro Rachunkowe VAVICOM Piaseczno, Józefosław, Warszawa. Księgowość, Kadry i Płace, Podatki, Finanse, Biznes',
     author: '@tungetyt',
     siteUrl: 'https://vavicom.pl',
