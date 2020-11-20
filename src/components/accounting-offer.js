@@ -68,7 +68,7 @@ export default function AccountingOffer() {
           </Grid>
           <Grid item>
             {Array(2).fill(null).map((line, i) => (
-              <Typography key={i} paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.info.${i}` })}</Typography>
+              <Typography key={i} paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.info.${i}` })}</Typography>
             ))}
 
           </Grid>
@@ -88,11 +88,11 @@ export default function AccountingOffer() {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <CenterWrapper>
-            <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.info.2` })}</Typography>
+            <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.info.2` })}</Typography>
             <ul>
               {Array(8).fill(null).map((line, i) => (
                 <li key={i}>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.services.${i}` })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.services.${i}` })}</Typography>
                 </li>
               ))}
             </ul>
@@ -109,8 +109,8 @@ export default function AccountingOffer() {
           >
             <Grid item>
               <div style={{ columnWidth: '600px' }}>
-                <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.more.0` })}</Typography>
-                <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.more.1` })}</Typography>
+                <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.more.0` })}</Typography>
+                <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.more.1` })}</Typography>
               </div>
             </Grid>
             <Grid item style={{ width: '600px' }}>
@@ -124,11 +124,11 @@ export default function AccountingOffer() {
           <Divider />
           <br />
           <CenterWrapper>
-            <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: 'accounting.more.2' })}</Typography>
+            <Typography paragraph className={text}>{ intl.formatMessage({ id: 'accounting.more.2' })}</Typography>
             <ul>
               {Array(3).fill(null).map((line, i) => (
                 <li key={i}>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.more.3.${i}` })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.more.3.${i}` })}</Typography>
                 </li>
               ))}
             </ul>

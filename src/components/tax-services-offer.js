@@ -59,8 +59,8 @@ export default function TaxServiceOffer() {
             </Tilt>
           </Grid>
           <Grid item>
-            <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info.0' })}</Typography>
-            <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info.1' })}</Typography>
+            <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info.0' })}</Typography>
+            <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info.1' })}</Typography>
           </Grid>
         </Grid>
         <IconButton
@@ -84,16 +84,16 @@ export default function TaxServiceOffer() {
             justify="center"
           >
             <Grid item>
-              <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info1.0' })}</Typography>
+              <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info1.0' })}</Typography>
               <ul>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'taxServices.info1.1' })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.info1.1' })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'taxServices.info1.2' })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.info1.2' })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'taxServices.info1.3' })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.info1.3' })}</Typography>
                 </li>
               </ul>
             </Grid>
@@ -117,28 +117,28 @@ export default function TaxServiceOffer() {
             <Grid
               item
             >
-              <Typography paragraph align="justify" style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info1.4' })}</Typography>
+              <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info1.4' })}</Typography>
               <ul>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'taxServices.services.0' })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.0' })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'taxServices.services.1' })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.1' })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'taxServices.services.2' })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.2' })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'taxServices.services.3' })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.3' })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'taxServices.services.4' })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.4' })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'taxServices.services.5' })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.5' })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: 'taxServices.services.6' })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.6' })}</Typography>
                 </li>
               </ul>
             </Grid>

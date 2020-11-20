@@ -64,8 +64,8 @@ export default function FinancialOffer() {
             </Tilt>
           </Grid>
           <Grid item>
-            <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.0` })}</Typography>
-            <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.1` })}</Typography>
+            <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.0` })}</Typography>
+            <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.1` })}</Typography>
 
           </Grid>
         </Grid>
@@ -93,28 +93,28 @@ export default function FinancialOffer() {
             <Grid
               item
             >
-              <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.2` })}</Typography>
+              <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.2` })}</Typography>
               <ul>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.` })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.` })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.4` })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.4` })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.5` })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.5` })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.6` })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.6` })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.7` })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.7` })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.8` })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.8` })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.9` })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.9` })}</Typography>
                 </li>
               </ul>
             </Grid>
@@ -133,9 +133,9 @@ export default function FinancialOffer() {
           >
             <Grid item>
               <div style={{ columnWidth: '600px' }}>
-                <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.10` })}</Typography>
-                <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.11` })}</Typography>
-                <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.12` })}</Typography>
+                <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.10` })}</Typography>
+                <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.11` })}</Typography>
+                <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.12` })}</Typography>
               </div>
             </Grid>
             <Grid item style={{ width: '600px' }}>

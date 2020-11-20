@@ -17,7 +17,6 @@ import {
 import DialogInfo from './dialog-info';
 
 const About = () => {
-  const { GATSBY_FACEBOOK_APP_ID } = process.env;
   const intl = useIntl();
   const aboutData = Object.values(aboutBtn).slice(0, -1);
   const clientValueData = Object.values(clientValueBtn).slice(0, -1);
@@ -49,32 +48,30 @@ const About = () => {
             style={{ maxWidth: '600px' }}
           >
             <Grid item style={{ margin }}>
-              <DialogInfo title={intl.formatMessage({ id: 'aboutBtn.title' })} data={aboutData} />
+              <DialogInfo title={intl.formatMessage({ id: 'aboutBtn.title' })} data={aboutData} isJustified={false} />
             </Grid>
             <Grid item style={{ margin }}>
-              <DialogInfo title={intl.formatMessage({ id: 'clientValueBtn.title' })} data={clientValueData} />
+              <DialogInfo title={intl.formatMessage({ id: 'clientValueBtn.title' })} data={clientValueData} isJustified={false} />
             </Grid>
             <Grid item style={{ margin }}>
-              <DialogInfo title={intl.formatMessage({ id: 'whyCooperateBtn.title' })} data={whyCooperateData} />
+              <DialogInfo title={intl.formatMessage({ id: 'whyCooperateBtn.title' })} data={whyCooperateData} isJustified={false} />
             </Grid>
             <Grid item style={{ margin }}>
-              <DialogInfo title={intl.formatMessage({ id: 'whatDifferBtn.title' })} data={whatDifferData} />
+              <DialogInfo title={intl.formatMessage({ id: 'whatDifferBtn.title' })} data={whatDifferData} isJustified={false} />
             </Grid>
             <Grid item style={{ margin }}>
-              <DialogInfo title={intl.formatMessage({ id: 'getToKnowUsBtn.title' })} data={getToKnowUsData} />
+              <DialogInfo title={intl.formatMessage({ id: 'getToKnowUsBtn.title' })} data={getToKnowUsData} isJustified={false} />
             </Grid>
             <Grid item style={{ margin }}>
-              <DialogInfo title={intl.formatMessage({ id: 'workTogetherBtn.title' })} data={workTogetherData} />
+              <DialogInfo title={intl.formatMessage({ id: 'workTogetherBtn.title' })} data={workTogetherData} isJustified={false} />
             </Grid>
             <Grid item style={{ margin }}>
-              <DialogInfo title={intl.formatMessage({ id: 'safetyBtn.title' })} data={safetyData} />
+              <DialogInfo title={intl.formatMessage({ id: 'safetyBtn.title' })} data={safetyData} isJustified={false} />
             </Grid>
             <Grid item style={{ margin }}>
               <DialogInfo title={intl.formatMessage({ id: 'ourClientsBtn.title' })} data={ourClientsData} isJustified={false} />
             </Grid>
-
           </Grid>
-
         </Grid>
       </Paper>
     </Element>

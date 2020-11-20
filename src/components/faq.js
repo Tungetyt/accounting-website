@@ -50,11 +50,11 @@ export default function Faq() {
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
             >
-              <Typography align="justify" className={text}>{intl.formatMessage({ id: `faqSection.${i}.${Object.keys(f)[0]}` })}</Typography>
+              <Typography className={text}>{intl.formatMessage({ id: `faqSection.${i}.${Object.keys(f)[0]}` })}</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                <Typography align="justify" className={text}>{intl.formatMessage({ id: `faqSection.${i}.${Object.keys(f)[1]}` })}</Typography>
+                <Typography className={text}>{intl.formatMessage({ id: `faqSection.${i}.${Object.keys(f)[1]}` })}</Typography>
               </Typography>
             </AccordionDetails>
           </Accordion>

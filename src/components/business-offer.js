@@ -66,7 +66,7 @@ export default function BusinessOffer() {
 
           </Grid>
           <Grid item>
-            <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.0` })}</Typography>
+            <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.0` })}</Typography>
           </Grid>
         </Grid>
         <IconButton
@@ -93,28 +93,28 @@ export default function BusinessOffer() {
             <Grid
               item
             >
-              <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.1` })}</Typography>
+              <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.1` })}</Typography>
               <ul>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.2` })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.2` })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.3` })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.3` })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.4` })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.4` })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.5` })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.5` })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.6` })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.6` })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.7` })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.7` })}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.8` })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.8` })}</Typography>
                 </li>
               </ul>
             </Grid>
@@ -132,11 +132,11 @@ export default function BusinessOffer() {
           >
             <Grid item>
               <div style={{ columnWidth: '600px' }}>
-                <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.10` })}</Typography>
-                <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.11` })}</Typography>
-                <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.12` })}</Typography>
-                <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.13` })}</Typography>
-                <Typography paragraph align="justify" className={text}>{ intl.formatMessage({ id: `${offerName}.14` })}</Typography>
+                <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.10` })}</Typography>
+                <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.11` })}</Typography>
+                <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.12` })}</Typography>
+                <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.13` })}</Typography>
+                <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.14` })}</Typography>
               </div>
             </Grid>
             <Grid item style={{ width: '300px' }}>
