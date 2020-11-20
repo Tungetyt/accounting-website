@@ -1,4 +1,4 @@
-import blue from '@material-ui/core/colors/blue';
+import blueGrey from '@material-ui/core/colors/blueGrey';
 
 export const LOCAL_STORAGE_KEY = {
   theme: 'theme-ui-color-mode',
@@ -10,13 +10,13 @@ export const THEME_NAMES = {
   dark: 'dark',
 };
 
-const color = blue;
+const color = blueGrey;
 
 const APP_THEME_EXTENDED = {
   overrides: {
     MUIDataTableBodyCell: {
       root: {
-        backgroundColor: color[500],
+        backgroundColor: color['400'],
       },
     },
   },

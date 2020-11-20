@@ -27,8 +27,8 @@ const Prices = () => {
   }));
   const { paper } = useStyles();
   const sectionName = 'pricesSection';
-  const color1 = isDark ? '#fff' : '#0073e6';
-  const color2 = isDark ? '#0073e6' : '#fff';
+  // const color1 = APP_THEME[isDark ? 'dark' : 'light'].palette.primary.main;
+  // const color2 = APP_THEME[isDark ? 'dark' : 'light'].palette.primary.main;
 
   return (
     <Element name={prices}>
@@ -56,9 +56,10 @@ const Prices = () => {
             {Array(2).fill(null).map((line, i) => (
               <Typography
                 key={i}
-                style={{
- marginLeft: '1%', marginRight: '1%', color: color1, textAlign: 'center', textShadow: `0 0 5px ${color1}, 0 0 10px ${color1}, 0 0 15px ${color2}, 0 0 20px ${color2}, 0 0 25px ${color2}, 0 0 30px ${color2}, 0 0 35px ${color2}`
-}}
+                color="primary"
+//                 style={{
+//  marginLeft: '1%', marginRight: '1%', textAlign: 'center', textShadow: `0 0 5px ${color1}, 0 0 10px ${color1}, 0 0 15px ${color2}, 0 0 20px ${color2}, 0 0 25px ${color2}, 0 0 30px ${color2}, 0 0 35px ${color2}`
+// }}
                 paragraph
               >
                 { intl.formatMessage({ id: `${sectionName}.specialOffer.${i}` })}
