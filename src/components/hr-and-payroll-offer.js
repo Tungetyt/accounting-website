@@ -110,11 +110,9 @@ export default function HrAndPayrollOffer() {
             spacing={2}
 
           >
-            <Grid item>
-              <div style={{ columnWidth: '600px' }}>
-                <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.more.${0}` })}</Typography>
-                <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.more.${1}` })}</Typography>
-              </div>
+            <Grid item style={{ width: '600px' }}>
+              <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.more.${0}` })}</Typography>
+              <Typography paragraph align="justify">{ intl.formatMessage({ id: `${offerName}.more.${1}` })}</Typography>
             </Grid>
             <Grid item style={{ width: '600px' }}>
               <Tilt>
