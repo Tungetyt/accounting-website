@@ -52,7 +52,7 @@ const IndexPage = (props) => {
       <ThemeProvider theme={chosenTheme}>
         <ColorContext.Provider value={[isDark, setIsDark]}>
           <CssBaseline />
-          <SEO title="BIURO RACHUNKOWE" description={DESCRIPTION} />
+          <SEO title="biuro rachunkowe" description={DESCRIPTION} />
           <Logo />
           <ResponsiveDrawer props={props} />
           <div id="top" />
