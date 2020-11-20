@@ -27,8 +27,12 @@ const Prices = () => {
   }));
   const { paper } = useStyles();
   const sectionName = 'pricesSection';
+  const color1 = isDark ? '#fff' : '#0073e6';
+  const color2 = isDark ? '#0073e6' : '#fff';
+
   return (
     <Element name={prices}>
+
       <Grid
         container
         direction="row"
@@ -43,9 +47,24 @@ const Prices = () => {
         </Grid>
         <Grid item>
           <Paper className={paper}>
+            <br />
+            <br />
+            {/* <div style={{
+ width: '20px', height: '20px', marginRight: '1rem', marginBottom: '1rem', borderRadius: '50%', backgroundColor: '#fff', boxShadow: '0 0 60px 30px #fff,  \n    0 0 100px 60px #f0f, \n    0 0 140px 90px #0ff'
+}}
+            /> */}
             {Array(2).fill(null).map((line, i) => (
-              <Typography key={i} paragraph>{ intl.formatMessage({ id: `${sectionName}.specialOffer.${i}` })}</Typography>
+              <Typography
+                key={i}
+                style={{
+ marginLeft: '1rem', color: color1, textAlign: 'center', textShadow: `0 0 5px ${color1}, 0 0 10px ${color1}, 0 0 15px ${color2}, 0 0 20px ${color2}, 0 0 25px ${color2}, 0 0 30px ${color2}, 0 0 35px ${color2}`
+}}
+                paragraph
+              >
+                { intl.formatMessage({ id: `${sectionName}.specialOffer.${i}` })}
+              </Typography>
             ))}
+            <br />
           </Paper>
         </Grid>
       </Grid>
