@@ -56,7 +56,7 @@ const Prices = () => {
             {Array(2).fill(null).map((line, i) => (
               <Typography
                 key={i}
-                color="primary"
+                color={isDark ? '#FFFFFFF' : '#000000'}
 //                 style={{
 //  marginLeft: '1%', marginRight: '1%', textAlign: 'center', textShadow: `0 0 5px ${color1}, 0 0 10px ${color1}, 0 0 15px ${color2}, 0 0 20px ${color2}, 0 0 25px ${color2}, 0 0 30px ${color2}, 0 0 35px ${color2}`
 // }}
