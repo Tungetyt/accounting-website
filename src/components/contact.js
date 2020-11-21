@@ -9,13 +9,21 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 import { Element } from 'react-scroll';
 import { ColorContext } from '../context/contexts';
 import { APP_THEME, NAVIGATION } from '../helpers';
 import ContactInfo from './contact-info';
+import styles from './dist/ImageZoom.module.css';
 import Image from './image';
 import OpenMap from './open-map';
 
+const tmp = styles;
+const wrapperStyle = {
+  width: '100%',
+  height: '100%'
+};
 const Contact = () => {
   const { contact } = NAVIGATION;
   const theme = useTheme();
@@ -58,7 +66,10 @@ const Contact = () => {
         >
           <Paper className={paper}>
             <Typography paragraph align="center">{ intl.formatMessage({ id: 'contactSection.ourOffice' })}</Typography>
-            <Image alt="our office" filename="6Ogrodowa64.jpg" />
+            <Zoom>
+
+              <Image style={wrapperStyle} alt="our office" filename="6Ogrodowa64.jpg" />
+            </Zoom>
           </Paper>
         </Grid>
         <Grid item>
