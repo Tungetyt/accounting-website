@@ -10,7 +10,6 @@ const LandingPage = () => {
   return (
     <Element name={home} id={home}>
       <Banner />
-      <Box style={{ marginBottom: '53px' }} />
     </Element>
   );
 };

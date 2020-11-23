@@ -76,7 +76,6 @@ const Banner = () => {
 
 const BannerWrapper = styled.section`
   .gatsby-image-wrapper {
-    height: 100vh;
     color: #fff;
     }
 
@@ -90,8 +89,8 @@ const BannerWrapper = styled.section`
       justify-content: center;
       margin-left: auto;
       margin-right: auto;
-      padding-top: 20vh;
-      padding-bottom: 20vh;
+      padding-top: 10rem;
+      padding-bottom: 10rem;
 
       @media (min-width: 768px) {
         max-width: 650px;

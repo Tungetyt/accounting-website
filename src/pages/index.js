@@ -58,6 +58,9 @@ const IndexPage = (props) => {
           <div id="top" />
           <main className={main}>
             <LandingPage />
+            <br />
+            <br />
+            <br />
             <TabPanel />
             <br />
             <br />
