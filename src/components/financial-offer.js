@@ -96,7 +96,7 @@ export default function FinancialOffer() {
               <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.2` })}</Typography>
               <ul>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.` })}</Typography>
+                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.3` })}</Typography>
                 </li>
                 <li>
                   <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.4` })}</Typography>
