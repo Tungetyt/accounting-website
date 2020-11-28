@@ -1,6 +1,4 @@
 {
-  "title": "Vavicom PL",
-  "description": "Kick off your next, great Gatsby project with this default-starter-intl. This barebones starter ships with the main Gatsby configuration files you might need.",
   "langBtn": "Change to English",
   "themeBtn": "Przełącz motyw na jasny/ciemny",
   "services": "USŁUGI",
@@ -29,7 +27,6 @@
     "financialServices": "USŁUGI FINANSOWE",
     "businessServices": "USŁUGI BIZNESOWE"
   },
-  "readMore": "CZYTAJ WIĘCEJ",
   "accounting": {
     "info": {
       "0": "Skomplikowane i dynamiczne zmiany prawa gospodarczego, w tym sprawozdawczości finansowej i podatkowej wymagają nieustannego śledzenia i prawidłowego interpretowania przepisów prawa.",
