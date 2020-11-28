@@ -92,6 +92,6 @@ module.exports = {
         linkStyles: true, // (default: true) Enable/disable loading stylesheets via CDN
       },
     },
-
+    'gatsby-plugin-netlify-cms',
   ],
 };
