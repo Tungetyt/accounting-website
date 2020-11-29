@@ -97,9 +97,6 @@ collections:
       - label: "hamburger"
         name: "hamburger"
         widget: "string"
-      - label: "hamburger"
-        name: "hamburger"
-        widget: "string"
       - label: "servicesSection"
         name: "servicesSection"
         widget: "object"
@@ -111,8 +108,8 @@ collections:
           - {label: "legalServices", name: "legalServices", widget: "string"}
           - {label: "financialServices", name: "financialServices", widget: "string"}
           - {label: "businessServices", name: "businessServices", widget: "string"}
-      - label: "servicesSection"
-        name: "servicesSection"
+      - label: "accounting"
+        name: "accounting"
         widget: "object"
         collapsed: false
         fields: 
@@ -439,17 +436,12 @@ collections:
           - {label: "15", name: "15", widget: "string"}
           - {label: "16", name: "16", widget: "string"}
           - {label: "17", name: "17", widget: "string"}
-      # - label: "faqSection"
-      #   name: "faqSection"
-      #   widget: "list"
-      #   field: 
-      #     - label: "qa"
-      #       name: "qa"
-      #       widget: "object"
-      #       collapsed: false
-      #       fields: 
-      #         - {label: "q", name: "q", widget: "string"}
-      #         - {label: "a", name: "a", widget: "string"}
+      - label: "faqSection"
+        name: "faqSection"
+        widget: "list"
+        fields: 
+          - {label: "q", name: "q", widget: "string"}
+          - {label: "a", name: "a", widget: "string"}
       - label: "contactSection"
         name: "contactSection"
         widget: "object"
