@@ -4,9 +4,9 @@ backend:
 media_folder: static/assets
 public_folder: /assets
 collections:
-  - name: cms_home
+  - name: home
     label: home
-    folder: home
+    folder: _cms/home
     create: true
     fields:
       - label: "titleNames"
@@ -17,9 +17,9 @@ collections:
       - label: "landingPageImage"
         name: "landingPageImage"
         widget: "image"
-  - name: cms_miscellaneous
+  - name: miscellaneous
     label: miscellaneous
-    folder: miscellaneous
+    folder: _cms/miscellaneous
     create: true
     fields:
       - label: "langBtn"
@@ -31,9 +31,9 @@ collections:
       - label: "backToTopBtn"
         name: "backToTopBtn"
         widget: "string"
-  - name: cms_navigation
+  - name: navigation
     label: navigation
-    folder: navigation
+    folder: _cms/navigation
     create: true
     fields:
       - label: "home"
