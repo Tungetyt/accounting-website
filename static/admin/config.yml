@@ -28,8 +28,8 @@ collections:
       - label: "themeBtn"
         name: "themeBtn"
         widget: "string"
-      - label: "themeBtn"
-        name: "themeBtn"
+      - label: "backToTopBtn"
+        name: "backToTopBtn"
         widget: "string"
   - name: cms_navigation
     label: navigation
