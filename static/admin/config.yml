@@ -7,7 +7,7 @@ collections:
   - name: vavicom
     label: vavicom
     folder: vavicom
-    create: true
+    create: false
     fields:
       - label: "landingPageImage"
         name: "landingPageImage"
@@ -125,6 +125,7 @@ collections:
       - label: "servicesSection"
         name: "servicesSection"
         widget: "object"
+        required: false
         collapsed: false
         fields: 
           - {label: "accounting", name: "accounting", widget: "text", required: false}
