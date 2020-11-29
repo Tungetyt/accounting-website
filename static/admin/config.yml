@@ -7,7 +7,7 @@ collections:
   - name: vavicom
     label: vavicom
     folder: vavicom
-    create: false
+    create: true
     fields:
       - label: "landingPageImage"
         name: "landingPageImage"
