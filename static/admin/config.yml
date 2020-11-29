@@ -12,10 +12,6 @@ collections:
       - label: "title"
         name: "title"
         widget: "string"
-      - label: "test"
-        name: "test"
-        widget: "string"
-        required: false
       - label: "landingPageImage"
         name: "landingPageImage"
         widget: "image"
