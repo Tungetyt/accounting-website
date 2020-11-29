@@ -439,17 +439,17 @@ collections:
           - {label: "15", name: "15", widget: "string"}
           - {label: "16", name: "16", widget: "string"}
           - {label: "17", name: "17", widget: "string"}
-      - label: "faqSection"
-        name: "faqSection"
-        widget: "list"
-        field: 
-          - label: "qa"
-            name: "qa"
-            widget: "object"
-            collapsed: false
-            fields: 
-              - {label: "q", name: "q", widget: "string"}
-              - {label: "a", name: "a", widget: "string"}
+      # - label: "faqSection"
+      #   name: "faqSection"
+      #   widget: "list"
+      #   field: 
+      #     - label: "qa"
+      #       name: "qa"
+      #       widget: "object"
+      #       collapsed: false
+      #       fields: 
+      #         - {label: "q", name: "q", widget: "string"}
+      #         - {label: "a", name: "a", widget: "string"}
       - label: "contactSection"
         name: "contactSection"
         widget: "object"
