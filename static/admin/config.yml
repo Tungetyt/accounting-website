@@ -14,43 +14,43 @@ collections:
         widget: "list"
         field: { label: name, name: name, widget: string }
       - { label: place, name: place, widget: string }
-      - { label: "landingPageImage"
+      -  label: "landingPageImage"
             name: "landingPageImage"
-            widget: "image" }
+            widget: "image"
   - name: miscellaneous
       label: miscellaneous
       folder: miscellaneous
       create: true
       fields:
-        - { label: "langBtn"
+        -  label: "langBtn"
               name: "langBtn"
-              widget: "string" }
-        - { label: "themeBtn"
+              widget: "string"
+        -  label: "themeBtn"
               name: "themeBtn"
-              widget: "string" }
-        - { label: "themeBtn"
+              widget: "string"
+        -  label: "themeBtn"
               name: "themeBtn"
-              widget: "string" }
+              widget: "string"
   - name: navigation
       label: navigation
       folder: navigation
       create: true
       fields:
-        - { label: "home"
+        -  label: "home"
               name: "home"
-              widget: "string" }
-        - { label: "services"
+              widget: "string"
+        -  label: "services"
               name: "services"
-              widget: "string" }
-        - { label: "prices"
+              widget: "string"
+        -  label: "prices"
               name: "prices"
-              widget: "string" }
-        - { label: "about"
+              widget: "string"
+        -  label: "about"
               name: "about"
-              widget: "string" }
-        - { label: "faq"
+              widget: "string"
+        -  label: "faq"
               name: "faq"
-              widget: "string" }
-        - { label: "contact"
+              widget: "string"
+        -  label: "contact"
               name: "contact"
-              widget: "string" }
+              widget: "string"
