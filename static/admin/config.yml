@@ -9,6 +9,9 @@ collections:
     folder: vavicom
     create: false
     fields:
+      - label: "title"
+        name: "title"
+        widget: "string"
       - label: "landingPageImage"
         name: "landingPageImage"
         widget: "image"
@@ -69,46 +72,46 @@ collections:
         name: "landing"
         widget: "list"
         required: false
-        field: {label: "titlePart", name: "titlePart", widget: "text", required: false}
+        field: {label: "titlePart", name: "titlePart", widget: "string", required: false}
       - label: "address"
         name: "address"
-        widget: "text"
+        widget: "string"
         required: false
       - label: "langBtn"
         name: "langBtn"
-        widget: "text"
+        widget: "string"
         required: false
       - label: "themeBtn"
         name: "themeBtn"
-        widget: "text"
+        widget: "string"
         required: false
       - label: "backToTopBtn"
         name: "backToTopBtn"
-        widget: "text"
+        widget: "string"
         required: false
       - label: "home"
         name: "home"
-        widget: "text"
+        widget: "string"
         required: false
       - label: "services"
         name: "services"
-        widget: "text"
+        widget: "string"
         required: false
       - label: "prices"
         name: "prices"
-        widget: "text"
+        widget: "string"
         required: false
       - label: "about"
         name: "about"
-        widget: "text"
+        widget: "string"
         required: false
       - label: "faq"
         name: "faq"
-        widget: "text"
+        widget: "string"
         required: false
       - label: "contact"
         name: "contact"
-        widget: "text"
+        widget: "string"
         required: false
       - label: "notfound"
         name: "notfound"
@@ -121,7 +124,7 @@ collections:
           - {label: "goback", name: "goback", widget: "text", required: false}
       - label: "hamburger"
         name: "hamburger"
-        widget: "text"
+        widget: "string"
       - label: "servicesSection"
         name: "servicesSection"
         widget: "object"
@@ -293,12 +296,12 @@ collections:
         widget: "object"
         collapsed: false
         fields: 
-          - {label: "name", name: "name", widget: "text", required: false}
-          - {label: "street", name: "street", widget: "text", required: false}
-          - {label: "street2", name: "street2", widget: "text", required: false}
-          - {label: "town", name: "town", widget: "text", required: false}
-          - {label: "town2", name: "town2", widget: "text", required: false}
-          - {label: "phone", name: "phone", widget: "text", required: false}
-          - {label: "email", name: "email", widget: "text", required: false}
-          - {label: "ourOffice", name: "ourOffice", widget: "text", required: false}
-          - {label: "whereAreWe", name: "whereAreWe", widget: "text", required: false}
+          - {label: "name", name: "name", widget: "string", required: false}
+          - {label: "street", name: "street", widget: "string", required: false}
+          - {label: "street2", name: "street2", widget: "string", required: false}
+          - {label: "town", name: "town", widget: "string", required: false}
+          - {label: "town2", name: "town2", widget: "string", required: false}
+          - {label: "phone", name: "phone", widget: "string", required: false}
+          - {label: "email", name: "email", widget: "string", required: false}
+          - {label: "ourOffice", name: "ourOffice", widget: "string", required: false}
+          - {label: "whereAreWe", name: "whereAreWe", widget: "string", required: false}
