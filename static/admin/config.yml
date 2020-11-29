@@ -4,24 +4,61 @@ backend:
 media_folder: static/assets
 public_folder: /assets
 collections:
-  - name: home
-    label: home
-    folder: _cms/home
-    create: true
+  - name: vavicom
+    label: vavicom
+    folder: vavicom
+    create: false
     fields:
-      - label: "titleNames"
-        name: "titleNames"
-        widget: "list"
-        field: { label: name, name: name, widget: string }
-      - { label: place, name: place, widget: string }
       - label: "landingPageImage"
         name: "landingPageImage"
         widget: "image"
-  - name: miscellaneous
-    label: miscellaneous
-    folder: _cms/miscellaneous
-    create: true
-    fields:
+      - label: "AccountingImage"
+        name: "AccountingImage"
+        widget: "image"
+      - label: "Accounting2Image"
+        name: "Accounting2Image"
+        widget: "image"
+      - label: "hrImage"
+        name: "hrImage"
+        widget: "image"
+      - label: "hr2Image"
+        name: "hr2Image"
+        widget: "image"
+      - label: "taxesImage"
+        name: "taxesImage"
+        widget: "image"
+      - label: "taxes2Image"
+        name: "taxes2Image"
+        widget: "image"
+      - label: "legalImage"
+        name: "legalImage"
+        widget: "image"
+      - label: "legal2Image"
+        name: "legal2Image"
+        widget: "image"
+      - label: "financeImage"
+        name: "financeImage"
+        widget: "image"
+      - label: "finance2Image"
+        name: "finance2Image"
+        widget: "image"
+      - label: "businessImage"
+        name: "businessImage"
+        widget: "image"
+      - label: "business2Image"
+        name: "business2Image"
+        widget: "image"
+      - label: "officeImage"
+        name: "officeImage"
+        widget: "image"  
+      - label: "landing"
+        name: "landing"
+        widget: "object"
+        collapsed: false
+        fields: 
+          - {label: "first", name: "first", widget: "string"}
+          - {label: "second", name: "second", widget: "string"}
+          - {label: "address", name: "address", widget: "string"}
       - label: "langBtn"
         name: "langBtn"
         widget: "string"
@@ -31,11 +68,6 @@ collections:
       - label: "backToTopBtn"
         name: "backToTopBtn"
         widget: "string"
-  - name: navigation
-    label: navigation
-    folder: _cms/navigation
-    create: true
-    fields:
       - label: "home"
         name: "home"
         widget: "string"
@@ -54,3 +86,381 @@ collections:
       - label: "contact"
         name: "contact"
         widget: "string"
+      - label: "notfound"
+        name: "notfound"
+        widget: "object"
+        collapsed: false
+        fields: 
+          - {label: "header", name: "header", widget: "string"}
+          - {label: "description", name: "description", widget: "string"}
+          - {label: "goback", name: "goback", widget: "string"}
+      - label: "hamburger"
+        name: "hamburger"
+        widget: "string"
+      - label: "hamburger"
+        name: "hamburger"
+        widget: "string"
+      - label: "servicesSection"
+        name: "servicesSection"
+        widget: "object"
+        collapsed: false
+        fields: 
+          - {label: "accounting", name: "accounting", widget: "string"}
+          - {label: "hrAndPayroll", name: "hrAndPayroll", widget: "string"}
+          - {label: "taxServices", name: "taxServices", widget: "string"}
+          - {label: "legalServices", name: "legalServices", widget: "string"}
+          - {label: "financialServices", name: "financialServices", widget: "string"}
+          - {label: "businessServices", name: "businessServices", widget: "string"}
+      - label: "servicesSection"
+        name: "servicesSection"
+        widget: "object"
+        collapsed: false
+        fields: 
+          - label: "info"
+            name: "info"
+            widget: "object"
+            collapsed: false
+            fields: 
+              - {label: "0", name: "0", widget: "string"}
+              - {label: "1", name: "1", widget: "string"}
+              - {label: "2", name: "2", widget: "string"}
+          - label: "services"
+            name: "services"
+            widget: "object"
+            collapsed: false
+            fields: 
+              - {label: "0", name: "0", widget: "string"}
+              - {label: "1", name: "1", widget: "string"}
+              - {label: "2", name: "2", widget: "string"}
+              - {label: "3", name: "3", widget: "string"}
+              - {label: "4", name: "4", widget: "string"}
+              - {label: "5", name: "5", widget: "string"}
+              - {label: "6", name: "6", widget: "string"}
+              - {label: "7", name: "7", widget: "string"}
+              - {label: "8", name: "8", widget: "string"}
+              - {label: "9", name: "9", widget: "string"}
+              - label: "more"
+                name: "more"
+                widget: "object"
+                collapsed: false
+                fields: 
+                  - {label: "0", name: "0", widget: "string"}
+                  - {label: "1", name: "1", widget: "string"}
+                  - {label: "2", name: "2", widget: "string"}
+                  - label: "3"
+                    name: "3"
+                    widget: "object"
+                    collapsed: false
+                    fields: 
+                      - {label: "0", name: "0", widget: "string"}
+                      - {label: "1", name: "1", widget: "string"}
+                      - {label: "2", name: "2", widget: "string"}
+      - label: "hrAndPayroll"
+        name: "hrAndPayroll"
+        widget: "object"
+        collapsed: false
+        fields: 
+          - label: "info"
+            name: "info"
+            widget: "object"
+            collapsed: false
+            fields: 
+              - {label: "0", name: "0", widget: "string"}
+              - {label: "1", name: "1", widget: "string"}
+              - {label: "2", name: "2", widget: "string"}
+              - {label: "3", name: "3", widget: "string"}
+          - label: "services"
+            name: "services"
+            widget: "object"
+            collapsed: false
+            fields: 
+              - {label: "0", name: "0", widget: "string"}
+              - {label: "1", name: "1", widget: "string"}
+              - {label: "2", name: "2", widget: "string"}
+              - {label: "3", name: "3", widget: "string"}
+              - {label: "4", name: "4", widget: "string"}
+              - {label: "5", name: "5", widget: "string"}
+              - {label: "6", name: "6", widget: "string"}
+              - {label: "7", name: "7", widget: "string"}
+              - {label: "8", name: "8", widget: "string"}
+              - {label: "9", name: "9", widget: "string"}
+              - {label: "10", name: "10", widget: "string"}
+              - {label: "11", name: "11", widget: "string"}
+          - label: "more"
+            name: "more"
+            widget: "object"
+            collapsed: false
+            fields: 
+              - {label: "0", name: "0", widget: "string"}
+              - {label: "1", name: "1", widget: "string"}
+              - {label: "2", name: "2", widget: "string"}
+              - label: "3"
+                name: "3"
+                widget: "object"
+                collapsed: false
+                fields: 
+                  - {label: "0", name: "0", widget: "string"}
+                  - {label: "1", name: "1", widget: "string"}
+      - label: "taxServices"
+        name: "taxServices"
+        widget: "object"
+        collapsed: false
+        fields: 
+          - label: "info"
+            name: "info"
+            widget: "object"
+            collapsed: false
+            fields: 
+              - {label: "0", name: "0", widget: "string"}
+              - {label: "1", name: "1", widget: "string"}
+          - label: "info1"
+            name: "info1"
+            widget: "object"
+            collapsed: false
+            fields: 
+              - {label: "0", name: "0", widget: "string"}
+              - {label: "1", name: "1", widget: "string"}
+              - {label: "2", name: "2", widget: "string"}
+              - {label: "3", name: "3", widget: "string"}
+              - {label: "4", name: "4", widget: "string"}
+          - label: "services"
+            name: "services"
+            widget: "object"
+            collapsed: false
+            fields: 
+              - {label: "0", name: "0", widget: "string"}
+              - {label: "1", name: "1", widget: "string"}
+              - {label: "2", name: "2", widget: "string"}
+              - {label: "3", name: "3", widget: "string"}
+              - {label: "4", name: "4", widget: "string"}
+              - {label: "5", name: "5", widget: "string"}
+              - {label: "6", name: "6", widget: "string"}
+          - label: "more"
+            name: "more"
+            widget: "object"
+            collapsed: false
+            fields: 
+              - {label: "0", name: "0", widget: "string"}
+      - label: "legalServices"
+        name: "legalServices"
+        widget: "object"
+        collapsed: false
+        fields: 
+          - {label: "0", name: "0", widget: "string"}
+          - {label: "1", name: "1", widget: "string"}
+          - {label: "2", name: "2", widget: "string"}
+          - {label: "3", name: "3", widget: "string"}
+          - {label: "4", name: "4", widget: "string"}
+          - {label: "5", name: "5", widget: "string"}
+          - {label: "6", name: "6", widget: "string"}
+          - {label: "7", name: "7", widget: "string"}
+          - {label: "8", name: "8", widget: "string"}
+          - {label: "9", name: "9", widget: "string"}
+          - {label: "10", name: "10", widget: "string"}
+          - {label: "11", name: "11", widget: "string"}
+          - {label: "12", name: "12", widget: "string"}
+          - {label: "13", name: "13", widget: "string"}
+          - {label: "14", name: "14", widget: "string"}
+      - label: "financialServices"
+        name: "financialServices"
+        widget: "object"
+        collapsed: false
+        fields: 
+          - {label: "0", name: "0", widget: "string"}
+          - {label: "1", name: "1", widget: "string"}
+          - {label: "2", name: "2", widget: "string"}
+          - {label: "3", name: "3", widget: "string"}
+          - {label: "4", name: "4", widget: "string"}
+          - {label: "5", name: "5", widget: "string"}
+          - {label: "6", name: "6", widget: "string"}
+          - {label: "7", name: "7", widget: "string"}
+          - {label: "8", name: "8", widget: "string"}
+          - {label: "9", name: "9", widget: "string"}
+          - {label: "10", name: "10", widget: "string"}
+          - {label: "11", name: "11", widget: "string"}
+          - {label: "12", name: "12", widget: "string"}
+      - label: "businessServices"
+        name: "businessServices"
+        widget: "object"
+        collapsed: false
+        fields: 
+          - {label: "0", name: "0", widget: "string"}
+          - {label: "1", name: "1", widget: "string"}
+          - {label: "2", name: "2", widget: "string"}
+          - {label: "3", name: "3", widget: "string"}
+          - {label: "4", name: "4", widget: "string"}
+          - {label: "5", name: "5", widget: "string"}
+          - {label: "6", name: "6", widget: "string"}
+          - {label: "7", name: "7", widget: "string"}
+          - {label: "8", name: "8", widget: "string"}
+          - {label: "9", name: "9", widget: "string"}
+          - {label: "10", name: "10", widget: "string"}
+          - {label: "11", name: "11", widget: "string"}
+          - {label: "12", name: "12", widget: "string"}
+          - {label: "13", name: "13", widget: "string"}
+          - {label: "14", name: "14", widget: "string"}
+      - label: "pricesSection"
+        name: "pricesSection"
+        widget: "object"
+        collapsed: false
+        fields: 
+          - label: "offers"
+            name: "offers"
+            widget: "list"
+            field: {label: offer, name: offer, widget: string}
+          - label: "prices"
+            name: "prices"
+            widget: "list"
+            field: {label: price, name: price, widget: string}
+          - label: "specialOffer"
+            name: "specialOffer"
+            widget: "list"
+            field: {label: offer, name: offer, widget: string}
+          - label: "dataTable"
+            name: "dataTable"
+            widget: "list"
+            field: {label: offer, name: offer, widget: string}
+      - label: "aboutBtn"
+        name: "aboutBtn"
+        widget: "object"
+        collapsed: false
+        fields: 
+          - {label: "title", name: "title", widget: "string"}
+          - {label: "0", name: "0", widget: "string"}
+          - {label: "1", name: "1", widget: "string"}
+          - {label: "2", name: "2", widget: "string"}
+          - {label: "3", name: "3", widget: "string"}
+          - {label: "4", name: "4", widget: "string"}
+          - {label: "5", name: "5", widget: "string"}
+          - {label: "6", name: "6", widget: "string"}
+          - {label: "7", name: "7", widget: "string"}
+          - {label: "8", name: "8", widget: "string"}
+          - {label: "9", name: "9", widget: "string"}
+          - {label: "10", name: "10", widget: "string"}
+          - {label: "11", name: "11", widget: "string"}
+          - {label: "12", name: "12", widget: "string"}
+          - {label: "13", name: "13", widget: "string"}
+          - {label: "14", name: "14", widget: "string"}
+          - {label: "15", name: "15", widget: "string"}
+          - {label: "16", name: "16", widget: "string"}
+          - {label: "17", name: "17", widget: "string"}
+          - {label: "18", name: "18", widget: "string"}
+      - label: "clientValueBtn"
+        name: "clientValueBtn"
+        widget: "object"
+        collapsed: false
+        fields: 
+          - {label: "title", name: "title", widget: "string"}
+          - {label: "0", name: "0", widget: "string"}
+          - {label: "1", name: "1", widget: "string"}
+          - {label: "2", name: "2", widget: "string"}
+          - {label: "3", name: "3", widget: "string"}
+          - {label: "4", name: "4", widget: "string"}
+          - {label: "5", name: "5", widget: "string"}
+          - {label: "6", name: "6", widget: "string"}
+          - {label: "7", name: "7", widget: "string"}
+          - {label: "8", name: "8", widget: "string"}
+          - {label: "9", name: "9", widget: "string"}
+          - {label: "10", name: "10", widget: "string"}
+          - {label: "11", name: "11", widget: "string"}
+          - {label: "12", name: "12", widget: "string"}
+      - label: "whyCooperateBtn"
+        name: "whyCooperateBtn"
+        widget: "object"
+        collapsed: false
+        fields: 
+          - {label: "title", name: "title", widget: "string"}
+          - {label: "0", name: "0", widget: "string"}
+          - {label: "1", name: "1", widget: "string"}
+          - {label: "2", name: "2", widget: "string"}
+          - {label: "3", name: "3", widget: "string"}
+          - {label: "4", name: "4", widget: "string"}
+          - {label: "5", name: "5", widget: "string"}
+      - label: "whatDifferBtn"
+        name: "whatDifferBtn"
+        widget: "object"
+        collapsed: false
+        fields: 
+          - {label: "title", name: "title", widget: "string"}
+          - {label: "0", name: "0", widget: "string"}
+          - {label: "1", name: "1", widget: "string"}
+          - {label: "2", name: "2", widget: "string"}
+          - {label: "3", name: "3", widget: "string"}
+          - {label: "4", name: "4", widget: "string"}
+      - label: "getToKnowUsBtn"
+        name: "getToKnowUsBtn"
+        widget: "object"
+        collapsed: false
+        fields: 
+          - {label: "title", name: "title", widget: "string"}
+          - {label: "0", name: "0", widget: "string"}
+          - {label: "1", name: "1", widget: "string"}
+          - {label: "2", name: "2", widget: "string"}
+      - label: "workTogetherBtn"
+        name: "workTogetherBtn"
+        widget: "object"
+        collapsed: false
+        fields: 
+          - {label: "title", name: "title", widget: "string"}
+          - {label: "0", name: "0", widget: "string"}
+          - {label: "1", name: "1", widget: "string"}
+          - {label: "2", name: "2", widget: "string"}
+      - label: "safetyBtn"
+        name: "safetyBtn"
+        widget: "object"
+        collapsed: false
+        fields: 
+          - {label: "title", name: "title", widget: "string"}
+          - {label: "0", name: "0", widget: "string"}
+          - {label: "1", name: "1", widget: "string"}
+          - {label: "2", name: "2", widget: "string"}
+          - {label: "3", name: "3", widget: "string"}
+      - label: "ourClientsBtn"
+        name: "ourClientsBtn"
+        widget: "object"
+        collapsed: false
+        fields: 
+          - {label: "title", name: "title", widget: "string"}
+          - {label: "0", name: "0", widget: "string"}
+          - {label: "1", name: "1", widget: "string"}
+          - {label: "2", name: "2", widget: "string"}
+          - {label: "3", name: "3", widget: "string"}
+          - {label: "4", name: "4", widget: "string"}
+          - {label: "5", name: "5", widget: "string"}
+          - {label: "6", name: "6", widget: "string"}
+          - {label: "7", name: "7", widget: "string"}
+          - {label: "8", name: "8", widget: "string"}
+          - {label: "9", name: "9", widget: "string"}
+          - {label: "10", name: "10", widget: "string"}
+          - {label: "11", name: "11", widget: "string"}
+          - {label: "12", name: "12", widget: "string"}
+          - {label: "13", name: "13", widget: "string"}
+          - {label: "14", name: "14", widget: "string"}
+          - {label: "15", name: "15", widget: "string"}
+          - {label: "16", name: "16", widget: "string"}
+          - {label: "17", name: "17", widget: "string"}
+      - label: "faqSection"
+        name: "faqSection"
+        widget: "list"
+        field: 
+          - label: "qa"
+            name: "qa"
+            widget: "object"
+            collapsed: false
+            fields: 
+              - {label: "q", name: "q", widget: "string"}
+              - {label: "a", name: "a", widget: "string"}
+      - label: "contactSection"
+        name: "contactSection"
+        widget: "object"
+        collapsed: false
+        fields: 
+          - {label: "name", name: "name", widget: "string"}
+          - {label: "street", name: "street", widget: "string"}
+          - {label: "street2", name: "street2", widget: "string"}
+          - {label: "town", name: "town", widget: "string"}
+          - {label: "town2", name: "town2", widget: "string"}
+          - {label: "phone", name: "phone", widget: "string"}
+          - {label: "email", name: "email", widget: "string"}
+          - {label: "ourOffice", name: "ourOffice", widget: "string"}
+          - {label: "whereAreWe", name: "whereAreWe", widget: "string"}
