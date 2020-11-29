@@ -125,6 +125,7 @@ collections:
       - label: "hamburger"
         name: "hamburger"
         widget: "string"
+        required: false
       - label: "servicesSection"
         name: "servicesSection"
         widget: "object"
