@@ -56,9 +56,12 @@ collections:
         widget: "object"
         collapsed: false
         fields: 
-          - {label: "first", name: "first", widget: "string"}
-          - {label: "second", name: "second", widget: "string"}
-          - {label: "address", name: "address", widget: "string"}
+          - {label: "0", name: "0", widget: "string"}
+          - {label: "1", name: "1", widget: "string"}
+          - {label: "2", name: "2", widget: "string"}
+      - label: "address"
+        name: "address"
+        widget: "string"
       - label: "langBtn"
         name: "langBtn"
         widget: "string"
