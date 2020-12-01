@@ -9,20 +9,30 @@ import styled from 'styled-components';
 import { ColorContext } from '../context/contexts';
 import { COMPANY } from '../helpers';
 
-const Banner = ({ data }) => {
-  // const data = useStaticQuery(graphql`
-  //   query {
-  //     file(relativePath: { eq: "banner.jpg" }) {
-  //       childImageSharp {
-  //         fluid(maxWidth: 2000, quality: 100) {
-  //           ...GatsbyImageSharpFluid_withWebp
-  //         }
-  //       }
-  //     }
-  //   }
-  // `);
+const Banner = () => {
+  const data = useStaticQuery(graphql`
+  query {
+    allMarkdownRemark{
+      edges {
+        node {
+          frontmatter {
+            title
+            landingPageImage {
+              childImageSharp {
+                fluid(maxWidth: 120, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  `);
   const post = data.markdownRemark;
-  const featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid;
+  console.log('data', data);
+  // const featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid;
   const [isDark] = useContext(ColorContext);
 
   const useStyles = makeStyles(() => ({
@@ -38,7 +48,7 @@ const Banner = ({ data }) => {
   return (
     <Paper elevation={24} className={opaqueColor}>
       <BannerWrapper>
-        <BackgroundImage
+        {/* <BackgroundImage
           Tag="section"
           className="hero-image"
           fluid={featuredImgFluid}
@@ -66,27 +76,11 @@ const Banner = ({ data }) => {
               </Typography>
             </Paper>
           </div>
-        </BackgroundImage>
+        </BackgroundImage> */}
       </BannerWrapper>
     </Paper>
   );
 };
-
-export const query = graphql`
-  query PostQuery() {
-    markdownRemark {
-      frontmatter {
-        landingPageImage {
-          childImageSharp {
-            fluid(maxWidth: 800) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`;
 
 const BannerWrapper = styled.section`
   .gatsby-image-wrapper {

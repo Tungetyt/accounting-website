@@ -18,6 +18,5 @@ landing:
   - BIURO
   - RACHUNKOWE
   - VAVICOM
-address: JÓZEFOSŁAW WARSZAWA PIASECZNO
 hamburger: TEST
 ---

@@ -9,15 +9,15 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'vavicom',
-        path: `${__dirname}/vavicom`,
+        name: 'assets',
+        path: `${__dirname}/static/assets`,
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'assets',
-        path: `${__dirname}/static/assets`,
+        name: 'vavicom',
+        path: `${__dirname}/vavicom`,
       },
     },
     'gatsby-plugin-sharp',

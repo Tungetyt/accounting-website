@@ -9,10 +9,10 @@ local_backend: true
 media_folder: static/assets
 public_folder: /assets
 collections:
-  - name: vavicom
-    label: vavicom
-    folder: vavicom
-    create: false
+  - name: images
+    label: images
+    folder: images
+    create: true
     fields:
       - label: "title"
         name: "title"
@@ -73,6 +73,14 @@ collections:
         name: "officeImage"
         widget: "image"
         required: false  
+  - name: vavicom
+    label: vavicom
+    folder: vavicom
+    create: true
+    fields:
+      - label: "title"
+        name: "title"
+        widget: "string"  
       - label: "landing"
         name: "landing"
         widget: "list"
