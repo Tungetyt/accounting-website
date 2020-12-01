@@ -19,7 +19,7 @@ import styles from './dist/ImageZoom.module.css';
 import Image from './image';
 import OpenMap from './open-map';
 
-const tmp = styles;
+// const tmp = styles;
 const wrapperStyle = {
   width: '100%',
   height: '100%'
@@ -68,7 +68,7 @@ const Contact = () => {
             <Typography paragraph align="center">{ intl.formatMessage({ id: 'contactSection.ourOffice' })}</Typography>
             <Zoom>
 
-              <Image style={wrapperStyle} alt="our office" filename="6Ogrodowa64.jpg" />
+              <Image style={wrapperStyle} alt="our office" filename="6ogrodowa64.jpg" />
             </Zoom>
           </Paper>
         </Grid>

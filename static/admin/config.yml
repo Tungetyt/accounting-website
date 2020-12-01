@@ -1,13 +1,18 @@
 backend:
-  name: github
-  repo: Tungetyt/accounting-website
+  # name: github
+  # repo: Tungetyt/accounting-website
+  name: git-gateway
+
+# when using the default proxy server port, npx netlify-cms-proxy-server
+local_backend: true
+
 media_folder: static/assets
 public_folder: /assets
 collections:
   - name: vavicom
     label: vavicom
     folder: vavicom
-    create: true
+    create: false
     fields:
       - label: "title"
         name: "title"

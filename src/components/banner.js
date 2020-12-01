@@ -9,18 +9,20 @@ import styled from 'styled-components';
 import { ColorContext } from '../context/contexts';
 import { COMPANY } from '../helpers';
 
-const Banner = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "banner.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 2000, quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `);
+const Banner = ({ data }) => {
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     file(relativePath: { eq: "banner.jpg" }) {
+  //       childImageSharp {
+  //         fluid(maxWidth: 2000, quality: 100) {
+  //           ...GatsbyImageSharpFluid_withWebp
+  //         }
+  //       }
+  //     }
+  //   }
+  // `);
+  const post = data.markdownRemark;
+  const featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid;
   const [isDark] = useContext(ColorContext);
 
   const useStyles = makeStyles(() => ({
@@ -39,7 +41,7 @@ const Banner = () => {
         <BackgroundImage
           Tag="section"
           className="hero-image"
-          fluid={data.file.childImageSharp.fluid}
+          fluid={featuredImgFluid}
           style={{ paddingBottom: '5rem' }}
         >
           <div className="hero-content">
@@ -51,10 +53,8 @@ const Banner = () => {
                 <br />
                 {COMPANY.replace(/\s/g, '')}
               </Typography>
-
             </Paper>
             <Paper elevation={0} className={opaqueColor}>
-
               <Typography
                 variant="h2"
                 color="primary"
@@ -63,9 +63,7 @@ const Banner = () => {
                 }}
               >
                 {intl.formatMessage({ id: 'landing.address' })}
-
               </Typography>
-
             </Paper>
           </div>
         </BackgroundImage>
@@ -73,6 +71,24 @@ const Banner = () => {
     </Paper>
   );
 };
+
+export const query = graphql`
+  query PostQuery($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        title
+        landingPageImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
 const BannerWrapper = styled.section`
   .gatsby-image-wrapper {

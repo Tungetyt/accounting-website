@@ -20,7 +20,14 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/vavicom`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/static/assets`,
       },
     },
     {
@@ -41,7 +48,7 @@ module.exports = {
         background_color: '#5c6bc0',
         theme_color: '#5c6bc0',
         display: 'minimal-ui',
-        icon: 'src/images/logo.svg', // This path is relative to the root of the site.
+        icon: 'src/images/logo.png', // This path is relative to the root of the site.
       },
     },
     {
@@ -93,5 +100,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-netlify-cms',
+    'gatsby-transformer-remark',
   ],
 };

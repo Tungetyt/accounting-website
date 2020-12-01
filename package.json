@@ -35,6 +35,7 @@
     "gatsby-plugin-sitemap": "^2.7.0",
     "gatsby-plugin-styled-components": "^3.3.14",
     "gatsby-source-filesystem": "^2.4.0",
+    "gatsby-transformer-remark": "^2.11.1",
     "gatsby-transformer-sharp": "^2.5.21",
     "leaflet": "^1.7.1",
     "mui-datatables": "^3.7.1",
