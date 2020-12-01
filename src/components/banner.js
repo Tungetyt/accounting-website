@@ -73,11 +73,9 @@ const Banner = ({ data }) => {
 };
 
 export const query = graphql`
-  query PostQuery($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+  query PostQuery() {
+    markdownRemark {
       frontmatter {
-        title
         landingPageImage {
           childImageSharp {
             fluid(maxWidth: 800) {
