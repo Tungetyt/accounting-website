@@ -11,30 +11,43 @@ import { COMPANY } from '../helpers';
 
 const Banner = () => {
   const data = useStaticQuery(graphql`
-  query {
-    allMarkdownRemark{
-      edges {
-        node {
-          frontmatter {
-            title
-            landingPageImage {
-              childImageSharp {
-                fluid(maxWidth: 120, quality: 100) {
-                  ...GatsbyImageSharpFluid
+    query {
+      allMarkdownRemark{
+        edges {
+          node {
+            frontmatter {
+              landingPageImage {
+                childImageSharp {
+                  fluid(quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
                 }
               }
             }
           }
         }
       }
+      allMarkdownRemark{
+        edges {
+          node {
+            frontmatter {
+              landing
+              address
+              langBtn
+            }
+          }
+        }
+      }
     }
-  }
   `);
-  const post = data.markdownRemark;
-  console.log('data', data);
-  // const featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid;
-  const [isDark] = useContext(ColorContext);
 
+  const allMarkdownRemark = data?.allMarkdownRemark;
+  const { address, landing } = allMarkdownRemark
+    ?.edges[1]
+    ?.node
+    ?.frontmatter;
+
+  const [isDark] = useContext(ColorContext);
   const useStyles = makeStyles(() => ({
     opaqueColor: {
       backgroundColor: isDark ? 'rgba(38, 50, 56, 0.8)' : 'rgba(236, 239, 241, 0.8)',
@@ -48,21 +61,24 @@ const Banner = () => {
   return (
     <Paper elevation={24} className={opaqueColor}>
       <BannerWrapper>
-        {/* <BackgroundImage
+        <BackgroundImage
           Tag="section"
           className="hero-image"
-          fluid={featuredImgFluid}
+          fluid={allMarkdownRemark
+            ?.edges[0]
+            ?.node
+            ?.frontmatter
+            ?.landingPageImage
+            ?.childImageSharp
+            ?.fluid}
           style={{ paddingBottom: '5rem' }}
         >
           <div className="hero-content">
             <Paper elevation={0} className={opaqueColor} style={{ marginBottom: '2rem' }}>
-              <Typography variant="h1" color="primary" style={{ lineHeight: '90%', userSelect: 'none' }}>
-                {intl.formatMessage({ id: 'landing.first' })}
-                <br />
-                {intl.formatMessage({ id: 'landing.second' })}
-                <br />
-                {COMPANY.replace(/\s/g, '')}
-              </Typography>
+
+              {landing.map((line, i) => (
+                <Typography key={i} variant="h1" color="primary" style={{ lineHeight: '90%', userSelect: 'none' }}>{line}</Typography>
+              ))}
             </Paper>
             <Paper elevation={0} className={opaqueColor}>
               <Typography
@@ -72,11 +88,11 @@ const Banner = () => {
                   lineHeight: '90%', userSelect: 'none', textDecoration: 'underline', fontSize: '1.5rem',
                 }}
               >
-                {intl.formatMessage({ id: 'landing.address' })}
+                {address}
               </Typography>
             </Paper>
           </div>
-        </BackgroundImage> */}
+        </BackgroundImage>
       </BannerWrapper>
     </Paper>
   );

@@ -85,6 +85,7 @@ collections:
         name: "landing"
         widget: "list"
         required: false
+        collapsed: false
         field: {label: "titlePart", name: "titlePart", widget: "string", required: false}
       - label: "address"
         name: "address"
@@ -159,6 +160,7 @@ collections:
           - label: "info"
             name: "info"
             widget: "list"
+            collapsed: false
             field: {label: "infoPart", name: "infoPart", widget: "text", required: false}
           - label: "services"
             name: "services"
@@ -168,6 +170,7 @@ collections:
               - label: "intro"
                 name: "intro"
                 widget: "list"
+                collapsed: false
                 field: {label: "introPart", name: "introPart", widget: "text", required: false}
               - label: "more"
                 name: "more"
@@ -177,10 +180,12 @@ collections:
                   - label: "moreIntro"
                     name: "moreIntro"
                     widget: "list"
+                    collapsed: false
                     field: {label: "moreIntroPart", name: "moreIntroPart", widget: "text", required: false}
                   - label: "next"
                     name: "next"
                     widget: "list"
+                    collapsed: false
                     field:  {label: "nextPart", name: "nextPart", widget: "text", required: false}
       - label: "hrAndPayroll"
         name: "hrAndPayroll"
@@ -190,10 +195,12 @@ collections:
           - label: "info"
             name: "info"
             widget: "list"
+            collapsed: false
             field: {label: "infoPart", name: "infoPart", widget: "text", required: false}
           - label: "services"
             name: "services"
             widget: "list"
+            collapsed: false
             field: {label: "servicesPart", name: "servicesPart", widget: "text", required: false}
           - label: "more"
             name: "more"
@@ -203,6 +210,7 @@ collections:
               - label: "moreList"
                 name: "moreList"
                 widget: "list"
+                collapsed: false
                 field: {label: "moreListPart", name: "moreListPart", widget: "text", required: false}
               - label: "next"
                 name: "next"
@@ -216,10 +224,12 @@ collections:
           - label: "info"
             name: "info"
             widget: "list"
+            collapsed: false
             field: {label: "infoPart", name: "infoPart", widget: "text", required: false}
           - label: "info1"
             name: "info1"
             widget: "list"
+            collapsed: false
             field: {label: "info1Part", name: "info1Part", widget: "text", required: false}
           - label: "services"
             name: "services"
@@ -235,15 +245,18 @@ collections:
       - label: "legalServices"
         name: "legalServices"
         widget: "list"
+        collapsed: false
         field: {label: "legalServicesPart", name: "legalServicesPart", widget: "text", required: false}
       - label: "financialServices"
         name: "financialServices"
         widget: "list"
+        collapsed: false
         fields: 
           - {label: "financialServicesPart", name: "financialServicesPart", widget: "text", required: false}
       - label: "businessServices"
         name: "businessServices"
         widget: "list"
+        collapsed: false
         field: {label: "businessServicesPart", name: "businessServicesPart", widget: "text", required: false}
       - label: "pricesSection"
         name: "pricesSection"
@@ -253,42 +266,52 @@ collections:
           - label: "offers"
             name: "offers"
             widget: "list"
+            collapsed: false
             field: {label: offer, name: offer, widget: text, required: false}
           - label: "prices"
             name: "prices"
             widget: "list"
+            collapsed: false
             field: {label: price, name: price, widget: text, required: false}
           - label: "specialOffer"
             name: "specialOffer"
             widget: "list"
+            collapsed: false
             field: {label: offer, name: offer, widget: text, required: false}
           - label: "dataTable"
             name: "dataTable"
             widget: "list"
+            collapsed: false
             field: {label: offer, name: offer, widget: text, required: false}
       - label: "aboutBtn"
         name: "aboutBtn"
         widget: "list"
+        collapsed: false
         field: {label: "aboutBtnPart", name: "aboutBtnPart", widget: "text", required: false}
       - label: "clientValueBtn"
         name: "clientValueBtn"
         widget: "list"
+        collapsed: false
         field: {label: "clientValueBtnPart", name: "clientValueBtnPart", widget: "text", required: false}
       - label: "whyCooperateBtn"
         name: "whyCooperateBtn"
         widget: "list"
+        collapsed: false
         field: {label: "whyCooperateBtnPart", name: "whyCooperateBtnPart", widget: "text", required: false}
       - label: "whatDifferBtn"
         name: "whatDifferBtn"
         widget: "list"
+        collapsed: false
         field: {label: "whatDifferBtnPart", name: "whatDifferBtnPart", widget: "text", required: false}
       - label: "getToKnowUsBtn"
         name: "getToKnowUsBtn"
         widget: "list"
+        collapsed: false
         field: {label: "getToKnowUsBtnPart", name: "getToKnowUsBtnPart", widget: "text", required: false}
       - label: "workTogetherBtn"
         name: "workTogetherBtn"
         widget: "list"
+        collapsed: false
         field: {label: "workTogetherBtnPart", name: "workTogetherBtnPart", widget: "text", required: false}
       - label: "safetyBtn"
         name: "safetyBtn"
@@ -298,10 +321,12 @@ collections:
       - label: "ourClientsBtn"
         name: "ourClientsBtn"
         widget: "list"
+        collapsed: false
         field: {label: "ourClientsBtnPart", name: "ourClientsBtnPart", widget: "text", required: false}
       - label: "faqSection"
         name: "faqSection"
         widget: "list"
+        collapsed: false
         fields: 
           - {label: "q", name: "q", widget: "text", required: false}
           - {label: "a", name: "a", widget: "text", required: false}

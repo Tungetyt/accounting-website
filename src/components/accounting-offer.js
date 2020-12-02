@@ -13,12 +13,63 @@ import clsx from 'clsx';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
 import Tilt from 'react-parallax-tilt';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import { ColorContext } from '../context/contexts';
 import { APP_THEME } from '../helpers';
 import CenterWrapper from './center-wrapper';
 import Image from './image';
 
 export default function AccountingOffer() {
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark{
+        edges {
+          node {
+            frontmatter {
+              AccountingImage {
+                childImageSharp {
+                  fluid(maxWidth: 600, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+              Accounting2Image {
+                childImageSharp {
+                  fluid(maxWidth: 600, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      allMarkdownRemark{
+        edges {
+          node {
+            frontmatter {
+              landing
+              address
+              langBtn
+            }
+          }
+        }
+      }
+    }
+  `);
+  const allMarkdownRemark = data?.allMarkdownRemark;
+  const frontmatter0 = allMarkdownRemark
+    ?.edges[0]
+    ?.node
+    ?.frontmatter;
+  const frontmatter1 = allMarkdownRemark
+    ?.edges[1]
+    ?.node
+    ?.frontmatter;
+
+  const { address, landing } = frontmatter1;
+
   const [expanded, setExpanded] = React.useState(false);
   const intl = useIntl();
   const [isDark] = useContext(ColorContext);
@@ -63,7 +114,11 @@ export default function AccountingOffer() {
         >
           <Grid item style={{ width: '600px' }}>
             <Tilt>
-              <Image alt="accounting" filename="7finanse-i-rachunkowosc.jpg" />
+              {/* <Image alt="accounting" filename="7finanse-i-rachunkowosc.jpg" /> */}
+              <Img fluid={frontmatter0?.AccountingImage
+                ?.childImageSharp
+                ?.fluid}
+              />
             </Tilt>
           </Grid>
           <Grid item>
@@ -115,7 +170,11 @@ export default function AccountingOffer() {
             </Grid>
             <Grid item style={{ width: '600px' }}>
               <Tilt>
-                <Image alt="accouting fire" filename="5maxresdefault.jpg" />
+                {/* <Image alt="accouting fire" filename="5maxresdefault.jpg" /> */}
+                <Img fluid={frontmatter0?.Accounting2Image
+                  ?.childImageSharp
+                  ?.fluid}
+                />
               </Tilt>
             </Grid>
           </Grid>

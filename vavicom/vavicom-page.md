@@ -1,10 +1,694 @@
 ---
-title: tyyulśśśśśśśś
+title: vavicom
 landing:
-  - veftyyulśśśśśśśś
-  - vretyyulśśśśśśśś
-  - wererretyyulśśśśśśśś
-address: dsadastyyulśśśśśśśś
-langBtn: fre
-themeBtn: re
+  - BIURO
+  - RACHUNKOWE
+  - VAVICOM
+address: JÓZEFOSŁAW WARSZAWA PIASECZNO
+langBtn: Change to English
+themeBtn: Przełącz motyw na jasny/ciemny
+backToTopBtn: Powrót do góry
+home: HOME
+services: USŁUGI
+prices: CENNIK
+about: O NAS
+faq: FAQ
+contact: KONTAKT
+notfound:
+  header: "404: Not Found"
+  description: Strona o takim adresie nie istnieje
+  goback: Wróć do strony głównej
+hamburger: Panel nawigacyjny
+servicesSection:
+  accounting: KSIĘGOWOŚĆ
+  hrAndPayroll: KADRY I PŁACE
+  taxServices: USŁUGI PODATKOWE
+  legalServices: USŁUGI PRAWNE
+  financialServices: USŁUGI FINANSOWE
+  businessServices: USŁUGI BIZNESOWE
+accounting:
+  info:
+    - Skomplikowane i dynamiczne zmiany prawa gospodarczego, w tym
+      sprawozdawczości finansowej i podatkowej wymagają nieustannego śledzenia i
+      prawidłowego interpretowania przepisów prawa.
+    - Zlecając bieżące prowadzenie ksiąg rachunkowych i sporządzanie sprawozdań
+      finansowych, możesz przestać koncentrować się na śledzeniu zmian w
+      przepisach i skupić się na codziennym prowadzeniu biznesu.
+    - "Nasze usługi obejmują:"
+  services:
+    intro:
+      - prowadzenie księgi przychodów i rozchodów KPIR;
+      - prowadzenie ksiąg handlowych;
+      - sporządzanie lub aktualizację polityki rachunkowości we współpracy z
+        Klientem;
+      - przygotowanie bazy danych w systemie finansowo – księgowym;
+      - ewidencję dokumentów otrzymywanych do Państwa i kontrahentów;
+      - bieżące prowadzenie ksiąg rachunkowych;
+      - raportowanie danych finansowych do zarządu firmy oraz grupy zgodnie z
+        Państwa wymogami;
+      - przygotowanie statutowych sprawozdań finansowych oraz pomoc w
+        sporządzeniu sprawozdania zarządu z działalności;
+      - przygotowanie sprawozdań i raportów dla Narodowego Banku Polskiego i
+        Głównego Urzędu Statystycznego;
+      - współpracę z audytorami;
+    more:
+      moreIntro:
+        - Naszym priorytetem jest zagwarantowanie klientom obsługi księgowej
+          zawsze na czas i przy zachowaniu najwyższych standardów jakości.
+          Świadczone przez nas usługi księgowe i sprawozdawczości zawsze
+          dostosowujemy do konkretnych oczekiwań zarówno pod względem formalnym,
+          jak i merytorycznym z uwzględnieniem terminów ustawowych i wymaganych
+          przez klienta.
+        - Świadczymy kompleksową obsługę podmiotów gospodarczych w szczególności
+          mikro, małych i średnich przedsiębiorstw. Podstawowym celem jest
+          wypełnienie bieżących obowiązków podatnika w zakresie prowadzenia
+          ksiąg rachunkowych oraz sprawozdawczości podatkowej.
+        - "Proponujemy konkurencyjne ceny:"
+      next:
+        - Ewidencja przychodów dla potrzeb podatku zryczałtowanego od 100 zł.
+        - KPIR księga przychodów i rozchodów od 150 zł.
+        - Księgowość rachunkowa (księgi handlowe) od 350 zł.
+hrAndPayroll:
+  info:
+    - Zapewniamy kompleksową obsługę w zakresie naliczania płac zgodnie z
+      obowiązującymi przepisami prawa pracy, ubezpieczeń społecznych oraz
+      podatku dochodowego od osób fizycznych.
+    - Dbamy również o prawidłowe, zgodne z kodeksem pracy, administrowanie
+      teczkami personalnymi i całą dokumentacją dotyczącą stosunku pracy i
+      urlopów. Przygotowujemy deklaracje rozliczeniowe do ZUS, PFRON oraz urzędu
+      skarbowego. Współpracujemy z tymi instytucjami w zakresie przygotowanej
+      dokumentacji w przypadku jakichkolwiek pytań.
+    - Zakres usług obejmuje także pomoc w procesie zatrudniania nowych oraz
+      odchodzących pracowników. Dbamy o to, żeby procesy kadrowe i płacowe
+      realizowane dla Państwa były zgodne z przepisami, efektywne i łatwe w
+      realizacji.
+    - "W ramach usługi prowadzenia kadr i płac oferujemy Państwu między innymi:"
+  services:
+    - naliczanie wynagrodzeń z uwzględnieniem dodatków i potrąceń;
+    - naliczanie świadczeń związanych z chorobą i macierzyństwem;
+    - sporządzanie deklaracji PIT i ZUS w imieniu pracodawcy;
+    - przygotowywanie dokumentacji płacowej dla firmy i jej pracowników;
+    - asystę przy płatnościach wynagrodzeń i składek na ubezpieczenia społeczne;
+    - przygotowywanie i składanie rocznych informacji o dochodach/deklaracji
+      (PIT-11, PIT-4R, PIT-40);
+    - tworzenie i administracja teczek personalnych;
+    - ewidencję i kontrolę wymiaru urlopów pracowniczych;
+    - monitorowanie ważności badań lekarskich i szkoleń BHP;
+    - przygotowywanie świadectw pracy;
+    - przygotowywanie i rozliczanie list płac dla osób zatrudnionych na
+      podstawie umów cywilno-prawnych;
+    - sporządzanie informacji o przychodach z innych źródeł (PIT-28, PIT-8C).
+  more:
+    moreList:
+      - Nasze oferta Oferujemy rozwiązania uwzględniające specyfikę struktury
+        organizacyjnej obowiązującej w Państwa firmie, złożoność składników
+        płacowych i raportów kadrowo-płacowych. Szybko reagujemy i jesteśmy
+        elastyczni w stosunku do Państwa potrzeb i wymagań. Zapewniamy całkowitą
+        poufność i bezpieczeństwo w przechowywaniu danych kadrowo-płacowych oraz
+        prowadzonych projektów restrukturyzacyjnych. Pomagamy obniżyć koszty
+        zarządzania kadrami.
+      - Naszą szeroką ofertę kierujemy do każdego pracodawcy, który zatrudnia
+        pracowników, niezależnie od wielkości firmy również pomagamy prowadzącym
+        działalność gospodarczą w formie samozatrudnienia.
+      - "Proponujemy konkurencyjne ceny:"
+    next:
+      nextPart: Usługi Płacowe od 35 zł, Usługi Kadrowe od 25 zł za 1 pracownika
+taxServices:
+  info:
+    - Polski system podatkowy w większości przypadków nakłada cykliczny
+      obowiązek płacenia podatków.
+    - Wymaga to systematycznego kalkulowania zobowiązań podatkowych oraz
+      sporządzania dla organów skarbowych wielu informacji i zeznań podatkowych
+      o różnych terminach wymagalności. Biuro Rachunkowe VAVICOM oferuje usługi
+      sporządzania wymaganych deklaracji podatkowych, jak również wsparcie w
+      kontaktach z organami podatkowymi, obejmujące m.in. obsługę kontroli
+      podatkowych.
+  info1:
+    - "Nasze prace w ramach przygotowania rozliczeń z tytułu CIT obejmują
+      kompleksowe przygotowanie okresowych kalkulacji oraz rocznego zeznania
+      CIT-8. W szczególności, usługi te zawierają przygotowanie:"
+    - Okresowych oraz rocznej kalkulacji CIT wraz ze szczegółowymi informacjami;
+    - rocznego rozliczenia, przygotowanie i złożenia zeznania podatkowego CIT-8
+      wraz ze stosownymi załącznikami sporządzonego na podstawie okresowych
+      kalkulacji CIT;
+    - ustalenie kwoty podatku należnego, który Spółka zobowiązana jest przelać
+      na rachunek bankowy urzędu skarbowego przed upływem ustawowego terminu
+      płatności.
+    - "Rozliczenia podatku VAT obejmują przygotowanie rejestrów oraz deklaracji
+      VAT, w tym:"
+  services:
+    - sporządzanie rejestrów zakupu i sprzedaży VAT na podstawie otrzymanej
+      dokumentacji;
+    - przedstawianie propozycji klasyfikacji transakcji, które mogłyby wpływać
+      na wysokość zobowiązania podatkowego, tzw. koszty uzyskania przychodów;
+    - sporządzanie deklaracji VAT w oparciu o rejestry VAT;
+    - informowanie o wysokości zobowiązania podatkowego VAT do zapłaty;
+    - sporządzanie deklaracji VAT-UE – informacji podsumowującej o dokonanych
+      wewnątrzwspólnotowych transakcjach zakupu i sprzedaży, a także korekty
+      deklaracji VAT-UE;
+    - wskazanie kwoty potencjalnego zwrotu podatku VAT na deklaracji VAT oraz
+      przygotowywanie wniosków o zwrot podatku VAT (w razie potrzeby).
+  more:
+    "0": Nasza usługa obejmuje sporządzanie na podstawie ksiąg kalkulacji podatku
+      dochodowego od osób prawnych oraz VAT za dany okres obrachunkowy lub rok
+      podatkowy oraz przygotowanie odpowiednich deklaracji podatkowych.
+      Przygotowujemy również zestawienia podsumowujące podatek VAT w handlu
+      wewnątrzwspólnotowym UE oraz deklaracje Intrastat.
+legalServices:
+  - Potrzebujesz przeprowadzić zmianę zarządu lub zmienili się wspólnicy? Chcesz
+    dokonać zmiany roku obrotowego, obniżyć kapitał zakładowy albo przeciwnie
+    Twoja spółka potrzebuje dokapitalizowania? Nie musisz szukać
+    wyspecjalizowanych kancelarii prawnych.
+  - Nasz zespół zapewnia kompleksowe wsparcie spółek działających na terenie
+    Polski we wszystkich aspektach związanych z obsługą prawną. Profesjonalne
+    wsparcie prawne w każdym momencie, daje dużą przewagę nad konkurencją. Nasza
+    kompleksowa asysta prawna przynosząca wymierne efekty, będzie dla Państwa
+    ogromnym wsparciem w prowadzeniu biznesu
+  - "Oferujemy następujące usługi:"
+  - Rejestracja działalności gospodarczej
+  - Zakładanie spółek
+  - Zawieszenie działalności lub likwidacja spółki z o.o.
+  - Zmiany rejestrowe takie jak zmiana właścicieli, członków zarządu, siedziby
+    spółki, zakresu działalności (PKD) itp.
+  - Przekształcenia własnościowe i zmiana formy prawnej działalności
+  - Fuzje i przejęcia
+  - Asysta Prawna – przygotowywanie dokumentów prawnych, uchwał, umów
+  - Oferujemy kompleksową usługę zakładania spółek kapitałowych. Usługa zawiera
+    przygotowanie treści umowy spółki, tak aby ten ważny dokument został
+    dopasowany do indywidualnych potrzeb, wielkości i charakteru Twojego
+    biznesu, mając na względzie Twój szeroko rozumiany interes i bezpieczeństwo.
+  - W trakcie procesu przygotowujemy, składamy i monitorujemy wnioski w sądzie i
+    urzędzie skarbowym oraz w urzędzie statystycznym. Wspieramy w procesie
+    wprowadzania zmian korporacyjnych w spółce, takich jak zmiany członków
+    zarządu, czy zmiany statutu spółki.
+  - Pomagamy w wypełnianiu formalnych obowiązków związanych z procesem zamykania
+    roku obrotowego spółki, poprzez m.in. zatwierdzanie sprawozdań finansowych
+    przez zgromadzenie wspólników lub akcjonariuszy, złożenie sprawozdań
+    finansowych do urzędu skarbowego, złożenie sprawozdań finansowych do sądu
+    rejestrowego.
+  - Od podstaw tworzymy nowe spółki, a także asystujemy w sprzedaży lub nabyciu
+    udziałów spółek istniejących, przygotowanych do natychmiastowego rozpoczęcia
+    działalności. Wspieramy podmioty zagraniczne w procesie zakładania oddziałów
+    i przedstawicielstw na terytorium Polski, w szczególności na etapie
+    kontaktów z właściwymi urzędami administracji publicznej oraz sądami (np.
+    KRS, GUS, urząd skarbowy). Przygotowujemy dokumenty korporacyjne niezbędne w
+    procesie likwidacji spółek, w tym m.in. uchwały zgromadzenia wspólników czy
+    sprawozdania likwidatorów. Na podstawie udzielonych nam pełnomocnictw,
+    możemy występować w imieniu wspólników spółki podczas zgromadzeń wspólników.
+    Proces likwidacji spółki kapitałowej jest skomplikowany i długotrwały.
+    Dzięki nam przejdą Państwo sprawnie i bezpiecznie przez całą procedurę. Nasz
+    nadzór oraz doradztwo to nieoceniona pomoc dla przedsiębiorców, którzy
+    chcieliby efektywnie i bezproblemowo zlikwidować swoją spółkę.
+  - Oferujemy bardzo konkurencyjne ceny, sprawne i profesjonalne działanie.
+financialServices:
+  - financialServicesPart: Zarządzanie finansami przedsiębiorstwa to nieoderwalna
+      część codziennych zadań właścicieli oraz osób zarządzających.
+  - financialServicesPart: Biuro Rachunkowe VAVICOM posiada zespół specjalistów z
+      wieloletnim doświadczeniem w zakresie zarządzania finansami, doradztwa
+      strategicznego oraz optymalizacji procesów gospodarczych i kosztów. W
+      ramach wdrożenia nasi specjaliści zaprojektują system raportowania
+      indywidualnie dobrany do potrzeb każdego Klienta.
+  - financialServicesPart: "Oferujemy:"
+  - financialServicesPart: Biznesplany i modele finansowe
+  - financialServicesPart: Prowadzenie rachunkowości zarządczej
+  - financialServicesPart: Analizy i optymalizację kosztów
+  - financialServicesPart: Monitorowanie i windykację należności
+  - financialServicesPart: Tworzenie systemów controlingowych
+  - financialServicesPart: Analizy kosztów finasowania w tym kosztów leasingu
+  - financialServicesPart: Wsparcie we współpracy z bankami i instytucjami
+      finansującymi, ubezpieczycielami
+  - financialServicesPart: Tworzymy biznesplany i modele finansowe, które służą do
+      oceny efektywności projektów inwestycyjnych oraz przygotowania
+      dokumentacji niezbędnej do uzyskania finansowania. Tworzymy modele
+      rachunkowości zarządczej i analizy finansowe – systemy raportowania
+      indywidualnie zaprojektowane dla potrzeb każdego Klienta.
+  - financialServicesPart: Przeprowadzamy analizy wyników przedsiębiorstwa oraz
+      zaproponujemy alternatywne rozwiązania zmierzające do podniesienia
+      rentowności/efektywności działalności gospodarczej.
+  - financialServicesPart: Skuteczna windykacja nie musi kończyć się sporem sądowym
+      i utratą klienta. Nasz zespół świadczy usługi monitorowania należności
+      oraz ich odzyskiwania już na bardzo wczesnym etapie. Kiedy takie działania
+      nie przyniosą oczekiwanego efektu prowadzimy kompleksową windykacją sądową
+      i egzekucyjną.
+businessServices:
+  - Każdy zarządzający biznesem potrzebuje eksperckiej wiedzy w zakresie
+    dynamicznie zmieniających się przepisów prawa i właściwym na nie
+    reagowaniem.
+  - "Zespół doradców biznesowych wspiera naszych klientów w zakresie:"
+  - Skorzystania z pakietów antykryzysowych i dotacji
+  - Zmiany umów z pracownikami
+  - Utrzymania i poprawy płynności finansowej
+  - Opracowania i wdrożenia planów kryzysowych
+  - Renegocjacji umów z dostawcami kontrahentami
+  - Restrukturyzacji
+  - Digitalizacji i automatyzacji przedsiębiorstw
+  - "Czas kryzysu to czas szybkich decyzji i umiejętności dostosowania się do
+    szybko zmieniającego się otoczenia. Zespół naszych specjalistów oferuje
+    wsparcie w następujących obszarach: prawnym, finansowym oraz doradztwa
+    operacyjnego, które będzie dopasowane do aktualnych wyzwań i szybko pozwoli
+    ograniczyć ryzyko biznesowe. Proponujemy rozwiązania pozwalające na zmianę
+    warunków zatrudniania, wynagradzania i świadczenia pracy, jak również
+    pomagamy uzyskać dodatkowe środki pomocowe w formie kredytów
+    preferencyjnych, subwencji i dotacji."
+  - Wdrażanie szeroko pojętych rozwiązań operacyjnych oraz podatkowych pozwala
+    przetrwać w okresie kryzysu oraz uzyskać przewagę konkurencyjną w okresie
+    pokryzysowym.
+  - Opracowujemy rozwiązania zapewniające płynność finansową firm, w tym w
+    obszarze zobowiązań publiczno-prawnych, windykacji należności, analizy
+    wypłacalności klientów itp.
+  - Możemy przeanalizować treści umów zawartych z kontrahentami, zidentyfikować
+    potencjalne możliwości renegocjacji stawek. Z uwagi na sytuację
+    epidemiologiczną, dopuszczalne jest podjęcie kroków, zmierzających do zmiany
+    lub renegocjacji zawartych umów, w szczególności w aspekcie modyfikacji
+    warunków wynagrodzenia i płatności oraz odstąpienia od umowy.
+  - Kiedy jedyną szansą przed utratą płynności finansowej, pozostaje
+    przeprowadzenie postępowania restrukturyzacyjnego przedsiębiorstwa, jesteśmy
+    gotowi opracować plan w zakresie zmniejszenia, odroczenia lub rozłożenia na
+    raty należności publicznoprawnych oraz wobec kontrahentów.
+  - Digitalizacja jest usługą wdrożenia najnowocześniejszych rozwiązań
+    technologicznych i informatycznych, które gwarantują utrzymanie najwyższej
+    jakości obsługi kontrahentów, przy jednoczesnym optymalnym wykorzystaniu
+    posiadanych zasobów. Często związana jest z przemodelowaniem dotychczasowego
+    planu biznesowego i sposobu działania, przynosi poprawę komunikacji
+    wewnętrznej i zewnętrznej oraz znacznie przyspiesza dostęp do informacji,
+    pozwalającej na dokładniejsze i skuteczniejsze kontrolowanie procesów.
+pricesSection:
+  offers:
+    - Kadry i płace
+    - Księga przychodów i rozchodów
+    - Księgi rachunkowe
+  prices:
+    - od 35 zł
+    - od 150 zł
+    - od 350 zł
+  specialOffer:
+    - Oferujemy również specjalny rabat dla wszystkich zmieniających biuro
+      rachunkowe.
+    - Zapewniamy bezpłatną pomoc przy zakładaniu własnej działalności
+      gospodarczej i firmy.
+  dataTable:
+    - Oferta
+    - Cena
+aboutBtn:
+  - O NAS
+  - Łączymy nowoczesne technologie, sprawdzone procesy oraz wiedzę i
+    doświadczenie
+  - Zapewniamy kompleksowe usługi finansowo-księgowe, w tym prowadzenie ksiąg,
+    rozliczeń podatkowych, przygotowanie list płac oraz usługi powiązane z
+    bieżącym funkcjonowaniem działu księgowości i administracji
+    kadrowo-płacowej. Dzięki naszym usługom możesz skupić się na prowadzeniu
+    własnego biznesu, zamiast tracić czas i energię na administrowanie procesami
+    finansowo-księgowymi. Powierzając na m swoje księgi handlowe masz pewność,
+    że są one prowadzone w sposób rzetelny i prawidłowy.
+  - Jeśli właśnie zaczynasz prowadzić działalność, zakładasz innowacyjny
+    start-up, rozważasz przekazanie funkcji księgowej lub płacowej na zewnątrz
+    lub chcesz zmienić dotychczasowego dostawcę usług, a także kiedy w związku z
+    zakończeniem działalności potrzebujesz partnera, który poprowadzi księgi
+    rachunkowe Twojej firmy – Biuro Rachunkowe VAVICOM z przyjemnością zaoferuje
+    Ci rozwiązanie i przygotuje indywidualnie dedykowaną ofertę cenową
+    dostosowaną do rozmiaru i specyfiki firmy.
+  - Naszą obsługę prowadzimy dla firm zlokalizowanych w całej Polsce, w języku
+    polskim oraz angielskim , w ramach projektów krótko- i długoterminowych, w
+    formie kompleksowego pakietu lub wybranych usług.
+  - "Biuro Rachunkowe VAVICOM oferuje usługi w zakresie:"
+  - 1. prowadzenia ksiąg rachunkowych i sprawozdawczości finansowej,
+  - 2. controllingu i rachunkowości zarządczej,
+  - 3. przygotowywania rozliczeń podatkowych i deklaracji podatkowych,
+  - 4. prowadzenia administracji płacowej i kadrowej,
+  - 5. doradztwa finansowo-podatkowego.
+  - Biuro Rachunkowe VAVICOM to innowacyjna, nowoczesna i dynamiczna firma,
+    mieszcząca się w centrum Józefosławia przy ul. Ogrodowej 6.
+  - Zapewniamy profesjonalną obsługę księgową, podatkową, finansową i prawną
+    oraz kadrową podmiotów gospodarczych o różnych formach prawnych i profilach
+    działalności. Dzięki wieloletniemu doświadczeniu z zakresu rachunkowości
+    finansowej i zarządczej oraz najwyższym kwalifikacjom naszych pracowników
+    jesteśmy w stanie zagwarantować naszym Klientom usługi na najwyższym
+    poziomie.
+  - Biuro rachunkowe VAVICOM jest licencjonowanym biurem księgowym, co pozwala
+    nam reprezentować naszych klientów przed instytucjami finansowymi.
+  - Wykorzystując własną infrastrukturę informatyczną oraz nowoczesną platformę
+    systemową, możemy świadczyć usługi na terenie całego kraju, a klient ma
+    całodobowy dostęp do swojej księgowości online z dowolnego miejsca na
+    świecie.
+  - Szeroki zakres usług wsparcia biznesu oraz wiedza ekspercka to nasze główne
+    atuty.
+  - "USŁUGI KSIĘGOWE: Kompleksowe usługi księgowe, rachunkowe, finansowe i
+    zarządcze. karta podatkowa,  księga przychodów i rozchodów (KPiR -
+    uproszczona księgowość), księgi rachunkowe/księgi handlowe (KH - pełna
+    księgowość), ryczałt ewidencjonowany."
+  - "KADRY I PŁACE: Rejestracja firmy i jej pracowników w ZUS, naliczanie
+    wynagrodzeń, przygotowywanie deklaracji ZUS i US, prowadzenie dokumentacji
+    pracowniczej."
+  - "DORADZTWO PODATKOWE: dobór formy prawnej do wielkości i specyfiki
+    planowanej działalności, optymalizacja podatkowa i przekształcenia formy
+    prawnej, bieżąca obsługa podatkowa, ceny transferowe, audyt podatkowy,
+    reprezentacja przed organami podatkowymi"
+  - "DODATKOWE USŁUGI: takie jak: pomoc w zakładaniu i finansowaniu firmy,
+    obsługa kadrowo-płacowa, pozyskiwanie subwencji i dotacji, reprezentacja w
+    Urzędach, usługi monitoringu należności i windykacji."
+clientValueBtn:
+  - WARTOŚĆ DLA KLIENTÓW
+  - Jesteśmy Finacial Business Partnerem. Naszą misją jest budowanie przewagi
+    konkurencyjnej naszych klientów, poprzez dostarczenie innowacyjnej i
+    profesjonalnej obsługi finansowej.
+  - Dlaczego warto skorzystać z usług Biura Rachunkowego VAVICOM?
+  - "Współpraca z nami:"
+  - pozwala na obniżenie pracochłonności i redukcję kosztów osobowych związanych
+    z prowadzeniem administracji, księgowości, obliczaniem podatków i
+    rozliczeniami pracowniczymi;
+  - minimalizuje ryzyka nieznajomości aktualnych przepisów prawa i ich
+    niewłaściwej interpretacji;
+  - daje możliwość uzyskania oszczędności podatkowych;
+  - daje profesjonalną pomoc nakierowaną na długofalową współpracę i osiąganie
+    wspólnych korzyści;
+  - wspiera Państwa biznes poprzez odpowiednią komunikację, dostarczając
+    informacje potrzebne do podejmowania decyzji;
+  - daje nowe spojrzenie na Państwa sprawy księgowe i podatkowe wsparte
+    ugruntowaną wiedzą i znajomością praktycznych zagadnień biznesowych.
+  - Rosnąca konkurencja zmusza przedsiębiorców do stałego poszukiwana usprawnień
+    i redukcji kosztów w różnych obszarach działalności firmy. Jednym z
+    rozwiązań, po które coraz częściej sięgają właściciele, a także dyrektorzy
+    operacyjni i finansowi, jest przekazanie księgowości oraz prowadzenie kadr i
+    płac do biura rachunkowego.
+  - Nasze doświadczenie wskazuje, iż zewnętrzni specjaliści, przejmując na
+    siebie odpowiedzialność za bieżące i rutynowe obowiązki, pomagają
+    przedsiębiorstwu zwiększać wartość dodaną i podnosić jego efektywność.
+    Jednocześnie skorzystanie przez firmę z zewnętrznego wsparcia  sprzyja
+    obniżaniu kosztów, głównie w skutek ograniczenia nakładów inwestycyjnych na
+    tworzenie nowych miejsc pracy, kosztów wynagrodzenia, świadczeń socjalnych,
+    szkoleń itp. Ponadto outsourcing uwalnia przedsiębiorstwo od kosztów
+    wdrożenia, administrowania i wspierania odpowiednich systemów
+    kadrowo-płacowych i księgowo-finansowych, a kadrze zarządzającej daje
+    większą możliwość skupienia się na głównych obszarach prowadzonej
+    działalności gospodarczej.
+  - Proponowane w tym zakresie rozwiązania spełniają najwyższe standardy jakości
+    i poufności, są konkurencyjne cenowo, a także praktyczne oraz, co
+    najważniejsze – efektywne
+  - Specjalizacja nasza obejmuje prowadzenie pełnej księgowości oraz rozliczeń z
+    zakresu kadr i płac, a także doradztwo prawne i podatkowe. Doświadczeni
+    prawnicy dbają o bezpieczeństwo prawne naszych klientów wspierając ich
+    zarówno w bieżącej działalności, jak i w realizacji skomplikowanych
+    projektów. Szczególną rolę przywiązujemy do bezpieczeństwa i funkcjonalności
+    systemów informatycznych. Nad bezpieczeństwem i ochroną powierzonych nam
+    danych bezustannie czuwają niezawodni specjaliści IT. Gwarantujemy
+    prawidłowe i rzetelne rozliczenia podatkowe, spełnienie najwyższych
+    standardów jakości, jak również dbałość o zachowanie poufności dla naszych
+    klientów.
+whyCooperateBtn:
+  - DLACZEGO WARTO Z NAMI WSPÓŁPRACOWAĆ
+  - Oszczędzasz czas. W jednym miejscu uzyskujesz pełną, profesjonalną obsługę
+    rachunkową i swoich finansów.
+  - Korzystasz z naszych usług bez względu na swoją lokalizację. Obsługa
+    dokumentacji oparta jest o nowoczesny system informatyczny i nie wymaga
+    obiegu dokumentów papierowych.
+  - Zyskujesz łatwy dostęp do informacji i eksperckiej wiedzy. Specjalnie dla
+    Ciebie przygotujemy dedykowane raporty i sprawozdania.
+  - Nasza usługa jest dopasowana do Twoich faktycznych potrzeb. Oferujemy dużo
+    więcej niż obsługę księgową – załatwiamy wszystkie formalności związane z
+    zakładaniem, prowadzeniem czy likwidacją firmy.
+  - Przygotowujemy biznes plany, oceniamy efektywności projektów inwestycyjnych
+    i modelujemy strukturę ich finansowania.
+  - Jeśli Twoja firma potrzebuje dodatkowego kapitału, oferujemy doradztwo i
+    pośrednictwo w zakresie pozyskiwania finansowania.
+whatDifferBtn:
+  - CO NAS WYRÓŻNIA
+  - Dzięki pełnej informatyzacji naszego Biura umożliwiamy korzystanie z naszych
+    usług Klientom z całej Polski.
+  - Wykorzystujemy nowoczesny program księgowy, który umożliwia Państwu
+    wystawianie faktur i prowadzenie rozliczeń, dostęp do swoich dokumentów
+    księgowych 24h/7, konwersję danych (import plików np. zestawienie miesięczne
+    faktur sprzedaży). Ponadto program umożliwia generowanie indywidualnych
+    zestawień i raportów z zakresu finansów firmy.
+  - Przygotowujemy dedykowane raporty i sprawozdania zawierające  potrzebne dane
+    finansowo-księgowe, kadrowo-płacowe, dzięki czemu Klient zyskuje dostęp do
+    informacji i eksperckiej wiedzy, a co najważniejsze minimalizację ryzyka w
+    tych obszarach i wymierne korzyści finansowe.
+  - W naszym biurze możecie Państwo załatwić wszystkie formalności związane z
+    założeniem, prowadzeniem lub likwidacją każdej firmy. Współpracujemy z
+    renomowanymi doradcami podatkowymi i audytorami, w celu zapewnienia pełnej
+    usługi księgowej i wsparcia doradczego w zakresie podatków i rachunkowości.
+  - Oferujemy doradztwo i pośrednictwo w obszarze pozyskiwania finansowania oraz
+    modelowania i oceny projektów inwestycyjnych.
+getToKnowUsBtn:
+  - POZNAJ NASZ ZESPÓŁ
+  - Zatrudniamy doświadczonych ekspertów w swojej dziedzinie. Dzięki temu nasze
+    biuro może skutecznie obsługiwać ewentualne kontrole podatkowe lub skarbowe.
+  - Księgowa zatrudniona w firmie na etacie spotyka się z kontrolą podatkową raz
+    na kilka lat albo i rzadziej. Księgowi zatrudnieni w naszym biurze
+    rachunkowym obsługują od kilku do kilkudziesięciu kontroli w roku, co
+    powoduje, że posiadają realne doświadczenie w prowadzeniu ksiąg i dużo
+    sprawniej bronią efektów swej pracy, jeśli zajdzie taka konieczność.
+  - Zespół składa się z zespołu profesjonalistów, którzy posiadają wieloletnie
+    doświadczenie w obszarze prowadzenia ksiąg rachunkowych zarówno dla firm
+    nieposiadających wyodrębnionej osobowości prawnej jak i spółek kapitałowych.
+    Obsługujemy spółki prawa handlowego, spółki jawne, spółki komandytowe,
+    spółki cywilne, jednoosobowe działalności gospodarcze, a także
+    stowarzyszenia, fundacje, związki zawodowe i wspólnoty mieszkaniowe.
+    Oferujemy kompleksowe usługi księgowe dla podmiotów gospodarczych oraz
+    usługi administrowania kadrami i płacami.
+workTogetherBtn:
+  - MOŻEMY RAZEM WSPÓŁPRACOWAĆ
+  - Zmiana biura rachunkowego lub też rozpoczęcie współpracy to bardzo ważna
+    decyzja. Szukacie Państwo partnera biznesowego, który zapewni Wam dyskrecję,
+    będzie miał Wasze zaufanie i poprowadzi prawidłowe rozliczenia podatkowe.
+    Jeżeli jesteście Państwo na naszej stronie to znaczy, że właśnie stoicie
+    przed takim wyborem.
+  - Biuro Rachunkowe VAVICOM to coś więcej niż tradycyjne biuro rachunkowe.
+    Nasze indywidualne podejście do Klienta sprawia, że jesteśmy częścią
+    organizacji naszego Klienta i wspólnie z nim dążymy do rozwoju firmy. Z
+    troską podchodzimy do każdego naszego Klienta. Dołącz do grona naszych
+    zadowolonych Klientów.
+  - Z chęcią odpowiemy na wszelkie Państwa pytania! Zachęcamy do kontaktu, nasz
+    doradca niezwłocznie się z Państwem skontaktuje.
+safetyBtn:
+  - BEZPIECZEŃSTWO I POUFNOŚĆ
+  - W trosce o najwyższy poziom bezpieczeństwa naszych usług, wszelkie pozyskane
+    dane objęte są ścisłą ochroną. Nasza kadra pracuje według ściśle określonych
+    i bardzo rygorystycznych standardów, dzięki czemu dajemy Państwu 100%
+    gwarancję bezpieczeństwa oraz pełną dyskrecję. Dzięki wdrożonym procedurom
+    możemy zagwarantować stałe i atrakcyjne terminy w zakresie wykonywanych
+    usług.
+  - Bezwzględnie przestrzegamy tajemnicy służbowej. Zapewniamy pełne
+    bezpieczeństwo danych elektronicznych oraz dokumentów. Przekazane do nas
+    dane i informacje są bezpieczne – działamy na podstawie ustawy z dnia 29
+    sierpnia 1997 r. o ochronie danych osobowych (t.j. Dz.U. z 2014 r. poz.
+    1182).
+  - Posiadamy wszelkie wymagane uprawnienia do prowadzenia działalności w
+    zakresie pełnej obsługi księgowej podmiotów gospodarczych. Ponosimy pełną
+    odpowiedzialność za prawidłowość prowadzonych ksiąg i rozliczeń klientów
+    przed Urzędami Skarbowymi i ZUS. Zgodnie z obowiązującymi przepisami
+    jesteśmy ubezpieczeni od odpowiedzialności cywilnej związanej z prowadzonymi
+    usługami finansowo-księgowymi.
+  - Licencję do usługowego prowadzenia Biura Rachunkowego, obowiązkowe
+    ubezpieczanie OC.
+ourClientsBtn:
+  - NASI KLIENCIfirmy transportowe;
+  - firmy marketingowe;
+  - sklepy;
+  - sklepy internetowe;
+  - firmy produkcyjne;
+  - firmy branży turystycznej;
+  - kancelarie prawne;
+  - komisy i lombardy;
+  - fundacje i stowarzyszenia;
+  - wspólnoty mieszkaniowe;
+  - firmy budowlane;
+  - agencje reklamowe;
+  - drukarnie;
+  - studia projektowe;
+  - firmy architektoniczne;
+  - hurtownie i dystrybutorzy;
+  - agencje ratingowe;
+  - i wiele innych.
+faqSection:
+  - q: Na czym polega księgowość online?
+    a: W dzisiejszych czasach Internet jest nieodzownym elementem prowadzenia każdej
+      firmy. Dla tych z Państwa, którzy poszukują nowinek technologicznych i
+      ułatwień w prowadzeniu działalności, przygotowaliśmy nowatorskie
+      rozwiązanie księgowość online. Jako jedno z nielicznych biur rachunkowych
+      w Polsce posiadamy platformę sprzętowo-programową umożliwiającą pełną
+      integrację, wymianę danych między klientem a biurem oraz zdalny dostęp do
+      wszelkich informacji z dowolnego miejsca na świecie.
+  - q: Co to jest integracja systemów?
+    a: Zlecenie obsługi księgowej innej firmie odciąża przedsiębiorstwo, jednak nie
+      uwalnia go od ciążących na nim obowiązków, jak wystawianie faktur VAT,
+      rejestracja wpłat do kasy, wystawianie przelewów, obsługa magazynu czy
+      moduły produkcji. W chwili, gdy tak zarejestrowane operacje zostaną
+      uzupełnione o dane księgowe (koszty, płace, księgowania), relatywnie
+      niewielkim nakładem czasowym bieżąca informacja o stanie przedsiębiorstwa
+      dostępna będzie po jednym kliknięciu.
+  - q: Jaka jest oszczędność czasu przy księgowości online?
+    a: Usługi, które proponujemy, to znakomity sposób na zaoszczędzenie czasu w
+      przypadku mniejszych przedsiębiorstw. Skorzystanie z nich zaoszczędzi
+      Państwa pracownikom czas, który musieli poświęcać tradycyjnemu modelowi
+      współpracy z biurem rachunkowym i na bieżąco uzyskiwać informacje bez
+      potrzeby wizyt w biurze. Po księgowość online z wielkim powodzeniem mogą
+      sięgnąć także duże przedsiębiorstwa. Z jednej strony posiadające kompletny
+      system wspomagający przedsiębiorstwo. Z drugiej zaś – uzyskując nadzór i
+      bieżącą kontrolę nad poprawnością wprowadzanych i księgowanych danych.
+  - q: Jak jest dostępność do danych w księgowość online?
+    a: Księgowość przez internet umożliwia bieżący dostęp do zasobów rachunkowych
+      firmy. Pozwala tworzyć raporty, analizy, wykresy i zestawienia oraz daje
+      firmie bieżący dostęp do jej kontrahentów i stanów magazynowych. Dzięki
+      księgowości online mogą Państwo kontrolować swoją firmę 24 godziny na
+      dobę. W wygodny sposób korzystać z dostępu do informacji na temat swojego
+      przedsiębiorstwa w dowolnym miejscu na świecie.
+  - q: Dlaczego warto zlecać księgowość zewnętrznym biurom rachunkowym?
+    a: Nie musicie kupować żadnego dodatkowego systemu finansowo-księgowego; szukać
+      księgowych z dużym doświadczeniem, którzy będą na bieżąco poszerzać
+      kompetencje; ponosić dodatkowych kosztów personalnych za zatrudnianie
+      pracownika ani angażować się w utrzymanie pracownika i jego stanowiska
+      prac. Klient zyskuje zawsze bieżącą wiedzę o aktualnych przepisach
+      podatkowych.
+  - q: Czy można zmienić biuro rachunkowe w ciągu roku?
+    a: Biuro rachunkowe można zmienić w dowolnym momencie. Należy jednak podkreślić,
+      że najdogodniejszym momentem zmiany biura rachunkowego jest początek
+      nowego okresu fiskalnego – dzięki temu nowe biuro rachunkowe ma pełną
+      odpowiedzialność za okres sprawozdawczy. Najczęstsze motywacje naszych
+      Klientów do zmiany biura rachunkowego w ciąg roku to zmiany personalne w
+      firmie i podjęcie decyzji o przejściu na usługi zewnętrzne, rażące
+      zaniedbania w terminowości rozliczeń podatkowych obecnego biura, rażące
+      obniżenie jakości obsługi dotychczasowego biura. Podejmując decyzję o
+      zmianie biura rachunkowego w ciągu roku fiskalnego trzeba z nowym biurem
+      dokładnie omówić zakres odpowiedzialności za przejmowane księgi – nie
+      każde biuro chce brać odpowiedzialność za księgowania i rozliczenia
+      podatkowe zrobione przez inne biuro, a tym samym może odmówić sporządzenia
+      i podpisania rocznych deklaracji czy sprawozdania finansowego lub zarządać
+      dodatkowego wynagrodzenia za weryfikację tych zapisów.
+  - q: Szkoda Ci czasu na analizowanie szybko zmieniających się przepisów?
+    a: Brak stabilności prawa podatkowego, wielokrotnie niejasne i niejednoznaczne
+      przepisy, sprzeczne interpretacje urzędów skarbowych czy nawet sądów – to
+      nieliczne problemy z jakimi zmaga się polski podatnik. Biuro rachunkowe w
+      całości zdejmuje ten ciężar z przedsiębiorcy. Przedsiębiorcy nie mają ani
+      czasu ani zasobów merytorycznych aby śledzić zmiany w przepisach, a za
+      ewentualne błędy w rozliczeniach nie mogą się tłumaczyć  nieznajomością
+      prawa. Wielokrotnie nie mają również możliwości merytorycznego
+      skontrolowania jakości rozliczeń podatkowych wykonywanych przez własnych
+      pracowników etatowych.
+  - q: Obawiasz się błędów jakie możesz zrobić samodzielnie prowadząc księgowość?
+    a: Jest wiele pułapek w polskim prawie, z którymi przedsiębiorcy i biura
+      rachunkowe muszą się zmagać w codziennych rozliczeniach. Kary za
+      niedopełnienie zobowiązać podatkowych są bardzo dotkliwe. Jeżeli drogi
+      Kliencie nie chcesz marnować czasu na pasjonującą lekturę co raz to nowych
+      przepisów podatkowych – zapraszamy do współpracy!
+  - q: Martwisz się, że dokumenty mogą być zagubione?
+    a: Biuro Rachunkowe VAVICOM współpracuje ze swoimi Klientami w oparciu o
+      nowoczesną platformę wymiany dokumentów. Każdy z naszych Klientów w każdym
+      momencie widzi jakie faktury nam przekazał i kiedy to zrobił. Dokumenty
+      można przekazać na wiele sposobów – chociażby bezpośrednio z telefonu
+      (faktura za paliwo), mailem lub też bezpośrednio na platformie. System ten
+      jest bardzo przyjazny dla użytkownika. Dodatkowo Klienci mają możliwość
+      bezpłatnego korzystania z dodatkowych funkcjonalności platformy m.in –
+      wystawianie faktur sprzedaży, generowanie przelewów do dostawców
+      (integracja z bankiem), wprowadzenie systemu online do akceptacji faktur,
+      archiwizowanie innej dokumentacji firmy (np. umowy).
+  - q: Masz złe doświadczenie ze współpracy z biurami rachunkowymi?
+    a: Stworzyliśmy środowisko pracy, w którym jesteśmy częścią struktury naszego
+      Klienta, wspieramy go w bieżącej działalności, a biorąc pod uwagę
+      zmieniające się przepisy i specyfikę Klienta proaktywnie proponujemy
+      rozwiązania. Gwarantem jakości jest doświadczony zespół i niespotykanie
+      niska rotacja zespołu.Dołącz do grona naszych zadowolonych Klientów!
+  - q: Nie masz z kim skonsultować bieżących decyzji księgowo-finansowych?
+    a: Jesteśmy finansowym partnerem biznesowym, nasza misją jest budowanie przewagi
+      konkurencyjnej naszych klientów poprzez profesjonalną obsługę rachunkową.
+      Dlatego też dbamy o to, aby nasi Klienci dostawali od nas regularne
+      informacje o zmieniających się przepisach dotyczących ich firmy.
+  - q: Wiesz czym jest księgowość hybrydowa?
+    a: Księgowość hybrydowa to połączenie tradycyjnej księgowości z księgowością
+      internetową. Takie połączenie pozwala na wdrożenie wszystkiego co
+      pozytywne z obu modelów i jednoczesne wyeliminowanie słabych punktów.
+      Biuro Rachunkowe VAVICOM stawia na połączenie nowoczesnych rozwiązań
+      technologicznych z jakże potrzebnym bezpośrednim kontaktem z osobą
+      obsługującą. Najważniejszy dla nas jest Klient, któremu zapewniamy bieżący
+      kontakt ze stałym opiekunem, systemy informatyczne wspierają nas jedynie w
+      usprawnieniu komunikacji z Klientem oraz usprawnieniu procesu wymiany
+      dokumentów. Biuro rachunkowe VAVICOM  – Zaufanie, które procentuje!
+  - q: W jakiej formie przekazujesz dokumenty do biura?
+    a: Zdecydowana większość naszych Klientów współpracuje z nami w oparciu o
+      nowoczesną platformę wymiany dokumentów. Nasi Klienci w każdym momencie
+      widzą jakie faktury nam przekazali. Klienci preferujący tradycyjne metody
+      współpracy dostarczają nam dokumenty osobiście lub za pośrednictwem
+      kuriera.
+  - q: Ważna jest dla ciebie kompleksowość obsługi, profesjonalizm I terminowość?
+    a: Gwarantujemy komfort i poczucie bezpieczeństwa w powierzonych sprawach;
+      dodatkowo poufność i dyskrecję. Bezpieczne systemy informatyczne.
+  - q: Jaka jest polityka prywatności Biura Rachunkowego?
+    a: "POLITYKA PRYWATNOŚCI Biuro Rachunkowe Vavicom. Administrator:
+      Administratorem danych jest VAVICOM sp. z o.o. z siedzibą w Piasecznie.
+      Dane kontaktowe: Z Administratorem można się skontaktować: elektronicznie:
+      info@vavicom.pl telefonicznie: +48 606 368 694 listownie: ul.
+      Grochowskiego 7 lok.25, 05-500 Piaseczno Administrator powołał Inspektora
+      Ochrony Danych, z którym można skontaktować się we wszystkich kwestiach
+      dotyczących ochrony danych osobowych oraz sposobu realizacji
+      przysługujących osobom fizycznym praw za pomocą email: iod@vavicom.pl Cel
+      przetwarzania i podstawa prawna przetwarzania danych osobowych Komunikacja
+      drogą e-mailową oraz tradycyjną: art. 6 ust. 1 lit. f) RODO Podstawą
+      prawną przetwarzania jest uzasadniony interes Administratora polegający na
+      prowadzeniu korespondencji. Kontakt telefoniczny: art. 6 ust. 1 lit. f)
+      RODO Podstawą prawną przetwarzania jest uzasadniony interes Administratora
+      polegający na konieczności załatwienia zgłoszonej sprawy związanej z
+      prowadzoną działalnością. Rekrutacja: art. 6 ust. 1 lit. c) RODO Podstawą
+      prawną przetwarzania jest obowiązek prawny ciążący na Administratorze w
+      związku z przepisami Kodeksu pracy oraz art. 6 ust. 1 lit. a) RODO
+      Podstawą prawną przetwarzania jest zgoda w celu przeprowadzenia procesu
+      rekrutacji w zakresie danych niewymaganych przepisami prawa, a także dla
+      celów przyszłych procesów rekrutacyjnych. Świadczenie usług: art. 6 ust. 1
+      lit. a) RODO oraz art. 10 ust. 2 ustawy z dnia 18 lipca 2002 r. o
+      świadczeniu usług drogą elektroniczną. Podstawą prawną przetwarzania jest
+      wyrażona zgoda. Art. 6 ust. 1 lit. b) RODO Podstawą prawną przetwarzania
+      jest zawarcie i wykonanie umowy. Art. 6 ust. 1 lit. f) RODO Podstawą
+      prawną przetwarzania jest prawnie uzasadniony interes Administratora
+      polegający w szczególności na realizacji umowy, marketingu usług własnych.
+      Gromadzenie danych w kontaktach biznesowych: art. 6 ust. 1 lit. a) RODO
+      Podstawą prawną przetwarzania jest wyrażona zgoda. Prowadzenie ksiąg
+      rachunkowych i dokumentacji podatkowej: art. 6 ust. 1 lit. c) RODO w zw. z
+      art. 74 ust. 2 ustawy z dnia 29 września 1994 r. o rachunkowości. Podstawą
+      prawną przetwarzania jest obowiązek prawny ciążący na Administratorze w
+      związku z przepisami ustawy o rachunkowości. Komunikacja z osobami
+      odpowiedzialnymi za wykonanie umowy po stronie partnera biznesowego: art.
+      6 ust. 1 lit. f) RODO Podstawą prawną przetwarzania jest uzasadniony
+      interes Administratora polegający na komunikacji z partnerami biznesowymi.
+      Odbiorcy danych: podmioty zapewniające świadczenie określonych usług, w
+      tym m.in. dostawcom usług teleinformatycznych, operatorom pocztowym,
+      firmom kurierskim. Dostawcy usług prawnych i doradczych oraz wspierających
+      Administratora w dochodzeniu należnych roszczeń w szczególności
+      kancelariom prawnym. Organy uprawnionym do otrzymania danych osobowych na
+      podstawie przepisów prawa. Prawa osoby, której dane dotyczą: Prawo dostępu
+      do danych osobowych oraz prawo do żądania ich sprostowania, usunięcia lub
+      ograniczenia przetwarzania. Prawo do wniesienia sprzeciwu wobec
+      przetwarzania Państwa danych osobowych. Prawo do jej cofnięcia w dowolnym
+      momencie bez wpływu na zgodność z prawem przetwarzania, którego dokonano
+      na podstawie zgody przed jej cofnięciem. W zakresie, w jakim Państwa dane
+      są przetwarzane w celu zawarcia i wykonywania umowy o świadczenie usług
+      lub przetwarzane na podstawie Państwa zgody przysługuje Państwu, także
+      prawo do przenoszenia danych osobowych. Przysługuje Państwu, również prawo
+      do wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych Okres
+      przechowywania danych: Państwa dane osobowe przechowywane będą do chwili
+      realizacji zadania, dla którego zostały zebrane a następnie, jeśli chodzi
+      o materiały archiwalne, przez czas wynikający z przepisów ustawy z dnia 14
+      lipca 1983 r. o narodowym zasobie archiwalnym i archiwach. W przypadku
+      przetwarzania Państwa danych osobowych w celu prowadzenia ksiąg
+      rachunkowych i dokumentacji podatkowej dane osobowe będą przechowywane
+      przez 5 lat liczonych od końca roku kalendarzowego, w którym powstał
+      obowiązek podatkowy. W przypadku przetwarzania Państwa danych osobowych do
+      świadczenia usług zaufania o których mowa w art. 17 ust. 2 ustawy z dnia 5
+      września 2016 r. o usługach zaufania oraz identyfikacji elektronicznej
+      dane osobowe przechowywane będą przez okres wymagany prawem tj. 20 lat. W
+      przypadku przetwarzania Państwa danych osobowych dla potrzeb obecnych
+      oraz  przyszłych procesów rekrutacyjnych dane osobowe przechowywane będą
+      przez okres 12 miesięcy. W przypadku przetwarzania danych osobowych w celu
+      dochodzenia Państwa roszczeń dane osobowe będą przechowywane przez okres
+      przedawnienia roszczeń określony w przepisach prawa. W przypadku wyrażenia
+      przez Państwa zgody na przetwarzanie danych osobowych w celach
+      marketingowych dane będą przechowywane do czasu jej wycofania."
+contactSection:
+  town2: 05-500 Piaseczno
+  street: ul. Ogrodowa 6
+  ourOffice: NASZE BIURO
+  name: Biuro Rachunkowe VAVICOM
+  phone: telefon
+  street2: ul. Grochowskiego 7
+  town: 05-500 Józefosław
+  whereAreWe: GDZIE JESTEŚMY
+  email: "Email: info@vavicom.pl lub vavicom.info@gmail.com"
 ---
