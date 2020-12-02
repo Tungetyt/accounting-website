@@ -7,11 +7,36 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
 import { Element } from 'react-scroll';
+import { graphql, useStaticQuery } from 'gatsby';
 import { ColorContext } from '../context/contexts';
 import { APP_THEME, NAVIGATION } from '../helpers';
 import { faqSection } from '../intl/en.json';
 
 export default function Faq() {
+  const data = useStaticQuery(graphql`
+  query {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            faqSection {
+              a
+              q
+            }
+          }
+        }
+      }
+    }
+  }
+`);
+  const allMarkdownRemark = data?.allMarkdownRemark;
+  console.log('allMarkdownRemark', allMarkdownRemark);
+  const faqSec = allMarkdownRemark
+    ?.edges[1]
+    ?.node
+    ?.frontmatter;
+  console.log('faqSec', faqSec);
+
   const [expanded, setExpanded] = React.useState(false);
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
@@ -39,7 +64,7 @@ export default function Faq() {
   return (
     <Element name={faq}>
       <div className={root}>
-        {faqSection.map((f, i) => (
+        {faqSec.faqSection.map((f, i) => (
           <Accordion
             // eslint-disable-next-line react/no-array-index-key
             key={i}

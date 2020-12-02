@@ -45,13 +45,19 @@ export default function AccountingOffer() {
           }
         }
       }
-      allMarkdownRemark{
+      allMarkdownRemark {
         edges {
           node {
             frontmatter {
-              landing
-              address
-              langBtn
+              accounting {
+                services {
+                  more {
+                    moreIntro
+                  }
+                  intro
+                }
+                info
+              }
             }
           }
         }
@@ -68,7 +74,8 @@ export default function AccountingOffer() {
     ?.node
     ?.frontmatter;
 
-  const { address, landing } = frontmatter1;
+  const { accounting } = frontmatter1;
+  console.log('accounting', accounting);
 
   const [expanded, setExpanded] = React.useState(false);
   const intl = useIntl();
@@ -122,10 +129,9 @@ export default function AccountingOffer() {
             </Tilt>
           </Grid>
           <Grid item>
-            {Array(2).fill(null).map((line, i) => (
-              <Typography key={i} paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.info.${i}` })}</Typography>
+            {accounting.info.map((line, i) => (
+              <Typography key={i} paragraph className={text}>{line}</Typography>
             ))}
-
           </Grid>
         </Grid>
         <IconButton
@@ -143,11 +149,11 @@ export default function AccountingOffer() {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <CenterWrapper>
-            <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.info.2` })}</Typography>
+            {/* <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.info.2` })}</Typography> */}
             <ul>
-              {Array(8).fill(null).map((line, i) => (
+              {accounting.services.intro.map((line, i) => (
                 <li key={i}>
-                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.services.${i}` })}</Typography>
+                  <Typography paragraph>{ line}</Typography>
                 </li>
               ))}
             </ul>
@@ -164,8 +170,11 @@ export default function AccountingOffer() {
           >
             <Grid item>
               <div style={{ columnWidth: '600px' }}>
-                <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.more.0` })}</Typography>
-                <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.more.1` })}</Typography>
+                {accounting.services.more.moreIntro.map((line, i) => (
+                  <Typography key={i} paragraph className={text}>{ line}</Typography>
+                ))}
+                {/* <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.more.0` })}</Typography>
+                <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.more.1` })}</Typography> */}
               </div>
             </Grid>
             <Grid item style={{ width: '600px' }}>
@@ -182,7 +191,7 @@ export default function AccountingOffer() {
 
           <Divider />
           <br />
-          <CenterWrapper>
+          {/* <CenterWrapper>
             <Typography paragraph className={text}>{ intl.formatMessage({ id: 'accounting.more.2' })}</Typography>
             <ul>
               {Array(3).fill(null).map((line, i) => (
@@ -191,7 +200,7 @@ export default function AccountingOffer() {
                 </li>
               ))}
             </ul>
-          </CenterWrapper>
+          </CenterWrapper> */}
 
         </CardContent>
       </Collapse>

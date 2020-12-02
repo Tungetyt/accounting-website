@@ -1,7 +1,7 @@
 ---
 title: vavicom
 landing:
-  - BIURO
+  - BIURO URO
   - RACHUNKOWE
   - VAVICOM
 address: JÓZEFOSŁAW WARSZAWA PIASECZNO
@@ -681,6 +681,8 @@ faqSection:
       przedawnienia roszczeń określony w przepisach prawa. W przypadku wyrażenia
       przez Państwa zgody na przetwarzanie danych osobowych w celach
       marketingowych dane będą przechowywane do czasu jej wycofania."
+  - q: pytanie
+    a: odpoweidz
 contactSection:
   town2: 05-500 Piaseczno
   street: ul. Ogrodowa 6

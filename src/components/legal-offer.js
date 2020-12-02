@@ -12,12 +12,59 @@ import clsx from 'clsx';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
 import Tilt from 'react-parallax-tilt';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import { ColorContext } from '../context/contexts';
 import { APP_THEME } from '../helpers';
 import CenterWrapper from './center-wrapper';
 import Image from './image';
 
 export default function LegalOffer() {
+  const data = useStaticQuery(graphql`
+  query {
+    allMarkdownRemark{
+      edges {
+        node {
+          frontmatter {
+            legalImage {
+              childImageSharp {
+                fluid(maxWidth: 600, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            legal2Image {
+              childImageSharp {
+                fluid(maxWidth: 600, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            legalServices
+          }
+        }
+      }
+    }
+  }
+`);
+  const allMarkdownRemark = data?.allMarkdownRemark;
+  const frontmatter0 = allMarkdownRemark
+    ?.edges[0]
+    ?.node
+    ?.frontmatter;
+  const { legalServices } = allMarkdownRemark
+    ?.edges[1]
+    ?.node
+    ?.frontmatter;
+  console.log('legalServices', legalServices);
   const [expanded, setExpanded] = React.useState(false);
   const intl = useIntl();
   const [isDark] = useContext(ColorContext);
@@ -62,12 +109,15 @@ export default function LegalOffer() {
         >
           <Grid item style={{ width: '600px' }}>
             <Tilt>
-              <Image alt="legal service" filename="8OIP_4x.jpg" />
+              <Img fluid={frontmatter0?.legalImage
+                ?.childImageSharp
+                ?.fluid}
+              />
             </Tilt>
           </Grid>
           <Grid item>
-            <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.0` })}</Typography>
-            <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.1` })}</Typography>
+            <Typography paragraph className={text}>{legalServices[0]}</Typography>
+            <Typography paragraph className={text}>{legalServices[1]}</Typography>
 
           </Grid>
         </Grid>
@@ -95,28 +145,28 @@ export default function LegalOffer() {
             <Grid
               item
             >
-              <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.2` })}</Typography>
+              <Typography paragraph className={text}>{legalServices[2]}</Typography>
               <ul>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.3` })}</Typography>
+                  <Typography paragraph>{legalServices[3]}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.4` })}</Typography>
+                  <Typography paragraph>{legalServices[4]}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.5` })}</Typography>
+                  <Typography paragraph>{legalServices[5]}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.6` })}</Typography>
+                  <Typography paragraph>{legalServices[6]}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.7` })}</Typography>
+                  <Typography paragraph>{legalServices[7]}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.8` })}</Typography>
+                  <Typography paragraph>{ legalServices[8]}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.9` })}</Typography>
+                  <Typography paragraph>{legalServices[9]}</Typography>
                 </li>
               </ul>
             </Grid>
@@ -126,9 +176,9 @@ export default function LegalOffer() {
           <CenterWrapper>
 
             <div style={{ columnWidth: '600px' }}>
-              <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.10` })}</Typography>
-              <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.11` })}</Typography>
-              <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.12` })}</Typography>
+              <Typography paragraph className={text}>{ legalServices[10]}</Typography>
+              <Typography paragraph className={text}>{ legalServices[11]}</Typography>
+              <Typography paragraph className={text}>{ legalServices[12]}</Typography>
 
             </div>
 
@@ -136,7 +186,10 @@ export default function LegalOffer() {
 
           <CenterWrapper>
             <Tilt style={{ width: '200px' }}>
-              <Image alt="more legal service" filename="15Zawieszenie_dzialalnosci_5843057.jpg" />
+              <Img fluid={frontmatter0?.legal2Image
+                ?.childImageSharp
+                ?.fluid}
+              />
             </Tilt>
 
           </CenterWrapper>

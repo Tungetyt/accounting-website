@@ -9,6 +9,8 @@ import EmailIcon from '@material-ui/icons/Email';
 import PhoneIcon from '@material-ui/icons/Phone';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import { ColorContext } from '../context/contexts';
 import {
   APP_THEME, EMAIL, EMAIL2, PHONE_NUMBER, PHONE_NUMBER2
@@ -21,6 +23,33 @@ const useStyles = makeStyles(() => ({
   },
 }));
 const ContactInfoMainContent = () => {
+  const data = useStaticQuery(graphql`
+  query {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            contactSection {
+              email
+              name
+              phone
+              street
+              street2
+              town
+              town2
+            }
+          }
+        }
+      }
+    }
+  }
+`);
+  const allMarkdownRemark = data?.allMarkdownRemark;
+  const { contactSection } = allMarkdownRemark
+    ?.edges[1]
+    ?.node
+    ?.frontmatter;
+
   const intl = useIntl();
   const [isDark] = useContext(ColorContext);
   const color = isDark ? '#FFFFFF' : 'primary';
@@ -41,19 +70,19 @@ const ContactInfoMainContent = () => {
             </Grid>
             <Grid item>
               <Typography color={color} className={typoSpace}>
-                {intl.formatMessage({ id: 'contactSection.name' })}
+                {contactSection.name}
               </Typography>
               <Typography color={color}>
-                {intl.formatMessage({ id: 'contactSection.street' })}
+                {contactSection.street}
               </Typography>
               <Typography color={color} className={typoSpace}>
-                {intl.formatMessage({ id: 'contactSection.town' })}
+                {contactSection.town}
               </Typography>
               <Typography color={color}>
-                {intl.formatMessage({ id: 'contactSection.street2' })}
+                {contactSection.street2}
               </Typography>
               <Typography color={color}>
-                {intl.formatMessage({ id: 'contactSection.town2' })}
+                {contactSection.town2}
               </Typography>
             </Grid>
           </Grid>

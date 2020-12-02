@@ -12,11 +12,65 @@ import clsx from 'clsx';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
 import Tilt from 'react-parallax-tilt';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import { ColorContext } from '../context/contexts';
 import { APP_THEME } from '../helpers';
 import Image from './image';
 
 export default function TaxServiceOffer() {
+  const data = useStaticQuery(graphql`
+  query {
+    allMarkdownRemark{
+      edges {
+        node {
+          frontmatter {
+            taxesImage {
+              childImageSharp {
+                fluid(maxWidth: 600, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            taxes2Image {
+              childImageSharp {
+                fluid(maxWidth: 600, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            taxServices {
+              info
+              info1
+              more {
+                _0
+              }
+              services
+            }
+          }
+        }
+      }
+    }
+  }
+`);
+  const allMarkdownRemark = data?.allMarkdownRemark;
+  const frontmatter0 = allMarkdownRemark
+    ?.edges[0]
+    ?.node
+    ?.frontmatter;
+  const { taxServices } = allMarkdownRemark
+    ?.edges[1]
+    ?.node
+    ?.frontmatter;
+  console.log('taxServices', taxServices);
   const [expanded, setExpanded] = React.useState(false);
   const intl = useIntl();
   const [isDark] = useContext(ColorContext);
@@ -54,13 +108,16 @@ export default function TaxServiceOffer() {
         >
           <Grid item style={{ width: '600px' }}>
             <Tilt>
-              <Image alt="tax services" filename="91022e07bbff5e0-1024x768.jpg" />
-
+              {/* <Image alt="tax services" filename="91022e07bbff5e0-1024x768.jpg" /> */}
+              <Img fluid={frontmatter0?.taxesImage
+                ?.childImageSharp
+                ?.fluid}
+              />
             </Tilt>
           </Grid>
           <Grid item>
-            <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info.0' })}</Typography>
-            <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info.1' })}</Typography>
+            <Typography paragraph style={{ maxWidth: '600px' }}>{ taxServices.info[0]}</Typography>
+            <Typography paragraph style={{ maxWidth: '600px' }}>{ taxServices.info[1]}</Typography>
           </Grid>
         </Grid>
         <IconButton
@@ -84,22 +141,26 @@ export default function TaxServiceOffer() {
             justify="center"
           >
             <Grid item>
-              <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info1.0' })}</Typography>
+              <Typography paragraph style={{ maxWidth: '600px' }}>{ taxServices.info1[0]}</Typography>
               <ul>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.info1.1' })}</Typography>
+                  <Typography paragraph>{ taxServices.info1[1]}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.info1.2' })}</Typography>
+                  <Typography paragraph>{taxServices.info1[2]}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.info1.3' })}</Typography>
+                  <Typography paragraph>{ taxServices.info1[3]}</Typography>
                 </li>
               </ul>
             </Grid>
             <Grid item style={{ width: '300px' }}>
               <Tilt>
-                <Image alt="more tax services" filename="3cropped-O6YV1W0-1.jpg" />
+                {/* <Image alt="more tax services" filename="3cropped-O6YV1W0-1.jpg" /> */}
+                <Img fluid={frontmatter0?.taxes2Image
+                  ?.childImageSharp
+                  ?.fluid}
+                />
               </Tilt>
             </Grid>
 
@@ -117,28 +178,25 @@ export default function TaxServiceOffer() {
             <Grid
               item
             >
-              <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info1.4' })}</Typography>
+              <Typography paragraph style={{ maxWidth: '600px' }}>{ taxServices.info1[4]}</Typography>
               <ul>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.0' })}</Typography>
+                  <Typography paragraph>{taxServices.more._0}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.1' })}</Typography>
+                  <Typography paragraph>{ taxServices.services[1]}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.2' })}</Typography>
+                  <Typography paragraph>{ taxServices.services[2]}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.3' })}</Typography>
+                  <Typography paragraph>{ taxServices.services[3]}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.4' })}</Typography>
+                  <Typography paragraph>{taxServices.services[4]}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.5' })}</Typography>
-                </li>
-                <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.6' })}</Typography>
+                  <Typography paragraph>{ taxServices.services[5]}</Typography>
                 </li>
               </ul>
             </Grid>

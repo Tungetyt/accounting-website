@@ -12,19 +12,61 @@ import React, { useContext } from 'react';
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
 import { Element } from 'react-scroll';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import { ColorContext } from '../context/contexts';
 import { APP_THEME, NAVIGATION } from '../helpers';
 import ContactInfo from './contact-info';
 import styles from './dist/ImageZoom.module.css';
 import Image from './image';
 import OpenMap from './open-map';
-
 // const tmp = styles;
 const wrapperStyle = {
   width: '100%',
   height: '100%'
 };
 const Contact = () => {
+  const data = useStaticQuery(graphql`
+  query {
+    allMarkdownRemark{
+      edges {
+        node {
+          frontmatter {
+            officeImage {
+              childImageSharp {
+                fluid(maxWidth: 600, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            contactSection {
+              whereAreWe
+              ourOffice
+            }
+          }
+        }
+      }
+    }
+  }
+`);
+  const allMarkdownRemark = data?.allMarkdownRemark;
+  const frontmatter0 = allMarkdownRemark
+    ?.edges[0]
+    ?.node
+    ?.frontmatter;
+  const { contactSection } = allMarkdownRemark
+    ?.edges[1]
+    ?.node
+    ?.frontmatter;
+
   const { contact } = NAVIGATION;
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up('md'));
@@ -52,7 +94,7 @@ const Contact = () => {
           {typeof window !== 'undefined' && matches && (
           <Box>
             <Paper className={paper}>
-              <Typography paragraph align="center">{ intl.formatMessage({ id: 'contactSection.whereAreWe' })}</Typography>
+              <Typography paragraph align="center">{ contactSection.whereAreWe}</Typography>
               <OpenMap />
             </Paper>
           </Box>
@@ -65,10 +107,14 @@ const Contact = () => {
           }}
         >
           <Paper className={paper}>
-            <Typography paragraph align="center">{ intl.formatMessage({ id: 'contactSection.ourOffice' })}</Typography>
+            <Typography paragraph align="center">{ contactSection.ourOffice}</Typography>
             <Zoom>
 
-              <Image style={wrapperStyle} alt="our office" filename="6ogrodowa64.jpg" />
+              {/* <Image style={wrapperStyle} alt="our office" filename="6ogrodowa64.jpg" /> */}
+              <Img fluid={frontmatter0?.officeImage
+                ?.childImageSharp
+                ?.fluid}
+              />
             </Zoom>
           </Paper>
         </Grid>

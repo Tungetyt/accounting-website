@@ -12,11 +12,61 @@ import clsx from 'clsx';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
 import Tilt from 'react-parallax-tilt';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import { ColorContext } from '../context/contexts';
 import { APP_THEME } from '../helpers';
 import Image from './image';
 
 export default function FinancialOffer() {
+  const data = useStaticQuery(graphql`
+  query {
+    allMarkdownRemark{
+      edges {
+        node {
+          frontmatter {
+            financeImage {
+              childImageSharp {
+                fluid(maxWidth: 600, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            finance2Image {
+              childImageSharp {
+                fluid(maxWidth: 600, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            financialServices {
+              financialServicesPart
+            }
+          }
+        }
+      }
+    }
+  }
+`);
+  const allMarkdownRemark = data?.allMarkdownRemark;
+  const frontmatter0 = allMarkdownRemark
+    ?.edges[0]
+    ?.node
+    ?.frontmatter;
+  const { financialServices } = allMarkdownRemark
+    ?.edges[1]
+    ?.node
+    ?.frontmatter;
+  console.log('financialServices', financialServices);
+
   const [expanded, setExpanded] = React.useState(false);
   const intl = useIntl();
   const [isDark] = useContext(ColorContext);
@@ -59,13 +109,15 @@ export default function FinancialOffer() {
         >
           <Grid item style={{ width: '600px' }}>
             <Tilt>
-              <Image alt="financial" filename="16E-biznes-po-pol-miliona-zlotych-dla-270-firm-108796-640x640.jpg" />
-
+              <Img fluid={frontmatter0?.financeImage
+                ?.childImageSharp
+                ?.fluid}
+              />
             </Tilt>
           </Grid>
           <Grid item>
-            <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.0` })}</Typography>
-            <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.1` })}</Typography>
+            <Typography paragraph className={text}>{ financialServices[0].financialServicesPart}</Typography>
+            <Typography paragraph className={text}>{ financialServices[1].financialServicesPart}</Typography>
 
           </Grid>
         </Grid>
@@ -93,28 +145,28 @@ export default function FinancialOffer() {
             <Grid
               item
             >
-              <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.2` })}</Typography>
+              <Typography paragraph className={text}>{financialServices[2].financialServicesPart}</Typography>
               <ul>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.3` })}</Typography>
+                  <Typography paragraph>{financialServices[3].financialServicesPart}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.4` })}</Typography>
+                  <Typography paragraph>{financialServices[4].financialServicesPart}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.5` })}</Typography>
+                  <Typography paragraph>{financialServices[5].financialServicesPart}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.6` })}</Typography>
+                  <Typography paragraph>{financialServices[6].financialServicesPart}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.7` })}</Typography>
+                  <Typography paragraph>{financialServices[7].financialServicesPart}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.8` })}</Typography>
+                  <Typography paragraph>{financialServices[8].financialServicesPart}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.9` })}</Typography>
+                  <Typography paragraph>{financialServices[9].financialServicesPart}</Typography>
                 </li>
               </ul>
             </Grid>
@@ -133,14 +185,17 @@ export default function FinancialOffer() {
           >
             <Grid item>
               <div style={{ columnWidth: '600px' }}>
-                <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.10` })}</Typography>
-                <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.11` })}</Typography>
-                <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.12` })}</Typography>
+                <Typography paragraph className={text}>{financialServices[10].financialServicesPart}</Typography>
+                <Typography paragraph className={text}>{financialServices[11].financialServicesPart}</Typography>
+                <Typography paragraph className={text}>{financialServices[12].financialServicesPart}</Typography>
               </div>
             </Grid>
             <Grid item style={{ width: '600px' }}>
               <Tilt>
-                <Image alt="more financial" filename="accounting_2.jpg" />
+                <Img fluid={frontmatter0?.finance2Image
+                  ?.childImageSharp
+                  ?.fluid}
+                />
               </Tilt>
             </Grid>
           </Grid>

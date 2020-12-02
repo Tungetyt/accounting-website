@@ -12,11 +12,58 @@ import clsx from 'clsx';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
 import Tilt from 'react-parallax-tilt';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import { ColorContext } from '../context/contexts';
 import { APP_THEME } from '../helpers';
 import Image from './image';
 
 export default function BusinessOffer() {
+  const data = useStaticQuery(graphql`
+  query {
+    allMarkdownRemark{
+      edges {
+        node {
+          frontmatter {
+            businessImage {
+              childImageSharp {
+                fluid(maxWidth: 600, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            business2Image {
+              childImageSharp {
+                fluid(maxWidth: 600, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            businessServices
+          }
+        }
+      }
+    }
+  }
+`);
+  const allMarkdownRemark = data?.allMarkdownRemark;
+  const frontmatter0 = allMarkdownRemark
+    ?.edges[0]
+    ?.node
+    ?.frontmatter;
+  const { businessServices } = allMarkdownRemark
+    ?.edges[1]
+    ?.node
+    ?.frontmatter;
+
   const [expanded, setExpanded] = React.useState(false);
   const intl = useIntl();
   const [isDark] = useContext(ColorContext);
@@ -61,12 +108,16 @@ export default function BusinessOffer() {
         >
           <Grid item style={{ width: '600px' }}>
             <Tilt>
-              <Image alt="business" filename="14biuro-rachunkowe-szczecin.jpeg" />
+              {/* <Image alt="business" filename="14biuro-rachunkowe-szczecin.jpeg" /> */}
+              <Img fluid={frontmatter0?.businessImage
+                ?.childImageSharp
+                ?.fluid}
+              />
             </Tilt>
 
           </Grid>
           <Grid item>
-            <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.0` })}</Typography>
+            <Typography paragraph className={text}>{ businessServices[0]}</Typography>
           </Grid>
         </Grid>
         <IconButton
@@ -93,28 +144,28 @@ export default function BusinessOffer() {
             <Grid
               item
             >
-              <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.1` })}</Typography>
+              <Typography paragraph className={text}>{ businessServices[1]}</Typography>
               <ul>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.2` })}</Typography>
+                  <Typography paragraph>{businessServices[2]}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.3` })}</Typography>
+                  <Typography paragraph>{businessServices[3]}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.4` })}</Typography>
+                  <Typography paragraph>{businessServices[4]}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.5` })}</Typography>
+                  <Typography paragraph>{businessServices[5]}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.6` })}</Typography>
+                  <Typography paragraph>{businessServices[6]}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.7` })}</Typography>
+                  <Typography paragraph>{businessServices[7]}</Typography>
                 </li>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.8` })}</Typography>
+                  <Typography paragraph>{businessServices[8]}</Typography>
                 </li>
               </ul>
             </Grid>
@@ -132,16 +183,21 @@ export default function BusinessOffer() {
           >
             <Grid item>
               <div style={{ columnWidth: '600px' }}>
-                <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.10` })}</Typography>
-                <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.11` })}</Typography>
-                <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.12` })}</Typography>
-                <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.13` })}</Typography>
-                <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.14` })}</Typography>
+                <Typography paragraph className={text}>{businessServices[10]}</Typography>
+                <Typography paragraph className={text}>{businessServices[11]}</Typography>
+                <Typography paragraph className={text}>{businessServices[12]}</Typography>
+                <Typography paragraph className={text}>{businessServices[13]}</Typography>
+                <Typography paragraph className={text}>{businessServices[14]}</Typography>
+                <Typography paragraph className={text}>...</Typography>
               </div>
             </Grid>
             <Grid item style={{ width: '300px' }}>
               <Tilt>
-                <Image alt="more business" filename="11Biznes.jpg" />
+                {/* <Image alt="more business" filename="11Biznes.jpg" /> */}
+                <Img fluid={frontmatter0?.business2Image
+                  ?.childImageSharp
+                  ?.fluid}
+                />
               </Tilt>
             </Grid>
           </Grid>

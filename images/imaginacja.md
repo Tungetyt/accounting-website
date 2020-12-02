@@ -1,7 +1,7 @@
 ---
 title: imaginacja
 landingPageImage: /assets/1.jpg
-AccountingImage: /assets/14biuro-rachunkowe-szczecin.jpeg
+AccountingImage: /assets/business.jpg
 Accounting2Image: /assets/11Biznes.jpg
 hrImage: /assets/12Podatek-VAT-kiedy-decyzja-wymiarowa-Ojq7ie.jpg
 hr2Image: /assets/4iStock_38378140_XLARGE-scaled.jpg

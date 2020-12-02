@@ -13,11 +13,67 @@ import clsx from 'clsx';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
 import Tilt from 'react-parallax-tilt';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import { ColorContext } from '../context/contexts';
 import { APP_THEME } from '../helpers';
 import Image from './image';
 
 export default function HrAndPayrollOffer() {
+  const data = useStaticQuery(graphql`
+  query {
+    allMarkdownRemark{
+      edges {
+        node {
+          frontmatter {
+            hrImage {
+              childImageSharp {
+                fluid(maxWidth: 600, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            hr2Image {
+              childImageSharp {
+                fluid(maxWidth: 600, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            hrAndPayroll {
+              info
+              more {
+                moreList
+                next {
+                  nextPart
+                }
+              }
+              services
+            }
+          }
+        }
+      }
+    }
+  }
+`);
+  const allMarkdownRemark = data?.allMarkdownRemark;
+  const frontmatter0 = allMarkdownRemark
+    ?.edges[0]
+    ?.node
+    ?.frontmatter;
+  const { hrAndPayroll } = allMarkdownRemark
+    ?.edges[1]
+    ?.node
+    ?.frontmatter;
+  console.log('hrAndPayroll', hrAndPayroll);
   const [expanded, setExpanded] = React.useState(false);
   const intl = useIntl();
   const [isDark] = useContext(ColorContext);
@@ -56,13 +112,17 @@ export default function HrAndPayrollOffer() {
         >
           <Grid item style={{ width: '600px' }}>
             <Tilt>
-              <Image alt="hr and payroll" filename="12Podatek-VAT-kiedy-decyzja-wymiarowa-Ojq7ie.jpg" />
+              {/* <Image alt="hr and payroll" filename="12Podatek-VAT-kiedy-decyzja-wymiarowa-Ojq7ie.jpg" /> */}
+              <Img fluid={frontmatter0?.hrImage
+                ?.childImageSharp
+                ?.fluid}
+              />
             </Tilt>
           </Grid>
           <Grid item>
-            <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: `${offerName}.info.0` })}</Typography>
-            <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: `${offerName}.info.1` })}</Typography>
-            <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: `${offerName}.info.2` })}</Typography>
+            <Typography paragraph style={{ maxWidth: '600px' }}>{ hrAndPayroll.info[0]}</Typography>
+            <Typography paragraph style={{ maxWidth: '600px' }}>{ hrAndPayroll.info[1]}</Typography>
+            <Typography paragraph style={{ maxWidth: '600px' }}>{ hrAndPayroll.info[2]}</Typography>
           </Grid>
 
         </Grid>
@@ -89,11 +149,11 @@ export default function HrAndPayrollOffer() {
             <Grid
               item
             >
-              <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: `${offerName}.info.3` })}</Typography>
+              <Typography paragraph style={{ maxWidth: '600px' }}>{ hrAndPayroll.info[0]}</Typography>
               <ul>
-                {Array(12).fill(null).map((line, i) => (
+                {hrAndPayroll.services.map((line, i) => (
                   <li key={i}>
-                    <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.services.${i}` })}</Typography>
+                    <Typography paragraph>{ line }</Typography>
                   </li>
                 ))}
               </ul>
@@ -111,13 +171,16 @@ export default function HrAndPayrollOffer() {
 
           >
             <Grid item style={{ width: '600px' }}>
-              <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.more.${0}` })}</Typography>
-              <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.more.${1}` })}</Typography>
+              <Typography paragraph>{hrAndPayroll.more.moreList[0]}</Typography>
+              <Typography paragraph>{hrAndPayroll.more.moreList[1]}</Typography>
             </Grid>
             <Grid item style={{ width: '600px' }}>
               <Tilt>
-                <Image alt="more hr and payroll" filename="4iStock_38378140_XLARGE-scaled.jpg" />
-
+                {/* <Image alt="more hr and payroll" filename="4iStock_38378140_XLARGE-scaled.jpg" /> */}
+                <Img fluid={frontmatter0?.hr2Image
+                  ?.childImageSharp
+                  ?.fluid}
+                />
               </Tilt>
             </Grid>
 
@@ -134,15 +197,11 @@ export default function HrAndPayrollOffer() {
             <Grid
               item
             >
-              <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'hrAndPayroll.more.2' })}</Typography>
+              <Typography paragraph style={{ maxWidth: '600px' }}>{hrAndPayroll.more.moreList[2]}</Typography>
               <ul>
                 <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: 'hrAndPayroll.more.3.0' })}</Typography>
+                  <Typography paragraph>{ hrAndPayroll.more.next.nextPart}</Typography>
                 </li>
-                <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: 'hrAndPayroll.more.3.1' })}</Typography>
-                </li>
-
               </ul>
             </Grid>
 
