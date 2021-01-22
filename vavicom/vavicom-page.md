@@ -2,7 +2,7 @@
 title: Vavicom Page
 landingPageImage: /assets/1.jpg
 landing:
-  - BIURO
+  - BIUROo
   - RACHUNKOWE
   - VAVICOM
 address: JÓZEFOSŁAW WARSZAWA PIASECZNO
