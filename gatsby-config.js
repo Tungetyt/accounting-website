@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Vavicom Piaseczno Józefosław Wawrszawa',
     description: 'Biuro Rachunkowe VAVICOM Piaseczno, Józefosław, Warszawa. Księgowość, Kadry i Płace, Podatki, Finanse, Biznes',
-    author: '@tungetyt',
+    author: '@tungetyt <m0kotlicki@gmail.com>',
     siteUrl: 'https://vavicom.pl',
   },
   plugins: [
@@ -81,7 +81,7 @@ module.exports = {
         // language JSON resource path
         path: `${__dirname}/src/intl`,
         // supported language
-        languages: ['pl', 'en'],
+        languages: ['pl'], // languages: ['pl', 'en'],
         // language file path
         defaultLanguage: 'pl',
       },

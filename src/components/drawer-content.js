@@ -25,9 +25,9 @@ const DrawerContent = () => {
         <Grid item>
           <ColorBtn />
         </Grid>
-        <Grid item>
+        {/* <Grid item>
           <LangBtn />
-        </Grid>
+        </Grid> */}
       </Grid>
       <br />
 
