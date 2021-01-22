@@ -53,10 +53,13 @@ export default function TaxServiceOffer() {
           style={{ padding: '6px' }}
         >
           <Grid item style={{ width: '600px' }}>
-            <Tilt>
-              <Image alt="tax services" filename="91022e07bbff5e0-1024x768.jpg" />
+            <div className="container">
+              <div className="containerimg">
+                <Image alt="tax services" filename="91022e07bbff5e0-1024x768.jpg" />
 
-            </Tilt>
+              </div>
+
+            </div>
           </Grid>
           <Grid item>
             <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info.0' })}</Typography>

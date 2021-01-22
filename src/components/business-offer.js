@@ -60,9 +60,12 @@ export default function BusinessOffer() {
           style={{ padding: '6px' }}
         >
           <Grid item style={{ width: '600px' }}>
-            <Tilt>
-              <Image alt="business" filename="14biuro-rachunkowe-szczecin.jpeg" />
-            </Tilt>
+            <div className="container">
+              <div className="containerimg">
+                <Image alt="business" filename="14biuro-rachunkowe-szczecin.jpeg" />
+              </div>
+
+            </div>
 
           </Grid>
           <Grid item>

@@ -55,9 +55,12 @@ export default function HrAndPayrollOffer() {
           style={{ padding: '6px' }}
         >
           <Grid item style={{ width: '600px' }}>
-            <Tilt>
-              <Image alt="hr and payroll" filename="12Podatek-VAT-kiedy-decyzja-wymiarowa-Ojq7ie.jpg" />
-            </Tilt>
+            <div className="container">
+              <div className="containerimg">
+                <Image alt="hr and payroll" filename="12Podatek-VAT-kiedy-decyzja-wymiarowa-Ojq7ie.jpg" />
+              </div>
+
+            </div>
           </Grid>
           <Grid item>
             <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: `${offerName}.info.0` })}</Typography>

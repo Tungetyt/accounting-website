@@ -61,9 +61,12 @@ export default function LegalOffer() {
           style={{ padding: '6px' }}
         >
           <Grid item style={{ width: '600px' }}>
-            <Tilt>
-              <Image alt="legal service" filename="8OIP_4x.jpg" />
-            </Tilt>
+            <div className="container">
+              <div className="containerimg">
+                <Image alt="legal service" filename="8OIP_4x.jpg" />
+              </div>
+
+            </div>
           </Grid>
           <Grid item>
             <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.0` })}</Typography>

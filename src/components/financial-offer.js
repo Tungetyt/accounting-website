@@ -58,10 +58,13 @@ export default function FinancialOffer() {
           style={{ padding: '6px' }}
         >
           <Grid item style={{ width: '600px' }}>
-            <Tilt>
-              <Image alt="financial" filename="16E-biznes-po-pol-miliona-zlotych-dla-270-firm-108796-640x640.jpg" />
+            <div className="container">
+              <div className="containerimg">
+                <Image alt="financial" filename="16E-biznes-po-pol-miliona-zlotych-dla-270-firm-108796-640x640.jpg" />
 
-            </Tilt>
+              </div>
+
+            </div>
           </Grid>
           <Grid item>
             <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.0` })}</Typography>

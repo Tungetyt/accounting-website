@@ -13,6 +13,7 @@ import clsx from 'clsx';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
 import Tilt from 'react-parallax-tilt';
+import Zoom from 'react-medium-image-zoom';
 import { ColorContext } from '../context/contexts';
 import { APP_THEME } from '../helpers';
 import CenterWrapper from './center-wrapper';
@@ -62,9 +63,11 @@ export default function AccountingOffer() {
           style={{ padding: '6px' }}
         >
           <Grid item style={{ width: '600px' }}>
-            <Tilt>
-              <Image alt="accounting" filename="7finanse-i-rachunkowosc.jpg" />
-            </Tilt>
+            <div className="container">
+              <div className="containerimg">
+                <Image alt="accounting" filename="7finanse-i-rachunkowosc.jpg" />
+              </div>
+            </div>
           </Grid>
           <Grid item>
             {Array(2).fill(null).map((line, i) => (
