@@ -39,6 +39,7 @@ const Logo = () => {
             variant="h6"
             noWrap
             color="primary"
+            style={{ userSelect: 'none' }}
           >
             {COMPANY}
           </Typography>
