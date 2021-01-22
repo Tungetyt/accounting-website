@@ -15,7 +15,8 @@ const Banner = () => {
       file(relativePath: { eq: "banner.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2000, quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid_tracedSVG
+
           }
         }
       }
