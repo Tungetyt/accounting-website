@@ -58,21 +58,17 @@ const Banner = () => {
                 <br />
                 {COMPANY.replace(/\s/g, '')}
               </Typography>
-
             </Paper>
             <Paper elevation={0} className={opaqueColor} style={{ backdropFilter: 'blur(3px)', padding: '1%', borderRadius: '20%' }}>
-
               <Typography
                 variant="h2"
                 color="primary"
                 style={{
-                  userSelect: 'none', textDecoration: 'underline', fontSize: '1.5rem',
+                  userSelect: 'none', fontSize: '1.5rem',
                 }}
               >
                 {intl.formatMessage({ id: 'landing.address' })}
-
               </Typography>
-
             </Paper>
           </div>
         </BackgroundImage>
