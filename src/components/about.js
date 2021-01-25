@@ -7,6 +7,13 @@ import {
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
 import { Element } from 'react-scroll';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faGlobeEurope, faHardHat, faHandshake, faCoins
+} from '@fortawesome/free-solid-svg-icons';
+import GroupIcon from '@material-ui/icons/Group';
+import StarIcon from '@material-ui/icons/Star';
+import LiveHelpIcon from '@material-ui/icons/LiveHelp';
 import { ColorContext } from '../context/contexts';
 import {
   APP_THEME, NAVIGATION
@@ -15,6 +22,7 @@ import {
   aboutBtn, clientValueBtn, getToKnowUsBtn, ourClientsBtn, safetyBtn, whatDifferBtn, whyCooperateBtn, workTogetherBtn
 } from '../intl/pl.json';
 import DialogInfo from './dialog-info';
+import LogoIcon from '../images/logo.svg';
 
 const About = () => {
   const intl = useIntl();
@@ -48,28 +56,46 @@ const About = () => {
             style={{ maxWidth: '600px' }}
           >
             <Grid item style={{ margin }}>
-              <DialogInfo title={intl.formatMessage({ id: 'aboutBtn.title' })} data={aboutData} isJustified={false} />
+              <DialogInfo title={intl.formatMessage({ id: 'aboutBtn.title' })} data={aboutData} isJustified={false}>
+                <LogoIcon width={25} height={25} />
+
+              </DialogInfo>
             </Grid>
             <Grid item style={{ margin }}>
-              <DialogInfo title={intl.formatMessage({ id: 'clientValueBtn.title' })} data={clientValueData} isJustified={false} />
+              <DialogInfo title={intl.formatMessage({ id: 'clientValueBtn.title' })} data={clientValueData} isJustified={false}>
+                <FontAwesomeIcon size="lg" icon={faCoins} />
+              </DialogInfo>
             </Grid>
             <Grid item style={{ margin }}>
-              <DialogInfo title={intl.formatMessage({ id: 'whyCooperateBtn.title' })} data={whyCooperateData} isJustified={false} />
+              <DialogInfo title={intl.formatMessage({ id: 'whyCooperateBtn.title' })} data={whyCooperateData} isJustified={false}>
+                <LiveHelpIcon />
+              </DialogInfo>
             </Grid>
             <Grid item style={{ margin }}>
-              <DialogInfo title={intl.formatMessage({ id: 'whatDifferBtn.title' })} data={whatDifferData} isJustified={false} />
+              <DialogInfo title={intl.formatMessage({ id: 'whatDifferBtn.title' })} data={whatDifferData} isJustified={false}>
+                <StarIcon />
+              </DialogInfo>
             </Grid>
             <Grid item style={{ margin }}>
-              <DialogInfo title={intl.formatMessage({ id: 'getToKnowUsBtn.title' })} data={getToKnowUsData} isJustified={false} />
+              <DialogInfo title={intl.formatMessage({ id: 'getToKnowUsBtn.title' })} data={getToKnowUsData} isJustified={false}>
+                <GroupIcon />
+              </DialogInfo>
             </Grid>
             <Grid item style={{ margin }}>
-              <DialogInfo title={intl.formatMessage({ id: 'workTogetherBtn.title' })} data={workTogetherData} isJustified={false} />
+              <DialogInfo title={intl.formatMessage({ id: 'workTogetherBtn.title' })} data={workTogetherData} isJustified={false}>
+                <FontAwesomeIcon size="lg" icon={faHandshake} />
+
+              </DialogInfo>
             </Grid>
             <Grid item style={{ margin }}>
-              <DialogInfo title={intl.formatMessage({ id: 'safetyBtn.title' })} data={safetyData} isJustified={false} />
+              <DialogInfo title={intl.formatMessage({ id: 'safetyBtn.title' })} data={safetyData} isJustified={false}>
+                <FontAwesomeIcon size="lg" icon={faHardHat} />
+              </DialogInfo>
             </Grid>
             <Grid item style={{ margin }}>
-              <DialogInfo title={intl.formatMessage({ id: 'ourClientsBtn.title' })} data={ourClientsData} isJustified={false} />
+              <DialogInfo title={intl.formatMessage({ id: 'ourClientsBtn.title' })} data={ourClientsData} isJustified={false}>
+                <FontAwesomeIcon size="lg" icon={faGlobeEurope} />
+              </DialogInfo>
             </Grid>
           </Grid>
         </Grid>

@@ -10,7 +10,9 @@ import React from 'react';
 
 const Transition = React.forwardRef((props, ref) => <Zoom ref={ref} {...props} />);
 
-export default function DialogInfo({ title, data = [], isJustified = true }) {
+export default function DialogInfo({
+  children, title, data = [], isJustified = true,
+}) {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => () => {
@@ -33,7 +35,7 @@ export default function DialogInfo({ title, data = [], isJustified = true }) {
 
   return (
     <>
-      <Button style={{ backgroundColor: '#212121', color: '#FFFFFF' }} onClick={handleClickOpen('paper')}>{title}</Button>
+      <Button style={{ backgroundColor: '#212121', color: '#FFFFFF' }} onClick={handleClickOpen('paper')} startIcon={children}>{title}</Button>
       <Dialog
         open={open}
         onClose={handleClose}
