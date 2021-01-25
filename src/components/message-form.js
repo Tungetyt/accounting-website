@@ -13,10 +13,10 @@ import SendIcon from '@material-ui/icons/Send';
 const MessageForm = () => {
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [isUpdatedCorrectly, setIsUpdatedCorrectly] = useState(false);
-  const [description, setDescription] = useState('');
+  const [message, setMessage] = useState('');
 
   const onChange = (e) => {
-    setDescription(e.target.value);
+    setMessage(e.target.value);
   };
 
   const handleSnackbarClose = (event, reason) => {
@@ -30,20 +30,20 @@ const MessageForm = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     setSnackbarOpen(true);
-    console.log('description', description);
+    console.log('message', message);
   };
-
+  console.log('message', message);
   return (
     <>
       <form noValidate autoComplete="off" onSubmit={onSubmit} style={{ width: '100%' }}>
 
         <TextField
-          name="description"
+          name="message"
           label="WIADOMOŚĆ EMAIL"
           multiline
           fullWidth
           // rows={6}
-          value={description}
+          value={message}
           onChange={onChange}
           variant="outlined"
           size="large"
@@ -60,7 +60,7 @@ const MessageForm = () => {
           type="submit"
           size="small"
           endIcon={<SendIcon />}
-        //   disable={isLoading}
+          disabled={!message}
         >
           WYŚLIJ
         </Button>

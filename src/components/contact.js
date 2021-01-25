@@ -59,11 +59,11 @@ const Contact = () => {
           </Box>
           )}
         </Grid>
-        <Grid item>
+        {/* <Grid item>
           <Paper className={paper}>
             <MessageForm />
           </Paper>
-        </Grid>
+        </Grid> */}
         <Grid
           item
           style={{
