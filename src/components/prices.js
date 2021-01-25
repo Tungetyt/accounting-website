@@ -27,6 +27,8 @@ const Prices = () => {
   }));
   const { paper } = useStyles();
   const sectionName = 'pricesSection';
+  // const color1 = APP_THEME[isDark ? 'dark' : 'light'].palette.primary.main;
+  // const color2 = APP_THEME[isDark ? 'dark' : 'light'].palette.primary.main;
 
   return (
     <Element name={prices}>
@@ -44,16 +46,20 @@ const Prices = () => {
           <DataTable />
         </Grid>
         <Grid item>
-          <Paper
-            className={paper}
-            style={{ maxWidth: '600px' }}
-          >
+          <Paper className={paper}>
             <br />
             <br />
+            {/* <div style={{
+ width: '20px', height: '20px', marginRight: '1rem', marginBottom: '1rem', borderRadius: '50%', backgroundColor: '#fff', boxShadow: '0 0 60px 30px #fff,  \n    0 0 100px 60px #f0f, \n    0 0 140px 90px #0ff'
+}}
+            /> */}
             {Array(2).fill(null).map((line, i) => (
               <Typography
                 key={i}
                 color={isDark ? '#FFFFFFF' : '#000000'}
+//                 style={{
+//  marginLeft: '1%', marginRight: '1%', textAlign: 'center', textShadow: `0 0 5px ${color1}, 0 0 10px ${color1}, 0 0 15px ${color2}, 0 0 20px ${color2}, 0 0 25px ${color2}, 0 0 30px ${color2}, 0 0 35px ${color2}`
+// }}
                 paragraph
               >
                 { intl.formatMessage({ id: `${sectionName}.specialOffer.${i}` })}
