@@ -16,6 +16,7 @@ const Banner = () => {
         childImageSharp {
           fluid(maxWidth: 2000, quality: 100) {
             ...GatsbyImageSharpFluid_tracedSVG
+
           }
         }
       }

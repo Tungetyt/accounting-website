@@ -18,7 +18,6 @@ import ContactInfo from './contact-info';
 import styles from './dist/ImageZoom.module.css';
 import Image from './image';
 import OpenMap from './open-map';
-import MessageForm from './message-form';
 
 const tmp = styles;
 const wrapperStyle = {
@@ -59,11 +58,6 @@ const Contact = () => {
           </Box>
           )}
         </Grid>
-        {/* <Grid item>
-          <Paper className={paper}>
-            <MessageForm />
-          </Paper>
-        </Grid> */}
         <Grid
           item
           style={{
@@ -73,6 +67,7 @@ const Contact = () => {
           <Paper className={paper}>
             <Typography paragraph align="center">{ intl.formatMessage({ id: 'contactSection.ourOffice' })}</Typography>
             <Zoom>
+
               <Image style={wrapperStyle} alt="our office" filename="6Ogrodowa64.jpg" />
             </Zoom>
           </Paper>
