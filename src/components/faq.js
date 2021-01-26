@@ -39,6 +39,7 @@ export default function Faq() {
   return (
     <Element name={faq}>
       <div className={root}>
+        <br />
         {faqSection.map((f, i) => (
           <Accordion
             // eslint-disable-next-line react/no-array-index-key
@@ -59,6 +60,7 @@ export default function Faq() {
             </AccordionDetails>
           </Accordion>
         ))}
+        <br />
       </div>
     </Element>
   );

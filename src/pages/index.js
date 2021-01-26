@@ -70,7 +70,9 @@ const IndexPage = (props) => {
             </SectionWrapper>
             <br />
             <SectionWrapper>
+              <br />
               <About />
+              <br />
             </SectionWrapper>
             <br />
             <SectionWrapper>

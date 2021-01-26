@@ -127,6 +127,7 @@ export default function ScrollableTabsButtonAuto() {
         <TabPanel value={chosenTab} index={5}>
           <BusinessOffer />
         </TabPanel>
+        <br />
       </Paper>
     </Element>
   );
