@@ -91,5 +91,5 @@ export const NAVIGATION = {
 
 export const OFFSET = -42;
 
-export const TITLE = 'BIURO RACHUNKOWE VAVICOM PIASECZNO JÓZEFOSŁAW WARSZAWA';
-export const DESCRIPTION = 'Biuro Rachunkowe VAVICOM Piaseczno, Józefosław, Warszawa. Księgowość, Kadry i Płace, Podatki, Finanse, Biznes';
+export const TITLE = 'BIURO RACHUNKOWE VAVICOM PIASECZNO JÓZEFOSŁAW KONSTANCIN WARSZAWA';
+export const DESCRIPTION = 'Biuro Rachunkowe VAVICOM Piaseczno, Józefosław, Konstancin, Warszawa. Księgowość, Kadry i Płace, Podatki, Finanse, Biznes';

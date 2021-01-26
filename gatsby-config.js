@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Vavicom Piaseczno Józefosław Wawrszawa',
-    description: 'Biuro Rachunkowe VAVICOM Piaseczno, Józefosław, Warszawa. Księgowość, Kadry i Płace, Podatki, Finanse, Biznes',
+    title: 'Vavicom Piaseczno Józefosław Kontancin Wawrszawa',
+    description: 'Biuro Rachunkowe VAVICOM Piaseczno, Józefosław, Kontancin, Warszawa. Księgowość, Kadry i Płace, Podatki, Finanse, Biznes',
     author: '@tungetyt <m0kotlicki@gmail.com>',
     siteUrl: 'https://vavicom.pl',
   },
