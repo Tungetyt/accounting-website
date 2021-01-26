@@ -10,6 +10,7 @@ import React, { useEffect, useState } from 'react';
 import About from '../components/about';
 import Contact from '../components/contact';
 import Faq from '../components/faq';
+import Career from '../components/career';
 import LandingPage from '../components/landing-page';
 import '../components/layout.css';
 import Logo from '../components/logo';
@@ -31,7 +32,7 @@ const IndexPage = (props) => {
 
   const useStyles = makeStyles((theme) => ({
     main: {
-      [theme.breakpoints.up('sm')]: {
+      [theme.breakpoints.up('lg')]: {
         marginRight: DRAWER_WIDTH,
       },
     },
@@ -74,6 +75,10 @@ const IndexPage = (props) => {
             <br />
             <SectionWrapper>
               <Faq />
+            </SectionWrapper>
+            <br />
+            <SectionWrapper>
+              <Career />
             </SectionWrapper>
             <br />
             <SectionWrapper>

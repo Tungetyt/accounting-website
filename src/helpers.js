@@ -38,6 +38,9 @@ export const APP_THEME = {
       elevation2: {
         backgroundColor: color['200'],
       },
+      elevation3: {
+        backgroundColor: color['300'],
+      },
     },
     ...APP_THEME_EXTENDED,
   },
@@ -56,12 +59,15 @@ export const APP_THEME = {
       elevation2: {
         backgroundColor: color['700'],
       },
+      elevation3: {
+        backgroundColor: color['600'],
+      },
     },
     ...APP_THEME_EXTENDED,
   },
 };
 
-export const DRAWER_WIDTH = 180;
+export const DRAWER_WIDTH = 160;
 
 export const COMPANY = 'VAVICOM';
 export const STREET = 'Ogrodowa 6';
@@ -79,6 +85,7 @@ export const NAVIGATION = {
   about: 'about',
   faq: 'faq',
   contact: 'contact',
+  career: 'career',
   prices: 'prices',
 };
 

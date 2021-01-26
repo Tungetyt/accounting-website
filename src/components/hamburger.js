@@ -16,7 +16,7 @@ const Hamburger = ({ handleDrawerToggle, isMobileOpen }) => {
 
   const useStyles = makeStyles((theme) => ({
     menuButton: {
-      [theme.breakpoints.up('sm')]: {
+      [theme.breakpoints.up('lg')]: {
         display: 'none',
       },
     },
@@ -34,7 +34,7 @@ const Hamburger = ({ handleDrawerToggle, isMobileOpen }) => {
   const { menuButton, hamburger } = useStyles();
 
   return (
-    <Hidden smUp implementation="css">
+    <Hidden lgUp implementation="css">
       <Paper
         elevation={0}
         className={hamburger}

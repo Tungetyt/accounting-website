@@ -34,7 +34,6 @@ const ContactInfoMainContent = () => {
             direction="row"
             justify="flex-start"
             alignItems="flex-start"
-            wrap="nowrap"
           >
             <Grid item style={{ marginRight: '12px' }}>
               <BusinessIcon color={color} />

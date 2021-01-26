@@ -35,27 +35,27 @@ const MainNav = (props) => {
   return (
     <div className={drawer} aria-label="mailbox folders">
       {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-      <Hidden smUp implementation="css">
-        <SwipeableDrawer
-          container={container}
-          variant="temporary"
-          anchor="right"
-          open={isMobileOpen}
-          onClose={handleDrawerToggle}
-          onOpen={handleDrawerToggle}
-          classes={{
-            paper: drawerPaper,
-          }}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          disableBackdropTransition={!iOS}
-          disableDiscovery={iOS}
-        >
-          <DrawerContent />
-        </SwipeableDrawer>
-      </Hidden>
-      <Hidden xsDown implementation="css">
+      {/* <Hidden mdUp implementation="css"> */}
+      <SwipeableDrawer
+        container={container}
+        variant="temporary"
+        anchor="right"
+        open={isMobileOpen}
+        onClose={handleDrawerToggle}
+        onOpen={handleDrawerToggle}
+        classes={{
+          paper: drawerPaper,
+        }}
+        ModalProps={{
+          keepMounted: true, // Better open performance on mobile.
+        }}
+        disableBackdropTransition={!iOS}
+        disableDiscovery={iOS}
+      >
+        <DrawerContent />
+      </SwipeableDrawer>
+      {/* </Hidden> */}
+      <Hidden mdDown implementation="css">
         <Drawer
           classes={{
             paper: drawerPaper,
