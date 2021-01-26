@@ -30,7 +30,7 @@ const Career = () => {
       margin: '1rem',
     },
     typo: {
-      fontSize: '2rem',
+      fontSize: '1.7rem',
     },
     moreInfo: {
       maxWidth: '450px'
