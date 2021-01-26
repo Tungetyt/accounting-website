@@ -1,6 +1,8 @@
 import { Avatar, Grid } from '@material-ui/core';
 import React from 'react';
 
+const AVATAR_SIZE = '2.5rem';
+
 const CareerPerson = ({ children }) => (
   <div>
     <Grid
@@ -20,8 +22,8 @@ const CareerPerson = ({ children }) => (
       >
         <Grid item style={{ marginRight: '12px' }}>
           <Avatar style={{
-            height: '2.5rem',
-            width: '2.5rem',
+            height: AVATAR_SIZE,
+            width: AVATAR_SIZE,
           }}
           />
         </Grid>
