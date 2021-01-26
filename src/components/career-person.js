@@ -10,26 +10,24 @@ const CareerPerson = ({ children }) => (
       alignItems="flex-start"
       style={{ marginBottom: '0.5rem' }}
     >
-      <Grid item>
-        <Grid
-          container
-          direction="row"
-          justify="flex-start"
-          alignItems="flex-start"
-          wrap="nowrap"
-          style={{ marginBottom: '0.5rem' }}
-        >
-          <Grid item style={{ marginRight: '1rem' }}>
-            <Avatar style={{
-              height: '3rem',
-              width: '3rem',
-            }}
-            />
-          </Grid>
-          <Grid item>
+      <Grid
+        item
+        container
+        direction="row"
+        justify="flex-start"
+        alignItems="flex-start"
+        style={{ marginBottom: '0.5rem' }}
+      >
+        <Grid item style={{ marginRight: '12px' }}>
+          <Avatar style={{
+            height: '3rem',
+            width: '3rem',
+          }}
+          />
+        </Grid>
+        <Grid item>
 
-            {children}
-          </Grid>
+          {children}
         </Grid>
       </Grid>
     </Grid>

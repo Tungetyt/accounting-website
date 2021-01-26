@@ -45,7 +45,6 @@ const Career = () => {
   const handleChange = () => {
     setIsMoreInfoChecked((prevState) => !prevState);
   };
-  console.log('isMoreInfoChecked', isMoreInfoChecked);
   return (
     <Element name={NAVIGATION.career}>
       <Paper className={paper}>
