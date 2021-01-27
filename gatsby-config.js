@@ -1,3 +1,11 @@
+// // Initialize dotenv
+// require('dotenv').config({
+//   path: '.env', // or '.env'
+// });
+
+// // And then you can use the config in gatsby-config.js
+// const config = require('gatsby-plugin-config');
+
 module.exports = {
   siteMetadata: {
     title: 'Vavicom Piaseczno Józefosław Kontancin Wawrszawa',
@@ -96,5 +104,12 @@ module.exports = {
       },
     },
     'gatsby-plugin-netlify-cms',
+    {
+      resolve: '@ccalamos/gatsby-source-googlemaps-static',
+      options: {
+        key: 'AIzaSyB_HxX8lgKV-lEFlyQDG1VQ8oE7PrztN0Y',
+        center: '41.8781,-87.6298',
+      },
+    },
   ],
 };

@@ -18,6 +18,7 @@ import ContactInfo from './contact-info';
 import styles from './dist/ImageZoom.module.css';
 import Image from './image';
 import OpenMap from './open-map';
+import GoogleMap from './map';
 
 const tmp = styles;
 const wrapperStyle = {
@@ -27,8 +28,7 @@ const wrapperStyle = {
 const Contact = () => {
   const { contact } = NAVIGATION;
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up('md'));
-  // const classes = useStyles();
+  const matches = true;// useMediaQuery(theme.breakpoints.up('md'));
   const intl = useIntl();
   const [isDark] = useContext(ColorContext);
   const useStyles = makeStyles(() => ({
@@ -42,40 +42,45 @@ const Contact = () => {
 
   return (
     <Element name={contact}>
-      <Grid
-        container
-        direction="row"
-        justify="center"
-        alignItems="center"
-      >
-        <Grid item>
-          {typeof window !== 'undefined' && matches && (
-          <Box>
-            <Paper className={paper}>
-              <Typography paragraph align="center">{ intl.formatMessage({ id: 'contactSection.whereAreWe' })}</Typography>
-              <OpenMap />
-            </Paper>
-          </Box>
-          )}
-        </Grid>
+      <>
         <Grid
-          item
-          style={{
-            width: '100%', height: 'auto', maxWidth: '600px'
-          }}
+          container
+          direction="row"
+          justify="center"
+          alignItems="center"
         >
-          <Paper className={paper}>
-            <Typography paragraph align="center">{ intl.formatMessage({ id: 'contactSection.ourOffice' })}</Typography>
-            <Zoom>
 
-              <Image style={wrapperStyle} alt="our office" filename="6Ogrodowa64.jpg" />
-            </Zoom>
-          </Paper>
+          <Grid item>
+            {typeof window !== 'undefined' && matches && (
+            <Box>
+              <Paper className={paper}>
+                <Typography paragraph align="center">{ intl.formatMessage({ id: 'contactSection.whereAreWe' })}</Typography>
+                {/* <OpenMap /> */}
+                <GoogleMap />
+              </Paper>
+            </Box>
+            )}
+          </Grid>
+          <Grid
+            item
+            style={{
+              width: '100%', height: 'auto', maxWidth: '600px'
+            }}
+          >
+            <Paper className={paper}>
+              <Typography paragraph align="center">{ intl.formatMessage({ id: 'contactSection.ourOffice' })}</Typography>
+              <Zoom>
+
+                <Image style={wrapperStyle} alt="our office" filename="6Ogrodowa64.jpg" />
+              </Zoom>
+            </Paper>
+          </Grid>
+          <Grid item>
+            <ContactInfo />
+          </Grid>
         </Grid>
-        <Grid item>
-          <ContactInfo />
-        </Grid>
-      </Grid>
+
+      </>
     </Element>
   );
 };
