@@ -17,7 +17,7 @@ const GoogleMap = () => {
         <GoogleMapReact
           bootstrapURLKeys={{ key: GATSBY_GOOGLE_MAP_KEY }}
           defaultCenter={[lat, lng]}
-          defaultZoom={13}
+          defaultZoom={10}
         >
           <Marker
             lat={lat}
