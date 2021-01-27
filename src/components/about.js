@@ -58,7 +58,6 @@ const About = () => {
             <Grid item style={{ margin }}>
               <DialogInfo title={intl.formatMessage({ id: 'aboutBtn.title' })} data={aboutData} isJustified={false}>
                 <LogoIcon width={25} height={25} />
-
               </DialogInfo>
             </Grid>
             <Grid item style={{ margin }}>
