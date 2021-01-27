@@ -64,7 +64,7 @@ const Career = () => {
           <Typography className={typo} style={{ lineHeight: '90%' }}>
             PRZEDSTAWICIEL HANDLOWY /
             <br />
-            Account Manager
+            ACCOUNT MANAGER
           </Typography>
         </CareerPerson>
         <CareerPerson>
