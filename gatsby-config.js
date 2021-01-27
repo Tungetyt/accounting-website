@@ -104,12 +104,5 @@ module.exports = {
       },
     },
     'gatsby-plugin-netlify-cms',
-    {
-      resolve: '@ccalamos/gatsby-source-googlemaps-static',
-      options: {
-        key: 'AIzaSyB_HxX8lgKV-lEFlyQDG1VQ8oE7PrztN0Y',
-        center: '41.8781,-87.6298',
-      },
-    },
   ],
 };

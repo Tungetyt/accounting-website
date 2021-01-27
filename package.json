@@ -5,7 +5,6 @@
   "version": "0.1.0",
   "author": "@tungetyt <m0kotlicki@gmail.com>",
   "dependencies": {
-    "@ccalamos/gatsby-source-googlemaps-static": "^1.4.10",
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/react-fontawesome": "^0.1.14",
