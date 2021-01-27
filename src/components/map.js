@@ -1,6 +1,5 @@
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
-import config from 'gatsby-plugin-config';
 import Marker from './marker';
 
 const { GATSBY_GOOGLE_MAP_KEY } = process.env;
