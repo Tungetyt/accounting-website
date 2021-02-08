@@ -17,7 +17,6 @@ import { APP_THEME, NAVIGATION } from '../helpers';
 import ContactInfo from './contact-info';
 import styles from './dist/ImageZoom.module.css';
 import Image from './image';
-import OpenMap from './open-map';
 import GoogleMap from './map';
 
 const tmp = styles;
