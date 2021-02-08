@@ -62,7 +62,7 @@ export default function BusinessOffer() {
           <Grid item style={{ width: '600px' }}>
             <div className="container">
               <div className="containerimg">
-                <Image alt="business" filename="14biuro-rachunkowe-szczecin.jpeg" />
+                <Image alt="Księgowy uściska dłoń klienta" filename="14biuro-rachunkowe-szczecin.jpeg" />
               </div>
 
             </div>
@@ -144,7 +144,7 @@ export default function BusinessOffer() {
             </Grid>
             <Grid item style={{ width: '300px' }}>
               <Tilt>
-                <Image alt="more business" filename="11Biznes.jpg" />
+                <Image alt="Księgowy tworzy wykres danych" filename="11Biznes.jpg" />
               </Tilt>
             </Grid>
           </Grid>

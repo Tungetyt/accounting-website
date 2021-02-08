@@ -60,7 +60,7 @@ export default function FinancialOffer() {
           <Grid item style={{ width: '600px' }}>
             <div className="container">
               <div className="containerimg">
-                <Image alt="financial" filename="16E-biznes-po-pol-miliona-zlotych-dla-270-firm-108796-640x640.jpg" />
+                <Image alt="Księgowy pokazuje urządzenia dzięki którym klient może komunikować się z firmą Vavicom" filename="16E-biznes-po-pol-miliona-zlotych-dla-270-firm-108796-640x640.jpg" />
 
               </div>
 
@@ -143,7 +143,7 @@ export default function FinancialOffer() {
             </Grid>
             <Grid item style={{ width: '600px' }}>
               <Tilt>
-                <Image alt="more financial" filename="accounting_2.jpg" />
+                <Image alt="Księgowi firmy Vavicom w pracy" filename="accounting_2.jpg" />
               </Tilt>
             </Grid>
           </Grid>

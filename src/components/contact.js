@@ -71,7 +71,7 @@ const Contact = () => {
               <Typography paragraph align="center">{ intl.formatMessage({ id: 'contactSection.ourOffice' })}</Typography>
               <Zoom>
 
-                <Image style={wrapperStyle} alt="our office" filename="6Ogrodowa64.jpg" />
+                <Image style={wrapperStyle} alt="Nasz budynek, w którym mieści się główne biuro Vavicom" filename="6Ogrodowa64.jpg" />
               </Zoom>
             </Paper>
           </Grid>

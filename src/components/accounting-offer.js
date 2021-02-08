@@ -65,7 +65,7 @@ export default function AccountingOffer() {
           <Grid item style={{ width: '600px' }}>
             <div className="container">
               <div className="containerimg">
-                <Image alt="accounting" filename="7finanse-i-rachunkowosc.jpg" />
+                <Image alt="Księgowi dogadują się w sprawie stworzenia nowej strategii biznesowej" filename="7finanse-i-rachunkowosc.jpg" />
               </div>
             </div>
           </Grid>
@@ -118,7 +118,7 @@ export default function AccountingOffer() {
             </Grid>
             <Grid item style={{ width: '600px' }}>
               <Tilt>
-                <Image alt="accouting fire" filename="5maxresdefault.jpg" />
+                <Image alt="Pełna księgowość dla firm" filename="5maxresdefault.jpg" />
               </Tilt>
             </Grid>
           </Grid>

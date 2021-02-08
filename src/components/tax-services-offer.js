@@ -55,7 +55,7 @@ export default function TaxServiceOffer() {
           <Grid item style={{ width: '600px' }}>
             <div className="container">
               <div className="containerimg">
-                <Image alt="tax services" filename="91022e07bbff5e0-1024x768.jpg" />
+                <Image alt="PIT, zeznania podatkowe" filename="91022e07bbff5e0-1024x768.jpg" />
 
               </div>
 
@@ -102,7 +102,7 @@ export default function TaxServiceOffer() {
             </Grid>
             <Grid item style={{ width: '300px' }}>
               <Tilt>
-                <Image alt="more tax services" filename="3cropped-O6YV1W0-1.jpg" />
+                <Image alt="Doradca podatkowy pozuje do zdjęcia" filename="3cropped-O6YV1W0-1.jpg" />
               </Tilt>
             </Grid>
 

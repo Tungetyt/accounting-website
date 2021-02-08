@@ -63,7 +63,7 @@ export default function LegalOffer() {
           <Grid item style={{ width: '600px' }}>
             <div className="container">
               <div className="containerimg">
-                <Image alt="legal service" filename="8OIP_4x.jpg" />
+                <Image alt="Drewniany młotek sądowy" filename="8OIP_4x.jpg" />
               </div>
 
             </div>
@@ -139,7 +139,7 @@ export default function LegalOffer() {
 
           <CenterWrapper>
             <Tilt style={{ width: '200px' }}>
-              <Image alt="more legal service" filename="15Zawieszenie_dzialalnosci_5843057.jpg" />
+              <Image alt="Uścisk dłoni pod nową ofertę" filename="15Zawieszenie_dzialalnosci_5843057.jpg" />
             </Tilt>
 
           </CenterWrapper>

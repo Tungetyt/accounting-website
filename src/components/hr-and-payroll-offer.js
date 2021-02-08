@@ -57,7 +57,7 @@ export default function HrAndPayrollOffer() {
           <Grid item style={{ width: '600px' }}>
             <div className="container">
               <div className="containerimg">
-                <Image alt="hr and payroll" filename="12Podatek-VAT-kiedy-decyzja-wymiarowa-Ojq7ie.jpg" />
+                <Image alt="Pieniądze, kalkukator, długopis, rozliczenia" filename="12Podatek-VAT-kiedy-decyzja-wymiarowa-Ojq7ie.jpg" />
               </div>
 
             </div>
@@ -119,7 +119,7 @@ export default function HrAndPayrollOffer() {
             </Grid>
             <Grid item style={{ width: '600px' }}>
               <Tilt>
-                <Image alt="more hr and payroll" filename="4iStock_38378140_XLARGE-scaled.jpg" />
+                <Image alt="Księgowa pozuje do zdjęcia" filename="4iStock_38378140_XLARGE-scaled.jpg" />
 
               </Tilt>
             </Grid>
