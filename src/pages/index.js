@@ -23,7 +23,7 @@ import TabPanel from '../components/tab-panel';
 import { ColorContext } from '../context/contexts';
 import {
   // eslint-disable-next-line comma-dangle
-  APP_THEME, DESCRIPTION, DRAWER_WIDTH, getItemByKey, LOCAL_STORAGE_KEY, THEME_NAMES
+  APP_THEME, DESCRIPTION, DRAWER_WIDTH, getItemByKey, LOCAL_STORAGE_KEY, THEME_NAMES, COMMON_BREAK, HALF_COMMON_BREAK
 } from '../helpers';
 
 const IndexPage = (props) => {
@@ -59,33 +59,37 @@ const IndexPage = (props) => {
           <div id="top" />
           <main className={main}>
             <LandingPage />
-            <br />
-            <br />
-            <br />
+            <div style={{ marginBottom: COMMON_BREAK }} />
             <TabPanel />
-            <br />
-            <br />
+            <div style={{ marginBottom: COMMON_BREAK }} />
+
             <SectionWrapper>
               <Prices />
             </SectionWrapper>
-            <br />
+            <div style={{ marginBottom: COMMON_BREAK }} />
+
             <SectionWrapper>
               <br />
               <About />
               <br />
             </SectionWrapper>
-            <br />
+            <div style={{ marginBottom: COMMON_BREAK }} />
+
             <SectionWrapper>
               <Faq />
             </SectionWrapper>
-            <br />
+            <div style={{ marginBottom: COMMON_BREAK }} />
+
             <SectionWrapper>
               <Career />
             </SectionWrapper>
-            <br />
+            <div style={{ marginBottom: COMMON_BREAK }} />
+
             <SectionWrapper>
               <Contact />
             </SectionWrapper>
+            <div style={{ marginBottom: HALF_COMMON_BREAK }} />
+
           </main>
           <ScrollTop>
             <Tooltip placement="top" title={intl.formatMessage({ id: 'backToTopBtn' })} arrow TransitionComponent={Zoom}>

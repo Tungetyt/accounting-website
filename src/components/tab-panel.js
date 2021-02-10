@@ -15,7 +15,9 @@ import PropTypes from 'prop-types';
 import React, { useContext } from 'react';
 import { Element, Link } from 'react-scroll';
 import { ColorContext } from '../context/contexts';
-import { APP_THEME, NAVIGATION, OFFSET } from '../helpers';
+import {
+  APP_THEME, NAVIGATION, OFFSET, DEFAULT_PADDING
+} from '../helpers';
 import AccountingOffer from './accounting-offer';
 import BusinessOffer from './business-offer';
 import FinancialOffer from './financial-offer';
@@ -72,8 +74,10 @@ export default function ScrollableTabsButtonAuto() {
       backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation1.backgroundColor,
       width: '99%',
       margin: 'auto',
+      paddingBottom: DEFAULT_PADDING
     },
     tabs: {
+
       justifyContent: 'center',
     },
     scroller: {
@@ -108,6 +112,8 @@ export default function ScrollableTabsButtonAuto() {
             <Tab label={intl.formatMessage({ id: 'servicesSection.businessServices' })} icon={<FontAwesomeIcon size="lg" icon={faChess} />} {...a11yProps(5)} to={services} offset={OFFSET} component={Link} />
           </Tabs>
         </AppBar>
+        <div style={{ marginBottom: DEFAULT_PADDING }} />
+
         <TabPanel value={chosenTab} index={0}>
           <AccountingOffer />
 
@@ -127,7 +133,6 @@ export default function ScrollableTabsButtonAuto() {
         <TabPanel value={chosenTab} index={5}>
           <BusinessOffer />
         </TabPanel>
-        <br />
       </Paper>
     </Element>
   );
