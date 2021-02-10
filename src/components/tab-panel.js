@@ -14,16 +14,18 @@ import { useIntl } from 'gatsby-plugin-intl';
 import PropTypes from 'prop-types';
 import React, { useContext } from 'react';
 import { Element, Link } from 'react-scroll';
+import Typography from '@material-ui/core/Typography';
 import { ColorContext } from '../context/contexts';
 import {
   APP_THEME, NAVIGATION, OFFSET, DEFAULT_PADDING
 } from '../helpers';
-import AccountingOffer from './accounting-offer';
-import BusinessOffer from './business-offer';
-import FinancialOffer from './financial-offer';
-import HrAndPayrollOffer from './hr-and-payroll-offer';
-import LegalOffer from './legal-offer';
-import TaxServiceOffer from './tax-services-offer';
+import { AccountingOffer, HeadingChildrenAccounting } from './accounting-offer';
+import { BusinessOffer, HeadingChildrenBusiness } from './business-offer';
+import { FinancialOffer, HeadingChildrenFinancial } from './financial-offer';
+import { HrAndPayrollOffer, HeadingChildrenHR } from './hr-and-payroll-offer';
+import { LegalOffer, HeadingChildrenLegal } from './legal-offer';
+import { TaxServiceOffer, HeadingChildrenTax } from './tax-services-offer';
+import Offer from './offer';
 
 function TabPanel(props) {
   const {
@@ -104,34 +106,45 @@ export default function ScrollableTabsButtonAuto() {
             aria-label="scrollable auto tabs example"
             classes={{ root: tabs, scroller }}
           >
-            <Tab label={intl.formatMessage({ id: 'servicesSection.accounting' })} icon={<FontAwesomeIcon size="lg" icon={faBook} />} {...a11yProps(0)} to={services} offset={OFFSET} component={Link} />
-            <Tab label={intl.formatMessage({ id: 'servicesSection.hrAndPayroll' })} icon={<FontAwesomeIcon size="lg" icon={faHandHoldingUsd} />} {...a11yProps(1)} to={services} offset={OFFSET} component={Link} />
-            <Tab label={intl.formatMessage({ id: 'servicesSection.taxServices' })} icon={<FontAwesomeIcon size="lg" icon={faMoneyCheckAlt} />} {...a11yProps(2)} to={services} offset={OFFSET} component={Link} />
-            <Tab label={intl.formatMessage({ id: 'servicesSection.legalServices' })} icon={<FontAwesomeIcon icon={faGavel} />} {...a11yProps(3)} to={services} offset={OFFSET} component={Link} />
-            <Tab label={intl.formatMessage({ id: 'servicesSection.financialServices' })} icon={<FontAwesomeIcon size="lg" icon={faSearchDollar} />} {...a11yProps(4)} to={services} offset={OFFSET} component={Link} />
-            <Tab label={intl.formatMessage({ id: 'servicesSection.businessServices' })} icon={<FontAwesomeIcon size="lg" icon={faChess} />} {...a11yProps(5)} to={services} offset={OFFSET} component={Link} />
+            <Tab label={intl.formatMessage({ id: 'servicesSection.accounting' })} icon={<FontAwesomeIcon size="3x" icon={faBook} />} {...a11yProps(0)} to={services} offset={OFFSET} component={Link} />
+            <Tab label={intl.formatMessage({ id: 'servicesSection.hrAndPayroll' })} icon={<FontAwesomeIcon size="3x" icon={faHandHoldingUsd} />} {...a11yProps(1)} to={services} offset={OFFSET} component={Link} />
+            <Tab label={intl.formatMessage({ id: 'servicesSection.taxServices' })} icon={<FontAwesomeIcon size="3x" icon={faMoneyCheckAlt} />} {...a11yProps(2)} to={services} offset={OFFSET} component={Link} />
+            <Tab label={intl.formatMessage({ id: 'servicesSection.legalServices' })} icon={<FontAwesomeIcon size="3x" icon={faGavel} />} {...a11yProps(3)} to={services} offset={OFFSET} component={Link} />
+            <Tab label={intl.formatMessage({ id: 'servicesSection.financialServices' })} icon={<FontAwesomeIcon size="3x" icon={faSearchDollar} />} {...a11yProps(4)} to={services} offset={OFFSET} component={Link} />
+            <Tab label={intl.formatMessage({ id: 'servicesSection.businessServices' })} icon={<FontAwesomeIcon size="3x" icon={faChess} />} {...a11yProps(5)} to={services} offset={OFFSET} component={Link} />
           </Tabs>
         </AppBar>
         <div style={{ marginBottom: DEFAULT_PADDING }} />
 
         <TabPanel value={chosenTab} index={0}>
-          <AccountingOffer />
-
+          <Offer image={{ alt: 'Księgowi dogadują się w sprawie stworzenia nowej strategii biznesowej', filename: '7finanse-i-rachunkowosc.jpg' }} headingChildren={<HeadingChildrenAccounting />}>
+            <AccountingOffer />
+          </Offer>
         </TabPanel>
         <TabPanel value={chosenTab} index={1}>
-          <HrAndPayrollOffer />
+          <Offer image={{ alt: 'Pieniądze, kalkukator, długopis, rozliczenia', filename: '12Podatek-VAT-kiedy-decyzja-wymiarowa-Ojq7ie.jpg' }} headingChildren={<HeadingChildrenHR />}>
+            <HrAndPayrollOffer />
+          </Offer>
         </TabPanel>
         <TabPanel value={chosenTab} index={2}>
-          <TaxServiceOffer />
+          <Offer image={{ alt: 'PIT, zeznania podatkowe', filename: '91022e07bbff5e0-1024x768.jpg' }} headingChildren={<HeadingChildrenTax />}>
+            <TaxServiceOffer />
+          </Offer>
         </TabPanel>
         <TabPanel value={chosenTab} index={3}>
-          <LegalOffer />
+          <Offer image={{ alt: 'Drewniany młotek sądowy', filename: '8OIP_4x.jpg' }} headingChildren={<HeadingChildrenLegal />}>
+            <LegalOffer />
+          </Offer>
         </TabPanel>
         <TabPanel value={chosenTab} index={4}>
-          <FinancialOffer />
+          <Offer image={{ alt: 'Księgowy pokazuje urządzenia dzięki którym klient może komunikować się z firmą Vavicom', filename: '16E-biznes-po-pol-miliona-zlotych-dla-270-firm-108796-640x640.jpg' }} headingChildren={<HeadingChildrenFinancial />}>
+            <FinancialOffer />
+          </Offer>
         </TabPanel>
         <TabPanel value={chosenTab} index={5}>
-          <BusinessOffer />
+          <Offer image={{ alt: 'Księgowy uściska dłoń klienta', filename: '14biuro-rachunkowe-szczecin.jpeg' }} headingChildren={<HeadingChildrenBusiness />}>
+            <BusinessOffer />
+          </Offer>
         </TabPanel>
       </Paper>
     </Element>

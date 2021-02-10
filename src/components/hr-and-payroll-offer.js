@@ -17,141 +17,91 @@ import { ColorContext } from '../context/contexts';
 import { APP_THEME } from '../helpers';
 import Image from './image';
 
-export default function HrAndPayrollOffer() {
-  const [expanded, setExpanded] = React.useState(false);
-  const intl = useIntl();
-  const [isDark] = useContext(ColorContext);
-  const useStyles = makeStyles((theme) => ({
-    root: {
-      backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor,
-    },
-    expand: {
-      transform: 'rotate(0deg)',
-      marginLeft: 'auto',
-      transition: theme.transitions.create('transform', {
-        duration: theme.transitions.duration.shortest,
-      }),
-    },
-    expandOpen: {
-      transform: 'rotate(180deg)',
-    },
-  }));
-  const classes = useStyles();
+const offerName = 'hrAndPayroll';
 
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
-  const offerName = 'hrAndPayroll';
+export function HrAndPayrollOffer() {
+  const intl = useIntl();
 
   return (
-    <Card className={classes.root}>
-      <CardActionArea onClick={handleExpandClick}>
+    <>
+      <Grid
+        container
+        direction="row"
+        justify="center"
+        alignItems="center"
+      >
         <Grid
-          container
-          direction="row"
-          justify="center"
-          alignItems="center"
-          spacing="3"
-          style={{ padding: '6px' }}
+          item
         >
-          <Grid item style={{ width: '600px' }}>
-            <div className="container">
-              <div className="containerimg">
-                <Image alt="Pieniądze, kalkukator, długopis, rozliczenia" filename="12Podatek-VAT-kiedy-decyzja-wymiarowa-Ojq7ie.jpg" />
-              </div>
-
-            </div>
-          </Grid>
-          <Grid item>
-            <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: `${offerName}.info.0` })}</Typography>
-            <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: `${offerName}.info.1` })}</Typography>
-            <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: `${offerName}.info.2` })}</Typography>
-          </Grid>
-
+          <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: `${offerName}.info.3` })}</Typography>
+          <ul>
+            {Array(12).fill(null).map((line, i) => (
+              <li key={i}>
+                <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.services.${i}` })}</Typography>
+              </li>
+            ))}
+          </ul>
         </Grid>
-        <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded,
-          })}
-          style={{ float: 'right' }}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
+
+      </Grid>
+      <Divider />
+      <br />
+      <Grid
+        container
+        direction="row"
+        justify="center"
+        alignItems="center"
+        spacing={2}
+      >
+        <Grid item style={{ width: '600px' }}>
+          <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.more.${0}` })}</Typography>
+          <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.more.${1}` })}</Typography>
+        </Grid>
+        <Grid item style={{ width: '600px' }}>
+          <Tilt>
+            <Image alt="Księgowa pozuje do zdjęcia" filename="4iStock_38378140_XLARGE-scaled.jpg" />
+
+          </Tilt>
+        </Grid>
+
+      </Grid>
+      <br />
+      <Divider />
+      <br />
+      <Grid
+        container
+        direction="row"
+        justify="center"
+        alignItems="center"
+      >
+        <Grid
+          item
         >
-          <ExpandMoreIcon />
-        </IconButton>
-      </CardActionArea>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Grid
-            container
-            direction="row"
-            justify="center"
-            alignItems="center"
-          >
-            <Grid
-              item
-            >
-              <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: `${offerName}.info.3` })}</Typography>
-              <ul>
-                {Array(12).fill(null).map((line, i) => (
-                  <li key={i}>
-                    <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.services.${i}` })}</Typography>
-                  </li>
-                ))}
-              </ul>
-            </Grid>
+          <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'hrAndPayroll.more.2' })}</Typography>
+          <ul>
+            <li>
+              <Typography paragraph>{ intl.formatMessage({ id: 'hrAndPayroll.more.3.0' })}</Typography>
+            </li>
+            <li>
+              <Typography paragraph>{ intl.formatMessage({ id: 'hrAndPayroll.more.3.1' })}</Typography>
+            </li>
 
-          </Grid>
-          <Divider />
-          <br />
-          <Grid
-            container
-            direction="row"
-            justify="center"
-            alignItems="center"
-            spacing={2}
+          </ul>
+        </Grid>
 
-          >
-            <Grid item style={{ width: '600px' }}>
-              <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.more.${0}` })}</Typography>
-              <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.more.${1}` })}</Typography>
-            </Grid>
-            <Grid item style={{ width: '600px' }}>
-              <Tilt>
-                <Image alt="Księgowa pozuje do zdjęcia" filename="4iStock_38378140_XLARGE-scaled.jpg" />
+      </Grid>
+    </>
+  );
+}
 
-              </Tilt>
-            </Grid>
+export function HeadingChildrenHR() {
+  const intl = useIntl();
 
-          </Grid>
-          <br />
-          <Divider />
-          <br />
-          <Grid
-            container
-            direction="row"
-            justify="center"
-            alignItems="center"
-          >
-            <Grid
-              item
-            >
-              <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'hrAndPayroll.more.2' })}</Typography>
-              <ul>
-                <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: 'hrAndPayroll.more.3.0' })}</Typography>
-                </li>
-                <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: 'hrAndPayroll.more.3.1' })}</Typography>
-                </li>
-
-              </ul>
-            </Grid>
-
-          </Grid>
-        </CardContent>
-      </Collapse>
-    </Card>
+  return (
+    <>
+      <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: `${offerName}.info.0` })}</Typography>
+      <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: `${offerName}.info.1` })}</Typography>
+      <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: `${offerName}.info.2` })}</Typography>
+    </>
   );
 }

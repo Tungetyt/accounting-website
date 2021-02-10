@@ -16,138 +16,87 @@ import { ColorContext } from '../context/contexts';
 import { APP_THEME } from '../helpers';
 import Image from './image';
 
-export default function TaxServiceOffer() {
-  const [expanded, setExpanded] = React.useState(false);
+export function TaxServiceOffer() {
   const intl = useIntl();
-  const [isDark] = useContext(ColorContext);
-  const useStyles = makeStyles((theme) => ({
-    root: {
-      backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor,
-    },
-    expand: {
-      transform: 'rotate(0deg)',
-      marginLeft: 'auto',
-      transition: theme.transitions.create('transform', {
-        duration: theme.transitions.duration.shortest,
-      }),
-    },
-    expandOpen: {
-      transform: 'rotate(180deg)',
-    },
-  }));
-  const classes = useStyles();
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
 
   return (
-    <Card className={classes.root}>
-      <CardActionArea onClick={handleExpandClick}>
-        <Grid
-          container
-          direction="row"
-          justify="center"
-          alignItems="center"
-          spacing="3"
-          style={{ padding: '6px' }}
-        >
-          <Grid item style={{ width: '600px' }}>
-            <div className="container">
-              <div className="containerimg">
-                <Image alt="PIT, zeznania podatkowe" filename="91022e07bbff5e0-1024x768.jpg" />
-
-              </div>
-
-            </div>
-          </Grid>
-          <Grid item>
-            <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info.0' })}</Typography>
-            <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info.1' })}</Typography>
-          </Grid>
+    <>
+      <Grid
+        container
+        direction="row"
+        alignItems="center"
+        justify="center"
+      >
+        <Grid item>
+          <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info1.0' })}</Typography>
+          <ul>
+            <li>
+              <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.info1.1' })}</Typography>
+            </li>
+            <li>
+              <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.info1.2' })}</Typography>
+            </li>
+            <li>
+              <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.info1.3' })}</Typography>
+            </li>
+          </ul>
         </Grid>
-        <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded,
-          })}
-          style={{ float: 'right' }}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
+        <Grid item style={{ width: '300px' }}>
+          <Tilt>
+            <Image alt="Doradca podatkowy pozuje do zdjęcia" filename="3cropped-O6YV1W0-1.jpg" />
+          </Tilt>
+        </Grid>
+
+      </Grid>
+      <br />
+
+      <Divider />
+      <br />
+      <Grid
+        container
+        direction="row"
+        alignItems="center"
+        justify="center"
+      >
+        <Grid
+          item
         >
-          <ExpandMoreIcon />
-        </IconButton>
-      </CardActionArea>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Grid
-            container
-            direction="row"
-            alignItems="center"
-            justify="center"
-          >
-            <Grid item>
-              <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info1.0' })}</Typography>
-              <ul>
-                <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.info1.1' })}</Typography>
-                </li>
-                <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.info1.2' })}</Typography>
-                </li>
-                <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.info1.3' })}</Typography>
-                </li>
-              </ul>
-            </Grid>
-            <Grid item style={{ width: '300px' }}>
-              <Tilt>
-                <Image alt="Doradca podatkowy pozuje do zdjęcia" filename="3cropped-O6YV1W0-1.jpg" />
-              </Tilt>
-            </Grid>
+          <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info1.4' })}</Typography>
+          <ul>
+            <li>
+              <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.0' })}</Typography>
+            </li>
+            <li>
+              <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.1' })}</Typography>
+            </li>
+            <li>
+              <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.2' })}</Typography>
+            </li>
+            <li>
+              <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.3' })}</Typography>
+            </li>
+            <li>
+              <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.4' })}</Typography>
+            </li>
+            <li>
+              <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.5' })}</Typography>
+            </li>
+            <li>
+              <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.6' })}</Typography>
+            </li>
+          </ul>
+        </Grid>
+      </Grid>
+    </>
+  );
+}
 
-          </Grid>
-          <br />
-
-          <Divider />
-          <br />
-          <Grid
-            container
-            direction="row"
-            alignItems="center"
-            justify="center"
-          >
-            <Grid
-              item
-            >
-              <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info1.4' })}</Typography>
-              <ul>
-                <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.0' })}</Typography>
-                </li>
-                <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.1' })}</Typography>
-                </li>
-                <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.2' })}</Typography>
-                </li>
-                <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.3' })}</Typography>
-                </li>
-                <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.4' })}</Typography>
-                </li>
-                <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.5' })}</Typography>
-                </li>
-                <li>
-                  <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.6' })}</Typography>
-                </li>
-              </ul>
-            </Grid>
-          </Grid>
-        </CardContent>
-      </Collapse>
-    </Card>
+export function HeadingChildrenTax() {
+  const intl = useIntl();
+  return (
+    <>
+      <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info.0' })}</Typography>
+      <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info.1' })}</Typography>
+    </>
   );
 }
