@@ -106,12 +106,12 @@ export default function ScrollableTabsButtonAuto() {
             aria-label="scrollable auto tabs example"
             classes={{ root: tabs, scroller }}
           >
-            <Tab label={intl.formatMessage({ id: 'servicesSection.accounting' })} icon={<FontAwesomeIcon size="3x" icon={faBook} />} {...a11yProps(0)} to={services} offset={OFFSET} component={Link} />
-            <Tab label={intl.formatMessage({ id: 'servicesSection.hrAndPayroll' })} icon={<FontAwesomeIcon size="3x" icon={faHandHoldingUsd} />} {...a11yProps(1)} to={services} offset={OFFSET} component={Link} />
-            <Tab label={intl.formatMessage({ id: 'servicesSection.taxServices' })} icon={<FontAwesomeIcon size="3x" icon={faMoneyCheckAlt} />} {...a11yProps(2)} to={services} offset={OFFSET} component={Link} />
-            <Tab label={intl.formatMessage({ id: 'servicesSection.legalServices' })} icon={<FontAwesomeIcon size="3x" icon={faGavel} />} {...a11yProps(3)} to={services} offset={OFFSET} component={Link} />
-            <Tab label={intl.formatMessage({ id: 'servicesSection.financialServices' })} icon={<FontAwesomeIcon size="3x" icon={faSearchDollar} />} {...a11yProps(4)} to={services} offset={OFFSET} component={Link} />
-            <Tab label={intl.formatMessage({ id: 'servicesSection.businessServices' })} icon={<FontAwesomeIcon size="3x" icon={faChess} />} {...a11yProps(5)} to={services} offset={OFFSET} component={Link} />
+            <Tab label={intl.formatMessage({ id: 'servicesSection.accounting' })} icon={<FontAwesomeIcon size="2x" icon={faBook} />} {...a11yProps(0)} to={services} offset={OFFSET} component={Link} />
+            <Tab label={intl.formatMessage({ id: 'servicesSection.hrAndPayroll' })} icon={<FontAwesomeIcon size="2x" icon={faHandHoldingUsd} />} {...a11yProps(1)} to={services} offset={OFFSET} component={Link} />
+            <Tab label={intl.formatMessage({ id: 'servicesSection.taxServices' })} icon={<FontAwesomeIcon size="2x" icon={faMoneyCheckAlt} />} {...a11yProps(2)} to={services} offset={OFFSET} component={Link} />
+            <Tab label={intl.formatMessage({ id: 'servicesSection.legalServices' })} icon={<FontAwesomeIcon size="2x" icon={faGavel} />} {...a11yProps(3)} to={services} offset={OFFSET} component={Link} />
+            <Tab label={intl.formatMessage({ id: 'servicesSection.financialServices' })} icon={<FontAwesomeIcon size="2x" icon={faSearchDollar} />} {...a11yProps(4)} to={services} offset={OFFSET} component={Link} />
+            <Tab label={intl.formatMessage({ id: 'servicesSection.businessServices' })} icon={<FontAwesomeIcon size="2x" icon={faChess} />} {...a11yProps(5)} to={services} offset={OFFSET} component={Link} />
           </Tabs>
         </AppBar>
         <div style={{ marginBottom: DEFAULT_PADDING }} />
