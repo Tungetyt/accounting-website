@@ -49,17 +49,16 @@ const Contact = () => {
           alignItems="center"
         >
 
-          <Grid item>
+          {/* <Grid item>
             {typeof window !== 'undefined' && matches && (
             <Box>
               <Paper className={paper}>
                 <Typography paragraph align="center">{ intl.formatMessage({ id: 'contactSection.whereAreWe' })}</Typography>
-                {/* <OpenMap /> */}
                 <GoogleMap />
               </Paper>
             </Box>
             )}
-          </Grid>
+          </Grid> */}
           <Grid
             item
             style={{

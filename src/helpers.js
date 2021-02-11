@@ -95,9 +95,7 @@ export const TITLE = 'BIURO RACHUNKOWE VAVICOM PIASECZNO JÓZEFOSŁAW KONSTANCIN
 export const DESCRIPTION = 'Biuro Rachunkowe VAVICOM Piaseczno, Józefosław, Konstancin, Warszawa. Księgowość, Kadry i Płace, Podatki, Finanse, Biznes';
 
 const commonBreakNum = 6;
-
 export const COMMON_BREAK = `${commonBreakNum}rem`;
-
 export const HALF_COMMON_BREAK = `${commonBreakNum / 2}rem`;
 
 export const DEFAULT_PADDING = '2rem';
