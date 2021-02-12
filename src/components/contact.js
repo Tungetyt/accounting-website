@@ -62,7 +62,7 @@ const Contact = () => {
           <Grid
             item
             style={{
-              width: '100%', height: 'auto', maxWidth: '600px'
+              minWidth: '500px', maxWidth: '600px'
             }}
           >
             <Paper className={paper}>
