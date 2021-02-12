@@ -74,8 +74,8 @@ export const STREET = 'Ogrodowa 6';
 export const STREET2 = 'Grochowskiego 7';
 export const TOWN = '05-500 Józefosław';
 export const TOWN2 = '05-500 Piaseczno';
-export const PHONE_NUMBER = '+48 602 237 246';
-export const PHONE_NUMBER2 = '+48 606 368 694';
+export const PHONE_NUMBER = '+48 606 368 694';
+export const PHONE_NUMBER2 = '+48 884 267 820';
 export const EMAIL = 'vavicom.info@gmail.com';
 export const EMAIL2 = 'info@vavicom.pl';
 
