@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const ScrollTop = (props) => {
-  const tooltipRight = (useMediaQuery('(min-width:600px)') ? 25 : 2);
+  const tooltipRight = (useMediaQuery('(min-width:1280px)') ? 22 : 2);
 
   const useStyles = makeStyles((theme) => ({
     root: {
