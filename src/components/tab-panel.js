@@ -109,9 +109,9 @@ export default function ScrollableTabsButtonAuto() {
             <Tab label={intl.formatMessage({ id: 'servicesSection.accounting' })} icon={<FontAwesomeIcon size="2x" icon={faBook} />} {...a11yProps(0)} to={services} offset={OFFSET} component={Link} />
             <Tab label={intl.formatMessage({ id: 'servicesSection.hrAndPayroll' })} icon={<FontAwesomeIcon size="2x" icon={faHandHoldingUsd} />} {...a11yProps(1)} to={services} offset={OFFSET} component={Link} />
             <Tab label={intl.formatMessage({ id: 'servicesSection.taxServices' })} icon={<FontAwesomeIcon size="2x" icon={faMoneyCheckAlt} />} {...a11yProps(2)} to={services} offset={OFFSET} component={Link} />
-            <Tab label={intl.formatMessage({ id: 'servicesSection.legalServices' })} icon={<FontAwesomeIcon size="2x" icon={faGavel} />} {...a11yProps(3)} to={services} offset={OFFSET} component={Link} />
             <Tab label={intl.formatMessage({ id: 'servicesSection.financialServices' })} icon={<FontAwesomeIcon size="2x" icon={faSearchDollar} />} {...a11yProps(4)} to={services} offset={OFFSET} component={Link} />
             <Tab label={intl.formatMessage({ id: 'servicesSection.businessServices' })} icon={<FontAwesomeIcon size="2x" icon={faChess} />} {...a11yProps(5)} to={services} offset={OFFSET} component={Link} />
+            <Tab label={intl.formatMessage({ id: 'servicesSection.legalServices' })} icon={<FontAwesomeIcon size="2x" icon={faGavel} />} {...a11yProps(3)} to={services} offset={OFFSET} component={Link} />
           </Tabs>
         </AppBar>
         <div style={{ marginBottom: DEFAULT_PADDING }} />
@@ -131,11 +131,6 @@ export default function ScrollableTabsButtonAuto() {
             <TaxServiceOffer />
           </Offer>
         </TabPanel>
-        <TabPanel value={chosenTab} index={3}>
-          <Offer image={{ alt: 'Drewniany młotek sądowy', filename: '8OIP_4x.jpg' }} headingChildren={<HeadingChildrenLegal />}>
-            <LegalOffer />
-          </Offer>
-        </TabPanel>
         <TabPanel value={chosenTab} index={4}>
           <Offer image={{ alt: 'Księgowy pokazuje urządzenia dzięki którym klient może komunikować się z firmą Vavicom', filename: '16E-biznes-po-pol-miliona-zlotych-dla-270-firm-108796-640x640.jpg' }} headingChildren={<HeadingChildrenFinancial />}>
             <FinancialOffer />
@@ -144,6 +139,11 @@ export default function ScrollableTabsButtonAuto() {
         <TabPanel value={chosenTab} index={5}>
           <Offer image={{ alt: 'Księgowy uściska dłoń klienta', filename: '14biuro-rachunkowe-szczecin.jpeg' }} headingChildren={<HeadingChildrenBusiness />}>
             <BusinessOffer />
+          </Offer>
+        </TabPanel>
+        <TabPanel value={chosenTab} index={3}>
+          <Offer image={{ alt: 'Drewniany młotek sądowy', filename: '8OIP_4x.jpg' }} headingChildren={<HeadingChildrenLegal />}>
+            <LegalOffer />
           </Offer>
         </TabPanel>
       </Paper>
