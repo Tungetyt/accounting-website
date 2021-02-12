@@ -23,8 +23,8 @@
   "servicesSection": {
     "accounting": "KSIĘGOWOŚĆ ONLINE",
     "hrAndPayroll": "KADRY I PŁACE",
-    "taxServices": "USŁUGI PODATKOWE",
-    "legalServices": "USŁUGI PRAWNE",
+    "taxServices": "USŁUGI ROZLICZEŃ KSIĘGOWO-PODATKOWYCH",
+    "legalServices": "USŁUGI POZOSTAŁE",
     "financialServices": "USŁUGI FINANSOWE",
     "businessServices": "USŁUGI BIZNESOWE"
   },
