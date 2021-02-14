@@ -60,9 +60,9 @@ export default function Offer({ image, headingChildren, children }) {
           style={{ padding: '6px' }}
         >
           <Grid item style={{ width: '600px' }}>
-            <div className="container" style={{ marginTop: '2.5rem' }}>
-              <div className="containerimg">
-                <Image alt={image.alt} filename={image.filename} />
+            <div className="container" style={{ marginTop: '2.5rem', borderRadius: '50%' }}>
+              <div className="containerimg" style={{ borderRadius: '50%' }}>
+                <Image alt={image.alt} filename={image.filename} style={{ borderRadius: '50%' }} />
               </div>
             </div>
           </Grid>
