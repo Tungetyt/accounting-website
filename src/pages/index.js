@@ -59,7 +59,7 @@ const IndexPage = (props) => {
           <div id="top" />
           <main className={main}>
             <LandingPage />
-            <div style={{ marginBottom: COMMON_BREAK }} />
+            <div style={{ marginBottom: HALF_COMMON_BREAK }} />
             <TabPanel />
             <div style={{ marginBottom: COMMON_BREAK }} />
 

@@ -35,7 +35,8 @@ const Banner = () => {
   const intl = useIntl();
 
   return (
-    <Paper elevation={24} className={opaqueColor}>
+    <Paper elevation={24} className={opaqueColor} style={{ clipPath: 'polygon(0 0, 0 80%, 100% 100%, 100% 20%)' }}>
+      {/* <img src="../images/11Biznes.jpg" /> */}
       <BannerWrapper>
         <BackgroundImage
           Tag="section"
