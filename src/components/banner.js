@@ -37,7 +37,7 @@ const Banner = () => {
   const intl = useIntl();
 
   return (
-    <Paper elevation={24} className={opaqueColor} style={{ clipPath: 'polygon(0 0, 0 80%, 100% 100%, 100% 20%)', zIndex: -1 }}>
+    <Paper elevation={24} className={opaqueColor} style={{ clipPath: 'polygon(0 0, 0 80%, 100% 100%, 100% 20%)' }}>
       {/* <img src="../images/11Biznes.jpg" /> */}
       <Parallax y={[-30, 30]} tagInner="div">
 
@@ -46,7 +46,7 @@ const Banner = () => {
             Tag="section"
             className="hero-image"
             fluid={data.file.childImageSharp.fluid}
-            style={{ paddingBottom: '5rem', zIndex: -1 }}
+            style={{ paddingBottom: '5rem' }}
           >
             <div className="hero-content">
               <Paper
