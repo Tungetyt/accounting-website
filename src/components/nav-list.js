@@ -73,11 +73,11 @@ const NavList = () => {
           <ListItemIcon><BusinessCenterIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={services} />
         </NavLink>
-        <NavLink to={prices} offset={OFFSET}>
+        <NavLink to={prices} offset={-80}>
           <ListItemIcon><LocalOfferIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={prices} />
         </NavLink>
-        <NavLink to={about} offset={OFFSET}>
+        <NavLink to={about} offset={-90}>
           <ListItemIcon><InfoIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={about} />
         </NavLink>
@@ -85,7 +85,7 @@ const NavList = () => {
           <ListItemIcon><HelpIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={faq} />
         </NavLink>
-        <NavLink to={career} offset={OFFSET}>
+        <NavLink to={career} offset={-90}>
           <ListItemIcon><SpaIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={career} />
         </NavLink>
