@@ -6,6 +6,8 @@ import BackgroundImage from 'gatsby-background-image';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
 import styled from 'styled-components';
+// import { Parallax, Background } from 'react-parallax';
+import { Parallax } from 'react-scroll-parallax';
 import { ColorContext } from '../context/contexts';
 import { COMPANY } from '../helpers';
 
@@ -35,46 +37,51 @@ const Banner = () => {
   const intl = useIntl();
 
   return (
-    <Paper elevation={24} className={opaqueColor} style={{ clipPath: 'polygon(0 0, 0 80%, 100% 100%, 100% 20%)' }}>
+    <Paper elevation={24} className={opaqueColor} style={{ clipPath: 'polygon(0 0, 0 80%, 100% 100%, 100% 20%)', zIndex: -1 }}>
       {/* <img src="../images/11Biznes.jpg" /> */}
-      <BannerWrapper>
-        <BackgroundImage
-          Tag="section"
-          className="hero-image"
-          fluid={data.file.childImageSharp.fluid}
-          style={{ paddingBottom: '5rem' }}
-        >
-          <div className="hero-content">
-            <Paper
-              elevation={0}
-              className={opaqueColor}
-              style={{
-                marginBottom: '2rem', padding: '1%', backdropFilter: 'blur(3px)', borderRadius: '20%',
-              }}
-            >
-              <Typography variant="h1" color="primary" style={{ lineHeight: '90%', userSelect: 'none' }}>
-                {intl.formatMessage({ id: 'landing.first' })}
-                <br />
-                {intl.formatMessage({ id: 'landing.second' })}
-                <br />
-                {COMPANY.replace(/\s/g, '')}
-              </Typography>
-            </Paper>
-            <Paper elevation={0} className={opaqueColor} style={{ backdropFilter: 'blur(3px)', padding: '1%', borderRadius: '20%' }}>
-              <Typography
-                variant="h2"
-                color="primary"
+      <Parallax y={[-30, 30]} tagInner="div">
+
+        <BannerWrapper>
+          <BackgroundImage
+            Tag="section"
+            className="hero-image"
+            fluid={data.file.childImageSharp.fluid}
+            style={{ paddingBottom: '5rem', zIndex: -1 }}
+          >
+            <div className="hero-content">
+              <Paper
+                elevation={0}
+                className={opaqueColor}
                 style={{
-                  userSelect: 'none', fontSize: '1.5rem',
+                  marginBottom: '2rem', padding: '1%', backdropFilter: 'blur(3px)', borderRadius: '20%',
                 }}
               >
-                {intl.formatMessage({ id: 'landing.address' })}
-              </Typography>
-            </Paper>
-          </div>
-        </BackgroundImage>
-      </BannerWrapper>
+                <Typography variant="h1" color="primary" style={{ lineHeight: '90%', userSelect: 'none' }}>
+                  {intl.formatMessage({ id: 'landing.first' })}
+                  <br />
+                  {intl.formatMessage({ id: 'landing.second' })}
+                  <br />
+                  {COMPANY.replace(/\s/g, '')}
+                </Typography>
+              </Paper>
+              <Paper elevation={0} className={opaqueColor} style={{ backdropFilter: 'blur(3px)', padding: '1%', borderRadius: '20%' }}>
+                <Typography
+                  variant="h2"
+                  color="primary"
+                  style={{
+                    userSelect: 'none', fontSize: '1.5rem',
+                  }}
+                >
+                  {intl.formatMessage({ id: 'landing.address' })}
+                </Typography>
+              </Paper>
+            </div>
+          </BackgroundImage>
+        </BannerWrapper>
+      </Parallax>
+
     </Paper>
+
   );
 };
 
