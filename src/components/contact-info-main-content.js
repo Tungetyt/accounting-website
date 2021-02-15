@@ -90,9 +90,6 @@ const ContactInfoMainContent = () => {
               <EmailIcon color={color} />
             </Grid>
             <Grid item>
-              {/* <Typography color={color}>
-                {EMAIL}
-              </Typography> */}
               <Typography color={color}>
                 {EMAIL2}
               </Typography>

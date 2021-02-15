@@ -34,8 +34,6 @@ const MainNav = (props) => {
 
   return (
     <div className={drawer} aria-label="mailbox folders">
-      {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-      {/* <Hidden mdUp implementation="css"> */}
       <SwipeableDrawer
         container={container}
         variant="temporary"
@@ -47,14 +45,13 @@ const MainNav = (props) => {
           paper: drawerPaper,
         }}
         ModalProps={{
-          keepMounted: true, // Better open performance on mobile.
+          keepMounted: true,
         }}
         disableBackdropTransition={!iOS}
         disableDiscovery={iOS}
       >
         <DrawerContent />
       </SwipeableDrawer>
-      {/* </Hidden> */}
       <Hidden mdDown implementation="css">
         <Drawer
           classes={{
@@ -72,10 +69,6 @@ const MainNav = (props) => {
 };
 
 MainNav.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window: PropTypes.func,
 };
 

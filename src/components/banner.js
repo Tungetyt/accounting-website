@@ -38,7 +38,6 @@ const Banner = () => {
 
   return (
     <Paper elevation={24} className={opaqueColor} style={{ clipPath: 'polygon(0 0, 0 80%, 100% 100%, 100% 20%)' }}>
-      {/* <img src="../images/11Biznes.jpg" /> */}
       <Parallax y={[-30, 30]} tagInner="div">
 
         <BannerWrapper>

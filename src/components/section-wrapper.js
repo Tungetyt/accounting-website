@@ -20,12 +20,9 @@ const SectionWrapper = ({ children }) => {
           style={{ width: '99%' }}
         >
           <Paper style={{ backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation1.backgroundColor, paddingTop: DEFAULT_PADDING, paddingBottom: DEFAULT_PADDING }}>
-            {/* <div style={{ paddingTop: defaultPadding }} /> */}
             <CenterWrapper>
               {children}
             </CenterWrapper>
-            {/* <div style={{ addingTop: defaultPadding}} /> */}
-
           </Paper>
         </Grid>
 
