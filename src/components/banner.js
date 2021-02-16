@@ -43,7 +43,6 @@ const Banner = () => {
         <BannerWrapper>
           <BackgroundImage
             Tag="section"
-            className="hero-image"
             fluid={data.file.childImageSharp.fluid}
             style={{ paddingBottom: '5rem' }}
           >

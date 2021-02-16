@@ -41,7 +41,7 @@ export default function Offer({ image, headingChildren, children }) {
     },
   }));
   const {
-    text, root, expand, expandOpen,
+    root, expand, expandOpen,
   } = useStyles();
 
   const handleExpandClick = () => {

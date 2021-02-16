@@ -3,7 +3,7 @@ import {
   Box,
   Grid,
   Paper,
-  Typography
+  Typography, Container
 } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
@@ -13,16 +13,16 @@ import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
 import { Element } from 'react-scroll';
 import { ColorContext } from '../context/contexts';
-import { APP_THEME, NAVIGATION } from '../helpers';
+import { APP_THEME, NAVIGATION, DEFAULT_PADDING } from '../helpers';
 import ContactInfo from './contact-info';
 import styles from './dist/ImageZoom.module.css';
 import Image from './image';
+import OpenMap from './open-map';
 import GoogleMap from './map';
 
 const tmp = styles;
 const wrapperStyle = {
-  width: '100%',
-  height: '100%'
+  // width: '600px'
 };
 const Contact = () => {
   const { contact } = NAVIGATION;
@@ -34,13 +34,13 @@ const Contact = () => {
     paper: {
       backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor,
       padding: '1rem',
-      margin: '1rem'
+      marginBottom: '1rem'
     }
   }));
   const { paper } = useStyles();
 
   return (
-    <Element name={contact}>
+    <Element name={contact} style={{ paddingBottom: '1rem', paddingTop: '1rem' }}>
       <>
         <Grid
           container
@@ -48,13 +48,12 @@ const Contact = () => {
           justify="center"
           alignItems="center"
         >
-
           {/* <Grid item>
             {typeof window !== 'undefined' && matches && (
             <Box>
               <Paper className={paper}>
                 <Typography paragraph align="center">{ intl.formatMessage({ id: 'contactSection.whereAreWe' })}</Typography>
-                <GoogleMap />
+                <OpenMap />
               </Paper>
             </Box>
             )}
@@ -62,22 +61,24 @@ const Contact = () => {
           <Grid
             item
             style={{
-              minWidth: '500px', maxWidth: '600px'
+              width: '100vw', maxWidth: '500px'
             }}
           >
-            <Paper className={paper}>
+            <Paper
+              className={paper}
+              style={{
+              }}
+            >
               <Typography paragraph align="center">{ intl.formatMessage({ id: 'contactSection.ourOffice' })}</Typography>
               <Zoom>
-
-                <Image style={wrapperStyle} alt="Nasz budynek, w którym mieści się główne biuro Vavicom" filename="6Ogrodowa64.jpg" />
+                <Image alt="Nasz budynek, w którym mieści się główne biuro Vavicom" filename="6Ogrodowa64.jpg" />
               </Zoom>
             </Paper>
           </Grid>
-          <Grid item>
+          <Grid item style={{ margin: DEFAULT_PADDING }}>
             <ContactInfo />
           </Grid>
         </Grid>
-
       </>
     </Element>
   );
