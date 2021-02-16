@@ -27,9 +27,6 @@ import {
 } from '../helpers';
 
 const IndexPage = (props) => {
-  // init value for isDark does not matter. The value is set in useEffect anyway.
-  const [isDark, setIsDark] = useState(true);
-
   const useStyles = makeStyles((theme) => ({
     main: {
       [theme.breakpoints.up('lg')]: {
@@ -41,6 +38,14 @@ const IndexPage = (props) => {
   const { main } = useStyles();
 
   const intl = useIntl();
+
+  // default light theme:
+  // const [isDark, setIsDark] = useState(false);
+  // useEffect(() => {
+  //   setIsDark(getItemByKey(LOCAL_STORAGE_KEY.theme) === THEME_NAMES.dark);
+  // }, []);
+
+  const [isDark, setIsDark] = useState(true);
   useEffect(() => {
     setIsDark(getItemByKey(LOCAL_STORAGE_KEY.theme) !== THEME_NAMES.light);
   }, []);
