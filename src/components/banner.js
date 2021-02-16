@@ -28,7 +28,9 @@ const Banner = () => {
 
   const useStyles = makeStyles(() => ({
     opaqueColor: {
-      backgroundColor: isDark ? 'rgba(38, 50, 56, 0.8)' : 'rgba(236, 239, 241, 0.8)',
+      // greyblue: 'rgba(38, 50, 56, 0.8)' : 'rgba(236, 239, 241, 0.8)'
+      // grey: 'rgba(33,33,33, 0.8)' : 'rgba(245,245,245, 0.8)'
+      backgroundColor: isDark ? 'rgba(33,33,33, 0.8)' : 'rgba(245,245,245, 0.8)',
     },
   }));
 
