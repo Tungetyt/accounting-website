@@ -40,7 +40,7 @@ const Contact = () => {
   const { paper } = useStyles();
 
   return (
-    <Element name={contact} style={{ paddingBottom: '1rem', paddingTop: '1rem' }}>
+    <Element name={contact} style={{ paddingTop: '1rem' }}>
       <>
         <Grid
           container
