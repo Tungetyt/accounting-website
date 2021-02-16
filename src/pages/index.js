@@ -28,7 +28,7 @@ import {
 
 const IndexPage = (props) => {
   // init value for isDark does not matter. The value is set in useEffect anyway.
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
 
   const useStyles = makeStyles((theme) => ({
     main: {
@@ -42,7 +42,7 @@ const IndexPage = (props) => {
 
   const intl = useIntl();
   useEffect(() => {
-    setIsDark(getItemByKey(LOCAL_STORAGE_KEY.theme) !== THEME_NAMES.light);
+    setIsDark(getItemByKey(LOCAL_STORAGE_KEY.theme) === THEME_NAMES.dark);
   }, []);
 
   let chosenTheme = createMuiTheme(isDark ? APP_THEME.dark : APP_THEME.light);
