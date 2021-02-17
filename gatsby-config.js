@@ -59,7 +59,7 @@ module.exports = {
       resolve: 'gatsby-plugin-scroll-indicator',
       options: {
         // Configure color of the scroll indicator
-        color: '#78909c',
+        color: '#3f51b5',
         // Height of the scroll indicator 3px
         height: '3px',
         // Configure paths where the scroll indicator will appear '/', '/en/', '/pl/
@@ -97,7 +97,7 @@ module.exports = {
         defaultLanguage: 'pl',
       },
     },
-     {
+    {
       resolve: 'gatsby-plugin-react-leaflet',
       options: {
         linkStyles: true, // (default: true) Enable/disable loading stylesheets via CDN
