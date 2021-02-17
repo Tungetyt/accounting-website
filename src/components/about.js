@@ -107,11 +107,11 @@ const About = () => {
             </Grid>
           </Paper>
         </Grid>
-        <Grid item>
+        {/* <Grid item>
           <Paper style={{ backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor, padding: '1rem' }}>
             <SwipeableTextMobileStepper />
           </Paper>
-        </Grid>
+        </Grid> */}
       </Grid>
     </Element>
   );
