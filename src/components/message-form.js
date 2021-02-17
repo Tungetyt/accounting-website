@@ -21,12 +21,17 @@ const MessageForm = () => {
   const [isUpdatedCorrectly, setIsUpdatedCorrectly] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState('');
+  const [email, setEmail] = useState('');
   const [sentMessagesData, setSentMessagesData] = useState(
     JSON.parse(getItemByKey(SENT_MESSAGES_DATA) || '[]')
       .map((sm) => ({ ...sm, date: new Date(sm.date) })),
   );
 
-  const onChange = (e) => {
+  const onEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const onMessageChange = (e) => {
     setMessage(e.target.value);
   };
 
@@ -49,7 +54,7 @@ const MessageForm = () => {
     emailjs.send(
       process.env.GATSBY_EMAILJS_SERVICE_ID,
       process.env.GATSBY_EMAILJS_TEMPLATE_ID,
-      { message },
+      { message, email },
       process.env.GATSBY_EMAILJS_USER_ID,
     ).then(
       (response) => {
@@ -70,17 +75,28 @@ const MessageForm = () => {
       },
     );
   };
-  console.log(sentMessagesData);
+
   return (
     <>
       <form noValidate autoComplete="off" onSubmit={onSubmit}>
+        <TextField
+          name="email"
+          label="TWÓJ ADRES EMAIL"
+          fullWidth
+          value={email}
+          onChange={onEmailChange}
+          variant="standard"
+          size="large"
+          autoComplete="email"
+          style={{ marginBottom: '0.6rem' }}
+        />
         <TextField
           name="message"
           label="TWOJA WIADOMOŚĆ"
           multiline
           fullWidth
           value={message}
-          onChange={onChange}
+          onChange={onMessageChange}
           variant="outlined"
           size="large"
           autoComplete="off"

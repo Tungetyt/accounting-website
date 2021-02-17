@@ -54,6 +54,7 @@
     "react-parallax-tilt": "^1.4.81",
     "react-scroll": "^1.8.1",
     "react-scroll-parallax": "^2.3.5",
+    "react-swipeable-views": "^0.13.9",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
