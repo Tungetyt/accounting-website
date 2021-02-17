@@ -1,6 +1,6 @@
 import {
   Snackbar,
-
+  Container,
   TextField,
 } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
@@ -9,11 +9,18 @@ import PublishIcon from '@material-ui/icons/Publish';
 import { Alert } from '@material-ui/lab';
 import React, { useContext, useReducer, useState } from 'react';
 import SendIcon from '@material-ui/icons/Send';
+import * as emailjs from 'emailjs-com';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import LinearProgress from '@material-ui/core/LinearProgress';
+
+const { GATSBY_EMAILJS_SERVICE_ID, GATSBY_EMAILJS_TEMPLATE_ID, GATSBY_EMAILJS_USER_ID } = process.env;
 
 const MessageForm = () => {
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [isUpdatedCorrectly, setIsUpdatedCorrectly] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState('');
+  const [sentMessages, setSentMessages] = useState([]);
 
   const onChange = (e) => {
     setMessage(e.target.value);
@@ -27,15 +34,38 @@ const MessageForm = () => {
     setSnackbarOpen(false);
   };
 
+  const handleFinishedSubmit = () => {
+    setIsSubmitting(false);
+    setSnackbarOpen(true);
+  };
+
   const onSubmit = (e) => {
     e.preventDefault();
-    setSnackbarOpen(true);
-    console.log('message', message);
+    setIsSubmitting(true);
+    emailjs.send(
+      GATSBY_EMAILJS_SERVICE_ID,
+      GATSBY_EMAILJS_TEMPLATE_ID,
+      { message },
+      GATSBY_EMAILJS_USER_ID,
+    ).then(
+      (response) => {
+        console.log(response.status, response.text);
+        setIsUpdatedCorrectly(true);
+        handleFinishedSubmit();
+        setSentMessages((prevState) => [...prevState, message]);
+        setMessage('');
+      },
+      (err) => {
+        console.log(err);
+        setIsUpdatedCorrectly(false);
+        handleFinishedSubmit();
+      },
+    );
   };
-  console.log('message', message);
+
   return (
     <>
-      <form noValidate autoComplete="off" onSubmit={onSubmit} style={{ width: '100%' }}>
+      <form noValidate autoComplete="off" onSubmit={onSubmit}>
 
         <TextField
           name="message"
@@ -53,6 +83,8 @@ const MessageForm = () => {
           }}
         />
 
+        {isSubmitting && <LinearProgress />}
+
         <Button
           color="primary"
           variant="contained"
@@ -60,7 +92,7 @@ const MessageForm = () => {
           type="submit"
           size="small"
           endIcon={<SendIcon />}
-          disabled={!message}
+          disabled={!message || isSubmitting}
         >
           WYŚLIJ DO NAS WIADOMOŚĆ
         </Button>

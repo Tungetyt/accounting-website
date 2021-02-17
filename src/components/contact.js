@@ -59,7 +59,7 @@ const Contact = () => {
             </Box>
             )}
           </Grid>
-          <Grid item>
+          <Grid item style={{ maxWidth: '450px' }}>
             <Paper className={paper}>
               <MessageForm />
             </Paper>
@@ -72,8 +72,6 @@ const Contact = () => {
           >
             <Paper
               className={paper}
-              style={{
-              }}
             >
               <Typography paragraph align="center">{ intl.formatMessage({ id: 'contactSection.ourOffice' })}</Typography>
               <Zoom>
