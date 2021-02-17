@@ -19,6 +19,7 @@ import styles from './dist/ImageZoom.module.css';
 import Image from './image';
 import OpenMap from './open-map';
 import GoogleMap from './map';
+import MessageForm from './message-form';
 
 const tmp = styles;
 const wrapperStyle = {
@@ -48,7 +49,7 @@ const Contact = () => {
           justify="center"
           alignItems="center"
         >
-          <Grid item style={{ margin: DEFAULT_PADDING }}>
+          <Grid item style={{ marginLeft: DEFAULT_PADDING, marginRight: DEFAULT_PADDING }}>
             {typeof window !== 'undefined' && matches && (
             <Box>
               <Paper className={paper}>
@@ -57,6 +58,11 @@ const Contact = () => {
               </Paper>
             </Box>
             )}
+          </Grid>
+          <Grid item>
+            <Paper className={paper}>
+              <MessageForm />
+            </Paper>
           </Grid>
           <Grid
             item
