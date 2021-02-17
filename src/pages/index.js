@@ -45,9 +45,15 @@ const IndexPage = (props) => {
   //   setIsDark(getItemByKey(LOCAL_STORAGE_KEY.theme) === THEME_NAMES.dark);
   // }, []);
 
-  const [isDark, setIsDark] = useState(true);
+  // default dark theme:
+  // const [isDark, setIsDark] = useState(true);
+  // useEffect(() => {
+  //   setIsDark(getItemByKey(LOCAL_STORAGE_KEY.theme) !== THEME_NAMES.light);
+  // }, []);
+
+  const [isDark, setIsDark] = useState(false);
   useEffect(() => {
-    setIsDark(getItemByKey(LOCAL_STORAGE_KEY.theme) !== THEME_NAMES.light);
+    setIsDark(getItemByKey(LOCAL_STORAGE_KEY.theme) === THEME_NAMES.dark);
   }, []);
 
   let chosenTheme = createMuiTheme(isDark ? APP_THEME.dark : APP_THEME.light);
