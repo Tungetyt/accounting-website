@@ -76,7 +76,7 @@ const MessageForm = () => {
       <form noValidate autoComplete="off" onSubmit={onSubmit}>
         <TextField
           name="message"
-          label="WIADOMOŚĆ EMAIL"
+          label="TWOJA WIADOMOŚĆ"
           multiline
           fullWidth
           value={message}
