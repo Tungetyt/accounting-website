@@ -1,7 +1,7 @@
 import {
   Snackbar,
   Container,
-  TextField,
+  TextField, Divider, Typography,
 } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import Slide from '@material-ui/core/Slide';
@@ -12,13 +12,19 @@ import SendIcon from '@material-ui/icons/Send';
 import * as emailjs from 'emailjs-com';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import LinearProgress from '@material-ui/core/LinearProgress';
+import { DEFAULT_PADDING, getItemByKey } from '../helpers';
+
+const SENT_MESSAGES_DATA = 'sentMessagesData';
 
 const MessageForm = () => {
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [isUpdatedCorrectly, setIsUpdatedCorrectly] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState('');
-  const [sentMessages, setSentMessages] = useState([]);
+  const [sentMessagesData, setSentMessagesData] = useState(
+    JSON.parse(getItemByKey(SENT_MESSAGES_DATA) || '[]')
+      .map((sm) => ({ ...sm, date: new Date(sm.date) })),
+  );
 
   const onChange = (e) => {
     setMessage(e.target.value);
@@ -50,7 +56,11 @@ const MessageForm = () => {
         console.log(response.status, response.text);
         setIsUpdatedCorrectly(true);
         handleFinishedSubmit();
-        setSentMessages((prevState) => [...prevState, message]);
+        const newMessageData = { message, date: new Date() };
+        localStorage.setItem(
+          SENT_MESSAGES_DATA, JSON.stringify([...sentMessagesData, newMessageData]),
+        );
+        setSentMessagesData((prevState) => [...prevState, newMessageData]);
         setMessage('');
       },
       (err) => {
@@ -60,11 +70,10 @@ const MessageForm = () => {
       },
     );
   };
-
+  console.log(sentMessagesData);
   return (
     <>
       <form noValidate autoComplete="off" onSubmit={onSubmit}>
-
         <TextField
           name="message"
           label="WIADOMOŚĆ EMAIL"
@@ -81,7 +90,6 @@ const MessageForm = () => {
         />
 
         {isSubmitting && <LinearProgress />}
-
         <Button
           color="primary"
           variant="contained"
@@ -94,12 +102,23 @@ const MessageForm = () => {
           WYŚLIJ DO NAS WIADOMOŚĆ
         </Button>
       </form>
+
+      {sentMessagesData?.length > 0 && <div style={{ marginBottom: DEFAULT_PADDING }} />}
+      {sentMessagesData.sort((sm1, sm2) => sm2.date - sm1.date).map((sm) => (
+        <>
+          <Divider />
+          <br />
+          <Typography paragraph style={{ fontWeight: 'bold' }}>{sm.date.toLocaleString('pl-PL', { timeZone: 'UTC' })}</Typography>
+          <Typography paragraph style={{ whiteSpace: 'pre-line' }}>{sm.message}</Typography>
+        </>
+      ))}
+
       <Snackbar
         open={snackbarOpen}
         autoHideDuration={6000}
         onClose={handleSnackbarClose}
         TransitionComponent={Slide}
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+        anchorOrigin={{ vertical: 'center', horizontal: 'center' }}
       >
         <Alert
           onClose={handleSnackbarClose}
