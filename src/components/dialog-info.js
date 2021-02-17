@@ -35,7 +35,7 @@ export default function DialogInfo({
 
   return (
     <>
-      <Button style={{ backgroundColor: '#212121', color: '#FFFFFF' }} onClick={handleClickOpen('paper')} startIcon={children}>{title}</Button>
+      <Button onClick={handleClickOpen('paper')} startIcon={children}>{title}</Button>
       <Dialog
         open={open}
         onClose={handleClose}
