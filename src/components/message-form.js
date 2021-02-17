@@ -22,6 +22,7 @@ const MessageForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState('');
   const [email, setEmail] = useState('');
+  const [isEmailValid, setIsEmailValid] = useState(true);
   const [sentMessagesData, setSentMessagesData] = useState(
     JSON.parse(getItemByKey(SENT_MESSAGES_DATA) || '[]')
       .map((sm) => ({ ...sm, date: new Date(sm.date) })),
@@ -76,12 +77,28 @@ const MessageForm = () => {
     );
   };
 
+  const validateEmail = (e) => {
+    if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(e?.target?.value)) {
+      setIsEmailValid(true);
+      return (true);
+    }
+    setIsEmailValid(false);
+    return (false);
+  };
+
+  const validate = () => {
+    if (email && isEmailValid && message) {
+      return (true);
+    }
+    return (false);
+  };
+
   return (
     <>
       <form noValidate autoComplete="off" onSubmit={onSubmit}>
         <TextField
           name="email"
-          label="TWÓJ ADRES EMAIL"
+          label="TWÓJ KONTAKTOWY ADRES EMAIL"
           fullWidth
           value={email}
           onChange={onEmailChange}
@@ -89,6 +106,9 @@ const MessageForm = () => {
           size="large"
           autoComplete="email"
           style={{ marginBottom: '0.6rem' }}
+          onBlur={validateEmail}
+          error={!isEmailValid}
+          helperText={isEmailValid ? '' : 'zły email'}
         />
         <TextField
           name="message"
@@ -106,6 +126,7 @@ const MessageForm = () => {
         />
 
         {isSubmitting && <LinearProgress />}
+
         <Button
           color="primary"
           variant="contained"
@@ -113,7 +134,7 @@ const MessageForm = () => {
           type="submit"
           size="small"
           endIcon={<SendIcon />}
-          disabled={!message || isSubmitting}
+          disabled={!validate() || isSubmitting}
         >
           WYŚLIJ DO NAS WIADOMOŚĆ
         </Button>
