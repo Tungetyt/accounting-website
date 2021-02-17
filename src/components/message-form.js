@@ -62,7 +62,7 @@ const MessageForm = () => {
           endIcon={<SendIcon />}
           disabled={!message}
         >
-          WYŚLIJ
+          WYŚLIJ DO NAS WIADOMOŚĆ
         </Button>
       </form>
       <Snackbar
