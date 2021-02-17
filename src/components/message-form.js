@@ -13,8 +13,6 @@ import * as emailjs from 'emailjs-com';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import LinearProgress from '@material-ui/core/LinearProgress';
 
-const { GATSBY_EMAILJS_SERVICE_ID, GATSBY_EMAILJS_TEMPLATE_ID, GATSBY_EMAILJS_USER_ID } = process.env;
-
 const MessageForm = () => {
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [isUpdatedCorrectly, setIsUpdatedCorrectly] = useState(false);
@@ -43,10 +41,10 @@ const MessageForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
     emailjs.send(
-      GATSBY_EMAILJS_SERVICE_ID,
-      GATSBY_EMAILJS_TEMPLATE_ID,
+      process.env.GATSBY_EMAILJS_SERVICE_ID,
+      process.env.GATSBY_EMAILJS_TEMPLATE_ID,
       { message },
-      GATSBY_EMAILJS_USER_ID,
+      process.env.GATSBY_EMAILJS_USER_ID,
     ).then(
       (response) => {
         console.log(response.status, response.text);
@@ -72,12 +70,11 @@ const MessageForm = () => {
           label="WIADOMOŚĆ EMAIL"
           multiline
           fullWidth
-            // rows={6}
           value={message}
           onChange={onChange}
           variant="outlined"
           size="large"
-          autoComplete="new-password"
+          autoComplete="off"
           onFocus={(event) => {
             event.target.setAttribute('autocomplete', 'off');
           }}
