@@ -48,7 +48,7 @@ const Contact = () => {
           justify="center"
           alignItems="center"
         >
-          {/* <Grid item>
+          <Grid item style={{ margin: DEFAULT_PADDING }}>
             {typeof window !== 'undefined' && matches && (
             <Box>
               <Paper className={paper}>
@@ -57,7 +57,7 @@ const Contact = () => {
               </Paper>
             </Box>
             )}
-          </Grid> */}
+          </Grid>
           <Grid
             item
             style={{
