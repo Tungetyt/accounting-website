@@ -118,7 +118,7 @@ const MessageForm = () => {
         autoHideDuration={6000}
         onClose={handleSnackbarClose}
         TransitionComponent={Slide}
-        anchorOrigin={{ vertical: 'center', horizontal: 'center' }}
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
       >
         <Alert
           onClose={handleSnackbarClose}
