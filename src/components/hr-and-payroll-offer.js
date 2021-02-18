@@ -22,15 +22,15 @@ const useStyles = makeStyles((theme) => ({
   maxWidth: {
     maxWidth: '600px',
   },
-  width:{
-    width: '600px'
-  }
+  width: {
+    width: '600px',
+  },
 }));
 
 export function HrAndPayrollOffer() {
   const intl = useIntl();
   const {
-    maxWidth,width
+    maxWidth, width,
   } = useStyles();
   return (
     <>
@@ -107,7 +107,7 @@ export function HrAndPayrollOffer() {
 export function HeadingChildrenHR() {
   const intl = useIntl();
   const {
-    maxWidth
+    maxWidth,
   } = useStyles();
   return (
     <>

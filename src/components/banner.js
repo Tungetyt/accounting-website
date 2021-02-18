@@ -33,10 +33,10 @@ const Banner = () => {
       backgroundColor: isDark ? 'rgba(33,33,33, 0.8)' : 'rgba(245,245,245, 0.8)',
     },
     clipPath: {
-      clipPath: 'polygon(0 0, 0 80%, 100% 100%, 100% 20%)'
+      clipPath: 'polygon(0 0, 0 80%, 100% 100%, 100% 20%)',
     },
     backgroundImage: {
-      paddingBottom: '5rem'
+      paddingBottom: '5rem',
     },
     blur: {
       padding: '1%', backdropFilter: 'blur(3px)', borderRadius: '20%',
@@ -45,17 +45,19 @@ const Banner = () => {
       marginBottom: '2rem',
     },
     userSelectNone: {
-      userSelect: 'none'
+      userSelect: 'none',
     },
     lineHeight: {
       lineHeight: '90%',
     },
     address: {
       fontSize: '1.5rem',
-    }
+    },
   }));
 
-  const { opaqueColor,clipPath,backgroundImage,blur ,lineHeight,marginBottom,address,userSelectNone} = useStyles();
+  const {
+    opaqueColor, clipPath, backgroundImage, blur, lineHeight, marginBottom, address, userSelectNone,
+  } = useStyles();
 
   const intl = useIntl();
 
@@ -74,7 +76,7 @@ const Banner = () => {
                 elevation={0}
                 className={`${opaqueColor} ${blur} ${marginBottom}`}
               >
-                <Typography variant="h1" color="primary" style={{lineHeight: "90%"}}>
+                <Typography variant="h1" color="primary" style={{ lineHeight: '90%' }}>
                   {intl.formatMessage({ id: 'landing.first' })}
                   <br />
                   {intl.formatMessage({ id: 'landing.second' })}

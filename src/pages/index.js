@@ -33,15 +33,15 @@ const IndexPage = (props) => {
         marginRight: DRAWER_WIDTH,
       },
     },
-    commonBreak:{
-      marginBottom: COMMON_BREAK
+    commonBreak: {
+      marginBottom: COMMON_BREAK,
     },
-    halfCommonBreak:{
-      marginBottom: HALF_COMMON_BREAK
-    }
+    halfCommonBreak: {
+      marginBottom: HALF_COMMON_BREAK,
+    },
   }));
 
-  const { main,halfCommonBreak,commonBreak } = useStyles();
+  const { main, halfCommonBreak, commonBreak } = useStyles();
 
   const intl = useIntl();
 
