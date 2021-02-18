@@ -14,18 +14,17 @@ import { useIntl } from 'gatsby-plugin-intl';
 import PropTypes from 'prop-types';
 import React, { useContext } from 'react';
 import { Element, Link } from 'react-scroll';
-import Typography from '@material-ui/core/Typography';
 import { ColorContext } from '../context/contexts';
 import {
-  APP_THEME, NAVIGATION, OFFSET, DEFAULT_PADDING
+  APP_THEME, DEFAULT_PADDING, NAVIGATION, OFFSET
 } from '../helpers';
 import { AccountingOffer, HeadingChildrenAccounting } from './accounting-offer';
 import { BusinessOffer, HeadingChildrenBusiness } from './business-offer';
 import { FinancialOffer, HeadingChildrenFinancial } from './financial-offer';
-import { HrAndPayrollOffer, HeadingChildrenHR } from './hr-and-payroll-offer';
-import { LegalOffer, HeadingChildrenLegal } from './legal-offer';
-import { TaxServiceOffer, HeadingChildrenTax } from './tax-services-offer';
+import { HeadingChildrenHR, HrAndPayrollOffer } from './hr-and-payroll-offer';
+import { HeadingChildrenLegal, LegalOffer } from './legal-offer';
 import Offer from './offer';
+import { HeadingChildrenTax, TaxServiceOffer } from './tax-services-offer';
 
 function TabPanel(props) {
   const {
@@ -85,8 +84,13 @@ export default function ScrollableTabsButtonAuto() {
     scroller: {
       flexGrow: '0',
     },
+    marginBtm: {
+      marginBottom: DEFAULT_PADDING
+    }
   }));
-  const { root, tabs, scroller } = useStyles();
+  const {
+    root, tabs, scroller, marginBtm
+  } = useStyles();
 
   const handleChange = (e, newValue) => {
     setChosenTab(newValue);
@@ -114,7 +118,7 @@ export default function ScrollableTabsButtonAuto() {
             <Tab label={intl.formatMessage({ id: 'servicesSection.legalServices' })} icon={<FontAwesomeIcon size="2x" icon={faGavel} />} {...a11yProps(3)} to={services} offset={OFFSET} component={Link} />
           </Tabs>
         </AppBar>
-        <div style={{ marginBottom: DEFAULT_PADDING }} />
+        <div className={marginBtm} />
 
         <TabPanel value={chosenTab} index={0}>
           <Offer image={{ alt: 'Księgowi dogadują się w sprawie stworzenia nowej strategii biznesowej', filename: '7finanse-i-rachunkowosc.jpg' }} headingChildren={<HeadingChildrenAccounting />}>

@@ -1,24 +1,25 @@
 import { Divider } from '@material-ui/core';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
-import Collapse from '@material-ui/core/Collapse';
 import Grid from '@material-ui/core/Grid';
-import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import clsx from 'clsx';
 import { useIntl } from 'gatsby-plugin-intl';
-import React, { useContext } from 'react';
+import React from 'react';
 import Tilt from 'react-parallax-tilt';
-import { ColorContext } from '../context/contexts';
-import { APP_THEME } from '../helpers';
 import Image from './image';
 
+const useStyles = makeStyles((theme) => ({
+  maxWidth: {
+    maxWidth: '600px',
+  },
+  width: {
+    width: '600px',
+  },
+}));
 export function TaxServiceOffer() {
   const intl = useIntl();
-
+  const {
+    maxWidth, width,
+  } = useStyles();
   return (
     <>
       <Grid
@@ -28,7 +29,7 @@ export function TaxServiceOffer() {
         justify="center"
       >
         <Grid item>
-          <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info1.0' })}</Typography>
+          <Typography paragraph className={maxWidth}>{ intl.formatMessage({ id: 'taxServices.info1.0' })}</Typography>
           <ul>
             <li>
               <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.info1.1' })}</Typography>
@@ -41,7 +42,7 @@ export function TaxServiceOffer() {
             </li>
           </ul>
         </Grid>
-        <Grid item style={{ width: '300px' }}>
+        <Grid item className={width}>
           <Tilt>
             <Image alt="Doradca podatkowy pozuje do zdjęcia" filename="3cropped-O6YV1W0-1.jpg" />
           </Tilt>
@@ -61,7 +62,7 @@ export function TaxServiceOffer() {
         <Grid
           item
         >
-          <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info1.4' })}</Typography>
+          <Typography paragraph className={maxWidth}>{ intl.formatMessage({ id: 'taxServices.info1.4' })}</Typography>
           <ul>
             <li>
               <Typography paragraph>{ intl.formatMessage({ id: 'taxServices.services.0' })}</Typography>
@@ -93,10 +94,13 @@ export function TaxServiceOffer() {
 
 export function HeadingChildrenTax() {
   const intl = useIntl();
+  const {
+    maxWidth,
+  } = useStyles();
   return (
     <>
-      <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info.0' })}</Typography>
-      <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'taxServices.info.1' })}</Typography>
+      <Typography paragraph className={maxWidth}>{ intl.formatMessage({ id: 'taxServices.info.0' })}</Typography>
+      <Typography paragraph className={maxWidth}>{ intl.formatMessage({ id: 'taxServices.info.1' })}</Typography>
     </>
   );
 }

@@ -3,31 +3,26 @@ import {
   Box,
   Grid,
   Paper,
-  Typography, Container
+  Typography
 } from '@material-ui/core';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { makeStyles } from '@material-ui/core/styles';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
 import { Element } from 'react-scroll';
 import { ColorContext } from '../context/contexts';
-import { APP_THEME, NAVIGATION, DEFAULT_PADDING } from '../helpers';
+import { APP_THEME, DEFAULT_PADDING, NAVIGATION } from '../helpers';
 import ContactInfo from './contact-info';
 import styles from './dist/ImageZoom.module.css';
 import Image from './image';
-import OpenMap from './open-map';
-import GoogleMap from './map';
 import MessageForm from './message-form';
+import OpenMap from './open-map';
 
 const tmp = styles;
-const wrapperStyle = {
-  // width: '600px'
-};
+
 const Contact = () => {
   const { contact } = NAVIGATION;
-  const theme = useTheme();
   const matches = true;// useMediaQuery(theme.breakpoints.up('md'));
   const intl = useIntl();
   const [isDark] = useContext(ColorContext);
@@ -36,12 +31,29 @@ const Contact = () => {
       backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor,
       padding: '1rem',
       marginBottom: '1rem'
+    },
+    paddingTop: {
+      paddingTop: '1rem'
+    },
+    marginLeftRight: {
+      marginLeft: DEFAULT_PADDING, marginRight: DEFAULT_PADDING
+    },
+    messageForm: {
+      maxWidth: '450px'
+    },
+    image: {
+      width: '100vw', maxWidth: '500px'
+    },
+    contactInfo: {
+      margin: DEFAULT_PADDING
     }
   }));
-  const { paper } = useStyles();
+  const {
+    paper, paddingTop, marginLeftRight, messageForm, image, contactInfo
+  } = useStyles();
 
   return (
-    <Element name={contact} style={{ paddingTop: '1rem' }}>
+    <Element name={contact} className={paddingTop}>
       <>
         <Grid
           container
@@ -49,7 +61,7 @@ const Contact = () => {
           justify="center"
           alignItems="center"
         >
-          <Grid item style={{ marginLeft: DEFAULT_PADDING, marginRight: DEFAULT_PADDING }}>
+          <Grid item className={marginLeftRight}>
             {typeof window !== 'undefined' && matches && (
             <Box>
               <Paper className={paper}>
@@ -59,27 +71,20 @@ const Contact = () => {
             </Box>
             )}
           </Grid>
-          <Grid item style={{ maxWidth: '450px' }}>
+          <Grid item className={messageForm}>
             <Paper className={paper}>
               <MessageForm />
             </Paper>
           </Grid>
-          <Grid
-            item
-            style={{
-              width: '100vw', maxWidth: '500px'
-            }}
-          >
-            <Paper
-              className={paper}
-            >
+          <Grid item className={image}>
+            <Paper className={paper}>
               <Typography paragraph align="center">{ intl.formatMessage({ id: 'contactSection.ourOffice' })}</Typography>
               <Zoom>
                 <Image alt="Nasz budynek, w którym mieści się główne biuro Vavicom" filename="6Ogrodowa64.jpg" />
               </Zoom>
             </Paper>
           </Grid>
-          <Grid item style={{ margin: DEFAULT_PADDING }}>
+          <Grid item className={contactInfo}>
             <ContactInfo />
           </Grid>
         </Grid>

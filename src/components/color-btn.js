@@ -1,4 +1,5 @@
 import IconButton from '@material-ui/core/IconButton';
+import { makeStyles } from '@material-ui/core/styles';
 import Tooltip from '@material-ui/core/Tooltip';
 import Zoom from '@material-ui/core/Zoom';
 import Brightness3Icon from '@material-ui/icons/Brightness3';
@@ -8,12 +9,22 @@ import React, { useContext, useLayoutEffect, useRef } from 'react';
 import { ColorContext } from '../context/contexts';
 import { LOCAL_STORAGE_KEY, THEME_NAMES } from '../helpers';
 
+const useStyles = makeStyles(() => ({
+  transition: {
+    transition: 'all 0.25s linear',
+  },
+}));
+
 const ColorBtn = () => {
   const [isDark, setIsDark] = useContext(ColorContext);
   const intl = useIntl();
   const firstUpdate = useRef(true);
   const { light, dark } = THEME_NAMES;
   const { theme } = LOCAL_STORAGE_KEY;
+
+  const {
+    transition,
+  } = useStyles();
 
   useLayoutEffect(() => {
     if (firstUpdate.current) {
@@ -32,7 +43,7 @@ const ColorBtn = () => {
         edge="end"
         color="primary"
         aria-label="mode"
-        style={{ transition: 'all 0.25s linear' }}
+        className={transition}
         onClick={() => {
           setIsDark((prevIsDark) => !prevIsDark);
         }}

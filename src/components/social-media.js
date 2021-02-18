@@ -1,5 +1,6 @@
 import { Grid, IconButton, Tooltip } from '@material-ui/core';
 import Paper from '@material-ui/core/Paper';
+import { makeStyles } from '@material-ui/core/styles';
 import Zoom from '@material-ui/core/Zoom';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
@@ -11,9 +12,14 @@ import { APP_THEME } from '../helpers';
 
 const SocialMedia = () => {
   const [isDark] = useContext(ColorContext);
-
+  const useStyles = makeStyles(() => ({
+    paper: {
+      backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor,
+    },
+  }));
+  const { paper } = useStyles();
   return (
-    <Paper style={{ backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor }}>
+    <Paper className={paper}>
       <Grid
         container
         justify="space-around"

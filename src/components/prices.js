@@ -22,8 +22,9 @@ const Prices = () => {
     paper: {
       backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor,
       padding: '1rem',
-      margin: '1rem'
-    }
+      margin: '1rem',
+      maxWidth: '600px'
+    },
   }));
   const { paper } = useStyles();
   const sectionName = 'pricesSection';
@@ -46,7 +47,6 @@ const Prices = () => {
         <Grid item>
           <Paper
             className={paper}
-            style={{ maxWidth: '600px' }}
           >
             <br />
             <br />

@@ -33,9 +33,15 @@ const IndexPage = (props) => {
         marginRight: DRAWER_WIDTH,
       },
     },
+    commonBreak:{
+      marginBottom: COMMON_BREAK
+    },
+    halfCommonBreak:{
+      marginBottom: HALF_COMMON_BREAK
+    }
   }));
 
-  const { main } = useStyles();
+  const { main,halfCommonBreak,commonBreak } = useStyles();
 
   const intl = useIntl();
 
@@ -70,36 +76,36 @@ const IndexPage = (props) => {
           <div id="top" />
           <main className={main}>
             <LandingPage />
-            <div style={{ marginBottom: HALF_COMMON_BREAK }} />
+            <div className={halfCommonBreak} />
             <TabPanel />
-            <div style={{ marginBottom: COMMON_BREAK }} />
+            <div className={commonBreak} />
 
             <SectionWrapper>
               <Prices />
             </SectionWrapper>
-            <div style={{ marginBottom: COMMON_BREAK }} />
+            <div className={commonBreak} />
 
             <SectionWrapper>
               <br />
               <About />
               <br />
             </SectionWrapper>
-            <div style={{ marginBottom: COMMON_BREAK }} />
+            <div className={commonBreak} />
 
             <SectionWrapper>
               <Faq />
             </SectionWrapper>
-            <div style={{ marginBottom: COMMON_BREAK }} />
+            <div className={commonBreak} />
 
             <SectionWrapper>
               <Career />
             </SectionWrapper>
-            <div style={{ marginBottom: COMMON_BREAK }} />
+            <div className={commonBreak} />
 
             <SectionWrapper>
               <Contact />
             </SectionWrapper>
-            <div style={{ marginBottom: HALF_COMMON_BREAK }} />
+            <div className={halfCommonBreak} />
 
           </main>
           <ScrollTop>

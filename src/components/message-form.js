@@ -1,22 +1,39 @@
 import {
-  Snackbar,
-  Container,
-  TextField, Divider, Typography,
+  Divider, Snackbar,
+
+  TextField, Typography,
 } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
-import Slide from '@material-ui/core/Slide';
-import PublishIcon from '@material-ui/icons/Publish';
-import { Alert } from '@material-ui/lab';
-import React, { useContext, useReducer, useState } from 'react';
-import SendIcon from '@material-ui/icons/Send';
-import * as emailjs from 'emailjs-com';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import LinearProgress from '@material-ui/core/LinearProgress';
+import Slide from '@material-ui/core/Slide';
+import { makeStyles } from '@material-ui/core/styles';
+import SendIcon from '@material-ui/icons/Send';
+import { Alert } from '@material-ui/lab';
+import * as emailjs from 'emailjs-com';
+import React, { useState } from 'react';
 import { DEFAULT_PADDING, getItemByKey } from '../helpers';
 
 const SENT_MESSAGES_DATA = 'sentMessagesData';
+const useStyles = makeStyles(() => ({
+  // Doesn't work for some reason...
+  // textField:{
+  //   marginBottom: '0.6rem'
+  // },
+  defaultPadding: {
+    marginBottom: DEFAULT_PADDING,
+  },
+  fontWeight: {
+    fontWeight: 'bold',
+  },
+  whiteSpace: {
+    whiteSpace: 'pre-line',
+  },
+}));
 
 const MessageForm = () => {
+  const {
+    defaultPadding, fontWeight, whiteSpace,
+  } = useStyles();
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [isUpdatedCorrectly, setIsUpdatedCorrectly] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -140,13 +157,13 @@ const MessageForm = () => {
         </Button>
       </form>
 
-      {sentMessagesData?.length > 0 && <div style={{ marginBottom: DEFAULT_PADDING }} />}
+      {sentMessagesData?.length > 0 && <div className={defaultPadding} />}
       {sentMessagesData.sort((sm1, sm2) => sm2.date - sm1.date).map((sm) => (
         <>
           <Divider />
           <br />
-          <Typography paragraph style={{ fontWeight: 'bold' }}>{sm.date.toLocaleString('pl-PL', { timeZone: 'UTC' })}</Typography>
-          <Typography paragraph style={{ whiteSpace: 'pre-line' }}>{sm.message}</Typography>
+          <Typography paragraph className={fontWeight}>{sm.date.toLocaleString('pl-PL', { timeZone: 'UTC' })}</Typography>
+          <Typography paragraph className={whiteSpace}>{sm.message}</Typography>
         </>
       ))}
 

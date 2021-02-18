@@ -1,34 +1,31 @@
-import { Divider, TextField } from '@material-ui/core';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
-import Collapse from '@material-ui/core/Collapse';
+import { Divider } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
-import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import clsx from 'clsx';
 import { useIntl } from 'gatsby-plugin-intl';
-import React, { useContext } from 'react';
+import React from 'react';
 import Tilt from 'react-parallax-tilt';
-import { ColorContext } from '../context/contexts';
-import { APP_THEME } from '../helpers';
 import CenterWrapper from './center-wrapper';
 import Image from './image';
 
 const offerName = 'legalServices';
+const useStyles = makeStyles((theme) => ({
+  maxWidth: {
+    maxWidth: '600px',
+  },
+  columnWidth: {
+    columnWidth: '600px',
+  },
+  width: {
+    width: '600px',
+  },
+}));
 
 export function LegalOffer() {
   const intl = useIntl();
-  const useStyles = makeStyles((theme) => ({
 
-    text: {
-      maxWidth: '600px',
-    },
-  }));
   const {
-    text,
+    maxWidth, columnWidth, width,
   } = useStyles();
 
   return (
@@ -42,7 +39,7 @@ export function LegalOffer() {
         <Grid
           item
         >
-          <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.2` })}</Typography>
+          <Typography paragraph className={maxWidth}>{ intl.formatMessage({ id: `${offerName}.2` })}</Typography>
           <ul>
             <li>
               <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.3` })}</Typography>
@@ -72,17 +69,17 @@ export function LegalOffer() {
       <br />
       <CenterWrapper>
 
-        <div style={{ columnWidth: '600px' }}>
-          <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.10` })}</Typography>
-          <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.11` })}</Typography>
-          <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.12` })}</Typography>
+        <div className={columnWidth}>
+          <Typography paragraph className={maxWidth}>{ intl.formatMessage({ id: `${offerName}.10` })}</Typography>
+          <Typography paragraph className={maxWidth}>{ intl.formatMessage({ id: `${offerName}.11` })}</Typography>
+          <Typography paragraph className={maxWidth}>{ intl.formatMessage({ id: `${offerName}.12` })}</Typography>
 
         </div>
 
       </CenterWrapper>
 
       <CenterWrapper>
-        <Tilt style={{ width: '200px' }}>
+        <Tilt className={width}>
           <Image alt="Uścisk dłoni pod nową ofertę" filename="15Zawieszenie_dzialalnosci_5843057.jpg" />
         </Tilt>
 
@@ -93,19 +90,14 @@ export function LegalOffer() {
 
 export function HeadingChildrenLegal() {
   const intl = useIntl();
-  const useStyles = makeStyles((theme) => ({
-    text: {
-      maxWidth: '600px',
-    },
-  }));
   const {
-    text,
+    maxWidth,
   } = useStyles();
 
   return (
     <>
-      <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.0` })}</Typography>
-      <Typography paragraph className={text}>{ intl.formatMessage({ id: `${offerName}.1` })}</Typography>
+      <Typography paragraph className={maxWidth}>{ intl.formatMessage({ id: `${offerName}.0` })}</Typography>
+      <Typography paragraph className={maxWidth}>{ intl.formatMessage({ id: `${offerName}.1` })}</Typography>
     </>
 
   );

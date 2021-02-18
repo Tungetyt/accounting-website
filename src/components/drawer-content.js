@@ -3,7 +3,6 @@ import Divider from '@material-ui/core/Divider';
 import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
 import ColorBtn from './color-btn';
-import LangBtn from './lang-btn';
 import NavList from './nav-list';
 
 const DrawerContent = () => {

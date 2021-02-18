@@ -32,31 +32,49 @@ const Banner = () => {
       // grey: 'rgba(33,33,33, 0.8)' : 'rgba(245,245,245, 0.8)'
       backgroundColor: isDark ? 'rgba(33,33,33, 0.8)' : 'rgba(245,245,245, 0.8)',
     },
+    clipPath: {
+      clipPath: 'polygon(0 0, 0 80%, 100% 100%, 100% 20%)'
+    },
+    backgroundImage: {
+      paddingBottom: '5rem'
+    },
+    blur: {
+      padding: '1%', backdropFilter: 'blur(3px)', borderRadius: '20%',
+    },
+    marginBottom: {
+      marginBottom: '2rem',
+    },
+    userSelectNone: {
+      userSelect: 'none'
+    },
+    lineHeight: {
+      lineHeight: '90%',
+    },
+    address: {
+      fontSize: '1.5rem',
+    }
   }));
 
-  const { opaqueColor } = useStyles();
+  const { opaqueColor,clipPath,backgroundImage,blur ,lineHeight,marginBottom,address,userSelectNone} = useStyles();
 
   const intl = useIntl();
 
   return (
-    <Paper elevation={24} className={opaqueColor} style={{ clipPath: 'polygon(0 0, 0 80%, 100% 100%, 100% 20%)' }}>
+    <Paper elevation={24} className={`${opaqueColor} ${clipPath}`}>
       <Parallax y={[-35, 30]}>
 
         <BannerWrapper>
           <BackgroundImage
             Tag="section"
             fluid={data.file.childImageSharp.fluid}
-            style={{ paddingBottom: '5rem' }}
+            className={backgroundImage}
           >
             <div className="hero-content">
               <Paper
                 elevation={0}
-                className={opaqueColor}
-                style={{
-                  marginBottom: '2rem', padding: '1%', backdropFilter: 'blur(3px)', borderRadius: '20%',
-                }}
+                className={`${opaqueColor} ${blur} ${marginBottom}`}
               >
-                <Typography variant="h1" color="primary" style={{ lineHeight: '90%', userSelect: 'none' }}>
+                <Typography variant="h1" color="primary" style={{lineHeight: "90%"}}>
                   {intl.formatMessage({ id: 'landing.first' })}
                   <br />
                   {intl.formatMessage({ id: 'landing.second' })}
@@ -64,13 +82,11 @@ const Banner = () => {
                   {COMPANY.replace(/\s/g, '')}
                 </Typography>
               </Paper>
-              <Paper elevation={0} className={opaqueColor} style={{ backdropFilter: 'blur(3px)', padding: '1%', borderRadius: '20%' }}>
+              <Paper elevation={0} className={`${opaqueColor} ${blur}`}>
                 <Typography
                   variant="h2"
                   color="primary"
-                  style={{
-                    userSelect: 'none', fontSize: '1.5rem',
-                  }}
+                  className={`${address} ${userSelectNone}`}
                 >
                   {intl.formatMessage({ id: 'landing.address' })}
                 </Typography>
@@ -86,8 +102,8 @@ const Banner = () => {
 };
 
 const BannerWrapper = styled.section`
-  .gatsby-image-wrapper {
-    color: #fff;
+    .gatsby-image-wrapper {
+      color: #fff;
     }
 
     .hero-content {

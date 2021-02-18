@@ -2,28 +2,31 @@
 /* eslint-disable indent */
 /* eslint-disable max-len */
 import {
-  Grid, Paper
-} from '@material-ui/core';
+ faCoins, faGlobeEurope, faHandshake, faHardHat
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Grid, Paper } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import GroupIcon from '@material-ui/icons/Group';
+import LiveHelpIcon from '@material-ui/icons/LiveHelp';
+import StarIcon from '@material-ui/icons/Star';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
 import { Element } from 'react-scroll';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faGlobeEurope, faHardHat, faHandshake, faCoins
-} from '@fortawesome/free-solid-svg-icons';
-import GroupIcon from '@material-ui/icons/Group';
-import StarIcon from '@material-ui/icons/Star';
-import LiveHelpIcon from '@material-ui/icons/LiveHelp';
 import { ColorContext } from '../context/contexts';
+import { APP_THEME, NAVIGATION } from '../helpers';
+import LogoIcon from '../images/logo.svg';
 import {
-  APP_THEME, NAVIGATION
-} from '../helpers';
-import {
-  aboutBtn, clientValueBtn, getToKnowUsBtn, ourClientsBtn, safetyBtn, whatDifferBtn, whyCooperateBtn, workTogetherBtn
+  aboutBtn,
+  clientValueBtn,
+  getToKnowUsBtn,
+  ourClientsBtn,
+  safetyBtn,
+  whatDifferBtn,
+  whyCooperateBtn,
+  workTogetherBtn
 } from '../intl/pl.json';
 import DialogInfo from './dialog-info';
-import SwipeableTextMobileStepper from './gallery';
-import LogoIcon from '../images/logo.svg';
 
 const About = () => {
   const intl = useIntl();
@@ -36,8 +39,22 @@ const About = () => {
   const safetyData = Object.values(safetyBtn).slice(0, -1);
   const ourClientsData = Object.values(ourClientsBtn).slice(0, -1);
   const { about } = NAVIGATION;
-  const margin = '1rem';
   const [isDark] = useContext(ColorContext);
+
+  const useStyles = makeStyles(() => ({
+    paper: {
+      backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor,
+      padding: '1rem'
+    },
+    maxWidth: {
+      maxWidth: '600px'
+    },
+    margin: {
+      margin: '1rem'
+    }
+  }));
+
+  const { paper, maxWidth, margin } = useStyles();
 
   return (
     <Element name={about}>
@@ -48,7 +65,7 @@ const About = () => {
         alignItems="center"
       >
         <Grid item>
-          <Paper style={{ backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor, padding: '1rem' }}>
+          <Paper className={paper}>
             <Grid
               container
               direction="row"
@@ -61,44 +78,44 @@ const About = () => {
                 direction="row"
                 justify="center"
                 alignItems="center"
-                style={{ maxWidth: '600px' }}
+                className={maxWidth}
               >
-                <Grid item style={{ margin }}>
+                <Grid item className={margin}>
                   <DialogInfo title={intl.formatMessage({ id: 'aboutBtn.title' })} data={aboutData} isJustified={false}>
                     <LogoIcon width={25} height={25} />
                   </DialogInfo>
                 </Grid>
-                <Grid item style={{ margin }}>
+                <Grid item className={margin}>
                   <DialogInfo title={intl.formatMessage({ id: 'clientValueBtn.title' })} data={clientValueData} isJustified={false}>
                     <FontAwesomeIcon size="lg" icon={faCoins} />
                   </DialogInfo>
                 </Grid>
-                <Grid item style={{ margin }}>
+                <Grid item className={margin}>
                   <DialogInfo title={intl.formatMessage({ id: 'whyCooperateBtn.title' })} data={whyCooperateData} isJustified={false}>
                     <LiveHelpIcon />
                   </DialogInfo>
                 </Grid>
-                <Grid item style={{ margin }}>
+                <Grid item className={margin}>
                   <DialogInfo title={intl.formatMessage({ id: 'whatDifferBtn.title' })} data={whatDifferData} isJustified={false}>
                     <StarIcon />
                   </DialogInfo>
                 </Grid>
-                <Grid item style={{ margin }}>
+                <Grid item className={margin}>
                   <DialogInfo title={intl.formatMessage({ id: 'getToKnowUsBtn.title' })} data={getToKnowUsData} isJustified={false}>
                     <GroupIcon />
                   </DialogInfo>
                 </Grid>
-                <Grid item style={{ margin }}>
+                <Grid item className={margin}>
                   <DialogInfo title={intl.formatMessage({ id: 'workTogetherBtn.title' })} data={workTogetherData} isJustified={false}>
                     <FontAwesomeIcon size="lg" icon={faHandshake} />
                   </DialogInfo>
                 </Grid>
-                <Grid item style={{ margin }}>
+                <Grid item className={margin}>
                   <DialogInfo title={intl.formatMessage({ id: 'safetyBtn.title' })} data={safetyData} isJustified={false}>
                     <FontAwesomeIcon size="lg" icon={faHardHat} />
                   </DialogInfo>
                 </Grid>
-                <Grid item style={{ margin }}>
+                <Grid item className={margin}>
                   <DialogInfo title={intl.formatMessage({ id: 'ourClientsBtn.title' })} data={ourClientsData} isJustified={false}>
                     <FontAwesomeIcon size="lg" icon={faGlobeEurope} />
                   </DialogInfo>
@@ -108,7 +125,7 @@ const About = () => {
           </Paper>
         </Grid>
         {/* <Grid item>
-          <Paper style={{ backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor, padding: '1rem' }}>
+          <Paper className={paper}>
             <SwipeableTextMobileStepper />
           </Paper>
         </Grid> */}

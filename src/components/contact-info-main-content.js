@@ -11,31 +11,41 @@ import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
 import { ColorContext } from '../context/contexts';
 import {
-  APP_THEME, EMAIL, EMAIL2, PHONE_NUMBER, PHONE_NUMBER2
+  APP_THEME, EMAIL2, PHONE_NUMBER, PHONE_NUMBER2
 } from '../helpers';
 
-const useStyles = makeStyles(() => ({
-
-  typoSpace: {
-    marginBottom: '0.4rem'
-  },
-}));
 const ContactInfoMainContent = () => {
   const intl = useIntl();
   const [isDark] = useContext(ColorContext);
+  const useStyles = makeStyles(() => ({
+    typoSpace: {
+      marginBottom: '0.4rem'
+    },
+    paper: {
+      backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor, padding: '1rem'
+    },
+    marginBottom: {
+      marginBottom: '1rem'
+    },
+    marginRight: {
+      marginRight: '12px'
+    }
+  }));
   const color = isDark ? '#FFFFFF' : 'primary';
-  const { typoSpace } = useStyles();
+  const {
+    typoSpace, paper, marginBottom, marginRight
+  } = useStyles();
   return (
-    <Paper style={{ backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor, padding: '1rem' }}>
+    <Paper className={paper}>
       <Grid container direction="column">
-        <Grid item style={{ marginBottom: '1rem' }}>
+        <Grid item className={marginBottom}>
           <Grid
             container
             direction="row"
             justify="flex-start"
             alignItems="flex-start"
           >
-            <Grid item style={{ marginRight: '12px' }}>
+            <Grid item className={marginRight}>
               <BusinessIcon color={color} />
             </Grid>
             <Grid item>
@@ -57,7 +67,7 @@ const ContactInfoMainContent = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item style={{ marginBottom: '1rem' }}>
+        <Grid item className={marginBottom}>
           <Grid
             container
             direction="row"
@@ -65,7 +75,7 @@ const ContactInfoMainContent = () => {
             alignItems="flex-start"
             wrap="nowrap"
           >
-            <Grid item style={{ marginRight: '12px' }}>
+            <Grid item className={marginRight}>
               <PhoneIcon color={color} />
             </Grid>
             <Grid item>
@@ -86,7 +96,7 @@ const ContactInfoMainContent = () => {
             alignItems="flex-start"
             wrap="nowrap"
           >
-            <Grid item style={{ marginRight: '12px' }}>
+            <Grid item className={marginRight}>
               <EmailIcon color={color} />
             </Grid>
             <Grid item>

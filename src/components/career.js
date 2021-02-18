@@ -34,10 +34,13 @@ const Career = () => {
     },
     moreInfo: {
       maxWidth: '450px'
+    },
+    lineHeight: {
+      lineHeight: '90%'
     }
   }));
   const {
-    paper, paper2, typo, moreInfo
+    paper, paper2, typo, moreInfo, lineHeight
   } = useStyles();
 
   const [isMoreInfoChecked, setIsMoreInfoChecked] = React.useState(false);
@@ -61,7 +64,7 @@ const Career = () => {
           </Typography>
         </CareerPerson>
         <CareerPerson>
-          <Typography className={typo} style={{ lineHeight: '90%' }}>
+          <Typography className={`${typo} ${lineHeight}`}>
             PRZEDSTAWICIEL HANDLOWY /
             <br />
             ACCOUNT MANAGER
@@ -71,7 +74,7 @@ const Career = () => {
           <Typography className={typo}>
             STUDENT
           </Typography>
-          <Typography style={{ lineHeight: '90%' }}>
+          <Typography className={lineHeight}>
 
             (PRAKTYKI Z MOŻLIWOŚCIĄ PÓŹNIEJSZEGO ZATRUDNIENIA)
             <br />

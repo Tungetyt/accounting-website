@@ -18,10 +18,20 @@ import { APP_THEME } from '../helpers';
 import Image from './image';
 
 const offerName = 'hrAndPayroll';
+const useStyles = makeStyles((theme) => ({
+  maxWidth: {
+    maxWidth: '600px',
+  },
+  width:{
+    width: '600px'
+  }
+}));
 
 export function HrAndPayrollOffer() {
   const intl = useIntl();
-
+  const {
+    maxWidth,width
+  } = useStyles();
   return (
     <>
       <Grid
@@ -33,7 +43,7 @@ export function HrAndPayrollOffer() {
         <Grid
           item
         >
-          <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: `${offerName}.info.3` })}</Typography>
+          <Typography paragraph className={maxWidth}>{ intl.formatMessage({ id: `${offerName}.info.3` })}</Typography>
           <ul>
             {Array(12).fill(null).map((line, i) => (
               <li key={i}>
@@ -53,11 +63,11 @@ export function HrAndPayrollOffer() {
         alignItems="center"
         spacing={2}
       >
-        <Grid item style={{ width: '600px' }}>
+        <Grid item className={width}>
           <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.more.${0}` })}</Typography>
           <Typography paragraph>{ intl.formatMessage({ id: `${offerName}.more.${1}` })}</Typography>
         </Grid>
-        <Grid item style={{ width: '600px' }}>
+        <Grid item className={width}>
           <Tilt>
             <Image alt="Księgowa pozuje do zdjęcia" filename="4iStock_38378140_XLARGE-scaled.jpg" />
 
@@ -77,7 +87,7 @@ export function HrAndPayrollOffer() {
         <Grid
           item
         >
-          <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: 'hrAndPayroll.more.2' })}</Typography>
+          <Typography paragraph className={maxWidth}>{ intl.formatMessage({ id: 'hrAndPayroll.more.2' })}</Typography>
           <ul>
             <li>
               <Typography paragraph>{ intl.formatMessage({ id: 'hrAndPayroll.more.3.0' })}</Typography>
@@ -96,12 +106,14 @@ export function HrAndPayrollOffer() {
 
 export function HeadingChildrenHR() {
   const intl = useIntl();
-
+  const {
+    maxWidth
+  } = useStyles();
   return (
     <>
-      <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: `${offerName}.info.0` })}</Typography>
-      <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: `${offerName}.info.1` })}</Typography>
-      <Typography paragraph style={{ maxWidth: '600px' }}>{ intl.formatMessage({ id: `${offerName}.info.2` })}</Typography>
+      <Typography paragraph className={maxWidth}>{ intl.formatMessage({ id: `${offerName}.info.0` })}</Typography>
+      <Typography paragraph className={maxWidth}>{ intl.formatMessage({ id: `${offerName}.info.1` })}</Typography>
+      <Typography paragraph className={maxWidth}>{ intl.formatMessage({ id: `${offerName}.info.2` })}</Typography>
     </>
   );
 }

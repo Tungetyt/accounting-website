@@ -18,9 +18,15 @@ const Logo = () => {
       backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.background.default,
       zIndex: '1100',
     },
+    marginRight: {
+      marginRight: '6px',
+    },
+    userSelectNone: {
+      userSelect: 'none',
+    },
   }));
 
-  const { logoPaper } = useStyles();
+  const { logoPaper, marginRight, userSelectNone } = useStyles();
 
   return (
     <Paper className={logoPaper} elevation={0} variant="outlined">
@@ -31,7 +37,7 @@ const Logo = () => {
         alignItems="center"
         wrap="nowrap"
       >
-        <Grid item style={{ marginRight: '6px' }}>
+        <Grid item className={marginRight}>
           <LogoIcon width={40} height={30} />
         </Grid>
         <Grid item>
@@ -39,7 +45,7 @@ const Logo = () => {
             variant="h6"
             noWrap
             color="primary"
-            style={{ userSelect: 'none' }}
+            className={userSelectNone}
           >
             {COMPANY}
           </Typography>
