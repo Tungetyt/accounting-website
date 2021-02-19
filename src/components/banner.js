@@ -76,7 +76,7 @@ const Banner = () => {
                 elevation={0}
                 className={`${opaqueColor} ${blur} ${marginBottom}`}
               >
-                <Typography variant="h1" color="primary" style={{ lineHeight: '90%' }}>
+                <Typography variant="h1" color="primary" className="banner-main-label" style={{ lineHeight: '90%' }}>
                   {intl.formatMessage({ id: 'landing.first' })}
                   <br />
                   {intl.formatMessage({ id: 'landing.second' })}

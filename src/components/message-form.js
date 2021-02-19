@@ -122,6 +122,7 @@ const MessageForm = () => {
           variant="standard"
           size="large"
           autoComplete="email"
+          className="email"
           style={{ marginBottom: '0.6rem' }}
           onBlur={validateEmail}
           error={!isEmailValid}
