@@ -61,7 +61,7 @@ const Contact = () => {
           justify="center"
           alignItems="center"
         >
-          <Grid item className={marginLeftRight}>
+          {/* <Grid item className={marginLeftRight}>
             {typeof window !== 'undefined' && matches && (
             <Box>
               <Paper className={paper}>
@@ -70,8 +70,8 @@ const Contact = () => {
               </Paper>
             </Box>
             )}
-          </Grid>
-          <Grid item className={messageForm}>
+          </Grid> */}
+          <Grid item className={`${messageForm} ${marginLeftRight}`}>
             <Paper className={paper}>
               <MessageForm />
             </Paper>
