@@ -1,6 +1,5 @@
 import {
   Divider, Snackbar,
-
   TextField, Typography,
 } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
@@ -10,8 +9,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import SendIcon from '@material-ui/icons/Send';
 import { Alert } from '@material-ui/lab';
 import * as emailjs from 'emailjs-com';
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { DEFAULT_PADDING, getItemByKey } from '../helpers';
+import { ColorContext } from '../context/contexts';
 
 const SENT_MESSAGES_DATA = 'sentMessagesData';
 const useStyles = makeStyles(() => ({
@@ -44,6 +44,7 @@ const MessageForm = () => {
     JSON.parse(getItemByKey(SENT_MESSAGES_DATA) || '[]')
       .map((sm) => ({ ...sm, date: new Date(sm.date) })),
   );
+  const [isDark] = useContext(ColorContext);
 
   const onEmailChange = (e) => {
     setEmail(e.target.value);
@@ -110,6 +111,8 @@ const MessageForm = () => {
     return (false);
   };
 
+  const getPlaceholderColor = () => (isDark ? 'lightblue' : 'darkblue');
+
   return (
     <>
       <form noValidate autoComplete="off" onSubmit={onSubmit}>
@@ -127,6 +130,11 @@ const MessageForm = () => {
           onBlur={validateEmail}
           error={!isEmailValid}
           helperText={isEmailValid ? '' : 'zły email'}
+          InputLabelProps={{
+            style: {
+              color: getPlaceholderColor(),
+            },
+          }}
         />
         <TextField
           name="message"
@@ -140,6 +148,11 @@ const MessageForm = () => {
           autoComplete="off"
           onFocus={(event) => {
             event.target.setAttribute('autocomplete', 'off');
+          }}
+          InputLabelProps={{
+            style: {
+              color: getPlaceholderColor(),
+            },
           }}
         />
 
