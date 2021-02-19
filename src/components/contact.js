@@ -3,7 +3,7 @@ import {
   Box,
   Grid,
   Paper,
-  Typography
+  Typography, Container
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { useIntl } from 'gatsby-plugin-intl';
@@ -35,33 +35,33 @@ const Contact = () => {
     paddingTop: {
       paddingTop: '1rem'
     },
-    marginLeftRight: {
-      marginLeft: DEFAULT_PADDING, marginRight: DEFAULT_PADDING
-    },
     messageForm: {
       maxWidth: '450px'
     },
     image: {
       width: '100vw', maxWidth: '500px'
     },
-    contactInfo: {
-      margin: DEFAULT_PADDING
+    gridContainer: {
+      overflow: 'hidden'
     }
   }));
   const {
-    paper, paddingTop, marginLeftRight, messageForm, image, contactInfo
+    paper, paddingTop, gridContainer, messageForm, image
   } = useStyles();
 
   return (
     <Element name={contact} className={paddingTop}>
       <>
-        <Grid
-          container
-          direction="row"
-          justify="center"
-          alignItems="center"
-        >
-          {/* <Grid item className={marginLeftRight}>
+        <Container maxWidth={false}>
+          <Grid
+            container
+            direction="row"
+            justify="center"
+            alignItems="center"
+            spacing={4}
+            className={gridContainer}
+          >
+            {/* <Grid item className={marginLeftRight}>
             {typeof window !== 'undefined' && matches && (
             <Box>
               <Paper className={paper}>
@@ -71,23 +71,24 @@ const Contact = () => {
             </Box>
             )}
           </Grid> */}
-          <Grid item className={`${messageForm} ${marginLeftRight}`}>
-            <Paper className={paper}>
-              <MessageForm />
-            </Paper>
+            <Grid item className={`${messageForm}`}>
+              <Paper className={paper}>
+                <MessageForm />
+              </Paper>
+            </Grid>
+            <Grid item className={image}>
+              <Paper className={paper}>
+                <Typography paragraph align="center">{ intl.formatMessage({ id: 'contactSection.ourOffice' })}</Typography>
+                <Zoom>
+                  <Image alt="Nasz budynek, w którym mieści się główne biuro Vavicom" filename="6Ogrodowa64.jpg" />
+                </Zoom>
+              </Paper>
+            </Grid>
+            <Grid item>
+              <ContactInfo />
+            </Grid>
           </Grid>
-          <Grid item className={image}>
-            <Paper className={paper}>
-              <Typography paragraph align="center">{ intl.formatMessage({ id: 'contactSection.ourOffice' })}</Typography>
-              <Zoom>
-                <Image alt="Nasz budynek, w którym mieści się główne biuro Vavicom" filename="6Ogrodowa64.jpg" />
-              </Zoom>
-            </Paper>
-          </Grid>
-          <Grid item className={contactInfo}>
-            <ContactInfo />
-          </Grid>
-        </Grid>
+        </Container>
       </>
     </Element>
   );
