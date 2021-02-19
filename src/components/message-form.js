@@ -137,7 +137,7 @@ const MessageForm = () => {
           }}
         />
         <TextField
-          key="message"
+          key="TWOJA WIADOMOŚĆ"
           name="message"
           label="TWOJA WIADOMOŚĆ"
           multiline
