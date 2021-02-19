@@ -96,7 +96,7 @@ const MessageForm = () => {
   };
 
   const validateEmail = (e) => {
-    if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(e?.target?.value)) {
+    if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(e?.target?.value || '')) {
       setIsEmailValid(true);
       return (true);
     }
