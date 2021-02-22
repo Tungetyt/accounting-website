@@ -71,7 +71,7 @@ const Contact = () => {
             </Box>
             )}
           </Grid> */}
-            <Grid item className={`${messageForm}`}>
+            <Grid item className={messageForm}>
               <Paper className={paper}>
                 <MessageForm />
               </Paper>

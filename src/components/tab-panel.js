@@ -135,17 +135,17 @@ export default function ScrollableTabsButtonAuto() {
             <TaxServiceOffer />
           </Offer>
         </TabPanel>
-        <TabPanel value={chosenTab} index={4}>
+        <TabPanel value={chosenTab} index={3}>
           <Offer image={{ alt: 'Księgowy pokazuje urządzenia dzięki którym klient może komunikować się z firmą Vavicom', filename: '16E-biznes-po-pol-miliona-zlotych-dla-270-firm-108796-640x640.jpg' }} headingChildren={<HeadingChildrenFinancial />}>
             <FinancialOffer />
           </Offer>
         </TabPanel>
-        <TabPanel value={chosenTab} index={5}>
+        <TabPanel value={chosenTab} index={4}>
           <Offer image={{ alt: 'Księgowy uściska dłoń klienta', filename: '14biuro-rachunkowe-szczecin.jpeg' }} headingChildren={<HeadingChildrenBusiness />}>
             <BusinessOffer />
           </Offer>
         </TabPanel>
-        <TabPanel value={chosenTab} index={3}>
+        <TabPanel value={chosenTab} index={5}>
           <Offer image={{ alt: 'Drewniany młotek sądowy', filename: '8OIP_4x.jpg' }} headingChildren={<HeadingChildrenLegal />}>
             <LegalOffer />
           </Offer>
