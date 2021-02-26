@@ -1,7 +1,7 @@
 import {
   Avatar, Grid,
   Paper,
-  Typography,
+  Typography, Tooltip,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { useIntl } from 'gatsby-plugin-intl';
@@ -10,9 +10,11 @@ import { Element } from 'react-scroll';
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
-import Brightness4Icon from '@material-ui/icons/Brightness4'; import { ColorContext } from '../context/contexts';
+import Brightness4Icon from '@material-ui/icons/Brightness4'; import Zoom from '@material-ui/core/Zoom';
+import { ColorContext } from '../context/contexts';
 import { APP_THEME, NAVIGATION } from '../helpers';
 import CareerPerson from './career-person';
+
 /* eslint-disable comma-dangle */
 const Career = () => {
   const intl = useIntl();
@@ -87,12 +89,18 @@ const Career = () => {
 
           </Typography>
         </CareerPerson>
+
         <FormGroup row>
           <FormControlLabel
-            control={<Switch color="secondary" checked={isMoreInfoChecked} onChange={handleChange} />}
+            control={(
+              <Tooltip title={isMoreInfoChecked ? 'Pokaż mniej' : 'Pokaż więcej'} TransitionComponent={Zoom}>
+                <Switch color="secondary" checked={isMoreInfoChecked} onChange={handleChange} />
+              </Tooltip>
+            )}
             label="Więcej informacji"
           />
         </FormGroup>
+
         {isMoreInfoChecked
         && (
         <Paper className={paper2}>
