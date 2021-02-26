@@ -7,7 +7,7 @@ import Brightness7Icon from '@material-ui/icons/Brightness7';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext, useLayoutEffect, useRef } from 'react';
 import { ColorContext } from '../context/contexts';
-import { LOCAL_STORAGE_KEY, THEME_NAMES } from '../helpers';
+import { LOCAL_STORAGE_KEY, THEME_DICT } from '../helpers';
 
 const useStyles = makeStyles(() => ({
   transition: {
@@ -19,7 +19,7 @@ const ColorBtn = () => {
   const [isDark, setIsDark] = useContext(ColorContext);
   const intl = useIntl();
   const firstUpdate = useRef(true);
-  const { light, dark } = THEME_NAMES;
+  const { light, dark } = THEME_DICT;
   const { theme } = LOCAL_STORAGE_KEY;
 
   const {

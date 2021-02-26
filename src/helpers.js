@@ -1,14 +1,22 @@
 import grey from '@material-ui/core/colors/grey';
+import blue from '@material-ui/core/colors/blue';
+
+export const UTILITY_COLOR = {
+  light: blue['900'],
+  dark: blue['300'],
+};
 
 export const LOCAL_STORAGE_KEY = {
   theme: 'theme-ui-color-mode',
 };
 export const getItemByKey = (item) => typeof window !== 'undefined' && window.localStorage.getItem(item);
 
-export const THEME_NAMES = {
+export const THEME_DICT = {
   light: 'light',
   dark: 'dark',
 };
+
+export const DEFAULT_THEME = THEME_DICT.dark;
 
 const color = grey;
 
@@ -17,6 +25,7 @@ const APP_THEME_EXTENDED = {
     MUIDataTableBodyCell: {
       root: {
         backgroundColor: color['400'],
+        color: UTILITY_COLOR.light,
       },
     },
   },
@@ -25,7 +34,7 @@ const APP_THEME_EXTENDED = {
 export const APP_THEME = {
   light: {
     palette: {
-      type: THEME_NAMES.light,
+      type: THEME_DICT.light,
       primary: {
         main: color['900'],
       },
@@ -46,7 +55,7 @@ export const APP_THEME = {
   },
   dark: {
     palette: {
-      type: THEME_NAMES.dark,
+      type: THEME_DICT.dark,
       primary: {
         main: color['50'],
       },

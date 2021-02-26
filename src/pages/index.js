@@ -23,7 +23,7 @@ import TabPanel from '../components/tab-panel';
 import { ColorContext } from '../context/contexts';
 import {
   // eslint-disable-next-line comma-dangle
-  APP_THEME, DESCRIPTION, DRAWER_WIDTH, getItemByKey, LOCAL_STORAGE_KEY, THEME_NAMES, COMMON_BREAK, HALF_COMMON_BREAK
+  APP_THEME, DESCRIPTION, DRAWER_WIDTH, getItemByKey, LOCAL_STORAGE_KEY, THEME_DICT, COMMON_BREAK, HALF_COMMON_BREAK, DEFAULT_THEME
 } from '../helpers';
 
 const IndexPage = (props) => {
@@ -45,21 +45,16 @@ const IndexPage = (props) => {
 
   const intl = useIntl();
 
-  // default light theme:
-  // const [isDark, setIsDark] = useState(false);
-  // useEffect(() => {
-  //   setIsDark(getItemByKey(LOCAL_STORAGE_KEY.theme) === THEME_NAMES.dark);
-  // }, []);
-
-  // default dark theme:
-  // const [isDark, setIsDark] = useState(true);
-  // useEffect(() => {
-  //   setIsDark(getItemByKey(LOCAL_STORAGE_KEY.theme) !== THEME_NAMES.light);
-  // }, []);
-
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(DEFAULT_THEME === THEME_DICT.dark);
   useEffect(() => {
-    setIsDark(getItemByKey(LOCAL_STORAGE_KEY.theme) === THEME_NAMES.dark);
+    setIsDark(() => {
+      const currLSColor = getItemByKey(LOCAL_STORAGE_KEY.theme);
+      const { light, dark } = THEME_DICT;
+      if (DEFAULT_THEME === dark) {
+        return currLSColor !== light;
+      }
+      return currLSColor === light;
+    });
   }, []);
 
   let chosenTheme = createMuiTheme(isDark ? APP_THEME.dark : APP_THEME.light);

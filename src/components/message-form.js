@@ -10,7 +10,10 @@ import SendIcon from '@material-ui/icons/Send';
 import { Alert } from '@material-ui/lab';
 import * as emailjs from 'emailjs-com';
 import React, { useState, useContext } from 'react';
-import { DEFAULT_PADDING, getItemByKey } from '../helpers';
+import blue from '@material-ui/core/colors/blue';
+import {
+  DEFAULT_PADDING, getItemByKey, DEFAULT_THEME, THEME_DICT, UTILITY_COLOR,
+} from '../helpers';
 import { ColorContext } from '../context/contexts';
 
 const SENT_MESSAGES_DATA = 'sentMessagesData';
@@ -111,7 +114,13 @@ const MessageForm = () => {
     return (false);
   };
 
-  const getPlaceholderColor = () => (isDark ? 'lightblue' : 'darkblue');
+  const getPlaceholderColor = () => {
+    const { light, dark } = UTILITY_COLOR;
+    if (isDark === undefined) {
+      return DEFAULT_THEME === THEME_DICT.dark ? dark : light;
+    }
+    return isDark ? dark : light;
+  };
 
   return (
     <>
