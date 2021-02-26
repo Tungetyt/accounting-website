@@ -12,7 +12,7 @@ import * as emailjs from 'emailjs-com';
 import React, { useState, useContext } from 'react';
 import blue from '@material-ui/core/colors/blue';
 import {
-  DEFAULT_PADDING, getItemByKey, DEFAULT_THEME, THEME_DICT, UTILITY_COLOR,
+  DEFAULT_PADDING, getItemByKey, DEFAULT_THEME, THEME_DICT, SECONDARY_COLOR,
 } from '../helpers';
 import { ColorContext } from '../context/contexts';
 
@@ -115,7 +115,7 @@ const MessageForm = () => {
   };
 
   const getPlaceholderColor = () => {
-    const { light, dark } = UTILITY_COLOR;
+    const { light, dark } = SECONDARY_COLOR;
     if (isDark === undefined) {
       return DEFAULT_THEME === THEME_DICT.dark ? dark : light;
     }

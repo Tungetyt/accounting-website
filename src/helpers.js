@@ -1,7 +1,7 @@
 import grey from '@material-ui/core/colors/grey';
 import blue from '@material-ui/core/colors/blue';
 
-export const UTILITY_COLOR = {
+export const SECONDARY_COLOR = {
   light: blue['900'],
   dark: blue['300'],
 };
@@ -25,7 +25,7 @@ const APP_THEME_EXTENDED = {
     MUIDataTableBodyCell: {
       root: {
         backgroundColor: color['400'],
-        color: UTILITY_COLOR.light,
+        color: SECONDARY_COLOR.light,
       },
     },
   },
@@ -37,6 +37,9 @@ export const APP_THEME = {
       type: THEME_DICT.light,
       primary: {
         main: color['900'],
+      },
+      secondary: {
+        main: SECONDARY_COLOR.light,
       },
       background: {
         default: color['100'],
@@ -58,6 +61,9 @@ export const APP_THEME = {
       type: THEME_DICT.dark,
       primary: {
         main: color['50'],
+      },
+      secondary: {
+        main: SECONDARY_COLOR.dark,
       },
       background: {
         default: color['900'],

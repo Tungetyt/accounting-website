@@ -10,7 +10,7 @@ import { Element } from 'react-scroll';
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
-import { ColorContext } from '../context/contexts';
+import Brightness4Icon from '@material-ui/icons/Brightness4'; import { ColorContext } from '../context/contexts';
 import { APP_THEME, NAVIGATION } from '../helpers';
 import CareerPerson from './career-person';
 /* eslint-disable comma-dangle */
@@ -89,7 +89,7 @@ const Career = () => {
         </CareerPerson>
         <FormGroup row>
           <FormControlLabel
-            control={<Switch checked={isMoreInfoChecked} onChange={handleChange} />}
+            control={<Switch color="secondary" checked={isMoreInfoChecked} onChange={handleChange} />}
             label="Więcej informacji"
           />
         </FormGroup>
