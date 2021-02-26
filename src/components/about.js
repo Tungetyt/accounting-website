@@ -27,6 +27,7 @@ import {
   workTogetherBtn
 } from '../intl/pl.json';
 import DialogInfo from './dialog-info';
+import ImageWrapper from './image-wrapper';
 
 const About = () => {
   const intl = useIntl();
@@ -51,10 +52,15 @@ const About = () => {
     },
     margin: {
       margin: '1rem'
+    },
+    gridContainer: {
+      overflow: 'hidden'
     }
   }));
 
-  const { paper, maxWidth, margin } = useStyles();
+  const {
+ paper, maxWidth, margin, gridContainer
+} = useStyles();
 
   return (
     <Element name={about}>
@@ -63,6 +69,8 @@ const About = () => {
         direction="row"
         justify="space-evenly"
         alignItems="center"
+        spacing={4}
+        className={gridContainer}
       >
         <Grid item>
           <Paper className={paper}>
@@ -124,6 +132,8 @@ const About = () => {
             </Grid>
           </Paper>
         </Grid>
+        <ImageWrapper imageData={{ filename: 'optima_logo.png', alt: 'System księgowy Optima Comarch' }} label="UŻYWAMY NOWOCZESNEGO SYSTEMU KSIĘGOWEGO" />
+
         {/* <Grid item>
           <Paper className={paper}>
             <SwipeableTextMobileStepper />

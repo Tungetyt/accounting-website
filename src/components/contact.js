@@ -18,6 +18,7 @@ import styles from './dist/ImageZoom.module.css';
 import Image from './image';
 import MessageForm from './message-form';
 import OpenMap from './open-map';
+import ImageWrapper from './image-wrapper';
 
 const tmp = styles;
 
@@ -39,7 +40,7 @@ const Contact = () => {
       maxWidth: '450px'
     },
     image: {
-      width: '100vw', maxWidth: '500px'
+      width: '100vw', maxaWidth: '500px'
     },
     gridContainer: {
       overflow: 'hidden'
@@ -76,14 +77,15 @@ const Contact = () => {
                 <MessageForm />
               </Paper>
             </Grid>
-            <Grid item className={image}>
+            <ImageWrapper imageData={{ filename: '6Ogrodowa64.jpg', alt: 'Nasz budynek, w którym mieści się główne biuro Vavicom' }} label={intl.formatMessage({ id: 'contactSection.ourOffice' })} />
+            {/* <Grid item className={image}>
               <Paper className={paper}>
                 <Typography paragraph align="center">{ intl.formatMessage({ id: 'contactSection.ourOffice' })}</Typography>
                 <Zoom>
                   <Image alt="Nasz budynek, w którym mieści się główne biuro Vavicom" filename="6Ogrodowa64.jpg" />
                 </Zoom>
               </Paper>
-            </Grid>
+            </Grid> */}
             <Grid item>
               <ContactInfo />
             </Grid>
