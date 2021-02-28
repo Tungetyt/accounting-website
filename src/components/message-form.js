@@ -12,6 +12,7 @@ import * as emailjs from 'emailjs-com';
 import React, { useState, useContext } from 'react';
 import blue from '@material-ui/core/colors/blue';
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
+import SubjectIcon from '@material-ui/icons/Subject';
 import {
   DEFAULT_PADDING, getItemByKey, DEFAULT_THEME, THEME_DICT, SECONDARY_COLOR,
 } from '../helpers';
@@ -146,9 +147,9 @@ const MessageForm = () => {
               color: getPlaceholderColor(),
             },
           }}
-          // InputProps={{
-          //   endAdornment: <AlternateEmailIcon />,
-          // }}
+          InputProps={{
+            endAdornment: <AlternateEmailIcon />,
+          }}
         />
 
         <TextField
@@ -169,6 +170,9 @@ const MessageForm = () => {
             style: {
               color: getPlaceholderColor(),
             },
+          }}
+          InputProps={{
+            endAdornment: <SubjectIcon />,
           }}
         />
 
