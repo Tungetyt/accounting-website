@@ -53,9 +53,10 @@ const MapBox = () => {
     };
 
     if (!map) initializeMap({ setMap, mapContainer });
+    console.log('map', map);
   }, [map]);
 
-  return <div ref={(el) => (mapContainer.current = el)} className={responsiveSize} />;
+  return <div ref={(el) => (mapContainer.current = el)} style={{ width: '500px', height: '500px' }} />;
 };
 
 export default MapBox;

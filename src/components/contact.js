@@ -84,7 +84,9 @@ const Contact = () => {
             <Grid item>
               <Paper className={`${paper} ${responsivePadding}`}>
                 <Typography paragraph align="center">{ intl.formatMessage({ id: 'contactSection.whereAreWe' })}</Typography>
-                <MapBox />
+                <div>
+                  <MapBox />
+                </div>
               </Paper>
             </Grid>
             <Grid item className={messageForm}>
