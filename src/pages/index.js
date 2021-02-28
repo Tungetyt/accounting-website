@@ -81,9 +81,7 @@ const IndexPage = (props) => {
             <div className={commonBreak} />
 
             <SectionWrapper>
-              <br />
               <About />
-              <br />
             </SectionWrapper>
             <div className={commonBreak} />
 
