@@ -11,6 +11,7 @@ import { Alert } from '@material-ui/lab';
 import * as emailjs from 'emailjs-com';
 import React, { useState, useContext } from 'react';
 import blue from '@material-ui/core/colors/blue';
+import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 import {
   DEFAULT_PADDING, getItemByKey, DEFAULT_THEME, THEME_DICT, SECONDARY_COLOR,
 } from '../helpers';
@@ -125,6 +126,7 @@ const MessageForm = () => {
   return (
     <>
       <form noValidate autoComplete="off" onSubmit={onSubmit}>
+
         <TextField
           name="email"
           label="TWÓJ KONTAKTOWY ADRES EMAIL"
@@ -144,7 +146,11 @@ const MessageForm = () => {
               color: getPlaceholderColor(),
             },
           }}
+          // InputProps={{
+          //   endAdornment: <AlternateEmailIcon />,
+          // }}
         />
+
         <TextField
           key="TWOJA WIADOMOŚĆ"
           name="message"

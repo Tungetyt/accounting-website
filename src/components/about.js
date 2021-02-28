@@ -5,7 +5,11 @@ import {
  faCoins, faGlobeEurope, faHandshake, faHardHat
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Grid, Paper } from '@material-ui/core';
+import {
+ Grid, Paper,
+  Box,
+  Typography, Container,
+} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import GroupIcon from '@material-ui/icons/Group';
 import LiveHelpIcon from '@material-ui/icons/LiveHelp';
@@ -13,8 +17,9 @@ import StarIcon from '@material-ui/icons/Star';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
 import { Element } from 'react-scroll';
+import Zoom from 'react-medium-image-zoom';
 import { ColorContext } from '../context/contexts';
-import { APP_THEME, NAVIGATION } from '../helpers';
+import { APP_THEME, NAVIGATION, COMMON_BREAK } from '../helpers';
 import LogoIcon from '../images/logo.svg';
 import {
   aboutBtn,
@@ -28,6 +33,8 @@ import {
 } from '../intl/pl.json';
 import DialogInfo from './dialog-info';
 import ImageWrapper from './image-wrapper';
+
+import Image from './image';
 
 const About = () => {
   const intl = useIntl();
@@ -45,21 +52,19 @@ const About = () => {
   const useStyles = makeStyles(() => ({
     paper: {
       backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor,
-      padding: '1rem'
+      padding: '1rem',
+      margin: '5%'
     },
     maxWidth: {
-      maxWidth: '600px'
+      maxWidth: '800px',
     },
     margin: {
       margin: '1rem'
     },
-    gridContainer: {
-      overflow: 'hidden'
-    }
   }));
 
   const {
- paper, maxWidth, margin, gridContainer
+ paper, maxWidth, margin
 } = useStyles();
 
   return (
@@ -67,10 +72,10 @@ const About = () => {
       <Grid
         container
         direction="row"
-        justify="space-evenly"
+        justify="center"
         alignItems="center"
-        spacing={4}
-        className={gridContainer}
+        // spacing={4}
+        // className={gridContainer}
       >
         <Grid item>
           <Paper className={paper}>
@@ -83,7 +88,7 @@ const About = () => {
               <Grid
                 container
                 item
-                direction="row"
+                direction="column"
                 justify="center"
                 alignItems="center"
                 className={maxWidth}
