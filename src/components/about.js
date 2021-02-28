@@ -2,11 +2,11 @@
 /* eslint-disable indent */
 /* eslint-disable max-len */
 import {
- faCoins, faGlobeEurope, faHandshake, faHardHat
+  faCoins, faGlobeEurope, faHandshake, faHardHat
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
- Grid, Paper,
+  Grid, Paper,
   Box,
   Typography, Container,
 } from '@material-ui/core';
@@ -49,14 +49,21 @@ const About = () => {
   const { about } = NAVIGATION;
   const [isDark] = useContext(ColorContext);
 
-  const useStyles = makeStyles(() => ({
+  const useStyles = makeStyles((theme) => ({
     paper: {
       backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor,
       padding: '1rem',
       margin: '5%'
     },
     maxWidth: {
-      maxWidth: '800px',
+
+      [theme.breakpoints.up('sm')]: {
+        minWidth: '400px',
+        maxWidth: '800px',
+      },
+      [theme.breakpoints.down('xs')]: {
+        width: '5rem'
+      },
     },
     margin: {
       margin: '1rem'
@@ -64,8 +71,10 @@ const About = () => {
   }));
 
   const {
- paper, maxWidth, margin
-} = useStyles();
+    paper, maxWidth, margin
+  } = useStyles();
+
+  const logoIconSize = 25;
 
   return (
     <Element name={about}>
@@ -95,7 +104,7 @@ const About = () => {
               >
                 <Grid item className={margin}>
                   <DialogInfo title={intl.formatMessage({ id: 'aboutBtn.title' })} data={aboutData} isJustified={false}>
-                    <LogoIcon width={25} height={25} />
+                    <LogoIcon width={logoIconSize} height={logoIconSize} />
                   </DialogInfo>
                 </Grid>
                 <Grid item className={margin}>

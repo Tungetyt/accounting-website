@@ -28,6 +28,12 @@ const APP_THEME_EXTENDED = {
         color: SECONDARY_COLOR.light,
       },
     },
+    // MuiButtonRoot: {
+    //   root: {
+    //     whiteSpace: 'nowrap',
+    //     width: '100px',
+    //   },
+    // },
   },
 };
 

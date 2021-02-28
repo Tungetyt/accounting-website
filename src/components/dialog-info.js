@@ -7,12 +7,32 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Zoom from '@material-ui/core/Zoom';
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import { APP_THEME } from '../helpers';
 
 const Transition = React.forwardRef((props, ref) => <Zoom ref={ref} {...props} />);
 
 export default function DialogInfo({
   children, title, data = [], isJustified = true,
 }) {
+  const useStyles = makeStyles((theme) => ({
+    buttonText: {
+      [theme.breakpoints.down('xs')]: {
+        display: 'none',
+      },
+    },
+    // button: {
+    //   [theme.breakpoints.down('xs')]: {
+    //     '& .MuiButton-startIcon': {
+    //       margin: 0,
+    //     },
+    //   },
+    // },
+  }));
+
+  const {
+    buttonText, button,
+  } = useStyles();
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => () => {
@@ -35,7 +55,7 @@ export default function DialogInfo({
 
   return (
     <>
-      <Button onClick={handleClickOpen('paper')} startIcon={children}>{title}</Button>
+      <Button className={button} onClick={handleClickOpen('paper')} startIcon={children} fullWidth><span className={buttonText}>{title}</span></Button>
       <Dialog
         open={open}
         onClose={handleClose}
