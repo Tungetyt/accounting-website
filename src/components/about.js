@@ -98,8 +98,8 @@ const About = () => {
                 container
                 item
                 direction="column"
-                justify="center"
-                alignItems="center"
+                justify="flex-start"
+                alignItems="flex-start"
                 className={maxWidth}
               >
                 <Grid item className={margin}>
@@ -107,14 +107,10 @@ const About = () => {
                     <LogoIcon width={logoIconSize} height={logoIconSize} />
                   </DialogInfo>
                 </Grid>
+
                 <Grid item className={margin}>
-                  <DialogInfo title={intl.formatMessage({ id: 'clientValueBtn.title' })} data={clientValueData} isJustified={false}>
-                    <FontAwesomeIcon size="lg" icon={faCoins} />
-                  </DialogInfo>
-                </Grid>
-                <Grid item className={margin}>
-                  <DialogInfo title={intl.formatMessage({ id: 'whyCooperateBtn.title' })} data={whyCooperateData} isJustified={false}>
-                    <LiveHelpIcon />
+                  <DialogInfo title={intl.formatMessage({ id: 'ourClientsBtn.title' })} data={ourClientsData} isJustified={false}>
+                    <FontAwesomeIcon size="lg" icon={faGlobeEurope} />
                   </DialogInfo>
                 </Grid>
                 <Grid item className={margin}>
@@ -128,8 +124,8 @@ const About = () => {
                   </DialogInfo>
                 </Grid>
                 <Grid item className={margin}>
-                  <DialogInfo title={intl.formatMessage({ id: 'workTogetherBtn.title' })} data={workTogetherData} isJustified={false}>
-                    <FontAwesomeIcon size="lg" icon={faHandshake} />
+                  <DialogInfo title={intl.formatMessage({ id: 'clientValueBtn.title' })} data={clientValueData} isJustified={false}>
+                    <FontAwesomeIcon size="lg" icon={faCoins} />
                   </DialogInfo>
                 </Grid>
                 <Grid item className={margin}>
@@ -138,8 +134,13 @@ const About = () => {
                   </DialogInfo>
                 </Grid>
                 <Grid item className={margin}>
-                  <DialogInfo title={intl.formatMessage({ id: 'ourClientsBtn.title' })} data={ourClientsData} isJustified={false}>
-                    <FontAwesomeIcon size="lg" icon={faGlobeEurope} />
+                  <DialogInfo title={intl.formatMessage({ id: 'workTogetherBtn.title' })} data={workTogetherData} isJustified={false}>
+                    <FontAwesomeIcon size="lg" icon={faHandshake} />
+                  </DialogInfo>
+                </Grid>
+                <Grid item className={margin}>
+                  <DialogInfo title={intl.formatMessage({ id: 'whyCooperateBtn.title' })} data={whyCooperateData} isJustified={false}>
+                    <LiveHelpIcon />
                   </DialogInfo>
                 </Grid>
               </Grid>
