@@ -99,6 +99,7 @@ export const PHONE_NUMBER = '+48 606 368 694';
 export const PHONE_NUMBER2 = '+48 884 267 820';
 export const EMAIL = 'vavicom.info@gmail.com';
 export const EMAIL2 = 'info@vavicom.pl';
+export const COORDINATES = [21.03460, 52.10008];
 
 export const NAVIGATION = {
   home: 'home',

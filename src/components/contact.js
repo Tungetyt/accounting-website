@@ -19,6 +19,7 @@ import Image from './image';
 import MessageForm from './message-form';
 import OpenMap from './open-map';
 import ImageWrapper from './image-wrapper';
+import MapBox from './map-box';
 
 const tmp = styles;
 
@@ -27,10 +28,10 @@ const Contact = () => {
   const matches = true;// useMediaQuery(theme.breakpoints.up('md'));
   const intl = useIntl();
   const [isDark] = useContext(ColorContext);
-  const useStyles = makeStyles(() => ({
+  const useStyles = makeStyles((theme) => ({
     paper: {
       backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor,
-      padding: '1rem',
+      // padding: '1rem',
       marginBottom: '1rem'
     },
     paddingTop: {
@@ -44,10 +45,18 @@ const Contact = () => {
     },
     gridContainer: {
       overflow: 'hidden'
+    },
+    responsivePadding: {
+      [theme.breakpoints.up('sm')]: {
+        padding: '1rem',
+      },
+    },
+    padding: {
+      padding: '1rem',
     }
   }));
   const {
-    paper, paddingTop, gridContainer, messageForm, image
+    paper, paddingTop, gridContainer, messageForm, image, responsivePadding, padding
   } = useStyles();
 
   return (
@@ -72,8 +81,14 @@ const Contact = () => {
             </Box>
             )}
           </Grid> */}
+            <Grid item>
+              <Paper className={`${paper} ${responsivePadding}`}>
+                <Typography paragraph align="center">{ intl.formatMessage({ id: 'contactSection.whereAreWe' })}</Typography>
+                <MapBox />
+              </Paper>
+            </Grid>
             <Grid item className={messageForm}>
-              <Paper className={paper}>
+              <Paper className={`${paper} ${padding}`}>
                 <MessageForm />
               </Paper>
             </Grid>

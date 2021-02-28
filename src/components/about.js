@@ -55,8 +55,7 @@ const About = () => {
       padding: '1rem',
       margin: '5%'
     },
-    maxWidth: {
-
+    responsiveWidth: {
       [theme.breakpoints.up('sm')]: {
         minWidth: '400px',
         maxWidth: '800px',
@@ -71,7 +70,7 @@ const About = () => {
   }));
 
   const {
-    paper, maxWidth, margin
+    paper, responsiveWidth, margin
   } = useStyles();
 
   const logoIconSize = 25;
@@ -100,7 +99,7 @@ const About = () => {
                 direction="column"
                 justify="flex-start"
                 alignItems="flex-start"
-                className={maxWidth}
+                className={responsiveWidth}
               >
                 <Grid item className={margin}>
                   <DialogInfo title={intl.formatMessage({ id: 'aboutBtn.title' })} data={aboutData} isJustified={false}>
