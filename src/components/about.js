@@ -85,6 +85,7 @@ const About = () => {
         // spacing={4}
         // className={gridContainer}
       >
+        <ImageWrapper imageData={{ filename: 'optima_logo.png', alt: 'System księgowy Optima Comarch' }} label="UŻYWAMY NOWOCZESNEGO SYSTEMU KSIĘGOWEGO" />
         <Grid item>
           <Paper className={paper}>
             <Grid
@@ -106,7 +107,6 @@ const About = () => {
                     <LogoIcon width={logoIconSize} height={logoIconSize} />
                   </DialogInfo>
                 </Grid>
-
                 <Grid item className={margin}>
                   <DialogInfo title={intl.formatMessage({ id: 'ourClientsBtn.title' })} data={ourClientsData} isJustified={false}>
                     <FontAwesomeIcon size="lg" icon={faGlobeEurope} />
@@ -146,7 +146,6 @@ const About = () => {
             </Grid>
           </Paper>
         </Grid>
-        <ImageWrapper imageData={{ filename: 'optima_logo.png', alt: 'System księgowy Optima Comarch' }} label="UŻYWAMY NOWOCZESNEGO SYSTEMU KSIĘGOWEGO" />
 
         {/* <Grid item>
           <Paper className={paper}>

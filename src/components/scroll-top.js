@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Zoom from '@material-ui/core/Zoom';
@@ -6,7 +6,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const ScrollTop = (props) => {
-  const tooltipRight = (useMediaQuery('(min-width:1280px)') ? 22 : 2);
+  const { lg } = useTheme()?.breakpoints.values;
+
+  const tooltipRight = (useMediaQuery(`(min-width:${lg}px)`) ? 22 : 2);
 
   const useStyles = makeStyles((theme) => ({
     root: {

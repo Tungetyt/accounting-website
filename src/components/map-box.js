@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { APP_THEME, COORDINATES } from '../helpers';
 
 const sizes = {
@@ -30,6 +31,21 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const MapBox = () => {
+  const { md, sm } = useTheme()?.breakpoints.values;
+  const isSmall = useMediaQuery(`(min-width:${sm}px)`);
+  const isMedium = useMediaQuery(`(min-width:${md}px)`);
+  const size = (() => {
+    if (isSmall) {
+      return sizes.sm;
+    }
+
+    if (isMedium) {
+      return sizes.md;
+    }
+
+    return sizes.xs;
+  })();
+
   const [map, setMap] = useState(null);
   const mapContainer = useRef(null);
   const {
@@ -56,7 +72,7 @@ const MapBox = () => {
     console.log('map', map);
   }, [map]);
 
-  return <div ref={(el) => (mapContainer.current = el)} style={{ width: '500px', height: '500px' }} />;
+  return <div ref={(el) => (mapContainer.current = el)} style={{ width: size, height: size }} />;
 };
 
 export default MapBox;

@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import AppBar from '@material-ui/core/AppBar';
 import Box from '@material-ui/core/Box';
 import Paper from '@material-ui/core/Paper';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
@@ -67,7 +67,9 @@ export default function ScrollableTabsButtonAuto() {
 
   const { services } = NAVIGATION;
   const intl = useIntl();
-  const tooltipRight = (useMediaQuery('(min-width:600px)') ? 'auto' : 'on');
+  const { sm } = useTheme()?.breakpoints.values;
+
+  const tooltipRight = (useMediaQuery(`(min-width:${sm}px)`) ? 'auto' : 'on');
 
   const useStyles = makeStyles(() => ({
     root: {
