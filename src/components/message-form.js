@@ -129,6 +129,7 @@ const MessageForm = () => {
       <form noValidate autoComplete="off" onSubmit={onSubmit}>
 
         <TextField
+          id="email"
           name="email"
           label="TWÓJ KONTAKTOWY ADRES EMAIL"
           fullWidth
@@ -153,6 +154,7 @@ const MessageForm = () => {
         />
 
         <TextField
+          id="message"
           key="TWOJA WIADOMOŚĆ"
           name="message"
           label="TWOJA WIADOMOŚĆ"

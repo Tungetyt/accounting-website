@@ -82,7 +82,7 @@ const About = () => {
         direction="row"
         justify="center"
         alignItems="center"
-        // spacing={4}
+        spacing={4}
         // className={gridContainer}
       >
         <ImageWrapper imageData={{ filename: 'optima_logo.png', alt: 'System księgowy Optima Comarch' }} label="UŻYWAMY NOWOCZESNEGO SYSTEMU KSIĘGOWEGO" />
@@ -100,7 +100,7 @@ const About = () => {
                 direction="column"
                 justify="flex-start"
                 alignItems="flex-start"
-                className={responsiveWidth}
+                // className={responsiveWidth}
               >
                 <Grid item className={margin}>
                   <DialogInfo title={intl.formatMessage({ id: 'aboutBtn.title' })} data={aboutData} isJustified={false}>

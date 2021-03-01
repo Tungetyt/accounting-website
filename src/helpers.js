@@ -2,8 +2,8 @@ import grey from '@material-ui/core/colors/grey';
 import blue from '@material-ui/core/colors/blue';
 
 export const SECONDARY_COLOR = {
-  light: blue['900'],
-  dark: blue['300'],
+  light: grey['900'],
+  dark: grey['50'],
 };
 
 export const LOCAL_STORAGE_KEY = {
@@ -28,10 +28,10 @@ const APP_THEME_EXTENDED = {
         color: SECONDARY_COLOR.light,
       },
     },
-    // MuiButtonRoot: {
-    //   root: {
-    //     whiteSpace: 'nowrap',
-    //     width: '100px',
+    // MuiGrid: {
+    //   container: {
+    //     width: '100% !important',
+    //     margin: '0 !important',
     //   },
     // },
   },
