@@ -24,7 +24,6 @@ const Career = () => {
     paper: {
       backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation2.backgroundColor,
       padding: '1rem',
-      margin: '1rem',
     },
     paper2: {
       backgroundColor: APP_THEME[isDark ? 'dark' : 'light'].palette.elevation3.backgroundColor,
