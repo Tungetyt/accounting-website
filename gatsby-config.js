@@ -14,6 +14,7 @@ module.exports = {
     siteUrl: 'https://vavicom.pl',
   },
   plugins: [
+    // 'gatsby-plugin-preact',
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
@@ -95,12 +96,6 @@ module.exports = {
         languages: ['pl'], // languages: ['pl', 'en'],
         // language file path
         defaultLanguage: 'pl',
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-react-leaflet',
-      options: {
-        linkStyles: true, // (default: true) Enable/disable loading stylesheets via CDN
       },
     },
     'gatsby-plugin-netlify-cms',

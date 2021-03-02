@@ -1,23 +1,17 @@
 /* eslint-disable comma-dangle */
 import {
-  Box,
-  Grid,
-  Paper,
-  Typography, Container
+  Container, Grid, Paper, Typography
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
-import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
 import { Element } from 'react-scroll';
 import { ColorContext } from '../context/contexts';
-import { APP_THEME, DEFAULT_PADDING, NAVIGATION } from '../helpers';
+import { APP_THEME, NAVIGATION } from '../helpers';
 import ContactInfo from './contact-info';
 import styles from './dist/ImageZoom.module.css';
-import Image from './image';
 import MessageForm from './message-form';
-import OpenMap from './open-map';
 import ImageWrapper from './image-wrapper';
 import MapBox from './map-box';
 
