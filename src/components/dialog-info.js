@@ -55,7 +55,7 @@ export default function DialogInfo({
 
   return (
     <>
-      <Button className={button} onClick={handleClickOpen('paper')} startIcon={children} fullWidth><span className={buttonText}>{title}</span></Button>
+      <Button aria-label={title} id={title} name={title} className={button} onClick={handleClickOpen('paper')} startIcon={children} fullWidth><span className={buttonText}>{title}</span></Button>
       <Dialog
         open={open}
         onClose={handleClose}
