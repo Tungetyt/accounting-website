@@ -13,23 +13,6 @@ const sizes = {
   xl: '900px',
 };
 
-const useStyles = makeStyles((theme) => ({
-  responsiveSize: {
-    [theme.breakpoints.down('xs')]: {
-      height: sizes.xs,
-      width: sizes.xs,
-    },
-    [theme.breakpoints.up('sm')]: {
-      height: sizes.sm,
-      width: sizes.sm,
-    },
-    [theme.breakpoints.up('md')]: {
-      height: sizes.md,
-      width: sizes.md,
-    },
-  },
-}));
-
 const MapBox = () => {
   const { md, sm } = useTheme()?.breakpoints.values;
   const isSmall = useMediaQuery(`(min-width:${sm}px)`);
@@ -48,9 +31,7 @@ const MapBox = () => {
 
   const [map, setMap] = useState(null);
   const mapContainer = useRef(null);
-  const {
-    responsiveSize,
-  } = useStyles();
+
   useEffect(() => {
     mapboxgl.accessToken = process.env.GATSBY_MAPBOX_ACCESS_TOKEN;
     const initializeMap = ({ setMap, mapContainer }) => {
@@ -69,16 +50,12 @@ const MapBox = () => {
     };
 
     if (!map) initializeMap({ setMap, mapContainer });
-    console.log('map', map);
   }, [map]);
+
   useEffect(() => {
     if (document) {
-      // document.getElementsByClassName('mapboxgl-ctrl-logo')[0].attributes.rel = 'noopener';
-      // document.getElementsByClassName('mapboxgl-ctrl-logo')[0].remove();
-      // document.getElementsByClassName('mapboxgl-ctrl-attrib-inner')[0].remove();
       document.getElementsByClassName('mapboxgl-ctrl-bottom-right')[0].remove();
       document.getElementsByClassName('mapboxgl-ctrl-bottom-left')[0].remove();
-      // console.log('a', document.getElementsByClassName('mapboxgl-ctrl-logo')[0]);
     }
   }, []);
 
