@@ -100,7 +100,7 @@ const About = () => {
                 direction="column"
                 justify="flex-start"
                 alignItems="flex-start"
-                // className={responsiveWidth}
+                className={responsiveWidth}
               >
                 <Grid item className={margin}>
                   <DialogInfo title={intl.formatMessage({ id: 'aboutBtn.title' })} data={aboutData} isJustified={false}>
