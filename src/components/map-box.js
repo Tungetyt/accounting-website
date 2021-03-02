@@ -71,6 +71,16 @@ const MapBox = () => {
     if (!map) initializeMap({ setMap, mapContainer });
     console.log('map', map);
   }, [map]);
+  useEffect(() => {
+    if (document) {
+      // document.getElementsByClassName('mapboxgl-ctrl-logo')[0].attributes.rel = 'noopener';
+      // document.getElementsByClassName('mapboxgl-ctrl-logo')[0].remove();
+      // document.getElementsByClassName('mapboxgl-ctrl-attrib-inner')[0].remove();
+      document.getElementsByClassName('mapboxgl-ctrl-bottom-right')[0].remove();
+      document.getElementsByClassName('mapboxgl-ctrl-bottom-left')[0].remove();
+      // console.log('a', document.getElementsByClassName('mapboxgl-ctrl-logo')[0]);
+    }
+  }, []);
 
   return <div ref={(el) => (mapContainer.current = el)} style={{ width: size, height: size }} />;
 };
