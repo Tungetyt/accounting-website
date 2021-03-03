@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import { graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import { useIntl } from 'gatsby-plugin-intl';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import styled from 'styled-components';
 // import { Parallax, Background } from 'react-parallax';
 import { Parallax } from 'react-scroll-parallax';
@@ -56,14 +56,32 @@ const Banner = () => {
   }));
 
   const {
-    opaqueColor, clipPath, backgroundImage, blur, lineHeight, marginBottom, address, userSelectNone,
+    opaqueColor, clipPath, backgroundImage, blur, marginBottom, address, userSelectNone,
   } = useStyles();
 
   const intl = useIntl();
 
+  const [width, setWidth] = useState(window && window.innerWidth);
+  function handleWindowSizeChange() {
+    setWidth(window && window.innerWidth);
+  }
+  useEffect(() => {
+    if (window) {
+      window.addEventListener('resize', handleWindowSizeChange);
+    }
+
+    return () => {
+      if (window) {
+        window.removeEventListener('resize', handleWindowSizeChange);
+      }
+    };
+  }, []);
+
+  const isMobile = (width <= 768);
+
   return (
     <Paper elevation={24} className={`${opaqueColor} ${clipPath}`}>
-      <Parallax y={[-35, 30]}>
+      <Parallax y={isMobile ? [0, 0] : [-35, 30]}>
 
         <BannerWrapper>
           <BackgroundImage
