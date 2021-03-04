@@ -58,8 +58,9 @@ const Banner = () => {
       // display: 'flex',
       // justify: 'center',
       // alignItems: 'center',
-      paddingTop: '20rem',
-      paddingBottom: '20rem',
+      paddingTop: '35vh',
+      paddingBottom: '35vh',
+      width: '100%',
     },
     flex: {
       display: 'flex',
