@@ -117,7 +117,7 @@ const Banner = () => {
 
   return (
     <Paper elevation={24} className={`${opaqueColor} ${clipPath}`}>
-      <Parallax y={isSmallScreen ? [-35, 30] : [0, 0]}>
+      {/*<Parallax y={isSmallScreen ? [-35, 30] : [0, 0]}>*/}
 
         <BannerWrapper>
           <BackgroundImage
@@ -187,7 +187,7 @@ const Banner = () => {
             {/* </div> */}
           </BackgroundImage>
         </BannerWrapper>
-      </Parallax>
+      {/*</Parallax>*/}
 
     </Paper>
 
