@@ -70,7 +70,7 @@ const IndexPage = (props) => {
           <ResponsiveDrawer props={props} />
           <div id="top" />
           <main className={main}>
-            <LandingPage />
+            {/* <LandingPage /> */}
             <div className={halfCommonBreak} />
             <TabPanel />
             <div className={commonBreak} />
