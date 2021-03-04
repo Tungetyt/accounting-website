@@ -58,8 +58,8 @@ const Banner = () => {
       // display: 'flex',
       // justify: 'center',
       // alignItems: 'center',
-      paddingTop: '35vh',
-      paddingBottom: '35vh',
+      paddingTop: '10rem',
+      paddingBottom: '10rem',
       width: '100%',
     },
     flex: {
@@ -93,8 +93,9 @@ const Banner = () => {
 
   const intl = useIntl();
 
-  const { lg, md } = useTheme()?.breakpoints.values;
+  const { lg, md, sm } = useTheme()?.breakpoints.values;
   const isLargeScreen = useMediaQuery(`(min-width:${md}px)`);
+  const isSmallScreen = useMediaQuery(`(min-width:${sm}px)`);
 
   // const [width, setWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
   // function handleWindowSizeChange() {
@@ -116,56 +117,56 @@ const Banner = () => {
 
   return (
     <Paper elevation={24} className={`${opaqueColor} ${clipPath}`}>
-      {/* <Parallax y={isMobile ? [0, 0] : [-35, 30]}> */}
+      <Parallax y={isSmallScreen ? [-35, 30] : [0, 0]}>
 
-      <BannerWrapper>
-        <BackgroundImage
-          Tag="section"
-          fluid={data.file.childImageSharp.fluid}
-          className={backgroundImage}
-        >
-          {/* <div className={outherContainer}> */}
-          <Grid
-            container
-            direction="row"
-            justify={isLargeScreen ? 'space-around' : 'center'}
-            alignItems="center"
-            // wrap="nowrap"
-            className={outherContainer}
+        <BannerWrapper>
+          <BackgroundImage
+            Tag="section"
+            fluid={data.file.childImageSharp.fluid}
+            className={backgroundImage}
           >
-            {/* <Hidden lgDown> */}
-            {isLargeScreen && <Grid item style={{ width: '164px', height: '1rem' }} />}
+            {/* <div className={outherContainer}> */}
+            <Grid
+              container
+              direction="row"
+              justify={isLargeScreen ? 'space-around' : 'center'}
+              alignItems="center"
+            // wrap="nowrap"
+              className={outherContainer}
+            >
+              {/* <Hidden lgDown> */}
+              {isLargeScreen && <Grid item style={{ width: '164px', height: '1rem' }} />}
 
-            {/* </Hidden> */}
-            <Grid item>
-              <div className="hero-content">
-                <Paper
-                  elevation={0}
-                  className={`${opaqueColor} ${blur} ${marginBottom}`}
-                >
-                  <Typography color="primary" className={`${title} ${userSelectNone}`} style={{ lineHeight: '90%' }}>
-                    {/* <h1 className={header1}> */}
-                    {intl.formatMessage({ id: 'landing.first' })}
-                    {' '}
-                    {intl.formatMessage({ id: 'landing.second' })}
-                    <br />
-                    {COMPANY.replace(/\s/g, '')}
-                    {/* </h1> */}
-                  </Typography>
-                </Paper>
-                <Paper elevation={0} className={`${opaqueColor} ${blur}`}>
-                  <Typography
-                    variant="h2"
-                    color="primary"
-                    className={`${address} ${userSelectNone}`}
+              {/* </Hidden> */}
+              <Grid item>
+                <div className="hero-content">
+                  <Paper
+                    elevation={0}
+                    className={`${opaqueColor} ${blur} ${marginBottom}`}
                   >
-                    {intl.formatMessage({ id: 'landing.address' })}
-                  </Typography>
-                </Paper>
-              </div>
-            </Grid>
-            {/* <Hidden lgDown> */}
-            {isLargeScreen
+                    <Typography color="primary" className={`${title} ${userSelectNone}`} style={{ lineHeight: '90%' }}>
+                      {/* <h1 className={header1}> */}
+                      {intl.formatMessage({ id: 'landing.first' })}
+                      {' '}
+                      {intl.formatMessage({ id: 'landing.second' })}
+                      <br />
+                      {COMPANY.replace(/\s/g, '')}
+                      {/* </h1> */}
+                    </Typography>
+                  </Paper>
+                  <Paper elevation={0} className={`${opaqueColor} ${blur}`}>
+                    <Typography
+                      variant="h2"
+                      color="primary"
+                      className={`${address} ${userSelectNone}`}
+                    >
+                      {intl.formatMessage({ id: 'landing.address' })}
+                    </Typography>
+                  </Paper>
+                </div>
+              </Grid>
+              {/* <Hidden lgDown> */}
+              {isLargeScreen
               && (
               <Grid item>
                 <Paper
@@ -181,12 +182,12 @@ const Banner = () => {
                 <div />
               </Grid>
               )}
-            {/* </Hidden> */}
-          </Grid>
-          {/* </div> */}
-        </BackgroundImage>
-      </BannerWrapper>
-      {/* </Parallax> */}
+              {/* </Hidden> */}
+            </Grid>
+            {/* </div> */}
+          </BackgroundImage>
+        </BannerWrapper>
+      </Parallax>
 
     </Paper>
 
