@@ -69,38 +69,38 @@ const IndexPage = (props) => {
           <Logo />
           <ResponsiveDrawer props={props} />
           <div id="top" />
-          {/* <main className={main}> */}
-          {/*  <LandingPage /> */}
-          {/*  <div className={halfCommonBreak} /> */}
-          {/*  <TabPanel /> */}
-          {/*  <div className={commonBreak} /> */}
+          <main className={main}>
+            <LandingPage />
+            <div className={halfCommonBreak} />
+            <TabPanel />
+            <div className={commonBreak} />
 
-          {/*  <SectionWrapper> */}
-          {/*    <Prices /> */}
-          {/*  </SectionWrapper> */}
-          {/*  <div className={commonBreak} /> */}
+            <SectionWrapper>
+              <Prices />
+            </SectionWrapper>
+            <div className={commonBreak} />
 
-          {/*  <SectionWrapper> */}
-          {/*    <About /> */}
-          {/*  </SectionWrapper> */}
-          {/*  <div className={commonBreak} /> */}
+            <SectionWrapper>
+              <About />
+            </SectionWrapper>
+            <div className={commonBreak} />
 
-          {/*  <SectionWrapper> */}
-          {/*    <Faq /> */}
-          {/*  </SectionWrapper> */}
-          {/*  <div className={commonBreak} /> */}
+            <SectionWrapper>
+              <Faq />
+            </SectionWrapper>
+            <div className={commonBreak} />
 
-          {/*  <SectionWrapper> */}
-          {/*    <Career /> */}
-          {/*  </SectionWrapper> */}
-          {/*  <div className={commonBreak} /> */}
+            <SectionWrapper>
+              <Career />
+            </SectionWrapper>
+            <div className={commonBreak} />
 
-          {/*  <SectionWrapper> */}
-          {/*    <Contact /> */}
-          {/*  </SectionWrapper> */}
-          {/*  <div className={halfCommonBreak} /> */}
+            <SectionWrapper>
+              <Contact />
+            </SectionWrapper>
+            <div className={halfCommonBreak} />
 
-          {/* </main> */}
+          </main>
           <ScrollTop>
             <Tooltip placement="top" title={intl.formatMessage({ id: 'backToTopBtn' })} arrow TransitionComponent={Zoom}>
               <Fab color="primary" size="small" aria-label="scroll back to top">
