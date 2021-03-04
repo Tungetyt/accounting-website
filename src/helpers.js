@@ -27,19 +27,7 @@ const APP_THEME_EXTENDED = {
         backgroundColor: color['400'],
         color: SECONDARY_COLOR.light,
       },
-
     },
-    // MuiTypography: {
-    //   root: {
-    //     '& h1': {
-    //       fontWeight: 'normal',
-    //     },
-    //
-    //   },
-    // },
-    // MuiTypographyH1: {
-    //
-    // },
     // MuiGrid: {
     //   container: {
     //     width: '100% !important',
@@ -47,11 +35,6 @@ const APP_THEME_EXTENDED = {
     //   },
     // },
   },
-  // typography: {
-  //   h1: {
-  //     fontWeight: 'normal',
-  //   },
-  // },
 };
 
 export const APP_THEME = {

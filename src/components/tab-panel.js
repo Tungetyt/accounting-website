@@ -109,7 +109,7 @@ export default function ScrollableTabsButtonAuto() {
             textColor={APP_THEME[isDark ? 'dark' : 'light'].palette.primary.main}
             variant="scrollable"
             scrollButtons={tooltipRight}
-            aria-label="services"
+            aria-label="scrollable auto tabs example"
             classes={{ root: tabs, scroller }}
           >
             <Tab label={intl.formatMessage({ id: 'servicesSection.accounting' })} icon={<FontAwesomeIcon size="2x" icon={faBook} />} {...a11yProps(0)} to={services} offset={OFFSET} component={Link} />
