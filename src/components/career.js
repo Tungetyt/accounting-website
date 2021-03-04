@@ -93,7 +93,7 @@ const Career = () => {
           <FormControlLabel
             control={(
               <Tooltip title={isMoreInfoChecked ? 'Pokaż mniej' : 'Pokaż więcej'} TransitionComponent={Zoom}>
-                <Switch color="secondary" checked={isMoreInfoChecked} onChange={handleChange} />
+                <Switch checked={isMoreInfoChecked} onChange={handleChange} />
               </Tooltip>
             )}
             label="Więcej informacji"
