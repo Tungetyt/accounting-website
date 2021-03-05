@@ -15,7 +15,7 @@ const ThemeBtn = () => {
     <IconButton
       edge="end"
       color="primary"
-      aria-label="mode"
+      aria-label="Zmień kolor strony"
       onClick={() => {
         const newTheme = isDark ? light : dark;
         localStorage.setItem(theme, newTheme);

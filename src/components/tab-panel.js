@@ -36,7 +36,7 @@ function TabPanel(props) {
       role="tabpanel"
       hidden={value !== index}
       id={`scrollable-auto-tabpanel-${index}`}
-      aria-labelledby={`scrollable-auto-tab-${index}`}
+      aria-labelledby={`przesuwanie-${index}`}
       {...other}
     >
       {value === index && (
@@ -57,7 +57,7 @@ TabPanel.propTypes = {
 function a11yProps(index) {
   return {
     id: `scrollable-auto-tab-${index}`,
-    'aria-controls': `scrollable-auto-tabpanel-${index}`,
+    'aria-controls': `panel-do-przesuwania-${index}`,
   };
 }
 
@@ -109,7 +109,7 @@ export default function ScrollableTabsButtonAuto() {
             textColor={APP_THEME[isDark ? 'dark' : 'light'].palette.primary.main}
             variant="scrollable"
             scrollButtons={tooltipRight}
-            aria-label="services"
+            aria-label="oferty"
             classes={{ root: tabs, scroller }}
           >
             <Tab label={intl.formatMessage({ id: 'servicesSection.accounting' })} icon={<FontAwesomeIcon size="2x" icon={faBook} />} {...a11yProps(0)} to={services} offset={OFFSET} component={Link} />

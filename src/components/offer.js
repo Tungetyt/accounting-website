@@ -87,11 +87,10 @@ export default function Offer({ image, headingChildren, children }) {
         <IconButton
           className={clsx(expand, {
             [expandOpen]: expanded,
-          })}
-          className={floatRight}
+          }, floatRight)}
           onClick={handleExpandClick}
           aria-expanded={expanded}
-          aria-label="show more"
+          aria-label="Pokaż więcej"
         >
           <ExpandMoreIcon />
         </IconButton>

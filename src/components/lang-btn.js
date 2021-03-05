@@ -25,7 +25,7 @@ const LangBtn = () => {
           {({ languages, language: currentLocale }) => (
             <Tooltip title={intl.formatMessage({ id: 'langBtn' })} arrow TransitionComponent={Zoom}>
               <IconButton
-                aria-label="language"
+                aria-label="Zmień język"
                 color="primary"
                 className={transition}
                 onClick={() => {

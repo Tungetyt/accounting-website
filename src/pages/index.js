@@ -103,7 +103,7 @@ const IndexPage = (props) => {
           </main>
           <ScrollTop>
             <Tooltip placement="top" title={intl.formatMessage({ id: 'backToTopBtn' })} arrow TransitionComponent={Zoom}>
-              <Fab color="primary" size="small" aria-label="scroll back to top">
+              <Fab color="primary" size="small" aria-label="Idź na samą górę strony">
                 <KeyboardArrowUpIcon />
               </Fab>
             </Tooltip>

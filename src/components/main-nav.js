@@ -33,7 +33,7 @@ const MainNav = (props) => {
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
   return (
-    <div className={drawer} aria-label="mailbox folders">
+    <div className={drawer} aria-label="Przesuwaj zdjęcia">
       <SwipeableDrawer
         container={container}
         variant="temporary"

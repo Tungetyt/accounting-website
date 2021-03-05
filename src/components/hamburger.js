@@ -43,7 +43,7 @@ const Hamburger = ({ handleDrawerToggle, isMobileOpen }) => {
         <Tooltip placement="top" title={intl.formatMessage({ id: 'hamburger' })} arrow TransitionComponent={Zoom}>
           <IconButton
             color="primary"
-            aria-label="open drawer"
+            aria-label="Otwórz panel nawigacyjny"
             edge="start"
             onClick={handleDrawerToggle}
             className={menuButton}

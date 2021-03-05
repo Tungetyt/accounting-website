@@ -55,19 +55,17 @@ export default function DialogInfo({
 
   return (
     <>
-      <Button aria-label={title} id={title} name={title} className={button} onClick={handleClickOpen('paper')} startIcon={children} fullWidth><span className={buttonText}>{title}</span></Button>
+      <Button aria-label={`kliknij w ${title}`} id={title} name={title} className={button} onClick={handleClickOpen('paper')} startIcon={children} fullWidth><span className={buttonText}>{title}</span></Button>
       <Dialog
         open={open}
         onClose={handleClose}
         scroll="paper"
-        aria-labelledby="scroll-dialog-title"
-        aria-describedby="scroll-dialog-description"
+        aria-labelledby={title}
         TransitionComponent={Transition}
       >
         <DialogTitle id="scroll-dialog-title">{title}</DialogTitle>
         <DialogContent>
           <DialogContentText
-            id="scroll-dialog-description"
             ref={descriptionElementRef}
             tabIndex={-1}
           >

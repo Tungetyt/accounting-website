@@ -42,7 +42,7 @@ const ColorBtn = () => {
       <IconButton
         edge="end"
         color="primary"
-        aria-label="mode"
+        aria-label="Zmień kolor strony"
         className={transition}
         onClick={() => {
           setIsDark((prevIsDark) => !prevIsDark);
