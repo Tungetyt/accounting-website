@@ -1,17 +1,17 @@
-import {Grid, Paper} from '@material-ui/core';
-import {makeStyles, useTheme} from '@material-ui/core/styles';
+import { Grid, Paper } from '@material-ui/core';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import {graphql, useStaticQuery} from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
-import {useIntl} from 'gatsby-plugin-intl';
-import React, {useContext} from 'react';
+import { useIntl } from 'gatsby-plugin-intl';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import {ColorContext} from '../context/contexts';
-import {COMPANY} from '../helpers';
+import { ColorContext } from '../context/contexts';
+import { COMPANY } from '../helpers';
 
 const Banner = () => {
-  const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`  
     query {
       file(relativePath: { eq: "banner.jpg" }) {
         childImageSharp {
@@ -41,10 +41,9 @@ const Banner = () => {
       // paddingBottom: '15rem',
       // borderBottomLeftRadius: "50%",
       // borderBottomRightRadius: "50%"
-      borderRadius: "50%"
+      // borderRadius: "50%"
 
-
-},
+    },
     blur: {
       backdropFilter: 'blur(3px)',
     },
@@ -102,49 +101,49 @@ const Banner = () => {
 
   return (
     <Paper elevation={24} className={`${opaqueColor} ${clipPath}`}>
-      {/*<Parallax y={isSmallScreen ? [-35, 30] : [0, 0]}>*/}
+      {/* <Parallax y={isSmallScreen ? [-35, 30] : [0, 0]}> */}
 
-        <BannerWrapper>
-          <BackgroundImage
-            Tag="section"
-            fluid={data.file.childImageSharp.fluid}
-            className={backgroundImage}
+      <BannerWrapper>
+        <BackgroundImage
+          Tag="section"
+          fluid={data.file.childImageSharp.fluid}
+          className={backgroundImage}
+        >
+          {/* <div className={outherContainer}> */}
+          <Grid
+            container
+            direction="row"
+            justify={isLargeScreen ? 'space-around' : 'center'}
+            alignItems="center"
+            className={outherContainer}
           >
-            {/* <div className={outherContainer}> */}
-            <Grid
-              container
-              direction="row"
-              justify={isLargeScreen ? 'space-around' : 'center'}
-              alignItems="center"
-              className={outherContainer}
-            >
-              {isLargeScreen && <Grid item style={{ width: '164px', height: '1rem' }} />}
-              <Grid item>
-                <div className="hero-content">
-                  <Paper
-                    elevation={0}
-                    className={`${opaqueColor} ${blur} ${marginBottom}`}
+            {isLargeScreen && <Grid item style={{ width: '164px', height: '1rem' }} />}
+            <Grid item>
+              <div className="hero-content">
+                <Paper
+                  elevation={0}
+                  className={`${opaqueColor} ${blur} ${marginBottom}`}
+                >
+                  <Typography color="primary" className={`${title} ${userSelectNone}`} style={{ lineHeight: '90%' }}>
+                    {intl.formatMessage({ id: 'landing.first' })}
+                    {' '}
+                    {intl.formatMessage({ id: 'landing.second' })}
+                    <br />
+                    {COMPANY.replace(/\s/g, '')}
+                  </Typography>
+                </Paper>
+                <Paper elevation={0} className={`${opaqueColor} ${blur}`}>
+                  <Typography
+                    variant="h2"
+                    color="primary"
+                    className={`${address} ${userSelectNone}`}
                   >
-                    <Typography color="primary" className={`${title} ${userSelectNone}`} style={{ lineHeight: '90%' }}>
-                      {intl.formatMessage({ id: 'landing.first' })}
-                      {' '}
-                      {intl.formatMessage({ id: 'landing.second' })}
-                      <br />
-                      {COMPANY.replace(/\s/g, '')}
-                    </Typography>
-                  </Paper>
-                  <Paper elevation={0} className={`${opaqueColor} ${blur}`}>
-                    <Typography
-                      variant="h2"
-                      color="primary"
-                      className={`${address} ${userSelectNone}`}
-                    >
-                      {intl.formatMessage({ id: 'landing.address' })}
-                    </Typography>
-                  </Paper>
-                </div>
-              </Grid>
-              {isLargeScreen
+                    {intl.formatMessage({ id: 'landing.address' })}
+                  </Typography>
+                </Paper>
+              </div>
+            </Grid>
+            {isLargeScreen
               && (
               <Grid item>
                 <Paper
@@ -158,10 +157,10 @@ const Banner = () => {
                 <div />
               </Grid>
               )}
-            </Grid>
-          </BackgroundImage>
-        </BannerWrapper>
-      {/*</Parallax>*/}
+          </Grid>
+        </BackgroundImage>
+      </BannerWrapper>
+      {/* </Parallax> */}
 
     </Paper>
 
@@ -178,10 +177,6 @@ const BannerWrapper = styled.section`
       flex-direction: column;
       justify-content: center;
       text-align: center;
-      border-bottom-left-radius: 50%;
-      border-bottom-right-radius: 50%;
-        border-radius: 50%;
-
     }
   }
 `;
