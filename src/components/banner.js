@@ -7,6 +7,7 @@ import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { Parallax } from 'react-scroll-parallax';
 import { ColorContext } from '../context/contexts';
 import { COMPANY } from '../helpers';
 
@@ -101,49 +102,49 @@ const Banner = () => {
 
   return (
     <Paper elevation={24} className={`${opaqueColor} ${clipPath}`}>
-      {/* <Parallax y={isSmallScreen ? [-35, 30] : [0, 0]}> */}
+      <Parallax y={isSmallScreen ? [-35, 30] : [0, 0]}>
 
-      <BannerWrapper>
-        <BackgroundImage
-          Tag="section"
-          fluid={data.file.childImageSharp.fluid}
-          className={backgroundImage}
-        >
-          {/* <div className={outherContainer}> */}
-          <Grid
-            container
-            direction="row"
-            justify={isLargeScreen ? 'space-around' : 'center'}
-            alignItems="center"
-            className={outherContainer}
+        <BannerWrapper>
+          <BackgroundImage
+            Tag="section"
+            fluid={data.file.childImageSharp.fluid}
+            className={backgroundImage}
           >
-            {isLargeScreen && <Grid item style={{ width: '164px', height: '1rem' }} />}
-            <Grid item>
-              <div className="hero-content">
-                <Paper
-                  elevation={0}
-                  className={`${opaqueColor} ${blur} ${marginBottom}`}
-                >
-                  <Typography color="primary" className={`${title} ${userSelectNone}`} style={{ lineHeight: '90%' }}>
-                    {intl.formatMessage({ id: 'landing.first' })}
-                    {' '}
-                    {intl.formatMessage({ id: 'landing.second' })}
-                    <br />
-                    {COMPANY.replace(/\s/g, '')}
-                  </Typography>
-                </Paper>
-                <Paper elevation={0} className={`${opaqueColor} ${blur}`}>
-                  <Typography
-                    variant="h2"
-                    color="primary"
-                    className={`${address} ${userSelectNone}`}
+            {/* <div className={outherContainer}> */}
+            <Grid
+              container
+              direction="row"
+              justify={isLargeScreen ? 'space-around' : 'center'}
+              alignItems="center"
+              className={outherContainer}
+            >
+              {isLargeScreen && <Grid item style={{ width: '164px', height: '1rem' }} />}
+              <Grid item>
+                <div className="hero-content">
+                  <Paper
+                    elevation={0}
+                    className={`${opaqueColor} ${blur} ${marginBottom}`}
                   >
-                    {intl.formatMessage({ id: 'landing.address' })}
-                  </Typography>
-                </Paper>
-              </div>
-            </Grid>
-            {isLargeScreen
+                    <Typography color="primary" className={`${title} ${userSelectNone}`} style={{ lineHeight: '90%' }}>
+                      {intl.formatMessage({ id: 'landing.first' })}
+                      {' '}
+                      {intl.formatMessage({ id: 'landing.second' })}
+                      <br />
+                      {COMPANY.replace(/\s/g, '')}
+                    </Typography>
+                  </Paper>
+                  <Paper elevation={0} className={`${opaqueColor} ${blur}`}>
+                    <Typography
+                      variant="h2"
+                      color="primary"
+                      className={`${address} ${userSelectNone}`}
+                    >
+                      {intl.formatMessage({ id: 'landing.address' })}
+                    </Typography>
+                  </Paper>
+                </div>
+              </Grid>
+              {isLargeScreen
               && (
               <Grid item>
                 <Paper
@@ -157,10 +158,10 @@ const Banner = () => {
                 <div />
               </Grid>
               )}
-          </Grid>
-        </BackgroundImage>
-      </BannerWrapper>
-      {/* </Parallax> */}
+            </Grid>
+          </BackgroundImage>
+        </BannerWrapper>
+      </Parallax>
 
     </Paper>
 
