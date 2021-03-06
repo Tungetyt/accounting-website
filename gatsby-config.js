@@ -8,8 +8,8 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'Vavicom Piaseczno Józefosław',
-    description: 'Biuro Rachunkowe VAVICOM Piaseczno, Józefosław. Księgowość, Kadry i Płace, Podatki, Finanse, Biznes',
+    title: 'Vavicom Piaseczno',
+    description: 'Biuro Rachunkowe VAVICOM Piaseczno. Księgowość, Kadry i Płace, Podatki, Finanse, Biznes',
     author: '@tungetyt <m0kotlicki@gmail.com>',
     siteUrl: 'https://vavicom.pl',
   },

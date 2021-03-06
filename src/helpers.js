@@ -130,8 +130,8 @@ export const NAVIGATION = {
 
 export const OFFSET = -42;
 
-export const TITLE = 'BIURO RACHUNKOWE VAVICOM PIASECZNO JÓZEFOSŁAW';
-export const DESCRIPTION = 'Biuro Rachunkowe VAVICOM Piaseczno, Józefosław. Księgowość, Kadry i Płace, Podatki, Finanse, Biznes';
+export const TITLE = 'BIURO RACHUNKOWE VAVICOM PIASECZNO';
+export const DESCRIPTION = 'Biuro Rachunkowe VAVICOM Piaseczno. Księgowość, Kadry i Płace, Podatki, Finanse, Biznes';
 
 const commonBreakNum = 6;
 export const COMMON_BREAK = `${commonBreakNum}rem`;
