@@ -18,7 +18,7 @@
   "landing": {
     "first": "BIURO",
     "second": "RACHUNKOWE",
-    "address": "JÓZEFOSŁAW WARSZAWA KONSTANCIN PIASECZNO"
+    "address": "JÓZEFOSŁAW PIASECZNO"
   },
   "servicesSection": {
     "accounting": "KSIĘGOWOŚĆ ONLINE",
@@ -170,8 +170,8 @@
     ],
     "prices": [
       "od 35 zł",
-      "od 150 zł", 
-      "od 350 zł" 
+      "od 150 zł",
+      "od 350 zł"
     ],
     "specialOffer":[
       "Oferujemy również specjalny rabat dla wszystkich zmieniających biuro rachunkowe.",
