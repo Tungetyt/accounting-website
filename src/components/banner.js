@@ -31,11 +31,20 @@ const Banner = () => {
       backgroundColor: isDark ? 'rgba(33,33,33, 0.8)' : 'rgba(245,245,245, 0.8)',
     },
     clipPath: {
-      // clipPath: 'polygon(0 0, 0 80%, 100% 100%, 100% 20%)',
+      clipPath: 'polygon(0 0, 100% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)',
+
+      // paddingBottom: '15rem',
+      // borderBottomLeftRadius: "50%",
+      // borderBottomRightRadius: "50%"
     },
     backgroundImage: {
-      paddingBottom: '5rem',
-    },
+      // paddingBottom: '15rem',
+      // borderBottomLeftRadius: "50%",
+      // borderBottomRightRadius: "50%"
+      borderRadius: "50%"
+
+
+},
     blur: {
       backdropFilter: 'blur(3px)',
     },
@@ -169,6 +178,10 @@ const BannerWrapper = styled.section`
       flex-direction: column;
       justify-content: center;
       text-align: center;
+      border-bottom-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+        border-radius: 50%;
+
     }
   }
 `;
