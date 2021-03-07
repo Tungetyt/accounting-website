@@ -40,7 +40,7 @@ const NavList = () => {
     return (
       <ListItem
         activeClass={active}
-        // spy
+        spy
         smooth
         duration={0}
         ignoreCancelEvents={false}
