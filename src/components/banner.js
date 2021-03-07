@@ -61,8 +61,8 @@ const Banner = () => {
       fontSize: '1.5rem',
     },
     outherContainer: {
-      paddingTop: '10rem',
-      paddingBottom: '10rem',
+      paddingTop: '15rem',
+      paddingBottom: '15rem',
       width: '100%',
     },
     flex: {
@@ -145,19 +145,19 @@ const Banner = () => {
                 </div>
               </Grid>
               {isLargeScreen
-              && (
-              <Grid item>
-                <Paper
-                  elevation={0}
-                  className={`${opaqueColor} ${blur} ${flex}`}
-                >
-                  <a href="https://www.iksiegowosc24.pl/biura-rachunkowe/mazowieckie/piaseczno/vavicom-sp-z-o-o" target="_blank" rel="noreferrer" title="Biuro polecane przez iKsiegowosc24"><img src="https://panel.iksiegowosc24.pl/assets/Image%2015.png" alt="Biuro polecane przez iKsiegowosc24" width="150" height="50" /></a>
-                  <a href="https://www.erpxt.pl/" target="_blank" rel="noreferrer" title="Fakturuj bezpłatnie z Comarch ERP XT"><img src="https://panel.iksiegowosc24.pl/assets/Image%2016.png" alt="Fakturuj bezpłatnie z Comarch ERP XT" width="150" height="50" /></a>
-                  <a href="https://www.ibard.com/" target="_blank" rel="noreferrer" title="Gwarancja bezpieczeństwa danych z Comarch IBARD Backup"><img src="https://panel.iksiegowosc24.pl/assets/Image%2017.png" alt="Gwarancja bezpieczeństwa danych z Comarch IBARD Backup" width="150" height="50" /></a>
-                </Paper>
-                <div />
-              </Grid>
-              )}
+                && (
+                  <Grid item>
+                    <Paper
+                      elevation={0}
+                      className={`${opaqueColor} ${blur} ${flex}`}
+                    >
+                      <a href="https://www.iksiegowosc24.pl/biura-rachunkowe/mazowieckie/piaseczno/vavicom-sp-z-o-o" target="_blank" rel="noreferrer" title="Biuro polecane przez iKsiegowosc24"><img src="https://panel.iksiegowosc24.pl/assets/Image%2015.png" alt="Biuro polecane przez iKsiegowosc24" width="150" height="50" /></a>
+                      <a href="https://www.erpxt.pl/" target="_blank" rel="noreferrer" title="Fakturuj bezpłatnie z Comarch ERP XT"><img src="https://panel.iksiegowosc24.pl/assets/Image%2016.png" alt="Fakturuj bezpłatnie z Comarch ERP XT" width="150" height="50" /></a>
+                      <a href="https://www.ibard.com/" target="_blank" rel="noreferrer" title="Gwarancja bezpieczeństwa danych z Comarch IBARD Backup"><img src="https://panel.iksiegowosc24.pl/assets/Image%2017.png" alt="Gwarancja bezpieczeństwa danych z Comarch IBARD Backup" width="150" height="50" /></a>
+                    </Paper>
+                    <div />
+                  </Grid>
+                )}
             </Grid>
           </BackgroundImage>
         </BannerWrapper>
