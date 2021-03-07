@@ -71,34 +71,34 @@ const IndexPage = (props) => {
           <div id="top" />
           <main className={main}>
             <LandingPage />
-            <div className={halfCommonBreak} />
+            {/* <div className={halfCommonBreak} /> */}
             <TabPanel />
-            <div className={commonBreak} />
+            {/* <div className={commonBreak} /> */}
 
             <SectionWrapper>
               <Prices />
             </SectionWrapper>
-            <div className={commonBreak} />
+            {/* <div className={commonBreak} /> */}
 
             <SectionWrapper>
               <About />
             </SectionWrapper>
-            <div className={commonBreak} />
+            {/* <div className={commonBreak} /> */}
 
             <SectionWrapper>
               <Faq />
             </SectionWrapper>
-            <div className={commonBreak} />
+            {/* <div className={commonBreak} /> */}
 
             <SectionWrapper>
               <Career />
             </SectionWrapper>
-            <div className={commonBreak} />
+            {/* <div className={commonBreak} /> */}
 
             <SectionWrapper>
               <Contact />
             </SectionWrapper>
-            <div className={halfCommonBreak} />
+            {/* <div className={halfCommonBreak} /> */}
 
           </main>
           <ScrollTop>

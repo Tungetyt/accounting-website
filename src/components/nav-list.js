@@ -13,9 +13,11 @@ import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import SpaIcon from '@material-ui/icons/Spa';
 import { useIntl } from 'gatsby-plugin-intl';
 import React, { useContext } from 'react';
-import { Link } from 'react-scroll';
+// import { Link } from 'react-scroll';
 import { ColorContext } from '../context/contexts';
 import { APP_THEME, NAVIGATION, OFFSET } from '../helpers';
+import { Link } from "gatsby"
+
 
 const NavList = () => {
   const intl = useIntl();
@@ -65,31 +67,31 @@ const NavList = () => {
   return (
     <nav>
       <List>
-        <NavLink to={home}>
+        <NavLink to="/">
           <ListItemIcon><HomeIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={home} />
         </NavLink>
-        <NavLink to={services} offset={OFFSET}>
+        <NavLink to='/uslugi' offset={OFFSET}>
           <ListItemIcon><BusinessCenterIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={services} />
         </NavLink>
-        <NavLink to={prices} offset={-80}>
+        <NavLink to='/cennik' offset={-80}>
           <ListItemIcon><LocalOfferIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={prices} />
         </NavLink>
-        <NavLink to={about} offset={-90}>
+        <NavLink to='/onas' offset={-90}>
           <ListItemIcon><InfoIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={about} />
         </NavLink>
-        <NavLink to={faq} offset={OFFSET}>
+        <NavLink to='/pytania' offset={OFFSET}>
           <ListItemIcon><HelpIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={faq} />
         </NavLink>
-        <NavLink to={career} offset={-90}>
+        <NavLink to='/kariera' offset={-90}>
           <ListItemIcon><SpaIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={career} />
         </NavLink>
-        <NavLink to={contact} offset={OFFSET}>
+        <NavLink to='/kontakt' offset={OFFSET}>
           <ListItemIcon><ContactPhoneIcon color="primary" className={icon} /></ListItemIcon>
           <TextLink id={contact} />
         </NavLink>

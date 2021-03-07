@@ -49,6 +49,7 @@
     "react-iframe": "^1.8.0",
     "react-medium-image-zoom": "^4.3.1",
     "react-parallax-tilt": "^1.4.91",
+    "react-router-dom": "^5.2.0",
     "react-scroll": "^1.8.1",
     "react-scroll-parallax": "^2.3.5",
     "react-swipeable-views": "^0.13.9",

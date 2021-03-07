@@ -2,11 +2,15 @@ import React from 'react';
 import Prices from '../components/prices';
 import Layout from '../components/layout';
 import '../components/layout.css';
+import SectionWrapper from '../components/section-wrapper';
 
-const Ceny = () => (
+
+const Cennik = () => (
   <Layout>
-    <Prices />
+    <SectionWrapper>
+      <Prices />
+    </SectionWrapper>
   </Layout>
 );
 
-export default Ceny;
+export default Cennik;

@@ -3,10 +3,10 @@ import TabPanel from '../components/tab-panel';
 import Layout from '../components/layout';
 import '../components/layout.css';
 
-const Services = () => (
+const Uslugi = () => (
   <Layout>
     <TabPanel />
   </Layout>
 );
 
-export default Services;
+export default Uslugi;
